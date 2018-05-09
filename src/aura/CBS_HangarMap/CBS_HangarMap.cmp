@@ -1,14 +1,21 @@
 <aura:component description="CBS_HangarMap">
     <aura:attribute name="hangars" type="CBS_Hangar__c[]"/>
-        <div class="slds-panel slds-panel_docked slds-panel_docked-left slds-is-open  slds-p-around_medium slds-m-around--medium"
-             aria-hidden="false">
-            <div class="slds-panel__header">
-                <h2 class="slds-panel__header-title slds-text-heading_small">Panel Header</h2>
-            </div>
-            <div class="slds-map" style="max-height: 500px;">
-                <iframe id="GoogleMapID" title="Google Maps iframe"
-                        src="https://www.google.com/maps/embed/v1/place?q=1%20market%2C%20nwq%20york&amp;key=AIzaSyDliLquGXGts9S8YtkWVolSQEJdBL1ZuWc"
-                        style="border: 0px;"></iframe>
-            </div>
-        </div>
+    <!--<aura:attribute name="map" type="Object"/>-->
+    <!--        <div class="slds-panel slds-panel_docked slds-panel_docked-left slds-is-open  slds-p-around_medium slds-m-around&#45;&#45;medium"
+                 aria-hidden="false">
+                <div class="slds-panel__header">
+                    <h2 class="slds-panel__header-title slds-text-heading_small">Panel Header</h2>
+                </div>
+                <div class="slds-map" style="max-height: 500px;">
+                    <iframe id="GoogleMapID" title="Google Maps iframe"
+                            src="https://www.google.com/maps/embed/v1/place?q=1%20market%2C%20nwq%20york&amp;key=AIzaSyDliLquGXGts9S8YtkWVolSQEJdBL1ZuWc"
+                            style="border: 0px;"></iframe>
+                </div>
+            </div>-->
+    <ltng:require styles="/resource/leaflet/leaflet.css" />
+    <ltng:require scripts="/resource/leaflet/leaflet.js"
+                  afterScriptsLoaded="{!c.jsLoaded}" />
+
+    <div class="map" id="map"></div>
+
 </aura:component>
