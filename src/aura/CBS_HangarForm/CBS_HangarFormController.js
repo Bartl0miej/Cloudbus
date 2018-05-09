@@ -7,18 +7,18 @@
 
         if (validHangar) {
             let searchedHangar = component.get("v.searchedHangar");
-            console.log('Searched hangar:');
-            console.log(searchedHangar);
+/*            console.log('Searched hangar:');
+            console.log(searchedHangar);*/
             let action = component.get("c.searchHangars");
             action.setParams({"searchedHangar" : searchedHangar});
             action.setCallback(this, function(response) {
                 let state = response.getState();
                 if (state === "SUCCESS") {
                     component.set("v.hangars", response.getReturnValue());
-                    console.log("Returned hangars: ");
+/*                    console.log("Returned hangars: ");
                     console.log(response.getReturnValue());
                     console.log("v.hangars = ");
-                    console.log(component.get("v.hangars"));
+                    console.log(component.get("v.hangars"));*/
 /*                    if (component.get("v.hangars").length > 0) {
                         document.getElementById('resultsDiv').style.visibility = 'visible';
                     }*/

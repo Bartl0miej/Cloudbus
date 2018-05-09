@@ -1,9 +1,6 @@
 <aura:component description="CBS_HangarDetails">
-    <aura:attribute name="selHangar" type="CBS_Hangar__c"/>
-
+    <aura:attribute name="selectedHangar" type="CBS_Hangar__c"/>
     <div>
-        {!v.selHangar.Name}
+            {!v.selectedHangar.Name}
     </div>
-
-
 </aura:component>

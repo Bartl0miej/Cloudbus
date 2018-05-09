@@ -1,5 +1,7 @@
 <aura:component description="CBS_HangarSearchMain" access="global" implements="flexipage:availableForAllPageTypes">
     <aura:attribute name="hangars" type="List" default="[]"/>
+    <aura:attribute name="selectedHangar" type="CBS_Hangar__c"/>
+    <aura:handler name="selectHangar" event="c:selectedHangarUpdate" action="{!c.handleHangarSelect}"/>
     <!--<aura:attribute name="selHangar" type="CBS_Hangar__c"/>-->
     <div class="slds-grid">
         <div class="slds-col slds-size_5-of-12">
@@ -12,11 +14,13 @@
                 </div>
             </aura:if>
         </div>
-        <div class="slds-col slds-size_7-of-12">
-            <c:CBS_HangarMap/>
-        </div>
-<!--        <div class="slds-col slds-size_7-of-12">
-            <c:CBS_HangarDetails selHangar="{!v.selHangar}"/>
-        </div>-->
+        <!--        <div class="slds-col slds-size_7-of-12">
+                    <c:CBS_HangarMap/>
+                </div>-->
+        <aura:if isTrue="{!v.selectedHangar != undefined}">
+            <div class="slds-col slds-size_7-of-12">
+                <c:CBS_HangarDetails selectedHangar="{!v.selectedHangar}"/>
+            </div>
+        </aura:if>
     </div>
 </aura:component>

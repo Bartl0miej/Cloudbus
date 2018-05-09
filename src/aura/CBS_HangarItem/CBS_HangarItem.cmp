@@ -1,7 +1,7 @@
 <aura:component description="CBS_HangarItem">
     <aura:attribute name="hangar" type="CBS_Hangar__c"/>
-<!--    <aura:attribute name="selHangar" type="CBS_Hangar__c"/>-->
-    <tr onclick="{!c.func}">
+    <aura:registerEvent name="selectHangar" type="c:selectedHangarUpdate"/>
+    <tr onclick="{!c.hangarSelected}">
         <td>
                 {!v.hangar.Name}
         </td>

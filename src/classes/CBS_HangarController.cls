@@ -2,7 +2,7 @@ public with sharing class CBS_HangarController {
     @AuraEnabled
     public static List<CBS_Hangar__c> searchHangars(CBS_Hangar__c searchedHangar) {
         String nameParam, emailParam, cityParam;
-        String query = 'SELECT Id, Name, Country__c, City__c FROM CBS_Hangar__c WHERE Country__c = \'' + searchedHangar.Country__c + '\'';
+        String query = 'SELECT Id, Name, Country__c, City__c, Capacity__c, E_mail__c, Military__c, Street__c, Telephone__c FROM CBS_Hangar__c WHERE Country__c = \'' + searchedHangar.Country__c + '\'';
 
         if (String.isNotEmpty(searchedHangar.Name)) {
             nameParam = ' \'%' + searchedHangar.Name + '%\' ';
