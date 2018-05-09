@@ -8,5 +8,13 @@
 
     handleSearchClear : function(component, event, helper) {
         component.set("v.selectedHangar", undefined);
+    },
+
+    handleCoordinates : function(component, event, helper) {
+        let coordinatesList = event.getParam("hangarsCoordinates");
+        for (let i = 0; i < coordinatesList.length; i++) {
+            console.log(coordinatesList[i].latitude);
+        }
+        component.set("v.theCoordinates", coordinatesList);
     }
 })

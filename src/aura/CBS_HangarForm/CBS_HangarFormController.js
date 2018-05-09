@@ -40,6 +40,16 @@
                         });
                         toastEvent.fire();
                     }
+
+                    let sendCoordinatesEvent = component.getEvent("sendCoordinates");
+
+                    console.log('sendcoordinatesevent = ');
+                    console.log(sendCoordinatesEvent);
+
+                    sendCoordinatesEvent.setParams({"hangarsCoordinates": response.getReturnValue()});
+                    sendCoordinatesEvent.fire();
+                    console.log("sendCoordinatesevent........")
+
                 } else {
                     console.log("Failed with state: " + state);
                 }

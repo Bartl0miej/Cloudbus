@@ -1,8 +1,10 @@
 <aura:component description="CBS_HangarSearchMain" access="global" implements="flexipage:availableForAllPageTypes">
     <aura:attribute name="hangars" type="List" default="[]"/>
+    <aura:attribute name="theCoordinates" type="List" default="[]"/>
     <aura:attribute name="selectedHangar" type="CBS_Hangar__c"/>
     <aura:handler name="selectHangar" event="c:selectedHangarUpdate" action="{!c.handleHangarSelect}"/>
     <aura:handler name="clearSearch" event="c:clearHangarSearch" action="{!c.handleSearchClear}"/>
+    <aura:handler name="sendCoordinates" event="c:CBS_SetCoordinates" action="{!c.handleCoordinates}"/>
     <div class="slds-grid">
         <div class="slds-col slds-size_5-of-12">
             <c:CBS_HangarForm hangars="{!v.hangars}"/>
@@ -15,7 +17,7 @@
             </aura:if>
         </div>
         <div class="slds-col slds-size_7-of-12">
-            <c:CBS_HangarMap hangars="{!v.hangars}"/>
+            <c:CBS_HangarMap coordinatesList="{!v.theCoordinates}"/>
             <aura:if isTrue="{!v.selectedHangar != undefined}">
                 <c:CBS_HangarDetails selectedHangar="{!v.selectedHangar}"/>
             </aura:if>

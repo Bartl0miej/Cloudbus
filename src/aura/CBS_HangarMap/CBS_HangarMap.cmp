@@ -1,5 +1,13 @@
 <aura:component description="CBS_HangarMap">
-    <aura:attribute name="hangars" type="CBS_Hangar__c[]"/>
+    <ltng:require styles="/resource/leaflet/leaflet.css"/>
+    <ltng:require scripts="/resource/leaflet/leaflet.js"
+                  afterScriptsLoaded="{!c.jsLoaded}"/>
+    <aura:attribute name="coordinatesList" type="List" default="[]"/>
+    <aura:attribute name="map" type="Object"/>
+    <aura:attribute name="markers" type="Object"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <!--<aura:attribute name="hangars" type="CBS_Hangar__c[]"/>-->
+    <!--<aura:handler name="sendCoordinates" event="c:CBS_SetCoordinates" action="{!c.handleCoordinates}"/>-->
     <!--<aura:attribute name="map" type="Object"/>-->
     <!--        <div class="slds-panel slds-panel_docked slds-panel_docked-left slds-is-open  slds-p-around_medium slds-m-around&#45;&#45;medium"
                  aria-hidden="false">
@@ -12,10 +20,8 @@
                             style="border: 0px;"></iframe>
                 </div>
             </div>-->
-    <ltng:require styles="/resource/leaflet/leaflet.css" />
-    <ltng:require scripts="/resource/leaflet/leaflet.js"
-                  afterScriptsLoaded="{!c.jsLoaded}" />
 
-    <div class="map" id="map"></div>
 
+    <div class="map" aura:id="map"></div>
+    <lightning:button value="CLick me" onclick="{!c.clickedButton}"/>
 </aura:component>
