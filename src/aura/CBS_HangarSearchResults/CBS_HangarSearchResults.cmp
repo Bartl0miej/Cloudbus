@@ -1,0 +1,28 @@
+<aura:component description="CBS_HangarSearchResults">
+    <aura:attribute name="hangars" type="CBS_Hangar__c[]"/>
+    <!--<aura:attribute name="selHangar" type="CBS_Hangar__c"/>-->
+    <lightning:card title="Hangars">
+        <p class="slds-p-horizontal--small">
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+            <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Country
+                </th>
+                <th>
+                    City
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+                <aura:iteration items="{!v.hangars}" var="sHangar">
+                    <c:CBS_HangarItem hangar="{!sHangar}"/>
+                </aura:iteration>
+            </tbody>
+        </table>
+        </p>
+    </lightning:card>
+</aura:component>

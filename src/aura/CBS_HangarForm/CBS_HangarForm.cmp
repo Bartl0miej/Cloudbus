@@ -1,0 +1,37 @@
+<aura:component description="CBS_HangarForm" controller="CBS_HangarController">
+    <aura:attribute name="searchedHangar" type="CBS_Hangar__c"
+                    default="{'sobjectType' : 'CBS_Hangar__c', 'Name' : '', 'Country__c' : '', 'City__c' : ''}"/>
+    <aura:attribute name="hangars" type="List" default="[]"/>
+    <div class="slds-panel slds-panel_docked slds-panel_docked-left slds-is-open slds-p-around_medium slds-m-around--medium"
+         aria-hidden="false">
+                <div aria-labelledby="searchhangarform">
+                    <fieldset class="slds-box slds-theme--default">
+                        <h3 class="slds-page-header__title" style="margin-bottom: 10px;">Search for hangars</h3>
+                        <form class="slds-form--stacked">
+                            <lightning:input aura:id="searchform" label="Hangar Name"
+                                             name="hangarname"
+                                             value="{!v.searchedHangar.Name}"/>
+
+                            <lightning:select label="Country" name="hangarcountry" aura:id="searchform"
+                                              value="{!v.searchedHangar.Country__c}" required="true">
+                                <option value="">Select a country</option>
+                                <option value="Poland">Poland</option>
+                                <option value="USA">USA</option>
+                                <option value="Germany">Germany</option>
+                                <option value="Ukraine">Ukraine</option>
+                            </lightning:select>
+                            <lightning:input aura:id="searchform" label="City"
+                                             name="hangarcity"
+                                             value="{!v.searchedHangar.City__c}"/>
+                            <lightning:button label="Search"
+                                              class="slds-m-top--medium"
+                                              variant="brand"
+                                              onclick="{!c.searchForHangar}"/>
+                            <lightning:button label="Clear"
+                                              class="slds-m-top--medium"
+                                              variant="neutral" onclick="{!c.clear}"/>
+                        </form>
+                    </fieldset>
+                </div>
+    </div>
+</aura:component>

@@ -1,0 +1,3 @@
+<aura:event type="COMPONENT" description="searchHangar">
+    <aura:attribute name="hangar" type="CBS_Hangar__c"/>
+</aura:event>

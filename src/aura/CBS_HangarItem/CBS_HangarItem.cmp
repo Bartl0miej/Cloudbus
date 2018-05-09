@@ -1,0 +1,15 @@
+<aura:component description="CBS_HangarItem">
+    <aura:attribute name="hangar" type="CBS_Hangar__c"/>
+<!--    <aura:attribute name="selHangar" type="CBS_Hangar__c"/>-->
+    <tr onclick="{!c.func}">
+        <td>
+                {!v.hangar.Name}
+        </td>
+        <td>
+                {!v.hangar.Country__c}
+        </td>
+        <td>
+                {!v.hangar.City__c}
+        </td>
+    </tr>
+</aura:component>
