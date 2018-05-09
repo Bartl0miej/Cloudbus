@@ -14,7 +14,23 @@
             action.setCallback(this, function(response) {
                 let state = response.getState();
                 if (state === "SUCCESS") {
-                    component.set("v.hangars", response.getReturnValue());
+                    console.log('debug info');
+                    console.log(response.getReturnValue().length);
+                    let hangarsRtn = [];
+                    for (let i = 0; i < response.getReturnValue().length; i++) {
+                        console.log(response.getReturnValue()[i].hangar);
+                        hangarsRtn.push(response.getReturnValue()[i].hangar);
+                        console.log('latitude: ' + response.getReturnValue()[i].latitude);
+                        console.log(response.getReturnValue()[i].longitude);
+
+                    }
+                    component.set("v.hangars", hangarsRtn);
+                    if (response.getReturnValue().length == 1) {
+                        let selHangar = response.getReturnValue()[0].hangar;
+                        let selectEvent = component.getEvent("selectHangar");
+                        selectEvent.setParams({"chosenHangar" : selHangar});
+                        selectEvent.fire();
+                    }
                     if (response.getReturnValue().length == 0) {
                         var toastEvent = $A.get("e.force:showToast");
                         toastEvent.setParams({

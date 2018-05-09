@@ -1,6 +1,6 @@
 public with sharing class CBS_HangarController {
     @AuraEnabled
-    public static List<CBS_Hangar__c> searchHangars(CBS_Hangar__c searchedHangar) {
+    public static List<HangarResult> searchHangars(CBS_Hangar__c searchedHangar) {
         String nameParam, emailParam, cityParam;
         String query = 'SELECT Id, Name, Country__c, City__c, Capacity__c, E_mail__c, Military__c, Street__c, Telephone__c FROM CBS_Hangar__c WHERE Country__c = \'' + searchedHangar.Country__c + '\'';
 
@@ -17,11 +17,19 @@ public with sharing class CBS_HangarController {
         System.debug('QUERY: ' + query);
 
         System.debug(Database.query(query));
-        return Database.query(query);
+        List<CBS_Hangar__c> cbsHangars = Database.query(query);
+        List<HangarResult> results = new List<HangarResult>();
+        for (CBS_Hangar__c hngr : cbsHangars) {
+            HangarResult tempResult = new HangarResult();
+            tempResult.hangar = hngr;
+            getGeoLocations(tempResult);
+            results.add(tempResult);
+        }
+
+        return results;
     }
 
-    @AuraEnabled
-    public static List<String> getGeoLocations() {
+    private static void getGeoLocations(HangarResult hangarWrapper) {
 /*        for (CBS_Hangar__c hangar : ) {
 
         }*/
@@ -31,7 +39,22 @@ public with sharing class CBS_HangarController {
         Http rrHttp = new Http();
         HttpRequest request = new HttpRequest();
         request.setMethod('GET');
-        request.setEndpoint('https://maps.googleapis.com/maps/api/geocode/json?address=Lublin+Ruska&key=AIzaSyCBtvTZtClyA-axDWKzRrJnFUmIoJZC0OM');
+//        request.setEndpoint('https://maps.googleapis.com/maps/api/geocode/json?address=' + hangarWrapper.hangar.Country__c + '&key=AIzaSyCBtvTZtClyA-axDWKzRrJnFUmIoJZC0OM');
+        String endpoint = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + hangarWrapper.hangar.Country__c;
+        //request.setEndpoint('https://maps.googleapis.com/maps/api/geocode/json?address=' + hangarWrapper.hangar.Country__c);
+
+        if (hangarWrapper.hangar.City__c != null) {
+            endpoint += '+' + hangarWrapper.hangar.City__c;
+        }
+
+        if (hangarWrapper.hangar.Street__c != null) {
+            endpoint += '+' + hangarWrapper.hangar.Street__c;
+        }
+
+        endpoint += '&key=AIzaSyCBtvTZtClyA-axDWKzRrJnFUmIoJZC0OM';
+        request.setEndpoint(endpoint);
+
+        //request.setEndpoint('https://maps.googleapis.com/maps/api/geocode/json?address=Lublin+Ruska&key=AIzaSyCBtvTZtClyA-axDWKzRrJnFUmIoJZC0OM');
         HttpResponse response = rrHttp.send(request);
         RootObject resJson = new RootObject();
         if (response.getStatusCode() == 200) {
@@ -40,17 +63,22 @@ public with sharing class CBS_HangarController {
             System.debug('resJson = ' + resJson);
             System.debug('lat: ' + resJson.results.get(0).geometry.location.lat);
             System.debug('lng: ' + resJson.results.get(0).geometry.location.lng);
+            hangarWrapper.latitude = String.valueOf(resJson.results.get(0).geometry.location.lat);
+            hangarWrapper.longitude = String.valueOf(resJson.results.get(0).geometry.location.lng);
+
+
+
             /*geolocations = resJson.geometry.location.lat;*/
             System.debug('geolocations: ' + geolocations);
         } else {
         }
 
-        return null;
     }
 
-    public class HangarLocation {
-        public String latitude { get; set; }
-        public String longitude { get; set; }
+    public class HangarResult {
+        @AuraEnabled public CBS_Hangar__c hangar { get; set;}
+        @AuraEnabled public String latitude { get; set; }
+        @AuraEnabled public String longitude { get; set; }
     }
 
     public class ResponseJson {
