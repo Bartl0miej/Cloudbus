@@ -6,6 +6,7 @@
     <aura:attribute name="map" type="Object"/>
     <aura:attribute name="markers" type="Object"/>
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="change" value="{!v.coordinatesList}" action="{!c.coordinatesChangeHandler}"/>
     <!--<aura:attribute name="hangars" type="CBS_Hangar__c[]"/>-->
     <!--<aura:handler name="sendCoordinates" event="c:CBS_SetCoordinates" action="{!c.handleCoordinates}"/>-->
     <!--<aura:attribute name="map" type="Object"/>-->
