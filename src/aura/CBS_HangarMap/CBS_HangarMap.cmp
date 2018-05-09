@@ -5,7 +5,7 @@
             <div class="slds-panel__header">
                 <h2 class="slds-panel__header-title slds-text-heading_small">Panel Header</h2>
             </div>
-            <div class="slds-map">
+            <div class="slds-map" style="max-height: 500px;">
                 <iframe id="GoogleMapID" title="Google Maps iframe"
                         src="https://www.google.com/maps/embed/v1/place?q=1%20market%2C%20nwq%20york&amp;key=AIzaSyDliLquGXGts9S8YtkWVolSQEJdBL1ZuWc"
                         style="border: 0px;"></iframe>

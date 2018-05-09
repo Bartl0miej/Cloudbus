@@ -13,10 +13,11 @@
                 </div>
             </aura:if>
         </div>
-        <aura:if isTrue="{!v.selectedHangar != undefined}">
-            <div class="slds-col slds-size_7-of-12">
+        <div class="slds-col slds-size_7-of-12">
+            <c:CBS_HangarMap hangars="{!v.hangars}"/>
+            <aura:if isTrue="{!v.selectedHangar != undefined}">
                 <c:CBS_HangarDetails selectedHangar="{!v.selectedHangar}"/>
-            </div>
-        </aura:if>
+            </aura:if>
+        </div>
     </div>
 </aura:component>
