@@ -6,6 +6,8 @@
         }, true);
 
         if (validHangar) {
+            let clearEvent = component.getEvent("clearSearch");
+            clearEvent.fire();
             let searchedHangar = component.get("v.searchedHangar");
             let action = component.get("c.searchHangars");
             action.setParams({"searchedHangar" : searchedHangar});
@@ -13,11 +15,21 @@
                 let state = response.getState();
                 if (state === "SUCCESS") {
                     component.set("v.hangars", response.getReturnValue());
+                    if (response.getReturnValue().length == 0) {
+                        var toastEvent = $A.get("e.force:showToast");
+                        toastEvent.setParams({
+                            "type": "Warning",
+                            "title": "No records.",
+                            "message": "No records found using specified criteria."
+                        });
+                        toastEvent.fire();
+                    }
                 } else {
                     console.log("Failed with state: " + state);
                 }
             });
             $A.enqueueAction(action);
+
         }
     },
 
