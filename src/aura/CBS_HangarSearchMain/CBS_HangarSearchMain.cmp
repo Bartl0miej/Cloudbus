@@ -17,7 +17,9 @@
             </aura:if>
         </div>
         <div class="slds-col slds-size_7-of-12">
-            <c:CBS_HangarMap coordinatesList="{!v.theCoordinates}"/>
+            <aura:if isTrue="{!v.theCoordinates.length != 0}">
+                <c:CBS_HangarMap coordinatesList="{!v.theCoordinates}"/>
+            </aura:if>
             <aura:if isTrue="{!v.selectedHangar != undefined}">
                 <c:CBS_HangarDetails selectedHangar="{!v.selectedHangar}"/>
             </aura:if>

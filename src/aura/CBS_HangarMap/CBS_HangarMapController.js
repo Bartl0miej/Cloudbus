@@ -34,19 +34,22 @@
 
         if (!map) {
             var mapElement = component.find("map").getElement();
-            map = L.map(mapElement, {zoomControl: false});
+            map = L.map(mapElement, {zoomControl: true, zoom:1,zoomAnimation:false,fadeAnimation:true,markerZoomAnimation:true});
             component.set("v.map", map);
         }
         L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',
                 {
                     attribution: 'Tiles © Esri'
                 }).addTo(map);
-                        var markerArray = [];
+                        /*var markerArray = [];
                         //markerArray.push(L.marker([parseFloat(cordArr[0].latitude), parseFloat(cordArr[0].longitude)]));
                         markerArray.push(L.marker([7.33, -70.33]));
                         //markerArray.push(L.marker([7.55, -70.55]));
                         var group = L.featureGroup(markerArray).addTo(map);
-                        map.fitBounds(group.getBounds().pad(0.50));
+                        component.set('v.markers', group);
+                        map.fitBounds(group.getBounds().pad(50));
+                        */
+                        helper.addMarkers(component);
 
 
     },

@@ -4,13 +4,13 @@
         var markers = component.get('v.markers');
         var coordinates = component.get('v.coordinatesList');
         let markerArray = [];
-        let markerGroup = window.L.featureGroup();
+        //let markerGroup = window.L.featureGroup();
 
 
 
         // Remove existing markers
         if (markers) {
-        	markers.clearLayers();
+        	map.removeLayer(markers);
         }
 
         // Add Markers
@@ -23,6 +23,7 @@
                    //markers.addLayer(marker);
                    markerArray.push(window.L.marker([parseFloat(coordinate.latitude), parseFloat(coordinate.longitude)]));
                     let group = window.L.featureGroup(markerArray).addTo(map);
+                    component.set('v.markers', group);
                     map.fitBounds(group.getBounds().pad(0.50));
 
 

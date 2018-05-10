@@ -1,4 +1,7 @@
 public with sharing class CBS_HangarController {
+
+    @AuraEnabled public static List<HangarResult> results { get; set; }
+
     @AuraEnabled
     public static List<HangarResult> searchHangars(CBS_Hangar__c searchedHangar) {
         String nameParam, emailParam, cityParam;
@@ -18,7 +21,7 @@ public with sharing class CBS_HangarController {
 
         System.debug(Database.query(query));
         List<CBS_Hangar__c> cbsHangars = Database.query(query);
-        List<HangarResult> results = new List<HangarResult>();
+        results = new List<HangarResult>();
         for (CBS_Hangar__c hngr : cbsHangars) {
             HangarResult tempResult = new HangarResult();
             tempResult.hangar = hngr;
@@ -29,11 +32,17 @@ public with sharing class CBS_HangarController {
         return results;
     }
 
+    @AuraEnabled
+    public static HangarResult getHangarWrapper(CBS_Hangar__c hangarToFind) {
+
+        HangarResult result = new HangarResult();
+        result.hangar = hangarToFind;
+        getGeoLocations(result);
+        System.debug('result hangar name = ' + result.hangar.Name);
+        return result;
+    }
+
     private static void getGeoLocations(HangarResult hangarWrapper) {
-/*        for (CBS_Hangar__c hangar : ) {
-
-        }*/
-
         Double geolocations;
 
         Http rrHttp = new Http();

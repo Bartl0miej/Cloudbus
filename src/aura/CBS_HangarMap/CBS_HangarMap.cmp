@@ -24,5 +24,4 @@
 
 
     <div class="map" aura:id="map"></div>
-    <lightning:button value="CLick me" onclick="{!c.clickedButton}"/>
 </aura:component>

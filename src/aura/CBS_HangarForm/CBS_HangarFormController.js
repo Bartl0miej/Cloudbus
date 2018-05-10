@@ -64,5 +64,9 @@
         component.set("v.hangars", []);
         let clearEvent = component.getEvent("clearSearch");
         clearEvent.fire();
+
+        let sendCoordinatesEvent = component.getEvent("sendCoordinates");
+        sendCoordinatesEvent.setParams({"hangarsCoordinates": new Array()});
+        sendCoordinatesEvent.fire();
     }
 })

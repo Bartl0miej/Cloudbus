@@ -1,6 +1,7 @@
-<aura:component description="CBS_HangarItem">
+<aura:component description="CBS_HangarItem" controller="CBS_HangarController">
     <aura:attribute name="hangar" type="CBS_Hangar__c"/>
     <aura:registerEvent name="selectHangar" type="c:selectedHangarUpdate"/>
+    <aura:registerEvent name="sendCoordinates" type="c:CBS_SetCoordinates"/>
     <tr onclick="{!c.hangarSelected}">
         <td>
                 {!v.hangar.Name}
