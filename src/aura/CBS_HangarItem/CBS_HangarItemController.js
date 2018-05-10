@@ -1,12 +1,16 @@
 ({
     hangarSelected : function(component, event, helper) {
         let selHangar = component.get("v.hangar");
+        let selectEvent = component.getEvent("selectHangar");
+        selectEvent.setParams({"chosenHangar" : selHangar});
+        selectEvent.fire();
+
         /*console.log(selHangar.Name);
         let selectEvent = component.getEvent("selectHangar");
         selectEvent.setParams({"chosenHangar" : selHangar});
         selectEvent.fire();
 
-/*        let sendCoordinatesEvent = component.getEvent("sendCoordinates");
+       let sendCoordinatesEvent = component.getEvent("sendCoordinates");
 
 
 
