@@ -1,16 +1,35 @@
 <aura:component description="CBS_HangarItem" controller="CBS_HangarController">
     <aura:attribute name="hangar" type="CBS_Hangar__c"/>
+    <aura:attribute name="isActive" type="Boolean" default="false"/>
+    <aura:attribute name="selectedItemId" type="Id"/>
     <aura:registerEvent name="selectHangar" type="c:selectedHangarUpdate"/>
+    <aura:registerEvent name="clearSelected" type="c:CBS_ClearSelectedHangar"/>
     <aura:registerEvent name="sendCoordinates" type="c:CBS_SetCoordinates"/>
-    <tr onclick="{!c.hangarSelected}">
-        <td>
-                {!v.hangar.Name}
-        </td>
-        <td>
-                {!v.hangar.Country__c}
-        </td>
-        <td>
-                {!v.hangar.City__c}
-        </td>
-    </tr>
+    
+    <aura:if isTrue="{!v.isActive}">
+        <tr onclick="{!c.hangarSelected}" bgcolor="lightgray">
+            <td>
+                    {!v.hangar.Name}
+            </td>
+            <td>
+                    {!v.hangar.Country__c}
+            </td>
+            <td>
+                    {!v.hangar.City__c}
+            </td>
+        </tr>
+    </aura:if>
+    <aura:if isTrue="{! !v.isActive}">
+        <tr onclick="{!c.hangarSelected}">
+            <td>
+                    {!v.hangar.Name}
+            </td>
+            <td>
+                    {!v.hangar.Country__c}
+            </td>
+            <td>
+                    {!v.hangar.City__c}
+            </td>
+        </tr>
+    </aura:if>
 </aura:component>
