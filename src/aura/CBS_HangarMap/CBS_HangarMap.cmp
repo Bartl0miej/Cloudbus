@@ -5,23 +5,6 @@
     <aura:attribute name="coordinatesList" type="List" default="[]"/>
     <aura:attribute name="map" type="Object"/>
     <aura:attribute name="markers" type="Object"/>
-    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
     <aura:handler name="change" value="{!v.coordinatesList}" action="{!c.coordinatesChangeHandler}"/>
-    <!--<aura:attribute name="hangars" type="CBS_Hangar__c[]"/>-->
-    <!--<aura:handler name="sendCoordinates" event="c:CBS_SetCoordinates" action="{!c.handleCoordinates}"/>-->
-    <!--<aura:attribute name="map" type="Object"/>-->
-    <!--        <div class="slds-panel slds-panel_docked slds-panel_docked-left slds-is-open  slds-p-around_medium slds-m-around&#45;&#45;medium"
-                 aria-hidden="false">
-                <div class="slds-panel__header">
-                    <h2 class="slds-panel__header-title slds-text-heading_small">Panel Header</h2>
-                </div>
-                <div class="slds-map" style="max-height: 500px;">
-                    <iframe id="GoogleMapID" title="Google Maps iframe"
-                            src="https://www.google.com/maps/embed/v1/place?q=1%20market%2C%20nwq%20york&amp;key=AIzaSyDliLquGXGts9S8YtkWVolSQEJdBL1ZuWc"
-                            style="border: 0px;"></iframe>
-                </div>
-            </div>-->
-
-
     <div class="map" aura:id="map"></div>
 </aura:component>

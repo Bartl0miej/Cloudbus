@@ -16,10 +16,6 @@ public with sharing class CBS_HangarController {
             cityParam = ' \'%' + searchedHangar.City__c + '%\' ';
             query += ' AND Name LIKE ' + cityParam;
         }
-
-        System.debug('QUERY: ' + query);
-
-        System.debug(Database.query(query));
         List<CBS_Hangar__c> cbsHangars = Database.query(query);
         results = new List<HangarResult>();
         for (CBS_Hangar__c hngr : cbsHangars) {
@@ -34,11 +30,9 @@ public with sharing class CBS_HangarController {
 
     @AuraEnabled
     public static HangarResult getHangarWrapper(CBS_Hangar__c hangarToFind) {
-
         HangarResult result = new HangarResult();
         result.hangar = hangarToFind;
         getGeoLocations(result);
-        System.debug('result hangar name = ' + result.hangar.Name);
         return result;
     }
 
@@ -48,9 +42,7 @@ public with sharing class CBS_HangarController {
         Http rrHttp = new Http();
         HttpRequest request = new HttpRequest();
         request.setMethod('GET');
-//        request.setEndpoint('https://maps.googleapis.com/maps/api/geocode/json?address=' + hangarWrapper.hangar.Country__c + '&key=AIzaSyCBtvTZtClyA-axDWKzRrJnFUmIoJZC0OM');
         String endpoint = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + hangarWrapper.hangar.Country__c;
-        //request.setEndpoint('https://maps.googleapis.com/maps/api/geocode/json?address=' + hangarWrapper.hangar.Country__c);
 
         if (hangarWrapper.hangar.City__c != null) {
             endpoint += '+' + hangarWrapper.hangar.City__c;
@@ -62,23 +54,12 @@ public with sharing class CBS_HangarController {
 
         endpoint += '&key=AIzaSyCBtvTZtClyA-axDWKzRrJnFUmIoJZC0OM';
         request.setEndpoint(endpoint);
-
-        //request.setEndpoint('https://maps.googleapis.com/maps/api/geocode/json?address=Lublin+Ruska&key=AIzaSyCBtvTZtClyA-axDWKzRrJnFUmIoJZC0OM');
         HttpResponse response = rrHttp.send(request);
         RootObject resJson = new RootObject();
         if (response.getStatusCode() == 200) {
             resJson = (RootObject)JSON.deserialize(response.getBody(), RootObject.class);
-            System.debug(response.getBody());
-            System.debug('resJson = ' + resJson);
-            System.debug('lat: ' + resJson.results.get(0).geometry.location.lat);
-            System.debug('lng: ' + resJson.results.get(0).geometry.location.lng);
             hangarWrapper.latitude = String.valueOf(resJson.results.get(0).geometry.location.lat);
             hangarWrapper.longitude = String.valueOf(resJson.results.get(0).geometry.location.lng);
-
-
-
-            /*geolocations = resJson.geometry.location.lat;*/
-            System.debug('geolocations: ' + geolocations);
         } else {
         }
 

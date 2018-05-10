@@ -14,15 +14,9 @@
             action.setCallback(this, function(response) {
                 let state = response.getState();
                 if (state === "SUCCESS") {
-                    console.log('debug info');
-                    console.log(response.getReturnValue().length);
                     let hangarsRtn = [];
                     for (let i = 0; i < response.getReturnValue().length; i++) {
-                        console.log(response.getReturnValue()[i].hangar);
                         hangarsRtn.push(response.getReturnValue()[i].hangar);
-                        console.log('latitude: ' + response.getReturnValue()[i].latitude);
-                        console.log(response.getReturnValue()[i].longitude);
-
                     }
                     component.set("v.hangars", hangarsRtn);
                     if (response.getReturnValue().length == 1) {
@@ -42,20 +36,14 @@
                     }
 
                     let sendCoordinatesEvent = component.getEvent("sendCoordinates");
-
-                    console.log('sendcoordinatesevent = ');
-                    console.log(sendCoordinatesEvent);
-
                     sendCoordinatesEvent.setParams({"hangarsCoordinates": response.getReturnValue()});
                     sendCoordinatesEvent.fire();
-                    console.log("sendCoordinatesevent........")
-
                 } else {
                     console.log("Failed with state: " + state);
                 }
             });
-            $A.enqueueAction(action);
 
+            $A.enqueueAction(action);
         }
     },
 
