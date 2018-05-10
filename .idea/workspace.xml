@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffb7f8dc-528c-4a66-b294-4414ce6fa1bc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_HangarForm/CBS_HangarFormController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_HangarForm/CBS_HangarFormController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_HangarItem/CBS_HangarItem.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_HangarItem/CBS_HangarItem.cmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_HangarItem/CBS_HangarItemController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_HangarItem/CBS_HangarItemController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_HangarMap/CBS_HangarMap.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_HangarMap/CBS_HangarMap.cmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_HangarMap/CBS_HangarMap.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_HangarMap/CBS_HangarMap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_HangarMap/CBS_HangarMapController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_HangarMap/CBS_HangarMapController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_HangarMap/CBS_HangarMapHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_HangarMap/CBS_HangarMapHelper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_HangarSearchMain/CBS_HangarSearchMain.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_HangarSearchMain/CBS_HangarSearchMain.cmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/CBS_HangarController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/CBS_HangarController.cls" afterDir="false" />
-    </list>
+    <list default="true" id="ffb7f8dc-528c-4a66-b294-4414ce6fa1bc" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -167,7 +157,7 @@
                     <map>
                       <entry key="AURA/CBS_HANGARDETAILS" value="1525862300727" />
                       <entry key="AURA/CBS_HANGARFORM" value="1525911134934" />
-                      <entry key="AURA/CBS_HANGARITEM" value="1525911139605" />
+                      <entry key="AURA/CBS_HANGARITEM" value="1525911141045" />
                       <entry key="AURA/CBS_HANGARMAP" value="1525911138098" />
                       <entry key="AURA/CBS_HANGARSEARCHMAIN" value="1525911136772" />
                       <entry key="AURA/CBS_HANGARSEARCHRESULTS" value="1525858320945" />
@@ -1535,10 +1525,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1098" />
+    <option name="x" value="1912" />
+    <option name="y" value="-213" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectReloadState">
     <option name="STATE" value="1" />
@@ -1737,7 +1727,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -1754,7 +1744,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26055047" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28590605" />
       <window_info anchor="bottom" id="Problems" order="13" weight="0.3295838" />
       <window_info anchor="bottom" id="SOQL Query" order="11" weight="0.3297062" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
