@@ -1,6 +1,6 @@
 <aura:component description="CBS_HangarDetails">
     <aura:attribute name="selectedHangar" type="CBS_Hangar__c"/>
-    <lightning:card title="{!v.selectedHangar.Name + ' Details'}" iconName="standard:metrics" class="slds-p-around_medium slds-m-around--medium">
+    <lightning:card title="{!v.selectedHangar.Name + ' ' + $Label.c.CBS_Details}" iconName="standard:metrics" class="slds-p-around_medium slds-m-around--medium">
         <lightning:recordViewForm recordId="{!v.selectedHangar.Id}" objectApiName="CBS_Hangar__c">
             <div class="slds-box slds-theme_default">
                 <table>

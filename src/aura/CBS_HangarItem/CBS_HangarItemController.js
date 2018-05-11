@@ -22,10 +22,4 @@
 
         $A.enqueueAction(action);
     },
-
-    clearSelectedHangar : function(component, event, helper) {
-        let selHangar = component.get("v.hangar");
-        selHangar.isActive = false;
-        component.set("v.hangar", selHangar);
-    }
 })

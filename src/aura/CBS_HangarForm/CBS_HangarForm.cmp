@@ -6,12 +6,10 @@
     <aura:registerEvent name="clearSearch" type="c:clearHangarSearch"/>
     <aura:registerEvent name="sendCoordinates" type="c:CBS_SetCoordinates"/>
     <aura:registerEvent name="selectHangar" type="c:selectedHangarUpdate"/>
-    <!--<aura:handler event="aura:waiting" action="{!c.showSpinner}"/>
-    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"/>-->
     <aura:if isTrue="{!v.Spinner}">
         <div aura:id="spinnerId" class="slds-spinner_container">
             <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
-                <span class="slds-assistive-text">Loading</span>
+                <span class="slds-assistive-text">{!$Label.c.CBS_Loading}</span>
                 <div class="slds-spinner__dot-a"></div>
                 <div class="slds-spinner__dot-b"></div>
             </div>
@@ -21,28 +19,28 @@
          aria-hidden="false">
                 <div aria-labelledby="searchhangarform">
                     <fieldset class="slds-box slds-theme--default">
-                        <h3 class="slds-page-header__title" style="margin-bottom: 10px;">Search for hangars</h3>
+                        <h3 class="slds-page-header__title" style="margin-bottom: 10px;">{!$Label.c.CBS_Search_for_hangars}</h3>
                         <form class="slds-form--stacked">
-                            <lightning:input aura:id="searchform" label="Hangar Name"
+                            <lightning:input aura:id="searchform" label="{!$Label.c.CBS_Hangar_Name}"
                                              name="hangarname"
                                              value="{!v.searchedHangar.Name}"/>
 
-                            <lightning:select label="Country" name="hangarcountry" aura:id="searchform"
+                            <lightning:select label="{!$Label.c.CBS_Country}" name="hangarcountry" aura:id="searchform"
                                               value="{!v.searchedHangar.Country__c}" required="true">
-                                <option value="">Select a country</option>
-                                <option value="Poland">Poland</option>
-                                <option value="USA">USA</option>
-                                <option value="Germany">Germany</option>
-                                <option value="Ukraine">Ukraine</option>
+                                <option value="">{!$Label.c.CBS_Select_a_country}</option>
+                                <option value="Poland">{!$Label.c.CBS_Poland}</option>
+                                <option value="USA">{!$Label.c.CBS_USA}</option>
+                                <option value="Germany">{!$Label.c.CBS_Germany}</option>
+                                <option value="Ukraine">{!$Label.c.CBS_Ukraine}</option>
                             </lightning:select>
-                            <lightning:input aura:id="searchform" label="City"
+                            <lightning:input aura:id="searchform" label="{!$Label.c.CBS_City}"
                                              name="hangarcity"
                                              value="{!v.searchedHangar.City__c}"/>
-                            <lightning:button label="Search"
+                            <lightning:button label="{!$Label.c.CBS_Search}"
                                               class="slds-m-top--medium"
                                               variant="brand"
                                               onclick="{!c.searchForHangar}"/>
-                            <lightning:button label="Clear"
+                            <lightning:button label="{!$Label.c.CBS_Clear}"
                                               class="slds-m-top--medium"
                                               variant="neutral" onclick="{!c.clear}"/>
                         </form>

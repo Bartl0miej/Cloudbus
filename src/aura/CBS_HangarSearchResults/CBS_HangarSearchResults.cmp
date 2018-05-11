@@ -7,13 +7,13 @@
                 <aura:iteration items="{!v.hangars}" var="sHangar" indexVar="index">
                     <aura:if isTrue="{!v.hangars.length == 1}">
                         <li class="itemSelect slds-list__item slds-p-around_small">
-                            <c:CBS_HangarItem hangarId="{!sHangar.Id}" hangar="{!sHangar}"/>
+                            <c:CBS_HangarItem hangar="{!sHangar}"/>
                         </li>
                     </aura:if>
                     <aura:if isTrue="{!v.hangars.length > 1}">
                         <li class="slds-list__item slds-p-around_small" aura:id="listItem"
                             data-id="{!index}" onclick="{!c.addClass}">
-                            <c:CBS_HangarItem hangarId="{!sHangar.Id}" hangar="{!sHangar}"/>
+                            <c:CBS_HangarItem hangar="{!sHangar}"/>
                         </li>
                     </aura:if>
                 </aura:iteration>

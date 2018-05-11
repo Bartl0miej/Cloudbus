@@ -1,29 +1,19 @@
 <aura:component description="CBS_HangarItem" controller="CBS_HangarController">
     <aura:attribute name="hangar" type="CBS_Hangar__c"/>
-    <aura:attribute name="isActive" type="Boolean" default="false"/>
-    <aura:attribute name="selectedItemId" type="Id"/>
-    <aura:attribute name="hangarId" type="Id"/>
     <aura:registerEvent name="selectHangar" type="c:selectedHangarUpdate"/>
     <aura:registerEvent name="sendCoordinates" type="c:CBS_SetCoordinates"/>
-    <aura:attribute name="targetFields" type="Object"/>
-    <force:recordData aura:id="hangarRecord"
-                      recordId="{!v.hangarId}"
-                      targetFields="{!v.targetFields}"
-                      fields="Name, City__c, Country__c"/>
 
-    <div class="slds-media" id="item" onclick="{!c.hangarSelected}" style="margin-bottom: 5px;">
-            <div class="slds-media__body">
+    <div onclick="{!c.hangarSelected}" style="margin-bottom: 5px;">
                 <div class="slds-grid">
-                    <h3 class="slds-text-heading_small slds-m-bottom_xx-small">{!v.targetFields.Name}</h3>
+                    <h3 class="slds-text-heading_small slds-m-bottom_xx-small">{!v.hangar.Name}</h3>
                 </div>
                 <div class="slds-grid slds-gutters">
                     <div class="slds-col slds-size_1-of-2">
-                        <span class="slds-text-color_weak slds-m-right_small slds-size--1-of-2">City: {!v.targetFields.City__c}</span>
+                        <span class="slds-text-color_weak slds-m-right_small slds-size--1-of-2">City: {!v.hangar.City__c}</span>
                     </div>
                     <div class="slds-col slds-size_1-of-2">
-                        <span class="slds-text-color_weak slds-m-right_small slds-size--1-of-2">Country: {!v.targetFields.Country__c}</span>
+                        <span class="slds-text-color_weak slds-m-right_small slds-size--1-of-2">Country: {!v.hangar.Country__c}</span>
                     </div>
                 </div>
-            </div>
     </div>
 </aura:component>
