@@ -1,13 +1,8 @@
 ({
     hangarSelected : function(component, event, helper) {
-
-        let clearSelectedEvent = component.getEvent("clearSelected");
-        clearSelectedEvent.fire();
-
         let selHangar = component.get("v.hangar");
         selHangar.isActive = true;
         component.set("v.hangar", selHangar);
-        //component.set("v.selectedItemId", selHangar.Id);
         let selectEvent = component.getEvent("selectHangar");
         selectEvent.setParams({"chosenHangar" : selHangar});
         selectEvent.fire();

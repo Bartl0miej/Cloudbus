@@ -162,16 +162,14 @@
         $j("#leadForm").on("submit", function (event) {
             event.preventDefault();
 
-            $j("#leadSubmitToast").slideToggle("slow").delay(2500).slideToggle("slow");
+            openToast("leadSubmitToast");
+
             $j.ajax({
                 type: $j(this).attr("method"),
                 url: $j(this).attr("action"),
-                data: $j(this).serialize(),
-                success: function(data) {
-                    $j("#ajax-response").html(data);
-                }
+                data: $j(this).serialize()
             });
-            $j(".slds-input").val("");
+            $j(".slds-input").val(null);
         });
 
 

@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffb7f8dc-528c-4a66-b294-4414ce6fa1bc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_HangarForm/CBS_HangarForm.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_HangarSearchResults/CBS_HangarSearchResults.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cloudbus.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Cloudbus.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_HangarForm/CBS_HangarForm.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_HangarForm/CBS_HangarForm.cmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_HangarForm/CBS_HangarFormController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_HangarForm/CBS_HangarFormController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_HangarForm/CBS_HangarFormHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_HangarForm/CBS_HangarFormHelper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/aura/CBS_HangarItem/CBS_HangarItem.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_HangarItem/CBS_HangarItem.cmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_HangarItem/CBS_HangarItem.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/aura/CBS_HangarItem/CBS_HangarItemController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_HangarItem/CBS_HangarItemController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_HangarMap/CBS_HangarMapController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_HangarMap/CBS_HangarMapController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_HangarMap/CBS_HangarMapHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_HangarMap/CBS_HangarMapHelper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/aura/CBS_HangarSearchResults/CBS_HangarSearchResults.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_HangarSearchResults/CBS_HangarSearchResults.cmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/CBS_HangarSearchResults/CBS_HangarSearchResults.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_HangarSearchResults/CBS_HangarSearchResults.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/CBS_HangarSearchResults/CBS_HangarSearchResultsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_HangarSearchResults/CBS_HangarSearchResultsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flows/Lead_Convert_Process-9.flow" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/FCC_ShopRandom.page" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/FCC_ShopRandom.page" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -26,89 +20,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CBS_HangarItemController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarItem/CBS_HangarItemController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CBS_HangarSearchMain.cmp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarSearchMain/CBS_HangarSearchMain.cmp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CBS_HangarMap.cmp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarMap/CBS_HangarMap.cmp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CBS_HangarItem.cmp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarItem/CBS_HangarItem.cmp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="22" column="38" lean-forward="true" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CBS_HangarMap.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarMap/CBS_HangarMap.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CBS_HangarMapHelper.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarMap/CBS_HangarMapHelper.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CBS_HangarMapController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarMap/CBS_HangarMapController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CBS_HangarSearchResults.cmp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarSearchResults/CBS_HangarSearchResults.cmp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CBS_HangarSearchResults.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarSearchResults/CBS_HangarSearchResults.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -129,6 +41,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>results</find>
+      <find>7.</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -150,20 +63,20 @@
         <option value="$PROJECT_DIR$/src/aura/CBS_HangarMap/CBS_HangarMap.cmp" />
         <option value="$PROJECT_DIR$/src/aura/CBS_SetCoordinates/CBS_SetCoordinates.evt" />
         <option value="$PROJECT_DIR$/src/classes/CBS_HangarController.cls" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_HangarSearchResults/CBS_HangarSearchResultsController.js" />
         <option value="$PROJECT_DIR$/src/aura/CBS_ClearSelectedHangar/CBS_ClearSelectedHangar.evt" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_HangarItem/CBS_HangarItemController.js" />
         <option value="$PROJECT_DIR$/src/aura/CBS_HangarForm/CBS_HangarForm.css" />
         <option value="$PROJECT_DIR$/src/aura/CBS_HangarForm/CBS_HangarForm.cmp" />
         <option value="$PROJECT_DIR$/src/aura/CBS_HangarForm/CBS_HangarFormHelper.js" />
         <option value="$PROJECT_DIR$/src/aura/CBS_HangarForm/CBS_HangarFormController.js" />
         <option value="$PROJECT_DIR$/src/aura/CBS_HangarMap/CBS_HangarMapController.js" />
         <option value="$PROJECT_DIR$/src/aura/CBS_HangarMap/CBS_HangarMapHelper.js" />
-        <option value="$PROJECT_DIR$/src/pages/FCC_ShopRandom.page" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_HangarItem/CBS_HangarItem.cmp" />
         <option value="$PROJECT_DIR$/src/aura/CBS_HangarItem/CBS_HangarItem.css" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_HangarSearchResults/CBS_HangarSearchResultsController.js" />
         <option value="$PROJECT_DIR$/src/aura/CBS_HangarSearchResults/CBS_HangarSearchResults.css" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_HangarItem/CBS_HangarItem.cmp" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_HangarItem/CBS_HangarItemController.js" />
         <option value="$PROJECT_DIR$/src/aura/CBS_HangarSearchResults/CBS_HangarSearchResults.cmp" />
+        <option value="$PROJECT_DIR$/src/pages/FCC_ShopRandom.page" />
       </list>
     </option>
   </component>
@@ -173,7 +86,7 @@
         <entry key="Cloudbus">
           <value>
             <ModuleWorkspaceSettings>
-              <option name="moduleContentsLastModified" value="1526018473431" />
+              <option name="moduleContentsLastModified" value="1526033026501" />
             </ModuleWorkspaceSettings>
           </value>
         </entry>
@@ -196,17 +109,17 @@
                       <entry key="AURA/CBS_CLEARSELECTEDHANGAR" value="1525944006677" />
                       <entry key="AURA/CBS_HANGARDETAILS" value="1525862300727" />
                       <entry key="AURA/CBS_HANGARFORM" value="1525956787172" />
-                      <entry key="AURA/CBS_HANGARITEM" value="1526025386016" />
+                      <entry key="AURA/CBS_HANGARITEM" value="1526029657466" />
                       <entry key="AURA/CBS_HANGARMAP" value="1525985047000" />
                       <entry key="AURA/CBS_HANGARSEARCHMAIN" value="1525911136772" />
-                      <entry key="AURA/CBS_HANGARSEARCHRESULTS" value="1526025698068" />
+                      <entry key="AURA/CBS_HANGARSEARCHRESULTS" value="1526030549328" />
                       <entry key="AURA/CBS_HARNESSAPP" value="1525850714393" />
                       <entry key="AURA/CBS_SETCOORDINATES" value="1525935016966" />
                       <entry key="AURA/CLEARHANGARSEARCH" value="1525859428000" />
                       <entry key="AURA/SEARCHHANGAR" value="1525852772000" />
                       <entry key="AURA/SELECTEDHANGARUPDATE" value="1525853529622" />
                       <entry key="CLASSES/CBS_HANGARCONTROLLER.CLS" value="1525935162897" />
-                      <entry key="PAGES/FCC_SHOPRANDOM.PAGE" value="1525986238691" />
+                      <entry key="PAGES/FCC_SHOPRANDOM.PAGE" value="1526031421551" />
                     </map>
                   </option>
                   <option name="lastBuildScope" value="CUSTOM" />
@@ -226,7 +139,7 @@
                   </option>
                   <option name="lastCustomSelectionUrls">
                     <set>
-                      <option value="metadata://Flow/Lead_Convert_Process-9" />
+                      <option value="metadata://Flow/Lead_Convert_Process-12" />
                     </set>
                   </option>
                 </ConnectionWorkspaceSettings>
@@ -239,71 +152,17 @@
             <entry key="Developer Edition">
               <value>
                 <MetadataContents>
-                  <option name="lastPopulated" value="1525943887850" />
+                  <option name="lastPopulated" value="1526032939562" />
                   <option name="metadataTypes">
                     <set>
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="Custom%3A Support Profile" />
-                            <option value="Customer Community Plus Login User" />
-                            <option value="Analytics Cloud Integration User" />
-                            <option value="High Volume Customer Portal User" />
-                            <option value="Cross Org Data Proxy User" />
-                            <option value="Force%2Ecom - Free User" />
-                            <option value="PlatformPortal" />
-                            <option value="External Identity User" />
-                            <option value="Force%2Ecom - App Subscription User" />
-                            <option value="Chatter External User" />
-                            <option value="Standard" />
-                            <option value="Identity User" />
-                            <option value="Custom%3A Sales Profile" />
-                            <option value="Partner Community Login User" />
-                            <option value="ContractManager" />
-                            <option value="Customer Community Plus User" />
-                            <option value="Shop Assistant2" />
-                            <option value="Partner Community User" />
-                            <option value="StandardAul" />
-                            <option value="Gold Partner User" />
-                            <option value="Chatter Moderator User" />
-                            <option value="ReadOnly" />
-                            <option value="SolutionManager" />
-                            <option value="Chatter Free User" />
-                            <option value="Shop Assistant" />
-                            <option value="Guest" />
-                            <option value="HighVolumePortal" />
-                            <option value="MarketingProfile" />
-                            <option value="Customer Portal Manager Standard" />
-                            <option value="Customer Community Login User" />
-                            <option value="Analytics Cloud Security User" />
-                            <option value="Admin" />
-                            <option value="Partner App Subscription User" />
-                            <option value="Silver Partner User" />
-                            <option value="Work%2Ecom Only User" />
-                            <option value="Authenticated Website" />
-                            <option value="Random Clients Profile" />
-                            <option value="CBS_Service" />
-                            <option value="Customer Community User" />
-                            <option value="CBS_Clients" />
-                            <option value="Custom%3A Marketing Profile" />
-                            <option value="CBS_Executive" />
-                            <option value="CBS_Sales" />
-                            <option value="Customer Portal Manager Custom" />
-                            <option value="Shop Assistant Manager" />
+                            <option value="FCC_Shop__c" />
+                            <option value="Lead" />
                           </set>
                         </option>
-                        <option name="name" value="Profile" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="ApexDevNet" />
-                            <option value="ShopRestCallout" />
-                            <option value="SOAP_Login" />
-                            <option value="Google_geolocation" />
-                          </set>
-                        </option>
-                        <option name="name" value="RemoteSiteSetting" />
+                        <option name="name" value="Workflow" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
@@ -316,15 +175,6 @@
                           </set>
                         </option>
                         <option name="name" value="WorkflowFieldUpdate" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="FCC_Shop__c" />
-                            <option value="Lead" />
-                          </set>
-                        </option>
-                        <option name="name" value="Workflow" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
@@ -377,27 +227,27 @@
                             <option value="Product" />
                             <option value="Security" />
                             <option value="Knowledge" />
+                            <option value="Ideas" />
                             <option value="Case" />
                             <option value="Name" />
-                            <option value="Ideas" />
                             <option value="FieldService" />
                             <option value="SocialCustomerService" />
                             <option value="OmniChannel" />
-                            <option value="Search" />
                             <option value="Opportunity" />
+                            <option value="Search" />
                             <option value="FileUploadAndDownloadSecurity" />
-                            <option value="Order" />
                             <option value="Activities" />
+                            <option value="Order" />
                             <option value="OrgPreference" />
                             <option value="BusinessHours" />
-                            <option value="Forecasting" />
                             <option value="Mobile" />
+                            <option value="Forecasting" />
                             <option value="Quote" />
                             <option value="LiveAgent" />
                             <option value="PersonalJourney" />
                             <option value="Entitlement" />
-                            <option value="PathAssistant" />
                             <option value="Contract" />
+                            <option value="PathAssistant" />
                           </set>
                         </option>
                         <option name="name" value="Settings" />
@@ -437,129 +287,180 @@
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="ChangePassword" />
-                            <option value="SiteTemplate" />
-                            <option value="InMaintenance" />
-                            <option value="FCC_ShopView" />
-                            <option value="StdExceptionTemplate" />
-                            <option value="FCC_ShopsStandardRestApi" />
-                            <option value="SiteRegister" />
-                            <option value="AnswersHome" />
-                            <option value="FCC_WholesalerEdit" />
-                            <option value="FCC_ShopRandom" />
-                            <option value="FCC_ShopDownloadXLS" />
-                            <option value="FCC_WholesalerView" />
-                            <option value="FCC_ShopDownloadCSV" />
-                            <option value="SiteLogin" />
-                            <option value="FCC_WholesalerView2" />
-                            <option value="Unauthorized" />
-                            <option value="SiteRegisterConfirm" />
-                            <option value="FCC_ShopImport" />
-                            <option value="UnderConstruction" />
-                            <option value="FCC_OrgInfo" />
-                            <option value="FileNotFound" />
-                            <option value="ForgotPassword" />
-                            <option value="Exception" />
-                            <option value="FCC_UserManagement" />
-                            <option value="IdeasHome" />
-                            <option value="AccountHierarchyPage" />
-                            <option value="BandwidthExceeded" />
-                            <option value="ForgotPasswordConfirm" />
-                            <option value="FCC_ShopsExternal" />
-                            <option value="MyProfilePage" />
-                            <option value="FCC_ShopEdit" />
-                            <option value="FCC_ShopSearch" />
-                            <option value="FCC_WholesalersExternal" />
+                            <option value="FCC_SendInvitationEmail" />
                           </set>
                         </option>
-                        <option name="name" value="ApexPage" />
+                        <option name="name" value="ApexTrigger" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="Metric.Progress" />
-                            <option value="Metric.Completion" />
+                            <option value="iEditJS" />
+                            <option value="jCrop" />
+                            <option value="jQueryUI" />
+                            <option value="jQuery" />
+                            <option value="FCC_Default_Logo" />
+                            <option value="jQuery_UI" />
+                            <option value="FCC_LoadingGif" />
+                            <option value="viewStyle" />
+                            <option value="FCC_Default_Image" />
+                            <option value="iEditCSS" />
+                            <option value="SldsCSS" />
+                            <option value="leaflet" />
+                            <option value="SiteSamples" />
                           </set>
                         </option>
-                        <option name="name" value="RecordType" />
+                        <option name="name" value="StaticResource" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="Order.AllActivatedOrders" />
-                            <option value="Opportunity.NewThisWeek" />
-                            <option value="Case.AllOpenCases" />
-                            <option value="Case.MyCases" />
-                            <option value="Order.AllDraftOrders" />
-                            <option value="User.ActiveUsers" />
-                            <option value="Order.AllOrders" />
-                            <option value="CBS_Hangar__c.All" />
-                            <option value="Scorecard.MyScorecards" />
-                            <option value="Opportunity.ClosingNextMonth" />
-                            <option value="Contact.AllContacts" />
-                            <option value="Case.MyOpenCases" />
-                            <option value="Opportunity.Default_Opportunity_Pipeline" />
-                            <option value="Opportunity.Private" />
-                            <option value="Contract.AllContracts" />
-                            <option value="Contract.MyActivatedContracts" />
-                            <option value="FCC_Shop__c.All" />
-                            <option value="Contract.AllDraftContracts" />
-                            <option value="WorkFeedbackRequest.AboutTopics" />
-                            <option value="Contact.NewLastWeek" />
-                            <option value="SocialPersona.AllSocialPersonas" />
-                            <option value="User.AllUsers" />
-                            <option value="Contract.MyDraftContracts" />
-                            <option value="Lead.TodaysLeads" />
-                            <option value="Solution.AllUnreviewedSolutions" />
-                            <option value="Account.NewLastWeek" />
-                            <option value="Activity.UpcomingEvents" />
-                            <option value="Account.MyAccounts" />
-                            <option value="Opportunity.AllOpportunities" />
-                            <option value="Contact.BirthdaysThisMonth" />
-                            <option value="Account.AllAccounts" />
-                            <option value="Opportunity.ClosingThisMonth" />
-                            <option value="CollaborationGroup.All_ChatterGroups" />
-                            <option value="Contact.NewThisWeek" />
-                            <option value="Activity.AllActivities" />
-                            <option value="Opportunity.NewLastWeek" />
-                            <option value="FCC_Shop_Wholesaler_Association__c.All" />
-                            <option value="Asset.AllAssets" />
-                            <option value="User.AdminUsers" />
-                            <option value="Scorecard.AllScorecards" />
-                            <option value="Opportunity.MyOpportunities" />
-                            <option value="Campaign.MyActiveCampaigns" />
-                            <option value="Lead.MyUnreadLeads" />
-                            <option value="Campaign.AllActiveCampaigns" />
-                            <option value="Product2.AllProducts" />
-                            <option value="Activity.TodaysTasks" />
-                            <option value="Contact.MyContacts" />
-                            <option value="Opportunity.Won" />
-                            <option value="Case.AllClosedCases" />
-                            <option value="Solution.AllReviewedSolutions" />
-                            <option value="Account.PlatinumandGoldSLACustomers" />
-                            <option value="Contract.MyInApprovalContracts" />
-                            <option value="Activity.MyActivities" />
-                            <option value="Contract.AllInApprovalContracts" />
-                            <option value="WorkFeedbackTemplate.All" />
-                            <option value="Lead.AllOpenLeads" />
-                            <option value="Account.NewThisWeek" />
-                            <option value="WorkFeedbackRequest.All" />
-                            <option value="Lead.ViewCustom1" />
-                            <option value="Idea.Ideas_Last_7_Days" />
-                            <option value="FCC_Wholesaler__c.All" />
-                            <option value="Lead.ViewCustom2" />
-                            <option value="Contract.AllActivatedContracts" />
+                            <option value="Lead_Convert_Process-4" />
+                            <option value="Lead_Convert_Process-3" />
+                            <option value="Lead_Convert_Process-2" />
+                            <option value="Lead_Convert_Process-12" />
+                            <option value="Lead_Convert_Process-10" />
+                            <option value="Lead_Convert_Process-11" />
+                            <option value="Lead_Convert_Process-8" />
+                            <option value="Lead_Convert_Process-7" />
+                            <option value="Lead_Convert_Process-6" />
+                            <option value="Lead_Convert_Process-5" />
                           </set>
                         </option>
-                        <option name="name" value="ListView" />
+                        <option name="name" value="Flow" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="Internal Zone" />
+                            <option value="FCC_Setting__c-en_US" />
+                            <option value="FCC_Trigger_Exceptions__c-en_US" />
+                            <option value="CBS_Hangar__c-en_US" />
+                            <option value="FCC_Shop_Wholesaler_Association__c-en_US" />
+                            <option value="FCC_Wholesaler__c-en_US" />
+                            <option value="FCC_Shop__c-en_US" />
                           </set>
                         </option>
-                        <option name="name" value="Community" />
+                        <option name="name" value="CustomObjectTranslation" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Custom%3A Support Profile" />
+                            <option value="Customer Community Plus Login User" />
+                            <option value="Analytics Cloud Integration User" />
+                            <option value="High Volume Customer Portal User" />
+                            <option value="Force%2Ecom - Free User" />
+                            <option value="Cross Org Data Proxy User" />
+                            <option value="PlatformPortal" />
+                            <option value="External Identity User" />
+                            <option value="Force%2Ecom - App Subscription User" />
+                            <option value="Standard" />
+                            <option value="Chatter External User" />
+                            <option value="Identity User" />
+                            <option value="Custom%3A Sales Profile" />
+                            <option value="Partner Community Login User" />
+                            <option value="ContractManager" />
+                            <option value="Customer Community Plus User" />
+                            <option value="Shop Assistant2" />
+                            <option value="Partner Community User" />
+                            <option value="StandardAul" />
+                            <option value="Gold Partner User" />
+                            <option value="Chatter Moderator User" />
+                            <option value="SolutionManager" />
+                            <option value="ReadOnly" />
+                            <option value="Chatter Free User" />
+                            <option value="Shop Assistant" />
+                            <option value="Guest" />
+                            <option value="HighVolumePortal" />
+                            <option value="Customer Portal Manager Standard" />
+                            <option value="MarketingProfile" />
+                            <option value="Customer Community Login User" />
+                            <option value="Analytics Cloud Security User" />
+                            <option value="Admin" />
+                            <option value="Work%2Ecom Only User" />
+                            <option value="Partner App Subscription User" />
+                            <option value="Silver Partner User" />
+                            <option value="Authenticated Website" />
+                            <option value="Random Clients Profile" />
+                            <option value="CBS_Service" />
+                            <option value="CBS_Clients" />
+                            <option value="Customer Community User" />
+                            <option value="Custom%3A Marketing Profile" />
+                            <option value="CBS_Executive" />
+                            <option value="CBS_Sales" />
+                            <option value="Customer Portal Manager Custom" />
+                            <option value="Shop Assistant Manager" />
+                          </set>
+                        </option>
+                        <option name="name" value="Profile" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="ApexDevNet" />
+                            <option value="ShopRestCallout" />
+                            <option value="SOAP_Login" />
+                            <option value="Google_geolocation" />
+                          </set>
+                        </option>
+                        <option name="name" value="RemoteSiteSetting" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Opportunity.DeliveryStatus" />
+                            <option value="Campaign.ViewCampaignInfluenceReport" />
+                            <option value="Case.UpsellCrosssellOpportunity" />
+                            <option value="Account.Billing" />
+                          </set>
+                        </option>
+                        <option name="name" value="WebLink" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="FCC_Shop__c.Phone_Format_for_Poland" />
+                          </set>
+                        </option>
+                        <option name="name" value="ValidationRule" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Order" />
+                            <option value="Account" />
+                            <option value="User" />
+                            <option value="FCC_Setting__c" />
+                            <option value="Contact" />
+                            <option value="Case" />
+                            <option value="FCC_Trigger_Exceptions__c" />
+                            <option value="Campaign" />
+                            <option value="FCC_Shop__c" />
+                            <option value="FCC_Wholesaler__c" />
+                            <option value="Opportunity" />
+                            <option value="Lead" />
+                            <option value="Asset" />
+                            <option value="CBS_Hangar__c" />
+                          </set>
+                        </option>
+                        <option name="name" value="SharingRules" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="DE Default" />
+                          </set>
+                        </option>
+                        <option name="name" value="HomePageLayout" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="FCC_Shop__c.Ger_Users" />
+                            <option value="FCC_Shop__c.PL_Users" />
+                          </set>
+                        </option>
+                        <option name="name" value="SharingCriteriaRule" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
@@ -574,8 +475,8 @@
                             <option value="SVPCustomerServiceSupport" />
                             <option value="VPInternationalSales" />
                             <option value="EasternSalesTeam" />
-                            <option value="ChannelSalesTeam" />
                             <option value="CEO" />
+                            <option value="ChannelSalesTeam" />
                             <option value="CustomerSupportInternational" />
                             <option value="CFO" />
                             <option value="WesternSalesTeam" />
@@ -613,588 +514,6 @@
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="sf_chttr_apps" />
-                            <option value="sf_com_apps" />
-                          </set>
-                        </option>
-                        <option name="name" value="InstalledPackage" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Case.Standard" />
-                            <option value="Lead.Standard" />
-                          </set>
-                        </option>
-                        <option name="name" value="AssignmentRule" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="FCC_SendInvitationEmail" />
-                          </set>
-                        </option>
-                        <option name="name" value="ApexTrigger" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="iEditJS" />
-                            <option value="jCrop" />
-                            <option value="jQuery_UI" />
-                            <option value="FCC_Default_Logo" />
-                            <option value="jQuery" />
-                            <option value="jQueryUI" />
-                            <option value="FCC_LoadingGif" />
-                            <option value="viewStyle" />
-                            <option value="FCC_Default_Image" />
-                            <option value="iEditCSS" />
-                            <option value="SldsCSS" />
-                            <option value="SiteSamples" />
-                            <option value="leaflet" />
-                          </set>
-                        </option>
-                        <option name="name" value="StaticResource" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Lead_Convert_Process-4" />
-                            <option value="Lead_Convert_Process-3" />
-                            <option value="Lead_Convert_Process-2" />
-                            <option value="Lead_Convert_Process-9" />
-                            <option value="Lead_Convert_Process-8" />
-                            <option value="Lead_Convert_Process-7" />
-                            <option value="Lead_Convert_Process-6" />
-                            <option value="Lead_Convert_Process-5" />
-                          </set>
-                        </option>
-                        <option name="name" value="Flow" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="FCC_Setting__c-en_US" />
-                            <option value="FCC_Trigger_Exceptions__c-en_US" />
-                            <option value="CBS_Hangar__c-en_US" />
-                            <option value="FCC_Shop_Wholesaler_Association__c-en_US" />
-                            <option value="FCC_Wholesaler__c-en_US" />
-                            <option value="FCC_Shop__c-en_US" />
-                          </set>
-                        </option>
-                        <option name="name" value="CustomObjectTranslation" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="FCC_Apex_classes" />
-                            <option value="FCC_Shops" />
-                            <option value="FCC_Send_Email_to" />
-                            <option value="FCC_Contract_end_before_start" />
-                            <option value="FCC_Reset_password" />
-                            <option value="FCC_Show_Permission_Sets" />
-                            <option value="FCC_Yes" />
-                            <option value="FCC_Search_Form" />
-                            <option value="FCC_Error_request" />
-                            <option value="FCC_Session_id" />
-                            <option value="FCC_Search_for_Wholesaler" />
-                            <option value="FCC_deactivated" />
-                            <option value="FCC_Shop_created" />
-                            <option value="FCC_Bad_file_extension" />
-                            <option value="FCC_Email_reset" />
-                            <option value="FCC_Overlapping_with" />
-                            <option value="FCC_Show_Login_History" />
-                            <option value="FCC_Search_for_Shops" />
-                            <option value="FCC_Email" />
-                            <option value="FCC_Dear_Sir" />
-                            <option value="FCC_Stack_underflow" />
-                            <option value="FCC_Photo_too_big" />
-                            <option value="FCC_Edit" />
-                            <option value="FCC_Permission_sets_of" />
-                            <option value="FCC_First_Page_Symbol" />
-                            <option value="FCC_Delete" />
-                            <option value="FCC_Shop_Name" />
-                            <option value="FCC_Clear" />
-                            <option value="FCC_Confirmation_required" />
-                            <option value="FCC_Specify_at_least_one_field" />
-                            <option value="FCC_Send_Email" />
-                            <option value="FCC_Email_Required" />
-                            <option value="FCC_Add_Contract" />
-                            <option value="FCC_Edit_Detail_Info" />
-                            <option value="FCC_Activate" />
-                            <option value="FCC_Last_Page_Symbol" />
-                            <option value="FCC_No_login_history" />
-                            <option value="FCC_Add_Contracts_To" />
-                            <option value="FCC_Show_session_id" />
-                            <option value="FCC_Duplicate_Record" />
-                            <option value="FCC_Wholesaler_deleted" />
-                            <option value="FCC_Export_Results" />
-                            <option value="FCC_No_public_groups" />
-                            <option value="FCC_Shop_deleted" />
-                            <option value="FCC_Join_us_today" />
-                            <option value="FCC_Deactivate" />
-                            <option value="FCC_Overlapping_with_assoc" />
-                            <option value="FCC_None" />
-                            <option value="FCC_Random_Shops" />
-                            <option value="FCC_Results" />
-                            <option value="FCC_Both_dates" />
-                            <option value="FCC_activated" />
-                            <option value="FCC_Reset_pw_deactivated" />
-                            <option value="FCC_Basic" />
-                            <option value="FCC_Show_ui_session" />
-                            <option value="FCC_Active_users" />
-                            <option value="FCC_Show_Public_Groups" />
-                            <option value="FCC_Contract_Start_Date" />
-                            <option value="FCC_Search_for_Wholesalers" />
-                            <option value="FCC_Last_Page" />
-                            <option value="FCC_No_email_address" />
-                            <option value="FCC_Order_by" />
-                            <option value="FCC_Previous_Page" />
-                            <option value="FCC_Org_owner" />
-                            <option value="FCC_Org_info" />
-                            <option value="FCC_Update_Shop" />
-                            <option value="FCC_Action" />
-                            <option value="FCC_Detail" />
-                            <option value="FCC_Org_instance" />
-                            <option value="FCC_Update_Wholesaler" />
-                            <option value="FCC_Map" />
-                            <option value="FCC_City" />
-                            <option value="FCC_Edit_Basic_Info" />
-                            <option value="FCC_Session_info" />
-                            <option value="FCC_Copy" />
-                            <option value="FCC_Add_one_date" />
-                            <option value="FCC_Export_to_XLS" />
-                            <option value="FCC_Wholesalers" />
-                            <option value="FCC_Summary_of_org" />
-                            <option value="FCC_Select_CSV" />
-                            <option value="FCC_Shop_Hierarchy" />
-                            <option value="FCC_Select" />
-                            <option value="FCC_Cannot_reset_password" />
-                            <option value="FCC_Export_to_CSV" />
-                            <option value="FCC_No_perm_sets" />
-                            <option value="FCC_Close" />
-                            <option value="FCC_Delete_Photo_Confirmation" />
-                            <option value="FCC_Save" />
-                            <option value="FCC_Germany" />
-                            <option value="FCC_Add_Wholesaler" />
-                            <option value="FCC_Confirm" />
-                            <option value="FCC_Access_external_shops" />
-                            <option value="FCC_Reverse" />
-                            <option value="FCC_Cash_desks_report" />
-                            <option value="FCC_Name" />
-                            <option value="FCC_Contract_End_Date" />
-                            <option value="FCC_No_wholesalers" />
-                            <option value="FCC_Delete_Wholesaler" />
-                            <option value="FCC_Wholesaler_Name" />
-                            <option value="FCC_Previous_Page_Symbol" />
-                            <option value="FCC_Public_groups_of" />
-                            <option value="FCC_CSV_Error" />
-                            <option value="FCC_Body" />
-                            <option value="FCC_Search" />
-                            <option value="FCC_There_is_no_specified_email" />
-                            <option value="FCC_User_Info" />
-                            <option value="FCC_Org_Information" />
-                            <option value="FCC_Random_Trademark" />
-                            <option value="FCC_has_been" />
-                            <option value="FCC_Status" />
-                            <option value="FCC_Shops_Cooperating" />
-                            <option value="FCC_Imported_Successfully" />
-                            <option value="FCC_Total_users" />
-                            <option value="FCC_Process" />
-                            <option value="FCC_Francesinha" />
-                            <option value="FCC_Wholesaler_updated" />
-                            <option value="FCC_All" />
-                            <option value="FCC_Pipe" />
-                            <option value="FCC_Delete_Shop" />
-                            <option value="FCC_First_Page" />
-                            <option value="FCC_Required" />
-                            <option value="FCC_Shop_updated" />
-                            <option value="FCC_Remove" />
-                            <option value="FCC_Family_cash_desks_number" />
-                            <option value="FCC_Bad_Start_Date_End_Date" />
-                            <option value="FCC_Cash_desks_number" />
-                            <option value="FCC_Country" />
-                            <option value="FCC_No" />
-                            <option value="Thank_you_for_joining" />
-                            <option value="FCC_Import" />
-                            <option value="FCC_De_Activate" />
-                            <option value="FCC_Next_Page" />
-                            <option value="FCC_Username" />
-                            <option value="FCC_New_Contracts" />
-                            <option value="FCC_Success" />
-                            <option value="FCC_Space_char" />
-                            <option value="FCC_Update" />
-                            <option value="FCC_Delete_Photo" />
-                            <option value="FCC_No_results_found" />
-                            <option value="FCC_Number_of_vf" />
-                            <option value="FCC_Cancel" />
-                            <option value="FCC_Login_history_of" />
-                            <option value="FCC_Poland" />
-                            <option value="FCC_No_email" />
-                            <option value="FCC_Subject" />
-                            <option value="FCC_USA" />
-                            <option value="FCC_Create_Shop" />
-                            <option value="FCC_Records_per_page" />
-                            <option value="FCC_Ukraine" />
-                            <option value="FCC_No_email_info" />
-                            <option value="FCC_Next_Page_Symbol" />
-                            <option value="FCC_UI_session_id" />
-                            <option value="FCC_Are_you_sure" />
-                            <option value="FCC_Random_Shops_Title" />
-                            <option value="FCC_Email_Sent" />
-                            <option value="FCC_Add_Wholesaler_to" />
-                          </set>
-                        </option>
-                        <option name="name" value="CustomLabel" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="CustomLabels" />
-                          </set>
-                        </option>
-                        <option name="name" value="CustomLabels" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="contactquery" />
-                            <option value="FCC_ShopSearchController" />
-                            <option value="FCC_ShopImportController" />
-                            <option value="AccountHierarchyTestData" />
-                            <option value="CBS_HangarController" />
-                            <option value="FCC_UserManagementController" />
-                            <option value="SaveImage" />
-                            <option value="ForgotPasswordControllerTest" />
-                            <option value="SiteRegisterControllerTest" />
-                            <option value="FCC_Util" />
-                            <option value="FCC_ShopRandomController" />
-                            <option value="MyProfilePageController" />
-                            <option value="FCC_ShopReportEmailBatch" />
-                            <option value="AttachmentUploadController" />
-                            <option value="FCC_WholesalerSOAP" />
-                            <option value="FCC_SmsShopSOAPWebServiceMock" />
-                            <option value="JSRemotingFileUploadController" />
-                            <option value="FCC_WholesalersRestCallout" />
-                            <option value="ChangePasswordControllerTest" />
-                            <option value="FCC_SmsUtil" />
-                            <option value="FCC_WholesalerREST" />
-                            <option value="FCC_ShopReportEmailBatchScheduler" />
-                            <option value="FCC_ShopsStandardRestApiCallout" />
-                            <option value="AccountStructure" />
-                            <option value="FCC_ShopRestCallout" />
-                            <option value="FCC_ShopsExternalControllerTest" />
-                            <option value="ForgotPasswordController" />
-                            <option value="FCC_OrgInfoController" />
-                            <option value="FCC_ShopREST" />
-                            <option value="FCC_MultiRequestMock" />
-                            <option value="FCC_WholesalerExternalCalloutTest" />
-                            <option value="FCC_WholesalersExternalControllerTest" />
-                            <option value="WIP_ShopEditController" />
-                            <option value="MyPagingController" />
-                            <option value="SiteRegisterController" />
-                            <option value="FCC_ShopsExternalController" />
-                            <option value="FCC_ShopCashDesksReportBuilder" />
-                            <option value="FCC_SmsShopSOAPWebService" />
-                            <option value="FCC_ShopViewController" />
-                            <option value="FCC_ShopsStandardRestApiController" />
-                            <option value="AsyncFCC_SmsShopSOAPWebService" />
-                            <option value="FCC_WholesalerViewController2" />
-                            <option value="FCC_WholesalerExternalCallout" />
-                            <option value="FCC_ShopSOAP" />
-                            <option value="SiteLoginControllerTest" />
-                            <option value="FCC_ShopEditController" />
-                            <option value="FCC_ShopCSV" />
-                            <option value="AddAttachmentExt" />
-                            <option value="FCC_WholesalersExternalController" />
-                            <option value="InlineAcountHerachy_TestUtilities" />
-                            <option value="MyProfilePageControllerTest" />
-                            <option value="FCC_WholesalerViewController" />
-                            <option value="SiteLoginController" />
-                            <option value="FCC_DeletePopup" />
-                            <option value="testAccountHierarchy" />
-                            <option value="ChangePasswordController" />
-                            <option value="FCC_SingleRequestMock" />
-                          </set>
-                        </option>
-                        <option name="name" value="ApexClass" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="CBS_Hangar__c-Hangar Layout" />
-                            <option value="Account-Account %28Sales%29 Layout" />
-                            <option value="Contact-Contact %28Support%29 Layout" />
-                            <option value="Product2-Product Layout" />
-                            <option value="Lead-Lead Layout" />
-                            <option value="Contact-Contact Layout" />
-                            <option value="Case-Case %28Sales%29 Layout" />
-                            <option value="Lead-Lead %28Support%29 Layout" />
-                            <option value="CollaborationGroup-Group Layout" />
-                            <option value="DandBCompany-D%26B Company Layout" />
-                            <option value="AssetRelationship-Asset Relationship Layout" />
-                            <option value="Case-Case %28Support%29 Layout" />
-                            <option value="Macro-Macro Layout" />
-                            <option value="Order-Order Layout" />
-                            <option value="UserProvisioningRequest-User Provisioning Request Layout" />
-                            <option value="ScorecardMetric-Scorecard Metric Layout" />
-                            <option value="Solution-Solution Layout" />
-                            <option value="Event-Event Layout" />
-                            <option value="Pricebook2-Price Book Layout" />
-                            <option value="UserProvisioningLog-User Provisioning Log Layout" />
-                            <option value="UserProvAccount-User Provisioning Account Layout" />
-                            <option value="Contact-Contact %28Marketing%29 Layout" />
-                            <option value="Task-Task Layout" />
-                            <option value="FCC_Shop__c-Shop Layout" />
-                            <option value="Opportunity-Opportunity Layout" />
-                            <option value="Asset-Asset Layout" />
-                            <option value="OrderItem-Order Product Layout" />
-                            <option value="DuplicateRecordSet-Duplicate Record Set Layout" />
-                            <option value="OpportunityLineItem-Opportunity Product Layout" />
-                            <option value="Case-Case Layout" />
-                            <option value="Contract-Contract Layout" />
-                            <option value="Account-Account Layout" />
-                            <option value="Campaign-Campaign Layout" />
-                            <option value="UserAlt-User Profile Layout" />
-                            <option value="ScorecardAssociation-Scorecard Association Layout" />
-                            <option value="Opportunity-Opportunity %28Sales%29 Layout" />
-                            <option value="SocialPersona-Social Persona Layout" />
-                            <option value="Scorecard-Scorecard Layout" />
-                            <option value="Case-Case %28Marketing%29 Layout" />
-                            <option value="PricebookEntry-Price Book Entry Layout" />
-                            <option value="CaseClose-Close Case Layout" />
-                            <option value="FeedItem-Feed Item Layout" />
-                            <option value="Idea-Idea Layout" />
-                            <option value="ContentVersion-Content Version Layout" />
-                            <option value="Opportunity-Opportunity %28Support%29 Layout" />
-                            <option value="Global-Global Layout" />
-                            <option value="Lead-Lead %28Sales%29 Layout" />
-                            <option value="Account-Account %28Marketing%29 Layout" />
-                            <option value="EmailMessage-Email Message Layout" />
-                            <option value="SocialPost-Social Post Layout" />
-                            <option value="CampaignMember-Campaign Member Page Layout" />
-                            <option value="Account-Account %28Support%29 Layout" />
-                            <option value="FCC_Shop_Wholesaler_Association__c-Shop-Wholesaler Association Layout" />
-                            <option value="QuickText-Quick Text Layout" />
-                            <option value="FCC_Wholesaler__c-Wholesaler Layout" />
-                            <option value="User-User Layout" />
-                            <option value="Contact-Contact %28Sales%29 Layout" />
-                            <option value="Lead-Lead %28Marketing%29 Layout" />
-                            <option value="Opportunity-Opportunity %28Marketing%29 Layout" />
-                          </set>
-                        </option>
-                        <option name="name" value="Layout" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="SiteFooter" />
-                            <option value="FCC_Load_Action" />
-                            <option value="SitePoweredBy" />
-                            <option value="SiteLogin" />
-                            <option value="FCC_Slds_Load_Action" />
-                            <option value="SiteHeader" />
-                            <option value="ShopsHierarchyTree" />
-                          </set>
-                        </option>
-                        <option name="name" value="ApexComponent" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="FCC_Wholesaler__c.City__c" />
-                            <option value="FCC_Shop__c.City__c" />
-                            <option value="Case.SLAViolation__c" />
-                            <option value="Lead.Primary__c" />
-                            <option value="Lead.CurrentGenerators__c" />
-                            <option value="FCC_Shop__c.Trigger__c" />
-                            <option value="Account.NumberofLocations__c" />
-                            <option value="FCC_Shop__c.Email__c" />
-                            <option value="Opportunity.MainCompetitors__c" />
-                            <option value="Account.UpsellOpportunity__c" />
-                            <option value="Account.SLASerialNumber__c" />
-                            <option value="FCC_Trigger_Exceptions__c.FCC_ShopTrigger__c" />
-                            <option value="Account.CustomerPriority__c" />
-                            <option value="FCC_Shop__c.Parent_Shop__c" />
-                            <option value="FCC_Shop__c.License_Number__c" />
-                            <option value="Opportunity.OrderNumber__c" />
-                            <option value="Metric.OrigMetricId__c" />
-                            <option value="FCC_Shop__c.Insert_Successful__c" />
-                            <option value="Case.EngineeringReqNumber__c" />
-                            <option value="Account.SLAExpirationDate__c" />
-                            <option value="Case.PotentialLiability__c" />
-                            <option value="FCC_Wholesaler__c.Country__c" />
-                            <option value="User.Country__c" />
-                            <option value="FCC_Wholesaler__c.Website__c" />
-                            <option value="Opportunity.TrackingNumber__c" />
-                            <option value="Account.Active__c" />
-                            <option value="FCC_Shop__c.Telephone__c" />
-                            <option value="Opportunity.DeliveryInstallationStatus__c" />
-                            <option value="FCC_Shop_Wholesaler_Association__c.Start_Date__c" />
-                            <option value="Contact.Level__c" />
-                            <option value="FCC_Shop_Wholesaler_Association__c.Wholesaler__c" />
-                            <option value="Goal.OrigGoalId__c" />
-                            <option value="FCC_Shop_Wholesaler_Association__c.Shop__c" />
-                            <option value="FCC_Shop__c.Street__c" />
-                            <option value="CBS_Hangar__c.Capacity__c" />
-                            <option value="CBS_Hangar__c.City__c" />
-                            <option value="FCC_Shop__c.Import__c" />
-                            <option value="FCC_Shop__c.Next_Annual_Date__c" />
-                            <option value="FCC_Wholesaler__c.Email__c" />
-                            <option value="FCC_Wholesaler__c.Telephone__c" />
-                            <option value="Account.SLA__c" />
-                            <option value="CBS_Hangar__c.Telephone__c" />
-                            <option value="Lead.SICCode__c" />
-                            <option value="CBS_Hangar__c.Military__c" />
-                            <option value="Contact.Languages__c" />
-                            <option value="CBS_Hangar__c.E_mail__c" />
-                            <option value="FCC_Setting__c.Value__c" />
-                            <option value="FCC_Shop_Wholesaler_Association__c.End_Date__c" />
-                            <option value="CBS_Hangar__c.Street__c" />
-                            <option value="CBS_Hangar__c.Country__c" />
-                            <option value="Opportunity.CurrentGenerators__c" />
-                            <option value="FCC_Shop__c.Cash_Desks_Number__c" />
-                            <option value="FCC_Shop__c.Country__c" />
-                            <option value="Lead.ProductInterest__c" />
-                            <option value="FCC_Wholesaler__c.Street__c" />
-                            <option value="Lead.NumberofLocations__c" />
-                            <option value="FCC_Shop__c.Size_of_the_Shop__c" />
-                            <option value="Case.Product__c" />
-                          </set>
-                        </option>
-                        <option name="name" value="CustomField" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Account" />
-                            <option value="Task" />
-                            <option value="CollaborationGroup" />
-                            <option value="ForecastingCategoryMapping" />
-                            <option value="OpportunityLineItem" />
-                            <option value="FCC_Shop_Wholesaler_Association__c" />
-                            <option value="CaseContactRole" />
-                            <option value="Activity" />
-                            <option value="Document" />
-                            <option value="ContactCleanInfo" />
-                            <option value="ScorecardMetric" />
-                            <option value="PushTopic" />
-                            <option value="FCC_Trigger_Exceptions__c" />
-                            <option value="FeedItem" />
-                            <option value="ContractContactRole" />
-                            <option value="ExchangeUserMapping" />
-                            <option value="SocialPersona" />
-                            <option value="Asset" />
-                            <option value="CampaignMember" />
-                            <option value="CollaborationGroupMember" />
-                            <option value="Order" />
-                            <option value="AccountContactRole" />
-                            <option value="StreamingChannel" />
-                            <option value="EmailMessage" />
-                            <option value="AccountCleanInfo" />
-                            <option value="Pricebook2" />
-                            <option value="UserProvisioningRequest" />
-                            <option value="OrgDeleteRequest" />
-                            <option value="PricebookEntry" />
-                            <option value="Campaign" />
-                            <option value="LeadCleanInfo" />
-                            <option value="FCC_Shop__c" />
-                            <option value="Idea" />
-                            <option value="Contract" />
-                            <option value="ScorecardAssociation" />
-                            <option value="PartnerRole" />
-                            <option value="OpportunityCompetitor" />
-                            <option value="Site" />
-                            <option value="MacroAction" />
-                            <option value="User" />
-                            <option value="Product2" />
-                            <option value="Macro" />
-                            <option value="MacroInstruction" />
-                            <option value="DuplicateRecordItem" />
-                            <option value="Case" />
-                            <option value="ContentVersion" />
-                            <option value="Opportunity" />
-                            <option value="Lead" />
-                            <option value="DuplicateRecordSet" />
-                            <option value="Scorecard" />
-                            <option value="Topic" />
-                            <option value="Solution" />
-                            <option value="AssetRelationship" />
-                            <option value="QuickText" />
-                            <option value="DandBCompany" />
-                            <option value="OpportunityContactRole" />
-                            <option value="FCC_Setting__c" />
-                            <option value="Contact" />
-                            <option value="FCC_Wholesaler__c" />
-                            <option value="OrderItem" />
-                            <option value="AssistantProgress" />
-                            <option value="CBS_Hangar__c" />
-                            <option value="Event" />
-                            <option value="TopicAssignment" />
-                          </set>
-                        </option>
-                        <option name="name" value="CustomObject" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Campaign.ViewCampaignInfluenceReport" />
-                            <option value="Opportunity.DeliveryStatus" />
-                            <option value="Case.UpsellCrosssellOpportunity" />
-                            <option value="Account.Billing" />
-                          </set>
-                        </option>
-                        <option name="name" value="WebLink" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="FCC_Shop__c.Phone_Format_for_Poland" />
-                          </set>
-                        </option>
-                        <option name="name" value="ValidationRule" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Order" />
-                            <option value="Account" />
-                            <option value="User" />
-                            <option value="FCC_Setting__c" />
-                            <option value="Contact" />
-                            <option value="Case" />
-                            <option value="FCC_Shop__c" />
-                            <option value="FCC_Wholesaler__c" />
-                            <option value="Campaign" />
-                            <option value="FCC_Trigger_Exceptions__c" />
-                            <option value="Opportunity" />
-                            <option value="Lead" />
-                            <option value="CBS_Hangar__c" />
-                            <option value="Asset" />
-                          </set>
-                        </option>
-                        <option name="name" value="SharingRules" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="DE Default" />
-                          </set>
-                        </option>
-                        <option name="name" value="HomePageLayout" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="FCC_Shop__c.Ger_Users" />
-                            <option value="FCC_Shop__c.PL_Users" />
-                          </set>
-                        </option>
-                        <option name="name" value="SharingCriteriaRule" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
                             <option value="Account" />
                             <option value="FCC_Shop__c" />
                             <option value="Lead" />
@@ -1202,6 +521,26 @@
                           </set>
                         </option>
                         <option name="name" value="MatchingRules" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Contact.Standard_Contact_Match_Rule_v1_1" />
+                            <option value="FCC_Shop__c.Shop_Matching_Rule" />
+                            <option value="Account.Standard_Account_Match_Rule_v1_0" />
+                            <option value="Lead.Standard_Lead_Match_Rule_v1_0" />
+                          </set>
+                        </option>
+                        <option name="name" value="MatchingRule" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Lead" />
+                            <option value="Case" />
+                          </set>
+                        </option>
+                        <option name="name" value="AssignmentRules" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
@@ -1217,9 +556,9 @@
                             <option value="standard__Platform" />
                             <option value="standard__LightningSales" />
                             <option value="standard__Service" />
-                            <option value="standard__Marketing" />
                             <option value="standard__Content" />
                             <option value="standard__Sites" />
+                            <option value="standard__Marketing" />
                             <option value="standard__LightningSalesConsole" />
                           </set>
                         </option>
@@ -1291,17 +630,17 @@
                             <option value="Account" />
                             <option value="Task" />
                             <option value="FCC_Shop_Wholesaler_Association__c" />
-                            <option value="Contact" />
                             <option value="Case" />
+                            <option value="Contact" />
                             <option value="ContentDocument" />
-                            <option value="FCC_Shop__c" />
                             <option value="FCC_Wholesaler__c" />
                             <option value="Campaign" />
+                            <option value="FCC_Shop__c" />
                             <option value="Opportunity" />
                             <option value="Lead" />
-                            <option value="Event" />
                             <option value="Asset" />
                             <option value="CBS_Hangar__c" />
+                            <option value="Event" />
                             <option value="Contract" />
                             <option value="Solution" />
                           </set>
@@ -1328,6 +667,46 @@
                       <MetadataType>
                         <option name="members">
                           <set>
+                            <option value="ChangePassword" />
+                            <option value="SiteTemplate" />
+                            <option value="InMaintenance" />
+                            <option value="FCC_ShopView" />
+                            <option value="StdExceptionTemplate" />
+                            <option value="FCC_ShopsStandardRestApi" />
+                            <option value="SiteRegister" />
+                            <option value="AnswersHome" />
+                            <option value="FCC_WholesalerEdit" />
+                            <option value="FCC_ShopRandom" />
+                            <option value="FCC_ShopDownloadXLS" />
+                            <option value="FCC_WholesalerView" />
+                            <option value="FCC_ShopDownloadCSV" />
+                            <option value="SiteLogin" />
+                            <option value="FCC_WholesalerView2" />
+                            <option value="Unauthorized" />
+                            <option value="SiteRegisterConfirm" />
+                            <option value="UnderConstruction" />
+                            <option value="FCC_ShopImport" />
+                            <option value="FCC_OrgInfo" />
+                            <option value="FileNotFound" />
+                            <option value="ForgotPassword" />
+                            <option value="Exception" />
+                            <option value="FCC_UserManagement" />
+                            <option value="IdeasHome" />
+                            <option value="AccountHierarchyPage" />
+                            <option value="ForgotPasswordConfirm" />
+                            <option value="BandwidthExceeded" />
+                            <option value="FCC_ShopsExternal" />
+                            <option value="FCC_ShopSearch" />
+                            <option value="MyProfilePage" />
+                            <option value="FCC_ShopEdit" />
+                            <option value="FCC_WholesalersExternal" />
+                          </set>
+                        </option>
+                        <option name="name" value="ApexPage" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
                             <option value="FCC_New_Shop" />
                             <option value="FCC_New_Wholesaler" />
                           </set>
@@ -1337,60 +716,42 @@
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="Search_Hangars" />
-                            <option value="LightningSalesConsole_UtilityBar" />
-                            <option value="LightningService_UtilityBar" />
-                            <option value="Cloudbus_UtilityBar" />
-                          </set>
-                        </option>
-                        <option name="name" value="FlexiPage" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Lead_Convert_Process" />
-                          </set>
-                        </option>
-                        <option name="name" value="FlowDefinition" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="RestConsumerApp" />
-                          </set>
-                        </option>
-                        <option name="name" value="ConnectedApp" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
                             <option value="Task.EditDescription" />
                             <option value="NewGroup" />
                             <option value="FeedItem.NewTaskFromFeedItem" />
                             <option value="NewNote" />
-                            <option value="CollaborationGroup.NewGroupMember" />
                             <option value="Task.EditDescription_0" />
+                            <option value="CollaborationGroup.NewGroupMember" />
                             <option value="CollaborationGroup.NewGroupRecord" />
-                            <option value="SendEmail" />
                             <option value="NewLead" />
+                            <option value="SendEmail" />
                             <option value="Task.UpdateStatus" />
                             <option value="NewOpportunity" />
                             <option value="NewTask" />
                             <option value="Task.Defer_0" />
-                            <option value="Task.UpdateStatus_0" />
                             <option value="NewAccount" />
+                            <option value="Task.UpdateStatus_0" />
                             <option value="Task.UpdatePriority" />
                             <option value="Case.LogACall" />
                             <option value="Case.NewChildCase" />
                             <option value="Task.UpdatePriority_0" />
                             <option value="NewContact" />
-                            <option value="Task.Defer" />
                             <option value="NewCase" />
-                            <option value="LogACall" />
+                            <option value="Task.Defer" />
                             <option value="NewEvent" />
+                            <option value="LogACall" />
                           </set>
                         </option>
                         <option name="name" value="QuickAction" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Salesforce1" />
+                            <option value="AppSwitcher" />
+                          </set>
+                        </option>
+                        <option name="name" value="AppMenu" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
@@ -1407,39 +768,15 @@
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="Salesforce1" />
-                            <option value="AppSwitcher" />
-                          </set>
-                        </option>
-                        <option name="name" value="AppMenu" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="CBS_Service_profileSessionSetting1525850511440" />
-                            <option value="Sales_profileSessionSetting1525679095386" />
-                            <option value="Shop_Assistant_profileSessionSetting1522958405899" />
-                            <option value="CBS_Executive_profileSessionSetting1525850461072" />
-                            <option value="Random_CLients_Profile_profileSessionSetting1523559158801" />
-                            <option value="Shop_Assistant_Manager_profileSessionSetting1522958486598" />
-                            <option value="Shop_Assistant_profileSessionSetting1525385059677" />
-                            <option value="Clients_profileSessionSetting1525679200531" />
-                          </set>
-                        </option>
-                        <option name="name" value="ProfileSessionSetting" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="clearHangarSearch" />
                             <option value="CBS_SetCoordinates" />
+                            <option value="clearHangarSearch" />
                             <option value="CBS_HangarMap" />
                             <option value="CBS_HangarItem" />
-                            <option value="searchHangar" />
                             <option value="CBS_HangarForm" />
+                            <option value="searchHangar" />
                             <option value="CBS_HangarSearchResults" />
-                            <option value="CBS_HangarDetails" />
                             <option value="selectedHangarUpdate" />
+                            <option value="CBS_HangarDetails" />
                             <option value="CBS_HangarSearchMain" />
                             <option value="CBS_ClearSelectedHangar" />
                             <option value="CBS_harnessApp" />
@@ -1450,10 +787,25 @@
                       <MetadataType>
                         <option name="members">
                           <set>
+                            <option value="CBS_Service_profileSessionSetting1525850511440" />
+                            <option value="Sales_profileSessionSetting1525679095386" />
+                            <option value="Shop_Assistant_profileSessionSetting1522958405899" />
+                            <option value="CBS_Executive_profileSessionSetting1525850461072" />
+                            <option value="Shop_Assistant_Manager_profileSessionSetting1522958486598" />
+                            <option value="Random_CLients_Profile_profileSessionSetting1523559158801" />
+                            <option value="Shop_Assistant_profileSessionSetting1525385059677" />
+                            <option value="Clients_profileSessionSetting1525679200531" />
+                          </set>
+                        </option>
+                        <option name="name" value="ProfileSessionSetting" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
                             <option value="Clients_profilePasswordPolicy1525679172481" />
                             <option value="Shop_Assistant_Manager_profilePasswordPolicy1522958486479" />
-                            <option value="Executives_profilePasswordPolicy1525679156390" />
                             <option value="Random_CLients_Profile_profilePasswordPolicy1523559158746" />
+                            <option value="Executives_profilePasswordPolicy1525679156390" />
                             <option value="Service_profilePasswordPolicy1525679118287" />
                             <option value="Shop_Assistant_profilePasswordPolicy1525385059635" />
                             <option value="Shop_Assistant_profilePasswordPolicy1522958405788" />
@@ -1473,22 +825,592 @@
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="Contact.Standard_Contact_Match_Rule_v1_1" />
-                            <option value="FCC_Shop__c.Shop_Matching_Rule" />
-                            <option value="Account.Standard_Account_Match_Rule_v1_0" />
-                            <option value="Lead.Standard_Lead_Match_Rule_v1_0" />
+                            <option value="FCC_Apex_classes" />
+                            <option value="FCC_Shops" />
+                            <option value="FCC_Send_Email_to" />
+                            <option value="FCC_Contract_end_before_start" />
+                            <option value="FCC_Reset_password" />
+                            <option value="FCC_Show_Permission_Sets" />
+                            <option value="FCC_Yes" />
+                            <option value="FCC_Search_Form" />
+                            <option value="FCC_Search_for_Wholesaler" />
+                            <option value="FCC_Error_request" />
+                            <option value="FCC_Session_id" />
+                            <option value="FCC_deactivated" />
+                            <option value="FCC_Bad_file_extension" />
+                            <option value="FCC_Shop_created" />
+                            <option value="FCC_Email_reset" />
+                            <option value="FCC_Overlapping_with" />
+                            <option value="FCC_Show_Login_History" />
+                            <option value="FCC_Search_for_Shops" />
+                            <option value="FCC_Email" />
+                            <option value="FCC_Dear_Sir" />
+                            <option value="FCC_Stack_underflow" />
+                            <option value="FCC_Photo_too_big" />
+                            <option value="FCC_Edit" />
+                            <option value="FCC_Permission_sets_of" />
+                            <option value="FCC_First_Page_Symbol" />
+                            <option value="FCC_Delete" />
+                            <option value="FCC_Shop_Name" />
+                            <option value="FCC_Clear" />
+                            <option value="FCC_Confirmation_required" />
+                            <option value="FCC_Specify_at_least_one_field" />
+                            <option value="FCC_Send_Email" />
+                            <option value="FCC_Email_Required" />
+                            <option value="FCC_Add_Contract" />
+                            <option value="FCC_Edit_Detail_Info" />
+                            <option value="FCC_Activate" />
+                            <option value="FCC_Last_Page_Symbol" />
+                            <option value="FCC_No_login_history" />
+                            <option value="FCC_Add_Contracts_To" />
+                            <option value="FCC_Duplicate_Record" />
+                            <option value="FCC_Show_session_id" />
+                            <option value="FCC_Wholesaler_deleted" />
+                            <option value="FCC_Export_Results" />
+                            <option value="FCC_No_public_groups" />
+                            <option value="FCC_Shop_deleted" />
+                            <option value="FCC_Deactivate" />
+                            <option value="FCC_Join_us_today" />
+                            <option value="FCC_Overlapping_with_assoc" />
+                            <option value="FCC_None" />
+                            <option value="FCC_Random_Shops" />
+                            <option value="FCC_Both_dates" />
+                            <option value="FCC_Results" />
+                            <option value="FCC_activated" />
+                            <option value="FCC_Reset_pw_deactivated" />
+                            <option value="FCC_Basic" />
+                            <option value="FCC_Show_ui_session" />
+                            <option value="FCC_Active_users" />
+                            <option value="FCC_Show_Public_Groups" />
+                            <option value="FCC_Contract_Start_Date" />
+                            <option value="FCC_Search_for_Wholesalers" />
+                            <option value="FCC_Last_Page" />
+                            <option value="FCC_No_email_address" />
+                            <option value="FCC_Previous_Page" />
+                            <option value="FCC_Order_by" />
+                            <option value="FCC_Org_owner" />
+                            <option value="FCC_Org_info" />
+                            <option value="FCC_Update_Shop" />
+                            <option value="FCC_Action" />
+                            <option value="FCC_Detail" />
+                            <option value="FCC_Update_Wholesaler" />
+                            <option value="FCC_Org_instance" />
+                            <option value="FCC_Map" />
+                            <option value="FCC_Edit_Basic_Info" />
+                            <option value="FCC_City" />
+                            <option value="FCC_Session_info" />
+                            <option value="FCC_Add_one_date" />
+                            <option value="FCC_Copy" />
+                            <option value="FCC_Export_to_XLS" />
+                            <option value="FCC_Wholesalers" />
+                            <option value="FCC_Summary_of_org" />
+                            <option value="FCC_Select_CSV" />
+                            <option value="FCC_Select" />
+                            <option value="FCC_Shop_Hierarchy" />
+                            <option value="FCC_Cannot_reset_password" />
+                            <option value="FCC_Export_to_CSV" />
+                            <option value="FCC_No_perm_sets" />
+                            <option value="FCC_Close" />
+                            <option value="FCC_Delete_Photo_Confirmation" />
+                            <option value="FCC_Save" />
+                            <option value="FCC_Germany" />
+                            <option value="FCC_Add_Wholesaler" />
+                            <option value="FCC_Confirm" />
+                            <option value="FCC_Access_external_shops" />
+                            <option value="FCC_Reverse" />
+                            <option value="FCC_Cash_desks_report" />
+                            <option value="FCC_Name" />
+                            <option value="FCC_Contract_End_Date" />
+                            <option value="FCC_No_wholesalers" />
+                            <option value="FCC_Delete_Wholesaler" />
+                            <option value="FCC_Public_groups_of" />
+                            <option value="FCC_Previous_Page_Symbol" />
+                            <option value="FCC_Wholesaler_Name" />
+                            <option value="FCC_CSV_Error" />
+                            <option value="FCC_Body" />
+                            <option value="FCC_Search" />
+                            <option value="FCC_There_is_no_specified_email" />
+                            <option value="FCC_User_Info" />
+                            <option value="FCC_Org_Information" />
+                            <option value="FCC_has_been" />
+                            <option value="FCC_Random_Trademark" />
+                            <option value="FCC_Status" />
+                            <option value="FCC_Shops_Cooperating" />
+                            <option value="FCC_Imported_Successfully" />
+                            <option value="FCC_Total_users" />
+                            <option value="FCC_Process" />
+                            <option value="FCC_Francesinha" />
+                            <option value="FCC_Wholesaler_updated" />
+                            <option value="FCC_All" />
+                            <option value="FCC_Pipe" />
+                            <option value="FCC_Required" />
+                            <option value="FCC_First_Page" />
+                            <option value="FCC_Delete_Shop" />
+                            <option value="FCC_Shop_updated" />
+                            <option value="FCC_Remove" />
+                            <option value="FCC_Family_cash_desks_number" />
+                            <option value="FCC_Bad_Start_Date_End_Date" />
+                            <option value="FCC_Cash_desks_number" />
+                            <option value="FCC_Country" />
+                            <option value="FCC_No" />
+                            <option value="Thank_you_for_joining" />
+                            <option value="FCC_Import" />
+                            <option value="FCC_De_Activate" />
+                            <option value="FCC_Next_Page" />
+                            <option value="FCC_Username" />
+                            <option value="FCC_Space_char" />
+                            <option value="FCC_Success" />
+                            <option value="FCC_New_Contracts" />
+                            <option value="FCC_Update" />
+                            <option value="FCC_Delete_Photo" />
+                            <option value="FCC_No_results_found" />
+                            <option value="FCC_Number_of_vf" />
+                            <option value="FCC_Cancel" />
+                            <option value="FCC_Login_history_of" />
+                            <option value="FCC_Poland" />
+                            <option value="FCC_No_email" />
+                            <option value="FCC_Subject" />
+                            <option value="FCC_USA" />
+                            <option value="FCC_Create_Shop" />
+                            <option value="FCC_Records_per_page" />
+                            <option value="FCC_Ukraine" />
+                            <option value="FCC_No_email_info" />
+                            <option value="FCC_Next_Page_Symbol" />
+                            <option value="FCC_UI_session_id" />
+                            <option value="FCC_Email_Sent" />
+                            <option value="FCC_Add_Wholesaler_to" />
+                            <option value="FCC_Are_you_sure" />
+                            <option value="FCC_Random_Shops_Title" />
                           </set>
                         </option>
-                        <option name="name" value="MatchingRule" />
+                        <option name="name" value="CustomLabel" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="Lead" />
-                            <option value="Case" />
+                            <option value="CustomLabels" />
                           </set>
                         </option>
-                        <option name="name" value="AssignmentRules" />
+                        <option name="name" value="CustomLabels" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Order.AllActivatedOrders" />
+                            <option value="Opportunity.NewThisWeek" />
+                            <option value="Case.AllOpenCases" />
+                            <option value="Case.MyCases" />
+                            <option value="Order.AllDraftOrders" />
+                            <option value="User.ActiveUsers" />
+                            <option value="Order.AllOrders" />
+                            <option value="CBS_Hangar__c.All" />
+                            <option value="Scorecard.MyScorecards" />
+                            <option value="Opportunity.ClosingNextMonth" />
+                            <option value="Contact.AllContacts" />
+                            <option value="Case.MyOpenCases" />
+                            <option value="Opportunity.Default_Opportunity_Pipeline" />
+                            <option value="Opportunity.Private" />
+                            <option value="Contract.AllContracts" />
+                            <option value="Contract.MyActivatedContracts" />
+                            <option value="FCC_Shop__c.All" />
+                            <option value="Contract.AllDraftContracts" />
+                            <option value="WorkFeedbackRequest.AboutTopics" />
+                            <option value="Contact.NewLastWeek" />
+                            <option value="SocialPersona.AllSocialPersonas" />
+                            <option value="User.AllUsers" />
+                            <option value="Contract.MyDraftContracts" />
+                            <option value="Lead.TodaysLeads" />
+                            <option value="Solution.AllUnreviewedSolutions" />
+                            <option value="Account.NewLastWeek" />
+                            <option value="Activity.UpcomingEvents" />
+                            <option value="Account.MyAccounts" />
+                            <option value="Opportunity.AllOpportunities" />
+                            <option value="Contact.BirthdaysThisMonth" />
+                            <option value="Account.AllAccounts" />
+                            <option value="Opportunity.ClosingThisMonth" />
+                            <option value="CollaborationGroup.All_ChatterGroups" />
+                            <option value="Contact.NewThisWeek" />
+                            <option value="Activity.AllActivities" />
+                            <option value="Opportunity.NewLastWeek" />
+                            <option value="FCC_Shop_Wholesaler_Association__c.All" />
+                            <option value="Asset.AllAssets" />
+                            <option value="User.AdminUsers" />
+                            <option value="Scorecard.AllScorecards" />
+                            <option value="Campaign.MyActiveCampaigns" />
+                            <option value="Opportunity.MyOpportunities" />
+                            <option value="Lead.MyUnreadLeads" />
+                            <option value="Campaign.AllActiveCampaigns" />
+                            <option value="Product2.AllProducts" />
+                            <option value="Contact.MyContacts" />
+                            <option value="Activity.TodaysTasks" />
+                            <option value="Case.AllClosedCases" />
+                            <option value="Opportunity.Won" />
+                            <option value="Solution.AllReviewedSolutions" />
+                            <option value="Account.PlatinumandGoldSLACustomers" />
+                            <option value="Contract.MyInApprovalContracts" />
+                            <option value="Activity.MyActivities" />
+                            <option value="Contract.AllInApprovalContracts" />
+                            <option value="WorkFeedbackTemplate.All" />
+                            <option value="Lead.AllOpenLeads" />
+                            <option value="Account.NewThisWeek" />
+                            <option value="WorkFeedbackRequest.All" />
+                            <option value="Lead.ViewCustom1" />
+                            <option value="Idea.Ideas_Last_7_Days" />
+                            <option value="Lead.ViewCustom2" />
+                            <option value="Contract.AllActivatedContracts" />
+                            <option value="FCC_Wholesaler__c.All" />
+                          </set>
+                        </option>
+                        <option name="name" value="ListView" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Internal Zone" />
+                          </set>
+                        </option>
+                        <option name="name" value="Community" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="sf_chttr_apps" />
+                            <option value="sf_com_apps" />
+                          </set>
+                        </option>
+                        <option name="name" value="InstalledPackage" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Case.Standard" />
+                            <option value="Lead.Standard" />
+                          </set>
+                        </option>
+                        <option name="name" value="AssignmentRule" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Search_Hangars" />
+                            <option value="LightningSalesConsole_UtilityBar" />
+                            <option value="LightningService_UtilityBar" />
+                            <option value="Cloudbus_UtilityBar" />
+                          </set>
+                        </option>
+                        <option name="name" value="FlexiPage" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="RestConsumerApp" />
+                          </set>
+                        </option>
+                        <option name="name" value="ConnectedApp" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Lead_Convert_Process" />
+                          </set>
+                        </option>
+                        <option name="name" value="FlowDefinition" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Account" />
+                            <option value="CollaborationGroup" />
+                            <option value="Task" />
+                            <option value="ForecastingCategoryMapping" />
+                            <option value="OpportunityLineItem" />
+                            <option value="CaseContactRole" />
+                            <option value="FCC_Shop_Wholesaler_Association__c" />
+                            <option value="Activity" />
+                            <option value="Document" />
+                            <option value="ContactCleanInfo" />
+                            <option value="ScorecardMetric" />
+                            <option value="PushTopic" />
+                            <option value="FCC_Trigger_Exceptions__c" />
+                            <option value="ContractContactRole" />
+                            <option value="FeedItem" />
+                            <option value="ExchangeUserMapping" />
+                            <option value="SocialPersona" />
+                            <option value="Asset" />
+                            <option value="CampaignMember" />
+                            <option value="Order" />
+                            <option value="CollaborationGroupMember" />
+                            <option value="AccountContactRole" />
+                            <option value="StreamingChannel" />
+                            <option value="EmailMessage" />
+                            <option value="AccountCleanInfo" />
+                            <option value="Pricebook2" />
+                            <option value="UserProvisioningRequest" />
+                            <option value="OrgDeleteRequest" />
+                            <option value="PricebookEntry" />
+                            <option value="FCC_Shop__c" />
+                            <option value="LeadCleanInfo" />
+                            <option value="Campaign" />
+                            <option value="Idea" />
+                            <option value="ScorecardAssociation" />
+                            <option value="Contract" />
+                            <option value="PartnerRole" />
+                            <option value="OpportunityCompetitor" />
+                            <option value="Site" />
+                            <option value="MacroAction" />
+                            <option value="User" />
+                            <option value="Product2" />
+                            <option value="Macro" />
+                            <option value="MacroInstruction" />
+                            <option value="DuplicateRecordItem" />
+                            <option value="Case" />
+                            <option value="ContentVersion" />
+                            <option value="Opportunity" />
+                            <option value="Lead" />
+                            <option value="DuplicateRecordSet" />
+                            <option value="Topic" />
+                            <option value="Scorecard" />
+                            <option value="Solution" />
+                            <option value="QuickText" />
+                            <option value="AssetRelationship" />
+                            <option value="DandBCompany" />
+                            <option value="OpportunityContactRole" />
+                            <option value="FCC_Setting__c" />
+                            <option value="Contact" />
+                            <option value="FCC_Wholesaler__c" />
+                            <option value="OrderItem" />
+                            <option value="AssistantProgress" />
+                            <option value="CBS_Hangar__c" />
+                            <option value="Event" />
+                            <option value="TopicAssignment" />
+                          </set>
+                        </option>
+                        <option name="name" value="CustomObject" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="FCC_Wholesaler__c.City__c" />
+                            <option value="Case.SLAViolation__c" />
+                            <option value="FCC_Shop__c.City__c" />
+                            <option value="Lead.Primary__c" />
+                            <option value="Lead.CurrentGenerators__c" />
+                            <option value="FCC_Shop__c.Trigger__c" />
+                            <option value="FCC_Shop__c.Email__c" />
+                            <option value="Account.NumberofLocations__c" />
+                            <option value="Opportunity.MainCompetitors__c" />
+                            <option value="Account.UpsellOpportunity__c" />
+                            <option value="Account.SLASerialNumber__c" />
+                            <option value="FCC_Trigger_Exceptions__c.FCC_ShopTrigger__c" />
+                            <option value="Account.CustomerPriority__c" />
+                            <option value="Product2.Main_photo__c" />
+                            <option value="FCC_Shop__c.Parent_Shop__c" />
+                            <option value="Product2.Engine__c" />
+                            <option value="Product2.Number_of_Seats__c" />
+                            <option value="FCC_Shop__c.License_Number__c" />
+                            <option value="Opportunity.OrderNumber__c" />
+                            <option value="Case.EngineeringReqNumber__c" />
+                            <option value="FCC_Shop__c.Insert_Successful__c" />
+                            <option value="Metric.OrigMetricId__c" />
+                            <option value="Account.SLAExpirationDate__c" />
+                            <option value="Case.PotentialLiability__c" />
+                            <option value="User.Country__c" />
+                            <option value="FCC_Wholesaler__c.Country__c" />
+                            <option value="FCC_Wholesaler__c.Website__c" />
+                            <option value="Product2.Wingspan__c" />
+                            <option value="Opportunity.TrackingNumber__c" />
+                            <option value="FCC_Shop__c.Telephone__c" />
+                            <option value="Account.Active__c" />
+                            <option value="Opportunity.DeliveryInstallationStatus__c" />
+                            <option value="Product2.Weight__c" />
+                            <option value="FCC_Shop_Wholesaler_Association__c.Start_Date__c" />
+                            <option value="Product2.Engines_Number__c" />
+                            <option value="Contact.Level__c" />
+                            <option value="Product2.Length__c" />
+                            <option value="FCC_Shop_Wholesaler_Association__c.Wholesaler__c" />
+                            <option value="FCC_Shop__c.Street__c" />
+                            <option value="FCC_Shop_Wholesaler_Association__c.Shop__c" />
+                            <option value="Goal.OrigGoalId__c" />
+                            <option value="CBS_Hangar__c.Capacity__c" />
+                            <option value="CBS_Hangar__c.City__c" />
+                            <option value="FCC_Shop__c.Import__c" />
+                            <option value="FCC_Wholesaler__c.Email__c" />
+                            <option value="FCC_Shop__c.Next_Annual_Date__c" />
+                            <option value="FCC_Wholesaler__c.Telephone__c" />
+                            <option value="Account.SLA__c" />
+                            <option value="CBS_Hangar__c.Telephone__c" />
+                            <option value="Lead.SICCode__c" />
+                            <option value="CBS_Hangar__c.Military__c" />
+                            <option value="Contact.Languages__c" />
+                            <option value="CBS_Hangar__c.E_mail__c" />
+                            <option value="FCC_Setting__c.Value__c" />
+                            <option value="FCC_Shop_Wholesaler_Association__c.End_Date__c" />
+                            <option value="CBS_Hangar__c.Street__c" />
+                            <option value="CBS_Hangar__c.Country__c" />
+                            <option value="Opportunity.CurrentGenerators__c" />
+                            <option value="FCC_Shop__c.Cash_Desks_Number__c" />
+                            <option value="FCC_Shop__c.Country__c" />
+                            <option value="Lead.ProductInterest__c" />
+                            <option value="FCC_Shop__c.Size_of_the_Shop__c" />
+                            <option value="FCC_Wholesaler__c.Street__c" />
+                            <option value="Lead.NumberofLocations__c" />
+                            <option value="Case.Product__c" />
+                          </set>
+                        </option>
+                        <option name="name" value="CustomField" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Metric.Progress" />
+                            <option value="Metric.Completion" />
+                          </set>
+                        </option>
+                        <option name="name" value="RecordType" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="CBS_Hangar__c-Hangar Layout" />
+                            <option value="Account-Account %28Sales%29 Layout" />
+                            <option value="Contact-Contact %28Support%29 Layout" />
+                            <option value="Product2-Product Layout" />
+                            <option value="Lead-Lead Layout" />
+                            <option value="Contact-Contact Layout" />
+                            <option value="Case-Case %28Sales%29 Layout" />
+                            <option value="Lead-Lead %28Support%29 Layout" />
+                            <option value="CollaborationGroup-Group Layout" />
+                            <option value="DandBCompany-D%26B Company Layout" />
+                            <option value="Case-Case %28Support%29 Layout" />
+                            <option value="AssetRelationship-Asset Relationship Layout" />
+                            <option value="Macro-Macro Layout" />
+                            <option value="Order-Order Layout" />
+                            <option value="Solution-Solution Layout" />
+                            <option value="ScorecardMetric-Scorecard Metric Layout" />
+                            <option value="UserProvisioningRequest-User Provisioning Request Layout" />
+                            <option value="Event-Event Layout" />
+                            <option value="Pricebook2-Price Book Layout" />
+                            <option value="UserProvisioningLog-User Provisioning Log Layout" />
+                            <option value="UserProvAccount-User Provisioning Account Layout" />
+                            <option value="Contact-Contact %28Marketing%29 Layout" />
+                            <option value="Task-Task Layout" />
+                            <option value="FCC_Shop__c-Shop Layout" />
+                            <option value="Opportunity-Opportunity Layout" />
+                            <option value="Asset-Asset Layout" />
+                            <option value="OrderItem-Order Product Layout" />
+                            <option value="DuplicateRecordSet-Duplicate Record Set Layout" />
+                            <option value="OpportunityLineItem-Opportunity Product Layout" />
+                            <option value="Case-Case Layout" />
+                            <option value="Contract-Contract Layout" />
+                            <option value="Account-Account Layout" />
+                            <option value="Campaign-Campaign Layout" />
+                            <option value="UserAlt-User Profile Layout" />
+                            <option value="ScorecardAssociation-Scorecard Association Layout" />
+                            <option value="Opportunity-Opportunity %28Sales%29 Layout" />
+                            <option value="SocialPersona-Social Persona Layout" />
+                            <option value="Scorecard-Scorecard Layout" />
+                            <option value="Case-Case %28Marketing%29 Layout" />
+                            <option value="PricebookEntry-Price Book Entry Layout" />
+                            <option value="CaseClose-Close Case Layout" />
+                            <option value="Idea-Idea Layout" />
+                            <option value="FeedItem-Feed Item Layout" />
+                            <option value="ContentVersion-Content Version Layout" />
+                            <option value="Opportunity-Opportunity %28Support%29 Layout" />
+                            <option value="Global-Global Layout" />
+                            <option value="Account-Account %28Marketing%29 Layout" />
+                            <option value="Lead-Lead %28Sales%29 Layout" />
+                            <option value="EmailMessage-Email Message Layout" />
+                            <option value="SocialPost-Social Post Layout" />
+                            <option value="CampaignMember-Campaign Member Page Layout" />
+                            <option value="Account-Account %28Support%29 Layout" />
+                            <option value="FCC_Shop_Wholesaler_Association__c-Shop-Wholesaler Association Layout" />
+                            <option value="QuickText-Quick Text Layout" />
+                            <option value="FCC_Wholesaler__c-Wholesaler Layout" />
+                            <option value="User-User Layout" />
+                            <option value="Contact-Contact %28Sales%29 Layout" />
+                            <option value="Lead-Lead %28Marketing%29 Layout" />
+                            <option value="Opportunity-Opportunity %28Marketing%29 Layout" />
+                          </set>
+                        </option>
+                        <option name="name" value="Layout" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="contactquery" />
+                            <option value="FCC_ShopSearchController" />
+                            <option value="FCC_ShopImportController" />
+                            <option value="AccountHierarchyTestData" />
+                            <option value="CBS_HangarController" />
+                            <option value="FCC_UserManagementController" />
+                            <option value="SaveImage" />
+                            <option value="SiteRegisterControllerTest" />
+                            <option value="ForgotPasswordControllerTest" />
+                            <option value="FCC_Util" />
+                            <option value="FCC_ShopRandomController" />
+                            <option value="MyProfilePageController" />
+                            <option value="FCC_ShopReportEmailBatch" />
+                            <option value="FCC_WholesalerSOAP" />
+                            <option value="AttachmentUploadController" />
+                            <option value="FCC_SmsShopSOAPWebServiceMock" />
+                            <option value="JSRemotingFileUploadController" />
+                            <option value="FCC_WholesalersRestCallout" />
+                            <option value="ChangePasswordControllerTest" />
+                            <option value="FCC_SmsUtil" />
+                            <option value="FCC_WholesalerREST" />
+                            <option value="FCC_ShopReportEmailBatchScheduler" />
+                            <option value="FCC_ShopsStandardRestApiCallout" />
+                            <option value="AccountStructure" />
+                            <option value="FCC_ShopRestCallout" />
+                            <option value="FCC_ShopsExternalControllerTest" />
+                            <option value="ForgotPasswordController" />
+                            <option value="FCC_OrgInfoController" />
+                            <option value="FCC_ShopREST" />
+                            <option value="FCC_MultiRequestMock" />
+                            <option value="FCC_WholesalerExternalCalloutTest" />
+                            <option value="FCC_WholesalersExternalControllerTest" />
+                            <option value="WIP_ShopEditController" />
+                            <option value="MyPagingController" />
+                            <option value="SiteRegisterController" />
+                            <option value="FCC_ShopsExternalController" />
+                            <option value="FCC_ShopCashDesksReportBuilder" />
+                            <option value="FCC_ShopViewController" />
+                            <option value="FCC_SmsShopSOAPWebService" />
+                            <option value="FCC_ShopsStandardRestApiController" />
+                            <option value="AsyncFCC_SmsShopSOAPWebService" />
+                            <option value="FCC_WholesalerViewController2" />
+                            <option value="FCC_WholesalerExternalCallout" />
+                            <option value="SiteLoginControllerTest" />
+                            <option value="FCC_ShopSOAP" />
+                            <option value="FCC_ShopEditController" />
+                            <option value="FCC_ShopCSV" />
+                            <option value="AddAttachmentExt" />
+                            <option value="FCC_WholesalersExternalController" />
+                            <option value="InlineAcountHerachy_TestUtilities" />
+                            <option value="MyProfilePageControllerTest" />
+                            <option value="FCC_WholesalerViewController" />
+                            <option value="SiteLoginController" />
+                            <option value="FCC_DeletePopup" />
+                            <option value="testAccountHierarchy" />
+                            <option value="ChangePasswordController" />
+                            <option value="FCC_SingleRequestMock" />
+                          </set>
+                        </option>
+                        <option name="name" value="ApexClass" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="SiteFooter" />
+                            <option value="FCC_Load_Action" />
+                            <option value="SitePoweredBy" />
+                            <option value="SiteLogin" />
+                            <option value="FCC_Slds_Load_Action" />
+                            <option value="SiteHeader" />
+                            <option value="ShopsHierarchyTree" />
+                          </set>
+                        </option>
+                        <option name="name" value="ApexComponent" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
@@ -1571,25 +1493,25 @@
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="unfiled$public/SUPPORTSelfServiceResetPasswordSAMPLE" />
                             <option value="unfiled$public/RejectionEmail" />
+                            <option value="unfiled$public/SUPPORTSelfServiceResetPasswordSAMPLE" />
                             <option value="unfiled$public/SupportSelfServiceResetPassword" />
                             <option value="unfiled$public/DeactivationEmail" />
-                            <option value="unfiled$public/UpdateConnEmail" />
                             <option value="unfiled$public/SupportCaseCreatedPhoneInquiries" />
+                            <option value="unfiled$public/UpdateConnEmail" />
                             <option value="unfiled$public/SupportSelfServiceNewLoginandPassword" />
                             <option value="unfiled$public/SUPPORTSelfServiceNewUserLoginInformationSAMPLE" />
                             <option value="unfiled$public/SupportCaseAssignmentNotification" />
                             <option value="unfiled$public/Anniversary_Email_to_Managers" />
                             <option value="unfiled$public/SupportCaseResponse" />
-                            <option value="unfiled$public/InvitationEmail" />
                             <option value="unfiled$public/SalesNewCustomerEmail" />
+                            <option value="unfiled$public/InvitationEmail" />
                             <option value="unfiled$public/No_materials_sent_yet" />
                             <option value="unfiled$public/SUPPORTSelfServiceNewCommentNotificationSAMPLE" />
-                            <option value="unfiled$public/SupportCaseCreatedWebInquiries" />
                             <option value="unfiled$public/SupportEscalatedCaseNotification" />
-                            <option value="unfiled$public/SupportEscalatedCaseReassignment" />
+                            <option value="unfiled$public/SupportCaseCreatedWebInquiries" />
                             <option value="unfiled$public/MarketingProductInquiryResponse" />
+                            <option value="unfiled$public/SupportEscalatedCaseReassignment" />
                             <option value="unfiled$public/AcceptanceEmail" />
                           </set>
                         </option>
@@ -1823,7 +1745,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="3832" y="-213" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -1831,7 +1752,7 @@
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Event Log" order="8" sideWeight="0.5005624" side_tool="true" visible="true" weight="0.24906667" />
+      <window_info anchor="right" id="Event Log" order="8" sideWeight="0.5005624" side_tool="true" weight="0.24906667" />
       <window_info anchor="bottom" id="Anonymous Apex" order="8" weight="0.4853101" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -1889,13 +1810,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarItem/CBS_HangarItemController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarMap/CBS_HangarMapHelper.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
@@ -2101,13 +2015,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarSearchResults/CBS_HangarSearchResultsController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="2" selection-start-line="1" selection-end-line="3" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarDetails/CBS_HangarDetails.cmp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
@@ -2157,14 +2064,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/FCC_ShopRandom.page">
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarItem/CBS_HangarItem.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="131" column="217" selection-start-line="131" selection-start-column="217" selection-end-line="131" selection-end-column="217" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#apex:page#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#apex:page#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="20">
+          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarMap/CBS_HangarMapController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -2189,20 +2099,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarSearchResults/CBS_HangarSearchResults.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarMap/CBS_HangarMapController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarSearchMain/CBS_HangarSearchMain.cmp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -2210,31 +2106,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarItem/CBS_HangarItem.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarItem/CBS_HangarItemController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        <state relative-caret-position="20">
+          <caret line="1" column="57" selection-start-line="1" selection-start-column="57" selection-end-line="1" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarItem/CBS_HangarItem.cmp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="22" column="38" lean-forward="true" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+        <state relative-caret-position="560">
+          <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#aura:component#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/FCC_ShopRandom.page">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="654">
+          <caret line="169" column="42" selection-start-line="169" selection-start-column="42" selection-end-line="169" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarSearchResults/CBS_HangarSearchResults.cmp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+        <state relative-caret-position="160">
+          <caret line="8" column="81" selection-start-line="8" selection-start-column="81" selection-end-line="8" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarSearchResults/CBS_HangarSearchResults.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarSearchResults/CBS_HangarSearchResultsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flows/Lead_Convert_Process-9.flow">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="500" column="39" selection-start-line="500" selection-start-column="37" selection-end-line="500" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -2255,7 +2175,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Illuminated Cloud</last-edited>
+          <last-edited />
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -2290,7 +2210,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Illuminated Cloud|Cloudbus</last-edited>
+          <last-edited />
           <splitter-proportions>
             <option name="proportions">
               <list>

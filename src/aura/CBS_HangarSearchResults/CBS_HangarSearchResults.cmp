@@ -1,39 +1,23 @@
 <aura:component description="CBS_HangarSearchResults">
     <aura:attribute name="hangars" type="CBS_Hangar__c[]"/>
     <aura:attribute name="selectedItemId" type="Id" default=""/>
-    <!--<aura:handler name="change" value="{!v.hangars}" action="{!c.hangarsChangeHandler}"/>-->
     <lightning:card title="Hangars">
-        <p class="slds-p-horizontal--small">
-        <table class="slds-table slds-table_bordered slds-table_cell-buffer">
-            <thead>
-            <tr>
-                <th>
-                    Name
-                </th>
-                <th>
-                    Country
-                </th>
-                <th>
-                    City
-                </th>
-            </tr>
-            </thead>
-            <tbody>
-               <!-- <aura:iteration items="{!v.hangars}" var="sHangar" indexVar="index">-->
-                    <!--<li>
-                    {!index} : <c:CBS_HangarItem hangar="{!sHangar}" isActive="{!sHangar.Id == selectedItemId}"/>
-                    </li>-->
-                    <ul>
-                        <aura:iteration items="{!v.hangars}" var="sHangar" indexVar="index">
-                            <li aura:id="listItem" data-id="{!indx}" onclick="{!c.addClass}">
-                                <c:CBS_HangarItem hangar="{!v.sHangar}"/>
-                            </li>
-                        </aura:iteration>
-                    </ul>
-
-<!--                </aura:iteration>-->
-            </tbody>
-        </table>
-        </p>
+        <div class="slds-p-left_medium slds-p-right_medium">
+            <ul class="slds-list_vertical slds-has-divider_top-space">
+                <aura:iteration items="{!v.hangars}" var="sHangar" indexVar="index">
+                    <aura:if isTrue="{!v.hangars.length == 1}">
+                        <li class="itemSelect slds-list__item slds-p-around_small">
+                            <c:CBS_HangarItem hangarId="{!sHangar.Id}" hangar="{!sHangar}"/>
+                        </li>
+                    </aura:if>
+                    <aura:if isTrue="{!v.hangars.length > 1}">
+                        <li class="slds-list__item slds-p-around_small" aura:id="listItem"
+                            data-id="{!index}" onclick="{!c.addClass}">
+                            <c:CBS_HangarItem hangarId="{!sHangar.Id}" hangar="{!sHangar}"/>
+                        </li>
+                    </aura:if>
+                </aura:iteration>
+            </ul>
+        </div>
     </lightning:card>
 </aura:component>

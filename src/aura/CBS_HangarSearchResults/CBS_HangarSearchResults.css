@@ -1,3 +1,10 @@
-.THIS li{
-    background-color: red !important;
+.THIS {
+}
+
+.THIS .itemSelect {
+    background-color: rgba(128, 179, 255, 0.9) !important;
+}
+
+.THIS li:hover {
+    background-color: #cce0ff;
 }
