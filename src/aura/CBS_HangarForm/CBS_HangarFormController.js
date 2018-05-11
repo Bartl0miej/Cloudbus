@@ -27,7 +27,7 @@
                         selectEvent.fire();
                     }
                     if (response.getReturnValue().length == 0) {
-                        var toastEvent = $A.get("e.force:showToast");
+                        let toastEvent = $A.get("e.force:showToast");
                         toastEvent.setParams({
                             "type": "Warning",
                             "title": "No records.",

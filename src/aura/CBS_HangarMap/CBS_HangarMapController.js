@@ -1,9 +1,7 @@
 ({
     rerenderMap : function (component, event, helper) {
         let cordArr = component.get("v.coordinatesList");
-        for (let i = 0; i < cordArr.length; i++) {
-            console.log("~~~~~~");
-        }
+
         var map = component.get("v.map");
 
         if (!map) {
@@ -11,6 +9,7 @@
             map = L.map(mapElement, {zoomControl: true, zoom: 1, zoomAnimation: false, fadeAnimation: true, markerZoomAnimation: true});
             component.set("v.map", map);
         }
+
         L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',
                 {
                     attribution: 'Tiles © Esri'
