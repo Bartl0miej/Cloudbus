@@ -8,7 +8,7 @@
 
         if (!map) {
             var mapElement = component.find("map").getElement();
-            map = L.map(mapElement, {zoomControl: true, zoom:1,zoomAnimation:false,fadeAnimation:true,markerZoomAnimation:true});
+            map = L.map(mapElement, {zoomControl: true, zoom: 1, zoomAnimation: false, fadeAnimation: true, markerZoomAnimation: true});
             component.set("v.map", map);
         }
         L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',

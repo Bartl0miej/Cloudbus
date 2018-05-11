@@ -8,6 +8,7 @@
         if (markers) {
         	map.removeLayer(markers);
         }
+
         if (map && coordinates && coordinates.length> 0) {
             for (var i=0; i<coordinates.length; i++) {
                 var coordinate = coordinates[i];

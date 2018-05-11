@@ -11,6 +11,7 @@
             let searchedHangar = component.get("v.searchedHangar");
             let action = component.get("c.searchHangars");
             action.setParams({"searchedHangar" : searchedHangar});
+            helper.showSpinner(component);
             action.setCallback(this, function(response) {
                 let state = response.getState();
                 if (state === "SUCCESS") {
@@ -38,6 +39,7 @@
                     let sendCoordinatesEvent = component.getEvent("sendCoordinates");
                     sendCoordinatesEvent.setParams({"hangarsCoordinates": response.getReturnValue()});
                     sendCoordinatesEvent.fire();
+                    helper.hideSpinner(component);
                 } else {
                     console.log("Failed with state: " + state);
                 }
@@ -56,5 +58,5 @@
         let sendCoordinatesEvent = component.getEvent("sendCoordinates");
         sendCoordinatesEvent.setParams({"hangarsCoordinates": new Array()});
         sendCoordinatesEvent.fire();
-    }
+    },
 })

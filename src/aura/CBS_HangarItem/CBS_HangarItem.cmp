@@ -5,7 +5,8 @@
     <aura:registerEvent name="selectHangar" type="c:selectedHangarUpdate"/>
     <aura:registerEvent name="clearSelected" type="c:CBS_ClearSelectedHangar"/>
     <aura:registerEvent name="sendCoordinates" type="c:CBS_SetCoordinates"/>
-    
+    <!--<aura:handler name="clearSelected" event="c:CBS_ClearSelectedHangar" action="{!c.clearSelectedHangar}"/>-->
+    <!--<aura:handler name="change" value="{!v.hangar}" action="{!c.hangarSelected}"/>-->
     <aura:if isTrue="{!v.isActive}">
         <tr onclick="{!c.hangarSelected}" bgcolor="lightgray">
             <td>

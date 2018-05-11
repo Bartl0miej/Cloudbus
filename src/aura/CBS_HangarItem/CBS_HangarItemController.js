@@ -5,6 +5,8 @@
         clearSelectedEvent.fire();
 
         let selHangar = component.get("v.hangar");
+        selHangar.isActive = true;
+        component.set("v.hangar", selHangar);
         //component.set("v.selectedItemId", selHangar.Id);
         let selectEvent = component.getEvent("selectHangar");
         selectEvent.setParams({"chosenHangar" : selHangar});
@@ -24,5 +26,11 @@
         });
 
         $A.enqueueAction(action);
+    },
+
+    clearSelectedHangar : function(component, event, helper) {
+        let selHangar = component.get("v.hangar");
+        selHangar.isActive = false;
+        component.set("v.hangar", selHangar);
     }
 })
