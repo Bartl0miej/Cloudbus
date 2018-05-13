@@ -3,9 +3,9 @@
                     default="{'sobjectType' : 'CBS_Hangar__c', 'Name' : '', 'Country__c' : '', 'City__c' : ''}"/>
     <aura:attribute name="hangars" type="List" default="[]"/>
     <aura:attribute name="Spinner" type="boolean" default="false"/>
-    <aura:registerEvent name="clearSearch" type="c:clearHangarSearch"/>
+    <aura:registerEvent name="clearSearch" type="c:CBS_ClearHangarSearch"/>
     <aura:registerEvent name="sendCoordinates" type="c:CBS_SetCoordinates"/>
-    <aura:registerEvent name="selectHangar" type="c:selectedHangarUpdate"/>
+    <aura:registerEvent name="selectHangar" type="c:CBS_SelectedHangarUpdate"/>
     <aura:if isTrue="{!v.Spinner}">
         <div aura:id="spinnerId" class="slds-spinner_container">
             <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">

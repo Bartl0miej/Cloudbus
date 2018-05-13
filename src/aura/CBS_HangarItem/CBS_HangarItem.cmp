@@ -1,19 +1,20 @@
 <aura:component description="CBS_HangarItem" controller="CBS_HangarController">
     <aura:attribute name="hangar" type="CBS_Hangar__c"/>
-    <aura:registerEvent name="selectHangar" type="c:selectedHangarUpdate"/>
+    <aura:registerEvent name="selectHangar" type="c:CBS_SelectedHangarUpdate"/>
     <aura:registerEvent name="sendCoordinates" type="c:CBS_SetCoordinates"/>
-
     <div onclick="{!c.hangarSelected}">
-                <div class="slds-grid">
-                    <h3 class="slds-text-heading_small slds-m-bottom_xx-small">{!v.hangar.Name}</h3>
-                </div>
-                <div class="slds-grid slds-gutters">
-                    <div class="slds-col slds-size_1-of-2">
-                        <span class="slds-text-color_weak slds-m-right_small slds-size--1-of-2">{!$Label.c.CBS_City2}&nbsp;{!v.hangar.City__c}</span>
-                    </div>
-                    <div class="slds-col slds-size_1-of-2">
-                        <span class="slds-text-color_weak slds-m-right_small slds-size--1-of-2">{!$Label.c.CBS_Country2}&nbsp;{!v.hangar.Country__c}</span>
-                    </div>
-                </div>
+        <div class="slds-grid">
+            <h3 class="slds-text-heading_small slds-m-bottom_xx-small">{!v.hangar.Name}</h3>
+        </div>
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_1-of-2">
+                <span class="slds-text-color_weak slds-m-right_small slds-size--1-of-2">{!$Label.c.CBS_City2}
+                    &nbsp;{!v.hangar.City__c}</span>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <span class="slds-text-color_weak slds-m-right_small slds-size--1-of-2">{!$Label.c.CBS_Country2}
+                    &nbsp;{!v.hangar.Country__c}</span>
+            </div>
+        </div>
     </div>
 </aura:component>

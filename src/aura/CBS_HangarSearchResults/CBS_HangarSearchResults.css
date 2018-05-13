@@ -1,8 +1,8 @@
 .THIS {
 }
 
-.THIS .itemSelect {
-    background-color: rgba(128, 179, 255, 0.9) !important;
+.THIS .itemSelected {
+    background-color: rgba(128, 179, 255, 0.7) !important;
 }
 
 .THIS li:hover {

@@ -1,3 +1,0 @@
-<aura:event type="COMPONENT" description="selectedHangarUpdate">
-    <aura:attribute name="chosenHangar" type="CBS_Hangar__c"/>
-</aura:event>

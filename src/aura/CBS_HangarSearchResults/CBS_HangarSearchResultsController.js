@@ -1,17 +1,17 @@
 ({
     addClass : function (component, event, helper) {
-            var selectedItem = event.currentTarget;
-            var hangarId = selectedItem.dataset.id;
-            var Elements = component.find('listItem');
+            let selectedItem = event.currentTarget;
+            let hangarId = selectedItem.dataset.id;
+            let hangars = component.find('listItem');
 
-            for(var i = 0; i<Elements.length; i++) {
-                var value = Elements[i].getElement().getAttribute('data-id');
+            for(let i = 0; i<hangars.length; i++) {
+                let tempId = hangars[i].getElement().getAttribute('data-id');
 
-                if (value != hangarId) {
-                   $A.util.removeClass(Elements[i], 'itemSelect');
-                }else{
-                    $A.util.addClass(Elements[i], 'itemSelect');
+                if (tempId != hangarId) {
+                   $A.util.removeClass(hangars[i], 'itemSelected');
+                } else {
+                    $A.util.addClass(hangars[i], 'itemSelected');
                 }
             }
-        }
+    }
 })

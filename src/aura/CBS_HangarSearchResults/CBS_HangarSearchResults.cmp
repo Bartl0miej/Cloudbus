@@ -6,7 +6,7 @@
             <ul class="slds-list_vertical slds-has-divider_top-space">
                 <aura:iteration items="{!v.hangars}" var="sHangar" indexVar="index">
                     <aura:if isTrue="{!v.hangars.length == 1}">
-                        <li class="itemSelect slds-list__item slds-p-around_small">
+                        <li class="itemSelected slds-list__item slds-p-around_small">
                             <c:CBS_HangarItem hangar="{!sHangar}"/>
                         </li>
                     </aura:if>
