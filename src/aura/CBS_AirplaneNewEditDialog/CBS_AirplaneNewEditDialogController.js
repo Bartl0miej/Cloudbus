@@ -60,5 +60,11 @@
         } else {
             helper.navigateTo(component, recId);
         }
+    },
+
+    handleUploadFinished: function (component, event) {
+/*        var uploadedFiles = event.getParam("files");
+        alert("Files uploaded : " + uploadedFiles.length);*/
+        alert('Files uploaded');
     }
 })

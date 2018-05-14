@@ -58,7 +58,7 @@ public with sharing class CBS_HangarController {
         HttpResponse response = rrHttp.send(request);
         RootObject resJson = new RootObject();
         if (response.getStatusCode() == 200) {
-            resJson = (RootObject)JSON.deserialize(response.getBody(), RootObject.class);
+            resJson = (RootObject) JSON.deserialize(response.getBody(), RootObject.class);
             hangarWrapper.latitude = String.valueOf(resJson.results.get(0).geometry.location.lat);
             hangarWrapper.longitude = String.valueOf(resJson.results.get(0).geometry.location.lng);
         } else {
@@ -66,8 +66,42 @@ public with sharing class CBS_HangarController {
 
     }
 
+    @AuraEnabled
+    public static List<String> getAttachments(String recordId) {
+
+        System.debug('recordId = ' + recordId);
+
+        try {
+
+            List<ContentDocumentLink> contentDocumentLinks =  [SELECT Id, LinkedEntityId, ContentDocumentId FROM ContentDocumentLink WHERE LinkedEntityId = :recordId];
+
+            if (contentDocumentLinks == null || contentDocumentLinks.size() == 0) {
+                return new List<String>();
+            }
+
+            List<String> contentDocuments = new List<String>();
+
+            for (ContentDocumentLink link : contentDocumentLinks) {
+                contentDocuments.add(link.ContentDocumentId);
+            }
+
+            List<ContentVersion> contentVersions = [SELECT Id FROM ContentVersion WHERE ContentDocumentId IN :contentDocuments];
+            List<String> returnedIds = new List<String>();
+
+            for (ContentVersion version : contentVersions) {
+                returnedIds.add(version.Id);
+            }
+
+            return returnedIds;
+        } catch (Exception exc) {
+            System.debug('error mg: ' + exc.getMessage());
+            throw new AuraHandledException(exc.getMessage());
+        }
+
+    }
+
     public class HangarResult {
-        @AuraEnabled public CBS_Hangar__c hangar { get; set;}
+        @AuraEnabled public CBS_Hangar__c hangar { get; set; }
         @AuraEnabled public String latitude { get; set; }
         @AuraEnabled public String longitude { get; set; }
     }
