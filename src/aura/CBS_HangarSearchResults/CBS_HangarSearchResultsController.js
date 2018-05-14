@@ -4,7 +4,7 @@
             let hangarId = selectedItem.dataset.id;
             let hangars = component.find('listItem');
 
-            for(let i = 0; i<hangars.length; i++) {
+            for(let i = 0; i< hangars.length; i++) {
                 let tempId = hangars[i].getElement().getAttribute('data-id');
 
                 if (tempId != hangarId) {

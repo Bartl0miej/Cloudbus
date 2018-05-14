@@ -30,8 +30,8 @@
                         let toastEvent = $A.get("e.force:showToast");
                         toastEvent.setParams({
                             "type": "Warning",
-                            "title": "No records.",
-                            "message": "No records found using specified criteria."
+                            "title": $A.get("$Label.c.CBS_No_hangars"),
+                            "message": $A.get("$Label.c.CBS_No_hangars_found")
                         });
                         toastEvent.fire();
                     }
