@@ -10,8 +10,6 @@
                       targetFields="{!v.airplaneRecord}"
                       mode="EDIT"/>
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
-
-
     <div aura:id="editDialog" role="dialog" tabindex="-1" aria-labelledby="header43"
          class="slds-modal slds-fade-in-open">
         <div class="slds-modal__container">

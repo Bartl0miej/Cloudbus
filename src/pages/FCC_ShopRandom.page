@@ -1,22 +1,31 @@
-<apex:page standardController="FCC_Shop__c" extensions="FCC_ShopRandomController" showHeader="false" standardStylesheets="false" lightningStylesheets="true" sidebar="false" docType="html-5.0" >
+<apex:page standardController="FCC_Shop__c" extensions="FCC_ShopRandomController" showHeader="false"
+           standardStylesheets="false" lightningStylesheets="true" sidebar="false" docType="html-5.0">
     <apex:includeScript value="{!$Resource.jQuery}"/>
     <apex:slds/>
     <div class="slds-scope" id="mainDiv">
-        <div class="slds-tabs_default">
+        <div class="slds-tabs_default" id="sldsTabs">
             <ul class="slds-tabs_default__nav" role="tablist">
-                <li class="slds-tabs_default__item slds-is-active" title="Item One" role="presentation" id="list-item-1">
-                    <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item" onclick="toggleStyle('#tab-default-1', '#list-item-1')">Contact</a>
+                <li class="slds-tabs_default__item slds-is-active" title="{!$Label.CBS_Contact}" role="presentation"
+                    id="list-item-1">
+                    <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0"
+                       aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item"
+                       onclick="toggleStyle('#tab-default-1', '#list-item-1')">{!$Label.CBS_Contact}</a>
                 </li>
-                <li class="slds-tabs_default__item" title="Item Two" role="presentation" id="list-item-2">
-                    <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2" id="tab-default-2__item" onclick="toggleStyle('#tab-default-2', '#list-item-2')">Shops</a>
+                <li class="slds-tabs_default__item" title="{!$Label.CBS_Shops}" role="presentation" id="list-item-2">
+                    <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1"
+                       aria-selected="false" aria-controls="tab-default-2" id="tab-default-2__item"
+                       onclick="toggleStyle('#tab-default-2', '#list-item-2')">{!$Label.CBS_Shops}</a>
                 </li>
-                <li class="slds-tabs_default__item" title="Item Three" role="presentation" id="list-item-3">
-                    <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-3" id="tab-default-3__item" onclick="toggleStyle('#tab-default-3', '#list-item-3')">Offer</a>
+                <li class="slds-tabs_default__item" title="{!$Label.CBS_Offer}" role="presentation" id="list-item-3">
+                    <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1"
+                       aria-selected="false" aria-controls="tab-default-3" id="tab-default-3__item"
+                       onclick="toggleStyle('#tab-default-3', '#list-item-3')">{!$Label.CBS_Offer}</a>
                 </li>
             </ul>
-            <div class="leadSubmitToast" style="height: 4rem; display: none; position: absolute; top: 5%; left:13%;" id="leadSubmitToast">
-                <div class="slds-notify_container slds-is-relative">
-                    <div class="slds-notify slds-notify_toast slds-theme_success" role="alert">
+            <div class="leadSubmitToast" style="height: 4rem; display: none; position: absolute; top: 5%; left:13%;"
+                 id="leadSubmitToast">
+                <div class="slds-notify_container slds-is-relative" id="leadSubmitDiv">
+                    <div class="slds-notify slds-notify_toast slds-theme_success" role="alert" id="leadSubmitInnerDiv">
                         <span class="slds-assistive-text">{!$Label.FCC_Success}</span>
                         <span class="slds-icon_container slds-icon-utility-success slds-m-right_small slds-no-flex slds-align-top"
                               title="{!$Label.FCC_Close}">
@@ -25,8 +34,8 @@
                                      xlink:href="/apexpages/slds/latest/assets/utility-sprite/svg/symbols.svg#success"></use>
                             </svg>
                         </span>
-                        <div class="slds-notify__content">
-                            <h2 class="slds-text-heading_small ">Thank you for contacting us - we will get back to you soon.</h2>
+                        <div class="slds-notify__content" id="leadToastHeaderDiv">
+                            <h2 class="slds-text-heading_small">{!$Label.CBS_Thank_you_form_toast}</h2>
                         </div>
                         <button class="slds-button slds-button_icon slds-notify__close slds-button_icon-inverse"
                                 title="{!$Label.FCC_Close}" onClick="closeToast('leadSubmitToast'); return false;">
@@ -39,7 +48,8 @@
                     </div>
                 </div>
             </div>
-            <div id="tab-default-2" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-2__item">
+            <div id="tab-default-2" class="slds-tabs_default__content slds-hide" role="tabpanel"
+                 aria-labelledby="tab-default-2__item">
                 <div class="slds-scope" id="mainDiv">
                     <div class="slds-page-header" role="banner" id="banner" style="margin-bottom: 20px;">
                         <p class="slds-text-title--caps slds-line-height--reset">{!$Label.FCC_Francesinha}</p>
@@ -67,7 +77,8 @@
                                     <div class="slds-truncate" title="{!randShop.Name}">{!randShop.Name}</div>
                                 </th>
                                 <td data-label="{!$Label.FCC_Country}">
-                                    <div class="slds-truncate" title="{!randShop.Country__c}">{!randShop.Country__c}</div>
+                                    <div class="slds-truncate"
+                                         title="{!randShop.Country__c}">{!randShop.Country__c}</div>
                                 </td>
                                 <td data-label="{!$Label.FCC_City}">
                                     <div class="slds-truncate" title="{!randShop.City__c}">{!randShop.City__c}</div>
@@ -77,68 +88,89 @@
                         </tbody>
                     </table>
                     <footer role="contentinfo" class="slds-p-around--large">
-                        <div class="slds-grid slds-grid--align-spread">
+                        <div class="slds-grid slds-grid--align-spread" id="shopsFooterDiv">
                             <p class="slds-col" style="color: #182337;">{!$Label.FCC_Join_us_today}</p>
                             <p class="slds-col" style="color: #182337;">{!$Label.FCC_Random_Trademark}</p>
                         </div>
                     </footer>
                 </div>
             </div>
-            <div id="tab-default-1" class="slds-tabs_default__content slds-show" role="tabpanel" aria-labelledby="tab-default-1__item" style="padding: 10px;">
-                <form id="leadForm" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+            <div id="tab-default-1" class="slds-tabs_default__content slds-show" role="tabpanel"
+                 aria-labelledby="tab-default-1__item" style="padding: 10px;">
+                <form id="leadForm" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
+                      method="POST">
                     <input type="hidden" name="oid" value="00D1r000000eUPq"/>
                     <input type="hidden" name="lead_source" value="Web Form"/>
-                    <div class="slds-form slds-form_compound">
-                        <fieldset class="slds-form-element">
-                            <div class="slds-form-element__group">
-                                <div class="slds-form-element__row">
-                                    <div class="slds-form-element slds-size_1-of-4">
-                                        <label for="first_name" class="slds-form-element__label">First Name</label><input id="first_name" maxlength="40" name="first_name" size="20" type="text" class="slds-input"/>
+                    <div class="slds-form slds-form_compound" id="mainFormDiv">
+                        <fieldset class="slds-form-element" id="formFieldset1">
+                            <div class="slds-form-element__group" id="formDiv1">
+                                <div class="slds-form-element__row" id="formRow1">
+                                    <div class="slds-form-element slds-size_1-of-4" id="formFirstName">
+                                        <label for="first_name" class="slds-form-element__label">{!$ObjectType.Lead.fields.FirstName.Label}</label>
+                                        <input id="first_name" maxlength="40" name="first_name"
+                                                               size="20" type="text" class="slds-input"/>
                                     </div>
-                                    <div class="slds-form-element slds-size_1-of-4">
-                                        <label for="last_name" class="slds-form-element__label">Last Name</label><input id="last_name" maxlength="80" name="last_name" size="20" type="text" class="slds-input" required="required"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </fieldset>
-                        <fieldset class="slds-form-element">
-                            <div class="slds-form-element__group">
-                                <div class="slds-form-element__row">
-                                    <div class="slds-form-element slds-size_1-of-4">
-                                        <label for="country" class="slds-form-element__label">Country</label><input id="country" maxlength="40" name="country" size="20" type="text" class="slds-input"/>
-                                    </div>
-                                    <div class="slds-form-element slds-size_1-of-4">
-                                        <label for="city" class="slds-form-element__label">City</label><input id="city" maxlength="40" name="city" size="20" type="text" class="slds-input"/>
+                                    <div class="slds-form-element slds-size_1-of-4" id="formLastName">
+                                        <label for="last_name" class="slds-form-element__label">{!$ObjectType.Lead.fields.LastName.Label}</label><input
+                                            id="last_name" maxlength="80" name="last_name" size="20" type="text"
+                                            class="slds-input" required="required"/>
                                     </div>
                                 </div>
                             </div>
                         </fieldset>
-                        <fieldset class="slds-form-element">
-                            <div class="slds-form-element__group">
-                                <div class="slds-form-element__row">
-                                    <div class="slds-form-element slds-size_1-of-4">
-                                        <label for="email" class="slds-form-element__label">Email</label><input id="email" maxlength="80" name="email" size="20" type="text" class="slds-input" required="required"/>
+                        <fieldset class="slds-form-element" id="formFieldset2">
+                            <div class="slds-form-element__group" id="formDiv2">
+                                <div class="slds-form-element__row" id="formRow2">
+                                    <div class="slds-form-element slds-size_1-of-4" id="formCountry">
+                                        <label for="country" class="slds-form-element__label">{!$ObjectType.Lead.fields.Country.Label}</label><input
+                                            id="country" maxlength="40" name="country" size="20" type="text"
+                                            class="slds-input"/>
                                     </div>
-                                    <div class="slds-form-element slds-size_1-of-4">
-                                        <label for="phone" class="slds-form-element__label">Phone</label><input id="phone" maxlength="40" name="phone" size="20" type="text" class="slds-input"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </fieldset>
-                        <fieldset class="slds-form-element">
-                            <div class="slds-form-element__group">
-                                <div class="slds-form-element__row">
-                                    <div class="slds-form-element slds-size_1-of-4">
-                                        <label for="company" class="slds-form-element__label">Company</label><input id="company" maxlength="40" name="company" size="20" type="text" class="slds-input" required="true"/>
+                                    <div class="slds-form-element slds-size_1-of-4" id="formCity">
+                                        <label for="city" class="slds-form-element__label">{!$ObjectType.Lead.fields.City.Label}</label><input id="city"
+                                                                                                              maxlength="40"
+                                                                                                              name="city"
+                                                                                                              size="20"
+                                                                                                              type="text"
+                                                                                                              class="slds-input"/>
                                     </div>
                                 </div>
                             </div>
                         </fieldset>
-                        <input type="submit" name="submit" value="Submit" class="slds-button slds-button_brand" style="margin-left: 22.7%; margin-top: 1%;"/>
+                        <fieldset class="slds-form-element" id="formFieldset3">
+                            <div class="slds-form-element__group" id="formDiv3">
+                                <div class="slds-form-element__row" id="formRow3">
+                                    <div class="slds-form-element slds-size_1-of-4" id="formEmail">
+                                        <label for="email" class="slds-form-element__label">{!$ObjectType.Lead.fields.Email.Label}</label><input
+                                            id="email" maxlength="80" name="email" size="20" type="text"
+                                            class="slds-input" required="required"/>
+                                    </div>
+                                    <div class="slds-form-element slds-size_1-of-4" id="formPhone">
+                                        <label for="phone" class="slds-form-element__label">{!$ObjectType.Lead.fields.Phone.Label}</label><input
+                                            id="phone" maxlength="40" name="phone" size="20" type="text"
+                                            class="slds-input"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="slds-form-element" id="formFieldset4">
+                            <div class="slds-form-element__group" id="formDiv4">
+                                <div class="slds-form-element__row" id="formRow4">
+                                    <div class="slds-form-element slds-size_1-of-4" id="formCompany">
+                                        <label for="company" class="slds-form-element__label">{!$ObjectType.Lead.fields.Company.Label}</label><input
+                                            id="company" maxlength="40" name="company" size="20" type="text"
+                                            class="slds-input" required="true"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <input type="submit" name="submit" value="{!$Label.CBS_Submit}" class="slds-button slds-button_brand"
+                               style="margin-left: 22.7%; margin-top: 1%;"/>
                     </div>
                 </form>
             </div>
-            <div id="tab-default-3" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-3__item"></div>
+            <div id="tab-default-3" class="slds-tabs_default__content slds-hide" role="tabpanel"
+                 aria-labelledby="tab-default-3__item"></div>
         </div>
     </div>
     <script>
@@ -171,6 +203,7 @@
             });
             $j(".slds-input").val(null);
         });
+
 
 
     </script>
