@@ -1,6 +1,45 @@
-<!--
- - Created by BRITENET on 13.05.2018.
- -->
+<aura:component description="CBS_AirplaneNewEditDialog"
+                implements="flexipage:availableForRecordHome,force:hasRecordId,lightning:actionOverride"
+                access="global">
+    <aura:attribute name="airplaneRecord" type="Product2"/>
+    <aura:attribute name="airplane" type="Object"/>
+    <force:recordData aura:id="forceRecord"
+                      recordId="{!v.recordId}"
+                      layoutType="FULL"
+                      targetRecord="{!v.airplane}"
+                      targetFields="{!v.airplaneRecord}"
+                      mode="EDIT"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
 
-<aura:component description="CBS_AirplaneNewEditDialog">
+
+    <div aura:id="editDialog" role="dialog" tabindex="-1" aria-labelledby="header43"
+         class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+            <div class="slds-modal__header">
+                <aura:if isTrue="{!v.recordId}">
+                    <h2 class="slds-text-heading--medium">Edit {!v.airplaneRecord.Name}</h2>
+                </aura:if>
+                <aura:if isTrue="{! !v.recordId}">
+                    <h2 class="slds-text-heading--medium">New Airplane</h2>
+                </aura:if>
+            </div>
+            <div class="slds-modal__content slds-p-around--medium slds-grid slds-wrap ">
+                <lightning:input value="{!v.airplaneRecord.Name}" aura:id="airplaneName" name="airplaneName" label="Airplane Name" required="true"
+                                 class="slds-size--1-of-1 slds-p-around_x-small"/>
+                <lightning:input value="{!v.airplaneRecord.Number_of_Seats__c}" type="number" name="airplaneNumberOfSeats" label="Number of Seats" step="0.1" min="1" max="999" class="slds-size--1-of-2 slds-p-around_x-small"/>
+                <lightning:input value="{!v.airplaneRecord.Wingspan__c}" type="number" name="airplaneWingspan" label="Wingspan(m)" step="0.1" min="1" max="999" class="slds-size--1-of-2 slds-p-around_x-small"/>
+                <lightning:input value="{!v.airplaneRecord.Engine__c}" name="airplaneEngine" label="Engine" class="slds-size--1-of-2 slds-p-around_x-small"/>
+                <lightning:input value="{!v.airplaneRecord.Engines_Number__c}" type="number" name="airplaneEnginesNumber" label="Engines Number" step="1" min="1" max="9" class="slds-size--1-of-2 slds-p-around_x-small"/>
+                <lightning:input value="{!v.airplaneRecord.Weight__c}" type="number" name="airplaneWeight" label="Weight" step="0.1" min="1" max="99999" class="slds-size--1-of-2 slds-p-around_x-small"/>
+                <lightning:input value="{!v.airplaneRecord.Length__c}" type="number" name="airplaneLength" label="Length" step="0.1" min="1" max="999" class="slds-size--1-of-2 slds-p-around_x-small"/>
+                <lightning:textarea value="{!v.airplaneRecord.Description}" name="airplaneDescription" class="slds-size--1-of-1 slds-p-around_x-small"
+                                    label="Airplane Description" maxlength="300" />
+            </div>
+            <div class="slds-modal__footer">
+                <lightning:button variant="neutral" label="Cancel" onclick="{!c.cancelDialog}"/>
+                <lightning:button variant="brand" label="Submit" onclick="{!c.saveRecord}"/>
+            </div>
+        </div>
+    </div>
+    <div aura:id="overlay" class="slds-backdrop slds-backdrop--open"></div>
 </aura:component>

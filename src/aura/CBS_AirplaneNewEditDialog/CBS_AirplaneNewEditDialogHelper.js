@@ -1,5 +1,9 @@
-/**
- * Created by BRITENET on 14.05.2018.
- */
 ({
+    navigateTo: function(component, recId) {
+        var navEvt = $A.get("e.force:navigateToSObject");
+        navEvt.setParams({
+            "recordId": recId
+        });
+        navEvt.fire();
+    }
 })
