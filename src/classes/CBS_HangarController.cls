@@ -52,7 +52,8 @@ public with sharing class CBS_HangarController {
             endpoint += '+' + hangarWrapper.hangar.Street__c;
         }
 
-        endpoint += '&key=AIzaSyCBtvTZtClyA-axDWKzRrJnFUmIoJZC0OM';
+        endpoint += '&key=';
+        endpoint += CBS_Util.getCustomSettingValue('GoogleApiKey');
         request.setEndpoint(endpoint);
         HttpResponse response = rrHttp.send(request);
         RootObject resJson = new RootObject();
