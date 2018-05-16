@@ -5,7 +5,7 @@
         var map = component.get("v.map");
 
         if (!map) {
-            var mapElement = component.find("map").getElement();
+            let mapElement = component.find("map").getElement();
             map = L.map(mapElement, {zoomControl: true, zoom: 1, zoomAnimation: false, fadeAnimation: true, markerZoomAnimation: true});
             component.set("v.map", map);
         }
@@ -25,7 +25,7 @@
     jsLoaded : function(component, event, helper) {
         let cordArr = component.get("v.coordinatesList");
 
-        var action = component.get("c.rerenderMap");
+        let action = component.get("c.rerenderMap");
 
         $A.enqueueAction(action);
     }
