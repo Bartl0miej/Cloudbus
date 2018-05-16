@@ -6,10 +6,10 @@
         <div class="slds-tabs_default" id="sldsTabs">
             <ul class="slds-tabs_default__nav" role="tablist">
                 <li class="slds-tabs_default__item slds-is-active" title="{!$Label.CBS_Contact}" role="presentation"
-                    id="list-item-1">
+                    id="contactListItem">
                     <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0"
-                       aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item"
-                       onclick="toggleStyle('#tab-default-1', '#list-item-1')">{!$Label.CBS_Contact}</a>
+                       aria-selected="true" aria-controls="tab-default-1" id="contactListDefaultItem"
+                       onclick="toggleStyle('#tab-default-1', '#contactListItem')">{!$Label.CBS_Contact}</a>
                 </li>
                 <li class="slds-tabs_default__item" title="{!$Label.CBS_Shops}" role="presentation" id="list-item-2">
                     <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1"
@@ -96,7 +96,7 @@
                 </div>
             </div>
             <div id="tab-default-1" class="slds-tabs_default__content slds-show" role="tabpanel"
-                 aria-labelledby="tab-default-1__item" style="padding: 10px;">
+                 aria-labelledby="contactListDefaultItem" style="padding: 10px;">
                 <form id="leadForm" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
                       method="POST">
                     <input type="hidden" name="oid" value="00D1r000000eUPq"/>
@@ -203,8 +203,5 @@
             });
             $j(".slds-input").val(null);
         });
-
-
-
     </script>
 </apex:page>

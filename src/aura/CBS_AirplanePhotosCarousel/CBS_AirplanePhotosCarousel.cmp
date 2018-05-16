@@ -4,7 +4,7 @@
     <aura:attribute name="renderCarousel" type="Boolean" default="true"/>
     <aura:handler name="change" value="{!v.attachments}" action="{!c.doInit}"/>
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
-    <aura:if isTrue="{!v.renderCarousel}">
+    <!--<aura:if isTrue="{!v.renderCarousel}">-->
         <aura:if isTrue="{!v.attachments.length > 0}">
             <lightning:carousel>
                 <aura:iteration items="{!v.attachments}" var="att">
@@ -14,6 +14,6 @@
                             alternativeText="This is a card"></lightning:carouselImage>
                 </aura:iteration>
             </lightning:carousel>
-        </aura:if>
+        <!--</aura:if>-->
     </aura:if>
 </aura:component>

@@ -1285,10 +1285,6 @@
                       <option name="entries">
                         <list>
                           <MetadataEntry>
-                            <option name="name" value="Lead_Convert_Process-12" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
                             <option name="name" value="Lead_Convert_Process-25" />
                             <option name="selected" value="true" />
                           </MetadataEntry>

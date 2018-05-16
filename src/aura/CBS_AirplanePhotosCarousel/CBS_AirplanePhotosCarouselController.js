@@ -6,10 +6,10 @@
             action.setCallback(this, function(response) {
                let state = response.getState();
                if (state === "SUCCESS") {
-                    let listOfAttachmentIds = response.getReturnValue();
+                    /*let listOfAttachmentIds = response.getReturnValue();
                     console.log('in callback');
                     console.log(listOfAttachmentIds);
-                    component.set("v.attachments", listOfAttachmentIds);
+                    component.set("v.attachments", listOfAttachmentIds);*/
                     /*component.set("v.renderCarousel", true);*/
                } else {
                    console.log('failed with state: ');

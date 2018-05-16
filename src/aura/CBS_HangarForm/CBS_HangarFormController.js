@@ -26,6 +26,7 @@
                         selectEvent.setParams({"chosenHangar" : selHangar});
                         selectEvent.fire();
                     }
+                    //else
                     if (response.getReturnValue().length == 0) {
                         let toastEvent = $A.get("e.force:showToast");
                         toastEvent.setParams({
@@ -34,6 +35,7 @@
                             "message": $A.get("$Label.c.CBS_No_hangars_found")
                         });
                         toastEvent.fire();
+                        return;
                     }
 
                     let sendCoordinatesEvent = component.getEvent("sendCoordinates");
@@ -41,6 +43,7 @@
                     sendCoordinatesEvent.fire();
                     helper.hideSpinner(component);
                 } else {
+                    //obsluga
                     console.log("Failed with state: " + state);
                 }
             });

@@ -6,7 +6,7 @@ public with sharing class CBS_PickListValuesController {
         Schema.DescribeSObjectResult res = convertToObj.getDescribe();
         Schema.DescribeFieldResult fieldResult = res.fields.getMap().get(selectedField).getDescribe();
         List<Schema.PicklistEntry> ple = fieldResult.getPicklistValues();
-        for( Schema.PicklistEntry pickListVal : ple){
+        for (Schema.PicklistEntry pickListVal : ple) {
             pickListValuesList.add(pickListVal.getLabel());
         }
         return pickListValuesList;
