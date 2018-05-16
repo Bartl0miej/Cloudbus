@@ -8,18 +8,18 @@
                 <li class="slds-tabs_default__item slds-is-active" title="{!$Label.CBS_Contact}" role="presentation"
                     id="contactListItem">
                     <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0"
-                       aria-selected="true" aria-controls="tab-default-1" id="contactListDefaultItem"
-                       onclick="toggleStyle('#tab-default-1', '#contactListItem')">{!$Label.CBS_Contact}</a>
+                       aria-selected="true" aria-controls="contactTab" id="contactListDefaultItem"
+                       onclick="toggleStyle('#contactTab', '#contactListItem')">{!$Label.CBS_Contact}</a>
                 </li>
-                <li class="slds-tabs_default__item" title="{!$Label.CBS_Shops}" role="presentation" id="list-item-2">
+                <li class="slds-tabs_default__item" title="{!$Label.CBS_Shops}" role="presentation" id="shopsListitem">
                     <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1"
-                       aria-selected="false" aria-controls="tab-default-2" id="tab-default-2__item"
-                       onclick="toggleStyle('#tab-default-2', '#list-item-2')">{!$Label.CBS_Shops}</a>
+                       aria-selected="false" aria-controls="shopsTab" id="shopsListDefaultItem"
+                       onclick="toggleStyle('#shopsTab', '#shopsListitem')">{!$Label.CBS_Shops}</a>
                 </li>
-                <li class="slds-tabs_default__item" title="{!$Label.CBS_Offer}" role="presentation" id="list-item-3">
+                <li class="slds-tabs_default__item" title="{!$Label.CBS_Offer}" role="presentation" id="offerListItem">
                     <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1"
-                       aria-selected="false" aria-controls="tab-default-3" id="tab-default-3__item"
-                       onclick="toggleStyle('#tab-default-3', '#list-item-3')">{!$Label.CBS_Offer}</a>
+                       aria-selected="false" aria-controls="offerTab" id="offerListDefaultItem"
+                       onclick="toggleStyle('#offerTab', '#offerListItem')">{!$Label.CBS_Offer}</a>
                 </li>
             </ul>
             <div class="leadSubmitToast" style="height: 4rem; display: none; position: absolute; top: 5%; left:13%;"
@@ -48,8 +48,86 @@
                     </div>
                 </div>
             </div>
-            <div id="tab-default-2" class="slds-tabs_default__content slds-hide" role="tabpanel"
-                 aria-labelledby="tab-default-2__item">
+            <div id="contactTab" class="slds-tabs_default__content slds-show" role="tabpanel"
+                 aria-labelledby="contactListDefaultItem" style="padding: 10px;">
+                <form id="leadForm" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
+                      method="POST">
+                    <input type="hidden" name="oid" value="00D1r000000eUPq"/>
+                    <input type="hidden" name="lead_source" value="Web Form"/>
+                    <div class="slds-form slds-form_compound" id="mainFormDiv">
+                        <fieldset class="slds-form-element" id="nameFieldset">
+                            <div class="slds-form-element__group" id="nameInnerDiv">
+                                <div class="slds-form-element__row" id="nameRowDiv">
+                                    <div class="slds-form-element slds-size_1-of-4" id="formFirstNameDiv">
+                                        <label for="first_name"
+                                               class="slds-form-element__label">{!$ObjectType.Lead.fields.FirstName.Label}</label>
+                                        <input id="first_name" maxlength="40" name="first_name"
+                                               size="20" type="text" class="slds-input"/>
+                                    </div>
+                                    <div class="slds-form-element slds-size_1-of-4" id="formLastNameDiv">
+                                        <label for="last_name"
+                                               class="slds-form-element__label">{!$ObjectType.Lead.fields.LastName.Label}</label><input
+                                            id="last_name" maxlength="80" name="last_name" size="20" type="text"
+                                            class="slds-input" required="required"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="slds-form-element" id="addressFieldset">
+                            <div class="slds-form-element__group" id="addressInnerDiv">
+                                <div class="slds-form-element__row" id="addressRowDiv">
+                                    <div class="slds-form-element slds-size_1-of-4" id="formCountryDiv">
+                                        <label for="country"
+                                               class="slds-form-element__label">{!$ObjectType.Lead.fields.Country.Label}</label><input
+                                            id="country" maxlength="40" name="country" size="20" type="text"
+                                            class="slds-input"/>
+                                    </div>
+                                    <div class="slds-form-element slds-size_1-of-4" id="formCityDiv">
+                                        <label for="city"
+                                               class="slds-form-element__label">{!$ObjectType.Lead.fields.City.Label}</label>
+                                        <input id="city" maxlength="40" name="city" size="20" type="text"
+                                               class="slds-input"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="slds-form-element" id="phoneEmailFieldset">
+                            <div class="slds-form-element__group" id="phoneEmailInnerDiv">
+                                <div class="slds-form-element__row" id="phoneEmailRow">
+                                    <div class="slds-form-element slds-size_1-of-4" id="formEmailDiv">
+                                        <label for="email"
+                                               class="slds-form-element__label">{!$ObjectType.Lead.fields.Email.Label}</label>
+                                        <input id="email" maxlength="80" name="email" size="20" type="text" class="slds-input" required="required"/>
+                                    </div>
+                                    <div class="slds-form-element slds-size_1-of-4" id="formPhoneDiv">
+                                        <label for="phone"
+                                               class="slds-form-element__label">{!$ObjectType.Lead.fields.Phone.Label}</label><input
+                                            id="phone" maxlength="40" name="phone" size="20" type="text"
+                                            class="slds-input"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="slds-form-element" id="companyFieldset">
+                            <div class="slds-form-element__group" id="companyInnerDiv">
+                                <div class="slds-form-element__row" id="companyRow">
+                                    <div class="slds-form-element slds-size_1-of-4" id="formCompanyDiv">
+                                        <label for="company"
+                                               class="slds-form-element__label">{!$ObjectType.Lead.fields.Company.Label}</label><input
+                                            id="company" maxlength="40" name="company" size="20" type="text"
+                                            class="slds-input" required="required"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <input type="submit" name="submit" value="{!$Label.CBS_Submit}"
+                               class="slds-button slds-button_brand"
+                               style="margin-left: 22.7%; margin-top: 1%;"/>
+                    </div>
+                </form>
+            </div>
+            <div id="shopsTab" class="slds-tabs_default__content slds-hide" role="tabpanel"
+                 aria-labelledby="shopsListDefaultItem">
                 <div class="slds-scope" id="mainDiv">
                     <div class="slds-page-header" role="banner" id="banner" style="margin-bottom: 20px;">
                         <p class="slds-text-title--caps slds-line-height--reset">{!$Label.FCC_Francesinha}</p>
@@ -95,82 +173,8 @@
                     </footer>
                 </div>
             </div>
-            <div id="tab-default-1" class="slds-tabs_default__content slds-show" role="tabpanel"
-                 aria-labelledby="contactListDefaultItem" style="padding: 10px;">
-                <form id="leadForm" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
-                      method="POST">
-                    <input type="hidden" name="oid" value="00D1r000000eUPq"/>
-                    <input type="hidden" name="lead_source" value="Web Form"/>
-                    <div class="slds-form slds-form_compound" id="mainFormDiv">
-                        <fieldset class="slds-form-element" id="formFieldset1">
-                            <div class="slds-form-element__group" id="formDiv1">
-                                <div class="slds-form-element__row" id="formRow1">
-                                    <div class="slds-form-element slds-size_1-of-4" id="formFirstName">
-                                        <label for="first_name" class="slds-form-element__label">{!$ObjectType.Lead.fields.FirstName.Label}</label>
-                                        <input id="first_name" maxlength="40" name="first_name"
-                                                               size="20" type="text" class="slds-input"/>
-                                    </div>
-                                    <div class="slds-form-element slds-size_1-of-4" id="formLastName">
-                                        <label for="last_name" class="slds-form-element__label">{!$ObjectType.Lead.fields.LastName.Label}</label><input
-                                            id="last_name" maxlength="80" name="last_name" size="20" type="text"
-                                            class="slds-input" required="required"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </fieldset>
-                        <fieldset class="slds-form-element" id="formFieldset2">
-                            <div class="slds-form-element__group" id="formDiv2">
-                                <div class="slds-form-element__row" id="formRow2">
-                                    <div class="slds-form-element slds-size_1-of-4" id="formCountry">
-                                        <label for="country" class="slds-form-element__label">{!$ObjectType.Lead.fields.Country.Label}</label><input
-                                            id="country" maxlength="40" name="country" size="20" type="text"
-                                            class="slds-input"/>
-                                    </div>
-                                    <div class="slds-form-element slds-size_1-of-4" id="formCity">
-                                        <label for="city" class="slds-form-element__label">{!$ObjectType.Lead.fields.City.Label}</label><input id="city"
-                                                                                                              maxlength="40"
-                                                                                                              name="city"
-                                                                                                              size="20"
-                                                                                                              type="text"
-                                                                                                              class="slds-input"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </fieldset>
-                        <fieldset class="slds-form-element" id="formFieldset3">
-                            <div class="slds-form-element__group" id="formDiv3">
-                                <div class="slds-form-element__row" id="formRow3">
-                                    <div class="slds-form-element slds-size_1-of-4" id="formEmail">
-                                        <label for="email" class="slds-form-element__label">{!$ObjectType.Lead.fields.Email.Label}</label><input
-                                            id="email" maxlength="80" name="email" size="20" type="text"
-                                            class="slds-input" required="required"/>
-                                    </div>
-                                    <div class="slds-form-element slds-size_1-of-4" id="formPhone">
-                                        <label for="phone" class="slds-form-element__label">{!$ObjectType.Lead.fields.Phone.Label}</label><input
-                                            id="phone" maxlength="40" name="phone" size="20" type="text"
-                                            class="slds-input"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </fieldset>
-                        <fieldset class="slds-form-element" id="formFieldset4">
-                            <div class="slds-form-element__group" id="formDiv4">
-                                <div class="slds-form-element__row" id="formRow4">
-                                    <div class="slds-form-element slds-size_1-of-4" id="formCompany">
-                                        <label for="company" class="slds-form-element__label">{!$ObjectType.Lead.fields.Company.Label}</label><input
-                                            id="company" maxlength="40" name="company" size="20" type="text"
-                                            class="slds-input" required="true"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </fieldset>
-                        <input type="submit" name="submit" value="{!$Label.CBS_Submit}" class="slds-button slds-button_brand"
-                               style="margin-left: 22.7%; margin-top: 1%;"/>
-                    </div>
-                </form>
-            </div>
-            <div id="tab-default-3" class="slds-tabs_default__content slds-hide" role="tabpanel"
-                 aria-labelledby="tab-default-3__item"></div>
+            <div id="offerTab" class="slds-tabs_default__content slds-hide" role="tabpanel"
+                 aria-labelledby="offerListDefaultItem"></div>
         </div>
     </div>
     <script>
@@ -203,5 +207,7 @@
             });
             $j(".slds-input").val(null);
         });
+
+
     </script>
 </apex:page>

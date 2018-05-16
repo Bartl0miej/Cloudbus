@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffb7f8dc-528c-4a66-b294-4414ce6fa1bc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cloudbus.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Cloudbus.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplanePhotosCarousel/CBS_AirplanePhotosCarousel.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplanePhotosCarousel/CBS_AirplanePhotosCarousel.cmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplanePhotosCarousel/CBS_AirplanePhotosCarouselController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplanePhotosCarousel/CBS_AirplanePhotosCarouselController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_HangarForm/CBS_HangarFormController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_HangarForm/CBS_HangarFormController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_HangarSearchResults/CBS_HangarSearchResultsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_HangarSearchResults/CBS_HangarSearchResultsController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/CBS_PickListValuesController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/CBS_PickListValuesController.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flows/Lead_Convert_Process-12.flow" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/FCC_ShopRandom.page" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/FCC_ShopRandom.page" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,8 +20,8 @@
       <file leaf-file-name="FCC_ShopRandom.page" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/FCC_ShopRandom.page">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" column="62" lean-forward="true" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
+            <state relative-caret-position="631">
+              <caret line="176" column="62" lean-forward="true" selection-start-line="176" selection-start-column="62" selection-end-line="176" selection-end-column="62" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#apex:page#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#apex:page#0;n#!!top" expanded="true" />
@@ -66,11 +58,25 @@
       <find>&amp;#45;&amp;#45;</find>
       <find>list-item-1</find>
       <find>tab-default-1__item</find>
+      <find>list-item-2</find>
+      <find>tab-default-3__item</find>
+      <find>tab-default-3</find>
+      <find>tab-default-1</find>
+      <find>tab-default-2</find>
+      <find>formFieldset1</find>
+      <find>formFirstName</find>
     </findStrings>
     <replaceStrings>
       <replace>--</replace>
       <replace>contactListItem</replace>
       <replace>contactListDefaultItem</replace>
+      <replace>shopsListitem</replace>
+      <replace>shopsListDefaultItem</replace>
+      <replace>offerListItem</replace>
+      <replace>offerListDefaultItem</replace>
+      <replace>offerTab</replace>
+      <replace>contactTab</replace>
+      <replace>shopsTab</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -164,7 +170,7 @@
                       <entry key="CLASSES/CBS_PICKLISTVALUESCONTROLLER.CLS" value="1526371487340" />
                       <entry key="CLASSES/CBS_UTIL.CLS" value="1526285919423" />
                       <entry key="CLASSES/VIEWSURVEYCONTROLLER.CLS" value="1526229062713" />
-                      <entry key="PAGES/FCC_SHOPRANDOM.PAGE" value="1526453779428" />
+                      <entry key="PAGES/FCC_SHOPRANDOM.PAGE" value="1526454768974" />
                     </map>
                   </option>
                   <option name="lastBuildScope" value="CUSTOM" />
@@ -2431,8 +2437,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/FCC_ShopRandom.page">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="62" lean-forward="true" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
+        <state relative-caret-position="631">
+          <caret line="176" column="62" lean-forward="true" selection-start-line="176" selection-start-column="62" selection-end-line="176" selection-end-column="62" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#apex:page#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#apex:page#0;n#!!top" expanded="true" />
