@@ -1,0 +1,41 @@
+<aura:component description="CBS_HangarDetails">
+    <aura:attribute name="selectedHangar" type="CBS_Hangar__c"/>
+    <lightning:card title="{!v.selectedHangar.Name + ' ' + $Label.c.CBS_Details}" iconName="standard:metrics" class="slds-p-around_medium slds-m-around--medium">
+        <lightning:recordViewForm recordId="{!v.selectedHangar.Id}" objectApiName="CBS_Hangar__c">
+            <div class="slds-box slds-theme_default">
+                <table>
+                    <tr>
+                        <td>
+                            <lightning:outputField fieldName="Name"/>
+                        </td>
+                        <td>
+                            <lightning:outputField fieldName="Capacity__c"/>
+                        </td>
+                        <td>
+                            <lightning:outputField fieldName="Military__c"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <lightning:outputField fieldName="Country__c"/>
+                        </td>
+                        <td>
+                            <lightning:outputField fieldName="City__c"/>
+                        </td>
+                        <td>
+                            <lightning:outputField fieldName="Street__c"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <lightning:outputField fieldName="E_mail__c"/>
+                        </td>
+                        <td>
+                            <lightning:outputField fieldName="Telephone__c"/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </lightning:recordViewForm>
+    </lightning:card>
+</aura:component>

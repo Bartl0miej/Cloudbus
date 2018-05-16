@@ -1,0 +1,23 @@
+<aura:component description="CBS_HangarSearchResults">
+    <aura:attribute name="hangars" type="CBS_Hangar__c[]"/>
+    <aura:attribute name="selectedItemId" type="Id" default=""/>
+    <lightning:card title="Hangars">
+        <div class="slds-p-left_medium slds-p-right_medium">
+            <ul class="slds-list_vertical slds-has-divider_top-space">
+                <aura:iteration items="{!v.hangars}" var="sHangar" indexVar="index">
+                    <aura:if isTrue="{!v.hangars.length == 1}">
+                        <li class="itemSelected slds-list__item slds-p-around_small">
+                            <c:CBS_HangarItem hangar="{!sHangar}"/>
+                        </li>
+                    </aura:if>
+                    <aura:if isTrue="{!v.hangars.length > 1}">
+                        <li class="slds-list__item slds-p-around_small" aura:id="listItem"
+                            data-id="{!index}" onclick="{!c.addClass}">
+                            <c:CBS_HangarItem hangar="{!sHangar}"/>
+                        </li>
+                    </aura:if>
+                </aura:iteration>
+            </ul>
+        </div>
+    </lightning:card>
+</aura:component>

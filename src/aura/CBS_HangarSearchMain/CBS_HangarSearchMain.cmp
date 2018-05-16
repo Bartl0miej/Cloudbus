@@ -1,0 +1,28 @@
+<aura:component description="CBS_HangarSearchMain" access="global" implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="hangars" type="List" default="[]"/>
+    <aura:attribute name="theCoordinates" type="List" default="[]"/>
+    <aura:attribute name="selectedHangar" type="CBS_Hangar__c"/>
+    <aura:handler name="selectHangar" event="c:CBS_SelectedHangarUpdate" action="{!c.handleHangarSelect}"/>
+    <aura:handler name="clearSearch" event="c:CBS_ClearHangarSearch" action="{!c.handleSearchClear}"/>
+    <aura:handler name="sendCoordinates" event="c:CBS_SetCoordinates" action="{!c.handleCoordinates}"/>
+    <div class="slds-grid">
+        <div class="slds-col slds-size_5-of-12">
+            <c:CBS_HangarForm hangars="{!v.hangars}"/>
+            <aura:if isTrue="{!v.hangars.length != 0}">
+                <div>
+                    <lightning:layoutItem padding="around-small">
+                        <c:CBS_HangarSearchResults hangars="{!v.hangars}"/>
+                    </lightning:layoutItem>
+                </div>
+            </aura:if>
+        </div>
+        <div class="slds-col slds-size_7-of-12">
+            <aura:if isTrue="{!v.theCoordinates.length != 0}">
+                <c:CBS_HangarMap coordinatesList="{!v.theCoordinates}"/>
+            </aura:if>
+            <aura:if isTrue="{!v.selectedHangar != undefined}">
+                <c:CBS_HangarDetails selectedHangar="{!v.selectedHangar}"/>
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

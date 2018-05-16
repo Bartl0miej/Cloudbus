@@ -1,0 +1,10 @@
+<aura:component description="CBS_HangarMap">
+    <ltng:require styles="/resource/leaflet/leaflet.css"/>
+    <ltng:require scripts="/resource/leaflet/leaflet.js"
+                  afterScriptsLoaded="{!c.jsLoaded}"/>
+    <aura:attribute name="coordinatesList" type="List" default="[]"/>
+    <aura:attribute name="map" type="Object"/>
+    <aura:attribute name="markers" type="Object"/>
+    <aura:handler name="change" value="{!v.coordinatesList}" action="{!c.coordinatesChangeHandler}"/>
+    <div class="map" aura:id="map"></div>
+</aura:component>

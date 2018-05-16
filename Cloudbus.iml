@@ -33,6 +33,7 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="Account" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Asset" />
@@ -45,6 +46,7 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Contact" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Setting__c" />
@@ -60,9 +62,11 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Hangar__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Lead" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Opportunity" />
@@ -190,12 +194,21 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="Cloudbus_UtilityBar" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="LightningSalesConsole_UtilityBar" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="LightningService_UtilityBar" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Search_for_Hangars" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Search_Hangars" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -207,6 +220,7 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="Account" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="AccountCleanInfo" />
@@ -239,6 +253,10 @@
                             <option name="name" value="CaseContactRole" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="CBS_Hangar__c" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="CollaborationGroup" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -246,6 +264,7 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Contact" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="ContactCleanInfo" />
@@ -284,10 +303,10 @@
                             <option name="name" value="FCC_Setting__c" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_Shop_Wholesaler_Association__c" />
+                            <option name="name" value="FCC_Shop__c" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_Shop__c" />
+                            <option name="name" value="FCC_Shop_Wholesaler_Association__c" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Trigger_Exceptions__c" />
@@ -302,13 +321,18 @@
                             <option name="name" value="ForecastingCategoryMapping" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Goal" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="Hangar__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Idea" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Lead" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="LeadCleanInfo" />
@@ -321,6 +345,9 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="MacroInstruction" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Metric" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Opportunity" />
@@ -393,9 +420,26 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="User" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="UserProvisioningRequest" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SurveyQuestionResponse__c" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SurveyTaker__c" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Survey_Question__c" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Survey__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -413,16 +457,16 @@
                             <option name="name" value="FCC_Shop__c.Annual_Date_Calculation" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_Shop__c.Trigger_Val_to_True" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="FCC_Shop__c.Trigger_Value_to_True" />
-                          </MetadataEntry>
-                          <MetadataEntry>
                             <option name="name" value="FCC_Shop__c.Trigger_to_False" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Shop__c.Trigger_to_True" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="FCC_Shop__c.Trigger_Val_to_True" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="FCC_Shop__c.Trigger_Value_to_True" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -549,10 +593,17 @@
                             <option name="name" value="AttachmentUploadController" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="CBS_HangarController" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="ChangePasswordController" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="ChangePasswordControllerTest" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="contactquery" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_DeletePopup" />
@@ -564,10 +615,10 @@
                             <option name="name" value="FCC_OrgInfoController" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_ShopCSV" />
+                            <option name="name" value="FCC_ShopCashDesksReportBuilder" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_ShopCashDesksReportBuilder" />
+                            <option name="name" value="FCC_ShopCSV" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_ShopEditController" />
@@ -576,10 +627,8 @@
                             <option name="name" value="FCC_ShopImportController" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_ShopREST" />
-                          </MetadataEntry>
-                          <MetadataEntry>
                             <option name="name" value="FCC_ShopRandomController" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_ShopReportEmailBatch" />
@@ -588,16 +637,13 @@
                             <option name="name" value="FCC_ShopReportEmailBatchScheduler" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="FCC_ShopREST" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="FCC_ShopRestCallout" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_ShopSOAP" />
-                          </MetadataEntry>
-                          <MetadataEntry>
                             <option name="name" value="FCC_ShopSearchController" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="FCC_ShopViewController" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_ShopsExternalController" />
@@ -606,7 +652,13 @@
                             <option name="name" value="FCC_ShopsExternalControllerTest" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="FCC_ShopSOAP" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="FCC_ShopsStandardRestApiController" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="FCC_ShopViewController" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_SingleRequestMock" />
@@ -636,22 +688,22 @@
                             <option name="name" value="FCC_WholesalerREST" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_WholesalerSOAP" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="FCC_WholesalerViewController" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="FCC_WholesalerViewController2" />
-                          </MetadataEntry>
-                          <MetadataEntry>
                             <option name="name" value="FCC_WholesalersExternalController" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_WholesalersExternalControllerTest" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="FCC_WholesalerSOAP" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="FCC_WholesalersRestCallout" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="FCC_WholesalerViewController" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="FCC_WholesalerViewController2" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="ForgotPasswordController" />
@@ -690,16 +742,85 @@
                             <option name="name" value="SiteRegisterControllerTest" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="testAccountHierarchy" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="WIP_ShopEditController" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="WIP_WholesalerViewController" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="contactquery" />
+                            <option name="name" value="GSurveysController" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="testAccountHierarchy" />
+                            <option name="name" value="GSurveysController_Test" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SFQuestion" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SurveyAndQuestionController" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SurveyAndQuestionController_Test" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SurveyManagerController" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SurveyManagerController_Test" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SurveySitesUtil" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SurveyTestingUtil" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Utilities" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Utilities_Test" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="ViewSurveyController" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="ViewSurveyController_Test" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="viewShareSurveyComponentController" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="viewShareSurveyComponentController_Test" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="viewSurveyResultsComponentController" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_PickListValuesController" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_Util" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -890,6 +1011,22 @@
                           <MetadataEntry>
                             <option name="name" value="Work%2Ecom Only User" />
                           </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_Executive" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_Sales" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_Service" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_Clients" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
                         </list>
                       </option>
                       <option name="name" value="Profile" />
@@ -900,6 +1037,7 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="Cloudbus" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Franchise_Command_Center" />
@@ -943,6 +1081,10 @@
                           <MetadataEntry>
                             <option name="name" value="standard__Sites" />
                           </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Survey_Force" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
                         </list>
                       </option>
                       <option name="name" value="CustomApplication" />
@@ -972,6 +1114,58 @@
                       <option name="wildcard" value="false" />
                     </MetadataType>
                     <MetadataType>
+                      <option name="entries">
+                        <list>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_HangarDetails" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_HangarForm" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_HangarItem" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_HangarMap" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_HangarSearchMain" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_HangarSearchResults" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_SetCoordinates" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_ClearHangarSearch" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_SelectedHangarUpdate" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_PickListValues" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_AirplaneNewEditDialog" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_AirplanePhotosCarousel" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                        </list>
+                      </option>
                       <option name="name" value="AuraDefinitionBundle" />
                     </MetadataType>
                     <MetadataType>
@@ -1088,6 +1282,14 @@
                       <option name="wildcard" value="false" />
                     </MetadataType>
                     <MetadataType>
+                      <option name="entries">
+                        <list>
+                          <MetadataEntry>
+                            <option name="name" value="Lead_Convert_Process-25" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                        </list>
+                      </option>
                       <option name="name" value="Flow" />
                       <option name="wildcard" value="false" />
                     </MetadataType>
@@ -1102,10 +1304,10 @@
                             <option name="name" value="ApexDevNet" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="SOAP_Login" />
+                            <option name="name" value="ShopRestCallout" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="ShopRestCallout" />
+                            <option name="name" value="SOAP_Login" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -1185,10 +1387,10 @@
                             <option name="name" value="Event-Event Layout" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_Shop_Wholesaler_Association__c-Shop-Wholesaler Association Layout" />
+                            <option name="name" value="FCC_Shop__c-Shop Layout" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_Shop__c-Shop Layout" />
+                            <option name="name" value="FCC_Shop_Wholesaler_Association__c-Shop-Wholesaler Association Layout" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Wholesaler__c-Wholesaler Layout" />
@@ -1522,6 +1724,9 @@
                             <option name="name" value="FCC_Activate" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="FCC_activated" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="FCC_Active_users" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -1531,13 +1736,13 @@
                             <option name="name" value="FCC_Add_Contracts_To" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="FCC_Add_one_date" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="FCC_Add_Wholesaler" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Add_Wholesaler_to" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="FCC_Add_one_date" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_All" />
@@ -1549,10 +1754,10 @@
                             <option name="name" value="FCC_Are_you_sure" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_Bad_Start_Date_End_Date" />
+                            <option name="name" value="FCC_Bad_file_extension" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_Bad_file_extension" />
+                            <option name="name" value="FCC_Bad_Start_Date_End_Date" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Basic" />
@@ -1562,9 +1767,6 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Both_dates" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="FCC_CSV_Error" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Cancel" />
@@ -1594,13 +1796,13 @@
                             <option name="name" value="FCC_Confirmation_required" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="FCC_Contract_end_before_start" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="FCC_Contract_End_Date" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Contract_Start_Date" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="FCC_Contract_end_before_start" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Copy" />
@@ -1612,10 +1814,16 @@
                             <option name="name" value="FCC_Create_Shop" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="FCC_CSV_Error" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="FCC_De_Activate" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Deactivate" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="FCC_deactivated" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Dear_Sir" />
@@ -1657,10 +1865,10 @@
                             <option name="name" value="FCC_Email_Required" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_Email_Sent" />
+                            <option name="name" value="FCC_Email_reset" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_Email_reset" />
+                            <option name="name" value="FCC_Email_Sent" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Error_request" />
@@ -1688,6 +1896,9 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Germany" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="FCC_has_been" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Import" />
@@ -1759,10 +1970,10 @@
                             <option name="name" value="FCC_Order_by" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_Org_Information" />
+                            <option name="name" value="FCC_Org_info" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_Org_info" />
+                            <option name="name" value="FCC_Org_Information" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Org_instance" />
@@ -1837,9 +2048,6 @@
                             <option name="name" value="FCC_Search" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_Search_Form" />
-                          </MetadataEntry>
-                          <MetadataEntry>
                             <option name="name" value="FCC_Search_for_Shops" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -1847,6 +2055,9 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Search_for_Wholesalers" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="FCC_Search_Form" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Select" />
@@ -1867,16 +2078,16 @@
                             <option name="name" value="FCC_Session_info" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_Shop_Hierarchy" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="FCC_Shop_Name" />
-                          </MetadataEntry>
-                          <MetadataEntry>
                             <option name="name" value="FCC_Shop_created" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Shop_deleted" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="FCC_Shop_Hierarchy" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="FCC_Shop_Name" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Shop_updated" />
@@ -1930,9 +2141,6 @@
                             <option name="name" value="FCC_UI_session_id" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_USA" />
-                          </MetadataEntry>
-                          <MetadataEntry>
                             <option name="name" value="FCC_Ukraine" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -1945,16 +2153,19 @@
                             <option name="name" value="FCC_Update_Wholesaler" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="FCC_USA" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="FCC_User_Info" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Username" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_Wholesaler_Name" />
+                            <option name="name" value="FCC_Wholesaler_deleted" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_Wholesaler_deleted" />
+                            <option name="name" value="FCC_Wholesaler_Name" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Wholesaler_updated" />
@@ -1964,15 +2175,6 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Yes" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="FCC_activated" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="FCC_deactivated" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="FCC_has_been" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Thank_you_for_joining" />
@@ -2089,15 +2291,18 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="Account" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Contact" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Shop__c" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Lead" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -2211,10 +2416,10 @@
                             <option name="name" value="Contract.MyInApprovalContracts" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_Shop_Wholesaler_Association__c.All" />
+                            <option name="name" value="FCC_Shop__c.All" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_Shop__c.All" />
+                            <option name="name" value="FCC_Shop_Wholesaler_Association__c.All" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Wholesaler__c.All" />
@@ -2319,9 +2524,11 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="Account.Standard_Account_Duplicate_Rule" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Contact.Standard_Contact_Duplicate_Rule" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Shop__c.Shop_Duplicate_Rule" />
@@ -2411,10 +2618,10 @@
                             <option name="name" value="CFO" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="COO" />
+                            <option name="name" value="ChannelSalesTeam" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="ChannelSalesTeam" />
+                            <option name="name" value="COO" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="CustomerSupportInternational" />
@@ -2550,18 +2757,6 @@
                             <option name="parentFolder" value="unfiled$public" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="unfiled$public/SUPPORTSelfServiceNewCommentNotificationSAMPLE" />
-                            <option name="parentFolder" value="unfiled$public" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="unfiled$public/SUPPORTSelfServiceNewUserLoginInformationSAMPLE" />
-                            <option name="parentFolder" value="unfiled$public" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="unfiled$public/SUPPORTSelfServiceResetPasswordSAMPLE" />
-                            <option name="parentFolder" value="unfiled$public" />
-                          </MetadataEntry>
-                          <MetadataEntry>
                             <option name="name" value="unfiled$public/SalesNewCustomerEmail" />
                             <option name="parentFolder" value="unfiled$public" />
                           </MetadataEntry>
@@ -2590,11 +2785,23 @@
                             <option name="parentFolder" value="unfiled$public" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="unfiled$public/SUPPORTSelfServiceNewCommentNotificationSAMPLE" />
+                            <option name="parentFolder" value="unfiled$public" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="unfiled$public/SupportSelfServiceNewLoginandPassword" />
                             <option name="parentFolder" value="unfiled$public" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="unfiled$public/SUPPORTSelfServiceNewUserLoginInformationSAMPLE" />
+                            <option name="parentFolder" value="unfiled$public" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="unfiled$public/SupportSelfServiceResetPassword" />
+                            <option name="parentFolder" value="unfiled$public" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="unfiled$public/SUPPORTSelfServiceResetPasswordSAMPLE" />
                             <option name="parentFolder" value="unfiled$public" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -2634,10 +2841,10 @@
                             <option name="name" value="FCC_Search_for_Shops" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_Shop_Wholesaler_Association__c" />
+                            <option name="name" value="FCC_Shop__c" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_Shop__c" />
+                            <option name="name" value="FCC_Shop_Wholesaler_Association__c" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Wholesaler__c" />
@@ -2649,16 +2856,16 @@
                             <option name="name" value="Org_Info" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="Users_Management" />
-                          </MetadataEntry>
-                          <MetadataEntry>
                             <option name="name" value="standard-Account" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="standard-AppLauncher" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="standard-Asset" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="standard-Campaign" />
@@ -2709,6 +2916,9 @@
                             <option name="name" value="standard-Forecasting3" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="standard-home" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="standard-Idea" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -2748,6 +2958,9 @@
                             <option name="name" value="standard-ProfilePlatformOverview" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="standard-report" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="standard-Sites" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -2766,10 +2979,23 @@
                             <option name="name" value="standard-Workspace" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="standard-home" />
+                            <option name="name" value="Users_Management" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="standard-report" />
+                            <option name="name" value="Getting_Started_With_Survey_Force" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SurveyTaker__c" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Survey_Question__c" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Survey__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -2785,11 +3011,11 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="Country_Values_Set" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
                       <option name="name" value="GlobalValueSet" />
-                      <option name="wildcard" value="false" />
                     </MetadataType>
                     <MetadataType>
                       <option name="name" value="WorkflowSend" />
@@ -2915,10 +3141,10 @@
                             <option name="name" value="Event" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_Shop_Wholesaler_Association__c" />
+                            <option name="name" value="FCC_Shop__c" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_Shop__c" />
+                            <option name="name" value="FCC_Shop_Wholesaler_Association__c" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Wholesaler__c" />
@@ -2950,56 +3176,60 @@
                       <option name="entries">
                         <list>
                           <MetadataEntry>
-                            <option name="name" value="FCC_Default_Image" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="FCC_Default_Logo" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="FCC_LoadingGif" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="SiteSamples" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="SldsCSS" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
                             <option name="name" value="iEditCSS" />
-                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="iEditJS" />
-                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="jCrop" />
-                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="jQuery" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="jQueryUI" />
-                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="jQuery_UI" />
-                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="jQueryUI" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SiteSamples" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SldsCSS" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="viewStyle" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SurveyForce" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SurveyForce_SLDS" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SurveyForce_UserGuide" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SurveyForce_jquery" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SurveyForce_jquery_ui" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SurveyForce_svg4everybody" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
                       <option name="name" value="StaticResource" />
+                      <option name="wildcard" value="false" />
                     </MetadataType>
                     <MetadataType>
                       <option name="entries">
@@ -3036,12 +3266,10 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_ShopRandom" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_ShopSearch" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="FCC_ShopView" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_ShopsExternal" />
@@ -3050,19 +3278,22 @@
                             <option name="name" value="FCC_ShopsStandardRestApi" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="FCC_ShopView" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="FCC_UserManagement" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_WholesalerEdit" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="FCC_WholesalersExternal" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="FCC_WholesalerView" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_WholesalerView2" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="FCC_WholesalersExternal" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FileNotFound" />
@@ -3109,6 +3340,22 @@
                           <MetadataEntry>
                             <option name="name" value="WIP_WholesalerView" />
                           </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="GSurveys" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SurveyManagerPage" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SurveyPage" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="TakeSurvey" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
                         </list>
                       </option>
                       <option name="name" value="ApexPage" />
@@ -3119,6 +3366,7 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="Random_Clients" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -3149,24 +3397,31 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="Account.Active__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Account.CustomerPriority__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Account.NumberofLocations__c" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="Account.SLAExpirationDate__c" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="Account.SLASerialNumber__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Account.SLA__c" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Account.SLAExpirationDate__c" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Account.SLASerialNumber__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Account.UpsellOpportunity__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Case.EngineeringReqNumber__c" />
@@ -3182,24 +3437,14 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Contact.Languages__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Contact.Level__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Setting__c.Value__c" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="FCC_Shop_Wholesaler_Association__c.End_Date__c" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="FCC_Shop_Wholesaler_Association__c.Shop__c" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="FCC_Shop_Wholesaler_Association__c.Start_Date__c" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="FCC_Shop_Wholesaler_Association__c.Wholesaler__c" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Shop__c.Cash_Desks_Number__c" />
@@ -3241,6 +3486,18 @@
                             <option name="name" value="FCC_Shop__c.Trigger__c" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="FCC_Shop_Wholesaler_Association__c.End_Date__c" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="FCC_Shop_Wholesaler_Association__c.Shop__c" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="FCC_Shop_Wholesaler_Association__c.Start_Date__c" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="FCC_Shop_Wholesaler_Association__c.Wholesaler__c" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="FCC_Trigger_Exceptions__c.FCC_ShopTrigger__c" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -3266,24 +3523,31 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Hangar__c.Capacity__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Hangar__c.City__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Hangar__c.Country__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Hangar__c.E_mail__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Hangar__c.Military__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Hangar__c.Street__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Hangar__c.Telephone__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Lead.CurrentGenerators__c" />
@@ -3296,6 +3560,7 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Lead.ProductInterest__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Lead.SICCode__c" />
@@ -3320,6 +3585,7 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="User.Country__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -3333,10 +3599,10 @@
                             <option name="name" value="FCC_Setting__c-en_US" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_Shop_Wholesaler_Association__c-en_US" />
+                            <option name="name" value="FCC_Shop__c-en_US" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="FCC_Shop__c-en_US" />
+                            <option name="name" value="FCC_Shop_Wholesaler_Association__c-en_US" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Trigger_Exceptions__c-en_US" />
@@ -3346,6 +3612,7 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Hangar__c-en_US" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -3357,15 +3624,18 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="Account.Standard_Account_Match_Rule_v1_0" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Contact.Standard_Contact_Match_Rule_v1_1" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="FCC_Shop__c.Shop_Matching_Rule" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Lead.Standard_Lead_Match_Rule_v1_0" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>

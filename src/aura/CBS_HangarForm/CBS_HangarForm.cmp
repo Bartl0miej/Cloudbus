@@ -1,0 +1,51 @@
+<aura:component description="CBS_HangarForm" controller="CBS_HangarController">
+    <aura:attribute name="searchedHangar" type="CBS_Hangar__c"
+                    default="{'sobjectType' : 'CBS_Hangar__c', 'Name' : '', 'Country__c' : '', 'City__c' : ''}"/>
+    <aura:attribute name="hangars" type="List" default="[]"/>
+    <aura:attribute name="Spinner" type="boolean" default="false"/>
+    <aura:attribute name="picklistValues" type="Object"/>
+    <c:CBS_PicklistValues sObjectName="CBS_Hangar__c" fieldName="Country__c" picklistValues="{!v.picklistValues}"/>
+    <aura:registerEvent name="clearSearch" type="c:CBS_ClearHangarSearch"/>
+    <aura:registerEvent name="sendCoordinates" type="c:CBS_SetCoordinates"/>
+    <aura:registerEvent name="selectHangar" type="c:CBS_SelectedHangarUpdate"/>
+    <aura:if isTrue="{!v.Spinner}">
+        <div aura:id="spinnerId" class="slds-spinner_container">
+            <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                <span class="slds-assistive-text">{!$Label.c.CBS_Loading}</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+    <div class="slds-panel slds-panel_docked slds-panel_docked-left slds-is-open slds-p-around_medium slds-m-around--medium"
+         aria-hidden="false">
+        <div aria-labelledby="searchhangarform">
+            <fieldset class="slds-box slds-theme--default">
+                <h3 class="slds-page-header__title" style="margin-bottom: 10px;">{!$Label.c.CBS_Search_for_hangars}</h3>
+                <form class="slds-form--stacked">
+                    <lightning:input aura:id="searchform" label="{!$Label.c.CBS_Hangar_Name}"
+                                     name="hangarname"
+                                     value="{!v.searchedHangar.Name}"/>
+
+                    <lightning:select label="{!$Label.c.CBS_Country}" name="hangarcountry" aura:id="searchform"
+                                      value="{!v.searchedHangar.Country__c}" required="true">
+                                                        <option value="">{!$Label.c.CBS_Select_a_country}</option>
+                        <aura:iteration items="{!v.picklistValues}" var="item">
+                            <option value="{!item}">{!item}</option>
+                        </aura:iteration>
+                    </lightning:select>
+                    <lightning:input aura:id="searchform" label="{!$Label.c.CBS_City}"
+                                     name="hangarcity"
+                                     value="{!v.searchedHangar.City__c}"/>
+                    <lightning:button label="{!$Label.c.CBS_Search}"
+                                      class="slds-m-top--medium"
+                                      variant="brand"
+                                      onclick="{!c.searchForHangar}"/>
+                    <lightning:button label="{!$Label.c.CBS_Clear}"
+                                      class="slds-m-top--medium"
+                                      variant="neutral" onclick="{!c.clear}"/>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</aura:component>
