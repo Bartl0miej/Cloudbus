@@ -1,6 +1,6 @@
 ({
-    doInit : function(component, event, helper) {
-        let recId = component.get("v.recordId");
+    //doInit : function(component, event, helper) {
+/*        let recId = component.get("v.recordId");
 
         if (!recId) {
             component.find("forceRecord").getNewRecord(
@@ -16,10 +16,227 @@
                         }
                     })
             );
+        }*/
+    //},
+
+    onInit: function(component, event, helper) {
+        let action = component.get("c.getAttachments");
+        action.setParams({"recordId" : component.get("v.recordId")});
+        action.setCallback(this, function(response) {
+           let state = response.getState();
+           if (state === "SUCCESS") {
+                let listOfAttachmentIds = response.getReturnValue();
+                let mainPic = {};
+                if (response.getReturnValue().mainPicture != undefined) {
+                    console.log('jest rozne?');
+                    mainPic.isAttachment = true;
+                    mainPic.Id = listOfAttachmentIds.mainPicture;
+                    mainPic.theData = null;
+                    mainPic.hasMain = true;
+                } else {
+                    mainPic.isAttachment = false;
+                    mainPic.Id = null;
+                    mainPic.theData = null;
+                    mainPic.hasMain = false;
+                }
+
+                component.set("v.mainPicture", mainPic);
+                //component.set("v.mainPicture", listOfAttachmentIds.mainPicture);
+                console.log('mainPicture = ' + listOfAttachmentIds.mainPicture);
+                listOfAttachmentIds = listOfAttachmentIds.attachments;
+
+                console.log('in callback');
+                component.set("v.attachments", listOfAttachmentIds);
+                console.log(listOfAttachmentIds);
+                console.log('after');
+                for (let i = 0; i < listOfAttachmentIds.length; i++) {
+                    console.log('attachment: ' + listOfAttachmentIds[i]);
+                }
+           } else {
+               console.log('failed with state: ');
+               console.log(response.getError());
+           }
+        });
+
+        $A.enqueueAction(action);
+    },
+
+    onClick12 : function(component, event, helper) {
+        let selectedItem = event.currentTarget;
+        let picId = selectedItem.dataset.id;
+
+        alert('Picture id: ' + picId);
+    },
+
+    deletePicture : function(component, event, helper) {
+        let atts = component.get("v.pictures");
+        for (let i = 0; i < atts.length; i++) {
+            console.log(atts[i]);
+        }
+
+        let selectedItem = event.currentTarget;
+        let picId = selectedItem.dataset.id;
+        atts.splice(picId, 1);
+
+        component.set("v.pictures", atts);
+    },
+
+    deleteAttachment : function(component, event, helper) {
+        let atts = component.get("v.attachments");
+        let toDelete = component.get("v.attachmentsToDelete");
+
+        let selectedItem = event.currentTarget;
+        let picId = selectedItem.dataset.id;
+
+        toDelete.push(atts[picId]);
+        component.set("v.attachmentsToDelete", toDelete);
+
+        atts.splice(picId, 1);
+        console.log('attachmentsList.length = ' + atts.length);
+
+        component.set("v.attachments", atts);
+    },
+
+    setAttAsMain : function(component, event, helper) {
+        let mainBeforeChange = component.get("v.mainPicture");
+        console.log('mainBeforeChange: ' + mainBeforeChange);
+        let attachmentsList = component.get("v.attachments");
+        let picsList = component.get("v.pictures");
+
+        let selectedItem = event.currentTarget;
+        let picId = selectedItem.dataset.id;
+
+        let mainPic = {};
+        mainPic.isAttachment = true;
+        mainPic.Id = attachmentsList[picId].Id;
+        mainPic.theData = null;
+        mainPic.hasMain = true;
+
+        attachmentsList.splice(picId, 1);
+
+        console.log('attachmentsList.length = ' + attachmentsList.length);
+
+        component.set("v.attachments", attachmentsList);
+        component.set("v.mainPicture", mainPic);
+        //alert(picId);
+
+        if (!mainBeforeChange.hasMain) {
+            console.log('==');
+            return;
+        }
+
+        if (mainBeforeChange.isAttachment) {
+            console.log('jest, tu wchodzimy');
+            attachmentsList.push(mainBeforeChange);
+            component.set("v.attachments", attachmentsList);
+        } else {
+            console.log('should be here');
+            picsList.push(mainBeforeChange);
+            component.set("v.pictures", picsList);
         }
     },
 
+    setPicAsMain : function(component, event, helper) {
+        let mainBeforeChange = component.get("v.mainPicture");
+        console.log('mainBeforeChange: ' + mainBeforeChange);
+        let attachmentsList = component.get("v.attachments");
+        let picsList = component.get("v.pictures");
+
+        let selectedItem = event.currentTarget;
+        let picId = selectedItem.dataset.id;
+
+        let mainPic = {};
+        mainPic.isAttachment = false;
+        mainPic.Id = null;
+        mainPic.theData = picsList[picId].theData;
+        mainPic.hasMain = true;
+
+        picsList.splice(picId, 1);
+
+        console.log('picsList.length = ' + picsList.length);
+
+        component.set("v.pictures", picsList);
+        component.set("v.mainPicture", mainPic);
+        //alert(picId);
+
+        if (!mainBeforeChange.hasMain) {
+            console.log('==');
+            return;
+        }
+
+        if (mainBeforeChange.isAttachment) {
+            console.log('jest, tu wchodzimy');
+            attachmentsList.push(mainBeforeChange);
+            component.set("v.attachments", attachmentsList);
+        } else {
+            picsList.push(mainBeforeChange);
+            component.set("v.pictures", picsList);
+        }
+    },
+
+    diselectFromMainPic : function(component, event, helper) {
+        let mainPic = component.get("v.mainPicture");
+        if (mainPic.isAttachment) {
+            let atts = component.get("v.attachments");
+            atts.push(mainPic);
+            component.set("v.attachments", atts);
+        } else {
+            let pics = component.get("v.pictures");
+            pics.unshift(mainPic);
+            component.set("v.pictures", pics);
+        }
+
+        let afterChange = {};
+        afterChange.isAttachment = false;
+        afterChange.Id = null;
+        afterChange.theData = null;
+        afterChange.hasMain = false;
+
+        component.set("v.mainPicture", afterChange);
+    },
+
+    deleteMainPic : function(component, event, helper) {
+        let mainPic = component.get("v.mainPicture");
+
+        if (mainPic.isAttachment) {
+        let toDelete = component.get("v.attachmentsToDelete");
+
+        toDelete.push(mainPic);
+        component.set("v.attachmentsToDelete", toDelete);
+        }
+
+        let afterChange = {};
+        afterChange.isAttachment = false;
+        afterChange.Id = null;
+        afterChange.theData = null;
+        afterChange.hasMain = false;
+
+        component.set("v.mainPicture", afterChange);
+    },
+
+    onDragOver: function(component, event, helper) {
+        event.preventDefault();
+    },
+
+    onDrop: function(component, event, helper) {
+    	event.stopPropagation();
+        event.preventDefault();
+        event.dataTransfer.dropEffect = 'copy';
+        let files = event.dataTransfer.files;
+        if (files.length>1) {
+            return alert("You can only upload one picture at a time");
+        }
+        helper.readFile(component, helper, files[0]);
+    },
+
     saveRecord : function(component, event, helper) {
+        let mainPic = component.get("v.mainPicture");
+        let pics = component.get("v.pictures");
+        let attsToDelete = component.get("v.attachments");
+
+
+
+
         let tempRec = component.find('forceRecord');
         tempRec.saveRecord($A.getCallback(function(result) {
             console.log(result.state);
@@ -46,7 +263,7 @@
                 let recId = result.recordId;
                 helper.navigateTo(component, recId);
             } else {
-                      console.log('Unknown problem, state: ' + result.state + ', error: ' + JSON.stringify(result.error));
+                console.log('Unknown problem, state: ' + result.state + ', error: ' + JSON.stringify(result.error));
             }
         }));
     },

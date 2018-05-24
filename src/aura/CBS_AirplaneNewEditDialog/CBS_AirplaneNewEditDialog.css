@@ -1,0 +1,84 @@
+.THIS {
+}
+
+.THIS > p {
+    font-size: 14px;
+    color: #CCCCCC;
+    margin: 4px 0;
+}
+
+.THIS img {
+    /*min-height: 100px;
+    max-height: 150px;
+    max-width: 175px;*/
+	width: auto;
+    height: auto;
+    border-radius: 4px;
+    margin: 2px;
+}
+
+/*.THIS .attImg {
+    height: 30px;
+    width: auto;
+    margin: 2px;
+}*/
+
+.THIS .mainImage {
+    border: 1px solid darkblue;
+    height: 200px;
+    max-width: 350px;
+    width: auto;
+}
+
+.THIS .deleteButton {
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    margin-left: 30%;
+    margin-top: 10px;
+}
+
+.THIS .container {
+    position: relative ;
+    width: 90%;
+    margin-right: 3px;
+}
+
+.THIS .conImg {
+    opacity: 0.5;
+    position: relative;
+    min-width: 100%;
+    width: 100%;
+    height: auto;
+    max-height: 100px;
+}
+
+.THIS .conImg:hover {
+    opacity: 1.0;
+    cursor: pointer;
+}
+
+.THIS .btn {
+    /*background-color: #c0cfe8;*/
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background:none;
+    border:none;
+    margin:0;
+}
+
+.THIS .mainContainer {
+    position: relative ;
+    width: 70%;
+    margin-right: 3px;
+}
+
+.THIS .mainConImg {
+    position: relative;
+    min-width: 100%;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}

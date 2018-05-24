@@ -6,6 +6,7 @@
                let state = response.getState();
                if (state === "SUCCESS") {
                     let listOfAttachmentIds = response.getReturnValue();
+                    listOfAttachmentIds = listOfAttachmentIds.attachments;
                     console.log('in callback');
                     component.set("v.attachments", listOfAttachmentIds);
                     console.log(listOfAttachmentIds);
