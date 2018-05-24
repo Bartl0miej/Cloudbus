@@ -69,6 +69,8 @@ public with sharing class CBS_HangarController {
     @AuraEnabled
     public static List<String> getAttachments(String recordId) {
 
+
+        /*return [ SELECT Id FROM Attachment WHERE ParentId=:recordId];*/
         System.debug('recordId = ' + recordId);
 
         try {
@@ -97,7 +99,6 @@ public with sharing class CBS_HangarController {
             System.debug('error mg: ' + exc.getMessage());
             throw new AuraHandledException(exc.getMessage());
         }
-
     }
 
     public class HangarResult {

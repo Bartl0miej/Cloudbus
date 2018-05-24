@@ -1,0 +1,2 @@
+<aura:event type="APPLICATION" description="CBS_AirplaneEdited">
+</aura:event>

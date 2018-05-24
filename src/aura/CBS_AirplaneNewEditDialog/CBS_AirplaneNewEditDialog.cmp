@@ -10,6 +10,7 @@
                       targetFields="{!v.airplaneRecord}"
                       mode="EDIT"/>
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:registerEvent name="CBS_AirplaneEdited" type="c:CBS_AirplaneEdited"/>
     <div aura:id="editDialog" role="dialog" tabindex="-1" aria-labelledby="header43"
          class="slds-modal slds-fade-in-open">
         <div class="slds-modal__container">
@@ -22,17 +23,33 @@
                 </aura:if>
             </div>
             <div class="slds-modal__content slds-p-around--medium slds-grid slds-wrap ">
-                <lightning:input value="{!v.airplaneRecord.Name}" aura:id="airplaneName" name="airplaneName" label="Airplane Name" required="true"
+                <lightning:input value="{!v.airplaneRecord.Name}" aura:id="airplaneName" name="airplaneName"
+                                 label="Airplane Name" required="true"
                                  class="slds-size--1-of-1 slds-p-around_x-small"/>
-                <lightning:input value="{!v.airplaneRecord.Number_of_Seats__c}" type="number" name="airplaneNumberOfSeats" label="Number of Seats" min="1" max="999" class="slds-size--1-of-2 slds-p-around_x-small"/>
-                <lightning:input value="{!v.airplaneRecord.Wingspan__c}" type="number" name="airplaneWingspan" label="Wingspan(m)" step="0.1" min="1" max="999" class="slds-size--1-of-2 slds-p-around_x-small"/>
-                <lightning:input value="{!v.airplaneRecord.Engine__c}" name="airplaneEngine" label="Engine" class="slds-size--1-of-2 slds-p-around_x-small"/>
-                <lightning:input value="{!v.airplaneRecord.Engines_Number__c}" type="number" name="airplaneEnginesNumber" label="Engines Number" step="1" min="1" max="9" class="slds-size--1-of-2 slds-p-around_x-small"/>
-                <lightning:input value="{!v.airplaneRecord.Weight__c}" type="number" name="airplaneWeight" label="Weight" step="0.1" min="1" max="99999" class="slds-size--1-of-2 slds-p-around_x-small"/>
-                <lightning:input value="{!v.airplaneRecord.Length__c}" type="number" name="airplaneLength" label="Length" step="0.1" min="1" max="999" class="slds-size--1-of-2 slds-p-around_x-small"/>
-                <lightning:textarea value="{!v.airplaneRecord.Description}" name="airplaneDescription" class="slds-size--1-of-1 slds-p-around_x-small"
+                <lightning:input value="{!v.airplaneRecord.Number_of_Seats__c}" type="number"
+                                 name="airplaneNumberOfSeats" label="Number of Seats" min="1" max="999"
+                                 class="slds-size--1-of-2 slds-p-around_x-small"/>
+                <lightning:input value="{!v.airplaneRecord.Wingspan__c}" type="number" name="airplaneWingspan"
+                                 label="Wingspan(m)" step="0.1" min="1" max="999"
+                                 class="slds-size--1-of-2 slds-p-around_x-small"/>
+                <lightning:input value="{!v.airplaneRecord.Engine__c}" name="airplaneEngine" label="Engine"
+                                 class="slds-size--1-of-2 slds-p-around_x-small"/>
+                <lightning:input value="{!v.airplaneRecord.Engines_Number__c}" type="number"
+                                 name="airplaneEnginesNumber" label="Engines Number" step="1" min="1" max="9"
+                                 class="slds-size--1-of-2 slds-p-around_x-small"/>
+                <lightning:input value="{!v.airplaneRecord.Weight__c}" type="number" name="airplaneWeight"
+                                 label="Weight" step="0.1" min="1" max="99999"
+                                 class="slds-size--1-of-2 slds-p-around_x-small"/>
+                <lightning:input value="{!v.airplaneRecord.Length__c}" type="number" name="airplaneLength"
+                                 label="Length" step="0.1" min="1" max="999"
+                                 class="slds-size--1-of-2 slds-p-around_x-small"/>
+                <lightning:textarea value="{!v.airplaneRecord.Description}" name="airplaneDescription"
+                                    class="slds-size--1-of-1 slds-p-around_x-small"
                                     label="Airplane Description" maxlength="300"/>
-                <lightning:inputRichText value="{!v.airplaneRecord.Main_photo__c}"/>
+                <lightning:input name="file1" class="slds-size--1-of-2" type="file" label="Add main photo" multiple="false" accept="image/png" onchange="{!c.handleFilesChange}"/>
+                <div style="display: none;">
+                    <lightning:inputRichText value="{!v.airplaneRecord.Main_photo__c}"/>
+                </div>
                 <lightning:fileUpload label="Add plane photos"
                                       name="fileUploader"
                                       multiple="true"

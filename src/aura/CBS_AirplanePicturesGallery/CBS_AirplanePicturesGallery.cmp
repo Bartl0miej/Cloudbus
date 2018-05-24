@@ -1,0 +1,16 @@
+<aura:component description="CBS_AirplanePicturesGallery"
+                implements="flexipage:availableForRecordHome, force:hasRecordId" access="global"
+                controller="CBS_HangarController">
+    <aura:attribute name="attachments" type="Object[]" access="public"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <lightning:card title="Airplane pictures gallery">
+        <lightning:layout multipleRows="true" horizontalAlign="center">
+            <aura:iteration items="{!v.attachments}" var="att">
+                <lightning:layoutItem size="4" padding="around-small">
+                    <img src="{!'/sfc/servlet.shepherd/version/download/' + att}" alt="Airplane image"/>
+                </lightning:layoutItem>
+            </aura:iteration>
+        </lightning:layout>
+    </lightning:card>
+</aura:component>

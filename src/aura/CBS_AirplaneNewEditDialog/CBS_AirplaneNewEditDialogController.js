@@ -33,6 +33,8 @@
                 resultToast.fire();
                 let recId = result.recordId;
                 helper.navigateTo(component, recId);
+                let airplaneEditedEvent = $A.get("e.c:CBS_AirplaneEdited");
+                airplaneEditedEvent.fire();
             } else if (result.state === "ERROR") {
                 console.log('ERROR: ' + JSON.stringify(result.error));
                 resultToast.setParams({
@@ -63,8 +65,28 @@
     },
 
     handleUploadFinished: function (component, event) {
-/*        var uploadedFiles = event.getParam("files");
-        alert("Files uploaded : " + uploadedFiles.length);*/
-        alert('Files uploaded');
+        var uploadedFiles = event.getParam("files");
+        alert("Files uploaded : " + uploadedFiles.length);
+        let airplaneEditedEvent = $A.get("e.c:CBS_AirplaneEdited");
+        airplaneEditedEvent.fire();
+    },
+
+    handleFilesChange : function(component, event, helper) {
+        var files = event.getSource().get("v.files");
+            if(files){
+                var file = files[0]
+                var reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = function () {
+                    var template = component.get("v.richtextvalue");
+                    if(template===undefined) template = '';
+                    template += '<img src="'+reader.result+'"/>';
+                    component.set("v.airplaneRecord.Main_photo__c",template);
+                };
+                reader.onerror = function (error) {
+                    console.log('Error: ', error);
+                };
+                alert('Main photo updated successfully.');
+            }
     }
 })
