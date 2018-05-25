@@ -21,8 +21,10 @@
         reader.onloadend = function() {
             var dataURL = reader.result;
             let atts = component.get("v.pictures");
-            let att = {theData : dataURL, theFile : file};
-            att.baseSixtyFour = att.theData.match(/,(.*)$/)[1];
+            let att = {theData : dataURL};
+            att.base64Data = dataURL.match(/,(.*)$/)[1];
+            att.fileName = file.name;
+            att.contentType = file.type;
             //console.log(att.theFile.name);
             atts.push(att);
             for (let i = 0; i < atts.length; i++) {
@@ -36,14 +38,12 @@
                 "message": "Image successfully added to gallery."
             });
             toastEvent.fire();
-            //helper.upload(component, file, dataURL.match(/,(.*)$/)[1]);
+            helper.upload(component, file, dataURL.match(/,(.*)$/)[1]);
         };
         reader.readAsDataURL(file);
     },
 
     upload: function(component, file, base64Data) {
-
-
         let action = component.get("c.saveAttachment");
         action.setParams({
             parentId: component.get("v.recordId"),
@@ -51,8 +51,17 @@
             base64Data: base64Data,
             contentType: file.type
         });
-        action.setCallback(this, function(a) {
+        action.setCallback(this, function(response) {
             component.set("v.message", "Image uploaded");
+            let att = {};
+            let attId = response.getReturnValue();
+            att.Id = attId;
+            let attsToCancel = component.get("v.attachmentsToCancel");
+            attsToCancel.push(att.Id);
+            component.set("v.attachmentsToCancel", attsToCancel);
+            let theAttachments = component.get("v.attachments");
+            theAttachments.push(att);
+            component.set("v.attachments", theAttachments);
         });
         component.set("v.message", "Uploading...");
         $A.enqueueAction(action);

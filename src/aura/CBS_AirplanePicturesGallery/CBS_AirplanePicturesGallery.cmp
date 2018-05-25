@@ -2,17 +2,30 @@
                 implements="flexipage:availableForRecordHome, force:hasRecordId" access="global"
                 controller="CBS_PictureController">
     <aura:attribute name="attachments" type="Object[]" access="public"/>
-    <aura:attribute name="atts" type="Object[]" access="public"/>
+    <aura:attribute name="mainPicId" type="String"/>
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
 
-    <lightning:card title="Airplane pictures gallery">
-        <lightning:layout multipleRows="true" horizontalAlign="center">
-            <aura:iteration items="{!v.attachments}" var="att">
-                <lightning:layoutItem size="4" padding="around-small">
-                    <!--<img src="{!'/sfc/servlet.shepherd/version/download/' + att}" alt="Airplane image"/>-->
-                    <img src="{!'/servlet/servlet.FileDownload?file=' + att.Id}"/>
-                </lightning:layoutItem>
-            </aura:iteration>
-        </lightning:layout>
+    <lightning:card title="Airplane pictures">
+        <div class="slds-wrap slds-grid">
+            <div class="slds-m-around--small">
+                <div class="slds-size_1-of-1 slds-m-bottom--small">
+                    <ui:outputText value="Main picture"/>
+                </div>
+                <img class="mainConImg" src="{!'/servlet/servlet.FileDownload?file=' + v.mainPicId}"
+                     style="max-width: 55%;"/>
+            </div>
+            <aura:if isTrue="{! !(v.attachments.length == 0)}">
+                <div class="slds-size_1-of-1 slds-m-top--large">
+                    <ui:outputText value="Gallery" class="slds-m-left--small"/>
+                </div>
+                <aura:iteration items="{!v.attachments}" var="att">
+                    <div class="slds-size_1-of-6 slds-m-around--small">
+                        <div class="container">
+                            <img class="conImg" src="{!'/servlet/servlet.FileDownload?file=' + att.Id}" style="max-width: 300px; min-height: 200px;"/>
+                        </div>
+                    </div>
+                </aura:iteration>
+            </aura:if>
+        </div>
     </lightning:card>
 </aura:component>

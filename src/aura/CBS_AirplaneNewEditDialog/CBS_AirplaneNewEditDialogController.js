@@ -20,6 +20,8 @@
     //},
 
     onInit: function(component, event, helper) {
+        let theSpinner = component.find("spinner");
+        theSpinner.showSpinner(component);
         let action = component.get("c.getAttachments");
         action.setParams({"recordId" : component.get("v.recordId")});
         action.setCallback(this, function(response) {
@@ -30,7 +32,7 @@
                 if (response.getReturnValue().mainPicture != undefined) {
                     console.log('jest rozne?');
                     mainPic.isAttachment = true;
-                    mainPic.Id = listOfAttachmentIds.mainPicture;
+                    mainPic.Id = listOfAttachmentIds.mainPicture.Id;
                     mainPic.theData = null;
                     mainPic.hasMain = true;
                 } else {
@@ -56,16 +58,10 @@
                console.log('failed with state: ');
                console.log(response.getError());
            }
+           theSpinner.hideSpinner();
         });
 
         $A.enqueueAction(action);
-    },
-
-    onClick12 : function(component, event, helper) {
-        let selectedItem = event.currentTarget;
-        let picId = selectedItem.dataset.id;
-
-        alert('Picture id: ' + picId);
     },
 
     deletePicture : function(component, event, helper) {
@@ -118,10 +114,8 @@
 
         component.set("v.attachments", attachmentsList);
         component.set("v.mainPicture", mainPic);
-        //alert(picId);
 
         if (!mainBeforeChange.hasMain) {
-            console.log('==');
             return;
         }
 
@@ -230,55 +224,130 @@
     },
 
     saveRecord : function(component, event, helper) {
+        let theSpinner = component.find("spinner");
         let mainPic = component.get("v.mainPicture");
+        if (!mainPic.hasMain) {
+            let toastEvent = $A.get("e.force:showToast");
+            toastEvent.setParams({
+                "type": "Error",
+                "title": "No main image",
+                "message": "You cannot save airplane without main picture."
+            });
+            toastEvent.fire();
+
+            return;
+        }
+
         let pics = component.get("v.pictures");
-        let attsToDelete = component.get("v.attachments");
+        let attsToDelete = component.get("v.attachmentsToDelete");
 
+        pics = JSON.stringify(pics);
 
-
+        console.log(pics);
 
         let tempRec = component.find('forceRecord');
-        tempRec.saveRecord($A.getCallback(function(result) {
-            console.log(result.state);
-            let resultToast = $A.get("e.force:showToast");
-            if(result.state === 'SUCCESS') {
+        let rId = component.get("v.recordId");
+        console.log('tempRec = ' + rId);
+
+        let mainPicAttachment = null;
+        if (mainPic.isAttachment) {
+            mainPicAttachment = mainPic;
+        }
+
+        theSpinner.showSpinner(component);
+        let action = component.get("c.saveAirplane");
+        action.setParams({"mainPictureAtt" : mainPicAttachment, recordId : rId, "attachmentsToDelete" : attsToDelete});
+        action.setCallback(this, function(response) {
+            let state = response.getState();
+            if (state === "SUCCESS") {
+                console.log('ok');
+                let resultToast = $A.get("e.force:showToast");
                 resultToast.setParams({
-                    "title": "Saved",
-                    "message": "The record was saved.",
-                    "type": 'success'
+                    "title": "Updated",
+                    "message": "The airplane was successfully updated.",
+                    "type": 'Success'
                 });
                 resultToast.fire();
-                let recId = result.recordId;
-                helper.navigateTo(component, recId);
-                let airplaneEditedEvent = $A.get("e.c:CBS_AirplaneEdited");
-                airplaneEditedEvent.fire();
-            } else if (result.state === "ERROR") {
-                console.log('ERROR: ' + JSON.stringify(result.error));
-                resultToast.setParams({
-                    "title": "Error",
-                    "message": "There was an error saving the record: " + JSON.stringify(result.error),
-                    "type": 'error'
-                });
-                resultToast.fire();
-                let recId = result.recordId;
+                let recId = component.get("v.recordId");
                 helper.navigateTo(component, recId);
             } else {
-                console.log('Unknown problem, state: ' + result.state + ', error: ' + JSON.stringify(result.error));
+                console.log('error');
             }
-        }));
+            theSpinner.hideSpinner();
+        });
+
+        $A.enqueueAction(action);
+
+//        let tempRec = component.find('forceRecord');
+//        tempRec.saveRecord($A.getCallback(function(result) {
+//            console.log(result.state);
+//            let resultToast = $A.get("e.force:showToast");
+//            if(result.state === 'SUCCESS') {
+//                resultToast.setParams({
+//                    "title": "Saved",
+//                    "message": "The record was saved.",
+//                    "type": 'success'
+//                });
+//                resultToast.fire();
+//                let recId = result.recordId;
+//                helper.navigateTo(component, recId);
+//                let airplaneEditedEvent = $A.get("e.c:CBS_AirplaneEdited");
+//                airplaneEditedEvent.fire();
+//            } else if (result.state === "ERROR") {
+//                console.log('ERROR: ' + JSON.stringify(result.error));
+//                resultToast.setParams({
+//                    "title": "Error",
+//                    "message": "There was an error saving the record: " + JSON.stringify(result.error),
+//                    "type": 'error'
+//                });
+//                resultToast.fire();
+//                let recId = result.recordId;
+//                helper.navigateTo(component, recId);
+//            } else {
+//                console.log('Unknown problem, state: ' + result.state + ', error: ' + JSON.stringify(result.error));
+//            }
     },
 
     cancelDialog : function(component, event, helper) {
-        var recId = component.get("v.recordId");
-        if (!recId) {
-            var homeEvt = $A.get("e.force:navigateToObjectHome");
-            homeEvt.setParams({
-                "scope": "Product2"
-            });
-            homeEvt.fire();
-        } else {
-            helper.navigateTo(component, recId);
+
+        let toCancel = component.get("v.attachmentsToCancel");
+        for (let i = 0; i < toCancel.length; i++) {
+            console.log('to cancel: ' + toCancel[i]);
         }
+
+        let action = component.get("c.cancelAirplaneEdit");
+        action.setParams({"picsToCancel" : toCancel});
+        action.setCallback(this, function(response) {
+            let state = response.getState();
+            if (state === "SUCCESS") {
+                console.log('success');
+                var recId = component.get("v.recordId");
+                if (!recId) {
+                    var homeEvt = $A.get("e.force:navigateToObjectHome");
+                    homeEvt.setParams({
+                        "scope": "Product2"
+                    });
+                    homeEvt.fire();
+                } else {
+                    helper.navigateTo(component, recId);
+                }
+            } else {
+                console.log('failure');
+            }
+        });
+
+        $A.enqueueAction(action);
+
+//        var recId = component.get("v.recordId");
+//        if (!recId) {
+//            var homeEvt = $A.get("e.force:navigateToObjectHome");
+//            homeEvt.setParams({
+//                "scope": "Product2"
+//            });
+//            homeEvt.fire();
+//        } else {
+//            helper.navigateTo(component, recId);
+//        }
     },
 
     handleUploadFinished: function (component, event) {

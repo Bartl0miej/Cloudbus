@@ -6,7 +6,11 @@
                let state = response.getState();
                if (state === "SUCCESS") {
                     let listOfAttachmentIds = response.getReturnValue();
+                    let mainPict = listOfAttachmentIds.mainPicture;
+                    console.log('picId = ' + mainPict.Id);
                     listOfAttachmentIds = listOfAttachmentIds.attachments;
+                    console.log(mainPict.Id);
+                    component.set("v.mainPicId", mainPict.Id);
                     console.log('in callback');
                     component.set("v.attachments", listOfAttachmentIds);
                     console.log(listOfAttachmentIds);
