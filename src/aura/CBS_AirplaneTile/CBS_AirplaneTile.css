@@ -1,0 +1,40 @@
+.THIS {
+}
+
+.THIS.tile {
+    position:relative;
+    display: inline-block;
+    width: 180px;
+    height: 250px;
+    padding: 1px !important;
+}
+
+.THIS.tile:hover {
+    border: 3px solid rgba(0, 112, 210, 0.5);
+}
+
+.THIS .innertile {
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.THIS .lower-third {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, .4);
+    padding: 6px 8px;
+}
+
+.THIS.selected {
+    border: 3px solid rgb(0, 112, 210);
+}
+
+.THIS.selected:hover {
+    border: 3px solid rgb(0, 112, 210);
+}

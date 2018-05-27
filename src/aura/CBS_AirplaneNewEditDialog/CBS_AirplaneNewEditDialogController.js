@@ -1,6 +1,6 @@
 ({
-    //doInit : function(component, event, helper) {
-/*        let recId = component.get("v.recordId");
+    doInit : function(component, event, helper) {
+       let recId = component.get("v.recordId");
 
         if (!recId) {
             component.find("forceRecord").getNewRecord(
@@ -16,10 +16,35 @@
                         }
                     })
             );
-        }*/
-    //},
+        }
+    },
 
     onInit: function(component, event, helper) {
+
+/*        console.log('some record id  = ' + component.get("v.someRecordId"));
+        let someRecordId = component.get("v.someRecordId");
+
+        if (!someRecordId) {
+            component.set("v.recordId", someRecordId);
+        }*/
+
+        let recId = component.get("v.recordId");
+
+        if (!recId) {
+             component.find("forceRecord").getNewRecord(
+                     "Product2",
+                     null,
+                     false,
+                     $A.getCallback(function() {
+                         let rec = component.get("v.propertyRecord");
+                         let error = component.get("v.recordError");
+                         if (error || (rec === null)) {
+                             console.log("Error initializing record template: " + error);
+                             return;
+                         }
+                     })
+             );
+        }
         let theSpinner = component.find("spinner");
         theSpinner.showSpinner(component);
         let action = component.get("c.getAttachments");
@@ -151,7 +176,6 @@
 
         component.set("v.pictures", picsList);
         component.set("v.mainPicture", mainPic);
-        //alert(picId);
 
         if (!mainBeforeChange.hasMain) {
             console.log('==');
@@ -218,7 +242,7 @@
         event.dataTransfer.dropEffect = 'copy';
         let files = event.dataTransfer.files;
         if (files.length>1) {
-            return alert("You can only upload one picture at a time");
+            return alert("You can only upload one picture at a time.");
         }
         helper.readFile(component, helper, files[0]);
     },
@@ -231,7 +255,7 @@
             toastEvent.setParams({
                 "type": "Error",
                 "title": "No main image",
-                "message": "You cannot save airplane without main picture."
+                "message": "You cannot save an airplane without main picture."
             });
             toastEvent.fire();
 

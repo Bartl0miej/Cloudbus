@@ -16,13 +16,19 @@ public with sharing class CBS_HangarController {
             cityParam = ' \'%' + searchedHangar.City__c + '%\' ';
             query += ' AND Name LIKE ' + cityParam;
         }
-        List<CBS_Hangar__c> cbsHangars = Database.query(query);
-        results = new List<HangarResult>();
-        for (CBS_Hangar__c hngr : cbsHangars) {
-            HangarResult tempResult = new HangarResult();
-            tempResult.hangar = hngr;
-            getGeoLocations(tempResult);
-            results.add(tempResult);
+
+        try {
+            List<CBS_Hangar__c> cbsHangars = Database.query(query);
+            results = new List<HangarResult>();
+            for (CBS_Hangar__c hngr : cbsHangars) {
+                HangarResult tempResult = new HangarResult();
+                tempResult.hangar = hngr;
+                getGeoLocations(tempResult);
+                results.add(tempResult);
+            }
+        } catch (Exception exc) {
+            CBS_CustomExceptionData errData = new CBS_CustomExceptionData(exc.getTypeName(), exc.getMessage());
+            throw new AuraHandledException(JSON.serialize(errData));
         }
 
         return results;
@@ -30,10 +36,15 @@ public with sharing class CBS_HangarController {
 
     @AuraEnabled
     public static HangarResult getHangarWrapper(CBS_Hangar__c hangarToFind) {
-        HangarResult result = new HangarResult();
-        result.hangar = hangarToFind;
-        getGeoLocations(result);
-        return result;
+        try {
+            HangarResult result = new HangarResult();
+            result.hangar = hangarToFind;
+            getGeoLocations(result);
+            return result;
+        } catch (Exception exc) {
+            CBS_CustomExceptionData errData = new CBS_CustomExceptionData(exc.getTypeName(), exc.getMessage());
+            throw new AuraHandledException(JSON.serialize(errData));
+        }
     }
 
     private static void getGeoLocations(HangarResult hangarWrapper) {
@@ -68,11 +79,6 @@ public with sharing class CBS_HangarController {
 
     @AuraEnabled
     public static List<String> getAttachments(String recordId) {
-
-
-        /*return [ SELECT Id FROM Attachment WHERE ParentId=:recordId];*/
-        System.debug('recordId = ' + recordId);
-
         try {
 
             List<ContentDocumentLink> contentDocumentLinks =  [SELECT Id, LinkedEntityId, ContentDocumentId FROM ContentDocumentLink WHERE LinkedEntityId = :recordId];
@@ -96,8 +102,8 @@ public with sharing class CBS_HangarController {
 
             return returnedIds;
         } catch (Exception exc) {
-            System.debug('error mg: ' + exc.getMessage());
-            throw new AuraHandledException(exc.getMessage());
+            CBS_CustomExceptionData errData = new CBS_CustomExceptionData(exc.getTypeName(), exc.getMessage());
+            throw new AuraHandledException(JSON.serialize(errData));
         }
     }
 

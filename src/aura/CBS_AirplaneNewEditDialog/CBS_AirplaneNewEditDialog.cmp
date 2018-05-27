@@ -1,6 +1,7 @@
 <aura:component description="CBS_AirplaneNewEditDialog"
                 implements="flexipage:availableForRecordHome, force:hasRecordId, lightning:actionOverride, force:LightningQuickAction"
                 access="global" controller="CBS_PictureController">
+    <aura:attribute name="someRecordId" type="String" default=""/>
     <aura:attribute name="airplaneRecord" type="Product2"/>
     <aura:attribute name="airplane" type="Object"/>
     <aura:attribute name="pictureSrc" type="String"
@@ -11,7 +12,6 @@
     <aura:attribute name="attachmentsToCancel" type="String[]" default="[]"/>
     <aura:attribute name="message" type="String" default="Drag an airplane picture here"/>
     <aura:attribute name="mainPicture" type="Object"/>
-    <!--<aura:attribute name="picturesToAtts" type="CBS_PictureController.PictureFile"/>-->
     <force:recordData aura:id="forceRecord"
                       recordId="{!v.recordId}"
                       layoutType="FULL"
@@ -86,17 +86,6 @@
                 <div class="slds-size_1-of-1">
                     <ui:outputText value="Gallery"/>
                 </div>
-<!--                <aura:iteration items="{!v.pictures}" var="pic" indexVar="index">
-                    <div class="slds-size&#45;&#45;1-of-3">
-                        <div class="container" onclick="{!c.setPicAsMain}" data-id="{!index}" aura:id="airplanePic">
-                            <img class="conImg" src="{!pic.theData}" aura:id="airplanePic" data-id="{!index}"/>
-                            <button class="btn" data-id="{!index}" aura:id="airplanePic"
-                                    onclick="{!c.deletePicture}">
-                                <lightning:icon iconName="utility:delete" alternativeText="Delete Picture" size="small" variant="error"/>
-                            </button>
-                        </div>
-                    </div>
-                </aura:iteration>-->
                 <aura:iteration items="{!v.attachments}" var="att" indexVar="index">
                     <div class="slds-size_1-of-3">
                         <div class="container" onclick="{!c.setAttAsMain}" data-id="{!index}" aura:id="airplanePic">

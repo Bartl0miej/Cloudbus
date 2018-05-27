@@ -1,0 +1,15 @@
+<aura:component description="CBS_AirplaneTile">
+    <aura:attribute name="airplaneItem" type="Object"/>
+    <aura:attribute name="selected" type="Boolean" default="false"/>
+    <lightning:button class="{! v.selected ? 'tile selected' : 'tile'}" onclick="{!c.onAirplaneClick}"
+                      title="wtf">
+        <div style="{!'background-image: url(https://britenetb1-dev-ed--c.eu12.content.force.com/servlet/servlet.FileDownload?file=' + v.airplaneItem.mainPicture.Id +');'}"
+             class="innertile">
+            <div class="lower-third">
+
+                <h1 class="slds-truncate">{!v.airplaneItem.Name}{!'https://britenetb1-dev-ed--c.eu12.content.force.com/servlet/servlet.FileDownload?file=' + v.airplaneItem.mainPicture.Id}</h1>
+            </div>
+        </div>
+    </lightning:button>
+    {!airplaneItem.Name}
+</aura:component>

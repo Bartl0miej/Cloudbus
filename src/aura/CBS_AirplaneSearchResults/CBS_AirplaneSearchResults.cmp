@@ -1,0 +1,22 @@
+<aura:component description="CBS_AirplaneSearchResults" implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="airplanes" type="Object" default="[]"/>
+    <aura:attribute name="selectedAirplaneId" type="String"/>
+    <aura:handler event="c:CBS_AirplaneSearchedEvent" action="{!c.onSearch}"/>
+    <aura:if isTrue="{! !(v.airplanes.length == 0)}">
+        <lightning:card title="Airplane search results">
+            <ui:scrollerWrapper class="scrollerSize" aura:id="scroller">
+                <lightning:layout multipleRows="true" horizontalAlign="center">
+                    <aura:iteration items="{!v.airplanes}" var="airplane">
+                    {!airplane.Name}
+                        <lightning:layoutItem size="3" padding="around-small">
+
+                            <c:CBS_AirplaneTile airplaneItem="{!airplane}"/>
+                            <!--                        <c:TMU_MovieTile movie="{!airplane}"
+                                         selected="{! airplane.Id == v.selectedAirplane.Id ? true : false}"/>-->
+                        </lightning:layoutItem>
+                    </aura:iteration>
+                </lightning:layout>
+            </ui:scrollerWrapper>
+        </lightning:card>
+    </aura:if>
+</aura:component>

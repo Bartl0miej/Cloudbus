@@ -830,6 +830,10 @@
                             <option name="name" value="CBS_AirplaneController" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_CustomExceptionData" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
                         </list>
                       </option>
                       <option name="name" value="ApexClass" />
@@ -1178,6 +1182,34 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="CBS_AirplanePicturesGallery" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_AirplaneSearch" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_AirplaneSearchForm" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_ClearAirplaneSearch" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_AirplaneSearchResults" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_AirplaneSearchedEvent" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_AirplaneTile" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_AirplaneEditDialogContainer" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>

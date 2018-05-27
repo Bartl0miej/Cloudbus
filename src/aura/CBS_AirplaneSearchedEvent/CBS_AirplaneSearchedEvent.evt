@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION" description="CBS_AirplaneSearchedEvent">
+    <aura:attribute name="airplanes" type="Object[]"/>
+</aura:event>

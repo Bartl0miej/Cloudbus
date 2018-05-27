@@ -17,29 +17,15 @@
                 sendCoordinatesEvent.fire();
             } else if (state === "ERROR") {
                 let errors = response.getError();
-                if (errors) {
-                    for (let i = 0; i < errors.length; i++) {
-                        for (let j = 0; errors[i].pageErrors && j < errors[i].pageErrors.length; j++) {
-                            message += (message.length > 0 ? '\n' : '') + errors[i].pageErrors[j].message;
-                        }
-
-                        if (errors[i].fieldErrors) {
-                            for (let fieldError = 0; fieldError < errors[i].fieldErrors.length; fieldError++) {
-                                let thisFieldError = errors[i].fieldErrors[fieldError];
-                                for (let j = 0; j < thisFieldError.length; j++) {
-                                    message += (message.length > 0 ? '\n' : '') + thisFieldError[j].message;
-                                }
-                            }
-                        }
-
-                        if (errors[i].message) {
-                            message += (message.length > 0 ? '\n' : '') + errors[i].message;
-                        }
-                    }
-                } else {
-                    message += (message.length > 0 ? '\n' : '') + 'Unknown error';
-                }
-                alert('Errors with server-side action:\n' + message);
+                let errorData = JSON.parse(errors.message);
+                console.log(errorData.name + ": " + errorData.message);
+                let toastEvent = $A.get("e.force:showToast");
+                toastEvent.setParams({
+                    "type": "Error",
+                    "title": errorData.name,
+                    "message": errorData.message
+                });
+                toastEvent.fire();
             }
         });
 
