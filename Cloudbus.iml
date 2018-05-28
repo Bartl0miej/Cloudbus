@@ -1205,11 +1205,11 @@
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="CBS_AirplaneTile" />
+                            <option name="name" value="CBS_AirplaneEditDialogContainer" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="CBS_AirplaneEditDialogContainer" />
+                            <option name="name" value="CBS_AirplaneNewDialogContainer" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>

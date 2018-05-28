@@ -14,6 +14,13 @@
     margin: 2px;
 }
 
+.THIS .mainImage {
+    border: 1px solid darkblue;
+    height: 200px;
+    max-width: 350px;
+    width: auto;
+}
+
 .THIS .deleteButton {
     background:none;
     border:none;
@@ -44,6 +51,7 @@
 }
 
 .THIS .btn {
+    /*background-color: #c0cfe8;*/
     position: absolute;
     top: 5px;
     right: 5px;

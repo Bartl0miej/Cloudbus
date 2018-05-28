@@ -1,3 +1,107 @@
 .THIS.scrollerSize {
     max-height: 750px;
 }
+
+.THIS .products {
+    display:block;
+    width:100%;
+    height:100%;
+    position:relative;
+    margin:0px;
+    padding:0px;
+    font-size:0px;
+    list-style:none;
+}
+
+.THIS a {
+    text-decoration: none;
+}
+
+.THIS .products li {
+    display:inline-block;
+    width:300px;
+    height:237px;
+    position:relative;
+    margin:0px;
+    padding:0px;
+    z-index:1;
+}
+
+.THIS .products li a .image {
+    display:block;
+    height:150px;
+    position:relative;
+    background-position:center;
+    background-repeat:no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.THIS .products li:hover {
+    position: relative;
+    z-index:20000;
+}
+
+.THIS .products li a {
+    display:block;
+    width:280px;
+    height:auto;
+    padding:10px;
+    position:absolute;
+    background-color:white;
+    cursor:pointer;
+}
+
+.THIS .products li:hover a {
+    box-shadow:0px 0px 5px rgba(0,0,0,0.5);
+    -moz-box-shadow:0px 0px 5px rgba(0,0,0,0.5);
+    -webkit-box-shadow:0px 0px 5px rgba(0,0,0,0.5);
+    -o-box-shadow:0px 0px 5px rgba(0,0,0,0.5);
+    -ms-box-shadow:0px 0px 5px rgba(0,0,0,0.5);
+}
+
+.THIS .products li a .image {
+    display:block;
+    height:150px;
+    position:relative;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.THIS .products li a h1 {
+    display:block;
+    height:auto;
+    margin:10px 0px 10px 5px;
+    font-family:arial;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.THIS .products li a h2 {
+    display:block;
+    height:auto;
+    margin:10px 0px;
+    font-family:arial;
+    font-size:12px;
+    font-weight:normal;
+}
+
+.THIS .products li a .informations {
+    display:none;
+}
+
+.THIS .products li a .informations p,
+.THIS .products li a .informations label {
+    display:block;
+    height:auto;
+    margin:10px 0px;
+    font-family:arial;
+    font-size:12px;
+    color:grey;
+    font-weight:normal;
+}
+
+.THIS .products li:hover a .informations {
+    display:block;
+}

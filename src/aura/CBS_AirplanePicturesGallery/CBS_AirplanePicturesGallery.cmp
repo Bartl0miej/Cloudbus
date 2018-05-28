@@ -4,24 +4,23 @@
     <aura:attribute name="attachments" type="Object[]" access="public"/>
     <aura:attribute name="mainPicId" type="String"/>
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
-
-    <lightning:card title="Airplane pictures">
+    <lightning:card title="{!$Label.c.CBS_Airplane_pictures}">
         <div class="slds-wrap slds-grid">
             <div class="slds-m-around--small">
                 <div class="slds-size_1-of-1 slds-m-bottom--small">
-                    <ui:outputText value="Main picture"/>
+                    <ui:outputText value="{!$Label.c.CBS_Main_picture}"/>
                 </div>
                 <img class="mainConImg" src="{!'/servlet/servlet.FileDownload?file=' + v.mainPicId}"
                      style="max-width: 55%;"/>
             </div>
             <aura:if isTrue="{! !(v.attachments.length == 0)}">
                 <div class="slds-size_1-of-1 slds-m-top--large">
-                    <ui:outputText value="Gallery" class="slds-m-left--small"/>
+                    <ui:outputText value="{!$Label.c.Gallery}" class="slds-m-left--small"/>
                 </div>
                 <aura:iteration items="{!v.attachments}" var="att">
                     <div class="slds-size_1-of-6 slds-m-around--small">
-                        <div class="container">
-                            <img class="conImg" src="{!'/servlet/servlet.FileDownload?file=' + att.Id}" style="max-width: 300px; min-height: 200px;"/>
+                        <div class="gallery">
+                            <img class="slds-m-right--large" src="{!'/servlet/servlet.FileDownload?file=' + att.Id}"/>
                         </div>
                     </div>
                 </aura:iteration>

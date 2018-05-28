@@ -32,16 +32,21 @@ public with sharing class CBS_PictureController {
     @AuraEnabled
     public static AttachmentsWrapper getAttachments(String recordId) {
         AttachmentsWrapper aWrapper = new AttachmentsWrapper();
-        List<Attachment> atts = [SELECT Id, Name FROM Attachment WHERE ParentId = :recordId AND Name = 'main' LIMIT 1];
-        if (!atts.isEmpty()) {
-            aWrapper.mainPicture = atts.get(0);
-            System.debug('--- ' + aWrapper.mainPicture.Id);
-        } else {
-            aWrapper.mainPicture = null;
-        }
-        aWrapper.attachments = [SELECT Id, Name FROM Attachment WHERE ParentId = :recordId AND Name != 'main'];
+        try {
+            List<Attachment> atts = [SELECT Id, Name FROM Attachment WHERE ParentId = :recordId AND Name = 'main' LIMIT 1];
+            if (!atts.isEmpty()) {
+                aWrapper.mainPicture = atts.get(0);
+                System.debug('--- ' + aWrapper.mainPicture.Id);
+            } else {
+                aWrapper.mainPicture = null;
+            }
+            aWrapper.attachments = [SELECT Id, Name FROM Attachment WHERE ParentId = :recordId AND Name != 'main'];
 
-        return aWrapper;
+            return aWrapper;
+        } catch (Exception exc) {
+            CBS_CustomExceptionData errData = new CBS_CustomExceptionData(exc.getTypeName(), exc.getMessage());
+            throw new AuraHandledException(JSON.serialize(errData));
+        }
     }
 
     public class AttachmentsWrapper {

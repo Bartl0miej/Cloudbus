@@ -2,20 +2,30 @@
     <aura:attribute name="airplanes" type="Object" default="[]"/>
     <aura:attribute name="selectedAirplaneId" type="String"/>
     <aura:handler event="c:CBS_AirplaneSearchedEvent" action="{!c.onSearch}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
     <aura:if isTrue="{! !(v.airplanes.length == 0)}">
         <lightning:card title="Airplane search results">
             <ui:scrollerWrapper class="scrollerSize" aura:id="scroller">
-                <lightning:layout multipleRows="true" horizontalAlign="center">
+                <ul class="products">
                     <aura:iteration items="{!v.airplanes}" var="airplane">
-                    {!airplane.Name}
-                        <lightning:layoutItem size="3" padding="around-small">
-
-                            <c:CBS_AirplaneTile airplaneItem="{!airplane}"/>
-                            <!--                        <c:TMU_MovieTile movie="{!airplane}"
-                                         selected="{! airplane.Id == v.selectedAirplane.Id ? true : false}"/>-->
-                        </lightning:layoutItem>
+                        <li style="margin: 7px;">
+                            <a href="{!'/one/one.app?#/sObject/'+ airplane.airplane.Id + '/view'}" target="_blank">
+                                <div class="image"
+                                     style="{!'background-image: url(https://britenetb1-dev-ed--c.eu12.content.force.com/servlet/servlet.FileDownload?file=' + airplane.mainPicture.Id +');'}"></div>
+                                <h1>{!airplane.airplane.Name}</h1>
+                                <div class="informations">
+                                    <p><strong>{!$Label.c.CBS_Number_of_seats}</strong>&nbsp;{!airplane.airplane.Number_of_Seats__c}</p>
+                                    <p><strong>{!$Label.c.CBS_Engine}</strong>&nbsp;{!airplane.airplane.Engine__c}</p>
+                                    <p><strong>{!$Label.c.CBS_Engines_number}</strong>&nbsp;{!airplane.airplane.Engines_Number__c}</p>
+                                    <p><strong>{!$Label.c.CBS_Wingspan}</strong>&nbsp;{!airplane.airplane.Wingspan__c}</p>
+                                    <p><strong>{!$Label.c.CBS_Weight}</strong>&nbsp;{!airplane.airplane.Weight__c}</p>
+                                    <p><strong>{!$Label.c.CBS_Length}</strong>&nbsp;{!airplane.airplane.Length__c}</p>
+                                </div>
+                            </a>
+                        </li>
                     </aura:iteration>
-                </lightning:layout>
+                </ul>
+                <div style="margin-bottom: 140px;">&nbsp;</div>
             </ui:scrollerWrapper>
         </lightning:card>
     </aura:if>

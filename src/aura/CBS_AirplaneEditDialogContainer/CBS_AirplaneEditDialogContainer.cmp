@@ -1,4 +1,3 @@
 <aura:component description="CBS_AirplaneEditDialogContainer" implements="flexipage:availableForRecordHome, force:hasRecordId, lightning:actionOverride, force:LightningQuickAction">
-    <c:CBS_AirplaneNewEditDialog />
-    <!--someRecordId="{!v.recordId}"-->
+    <c:CBS_AirplaneNewEditDialog theRecordId="{!v.recordId}"/>
 </aura:component>

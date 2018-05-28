@@ -37,9 +37,11 @@
 
                 let planes = response.getReturnValue();
                 for (let i = 0; i < planes.length; i++) {
-                    console.log(planes[0].Name);
+                    console.log(planes[0].airplane.Name);
                 }
                 component.set("v.airplanes", planes);
+                console.log('planes');
+                console.log(planes);
                 let searchedAirplaneEvent = $A.get('e.c:CBS_AirplaneSearchedEvent');
                 searchedAirplaneEvent.setParam("airplaneWrappers", planes);
                 searchedAirplaneEvent.fire();

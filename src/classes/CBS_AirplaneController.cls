@@ -7,7 +7,7 @@ public with sharing class CBS_AirplaneController {
         Decimal airplaneEnginesNumber = searchedAirplane.Engines_Number__c;
 
         Boolean hasFirstParam = false;
-        String query = 'SELECT Id, Name, Number_of_Seats__c, Engines_Number__c FROM Product2 WHERE ';
+        String query = 'SELECT Id, Name, Number_of_Seats__c, Engines_Number__c, Engine__c, Length__c, Weight__c, Wingspan__c FROM Product2 WHERE ';
 
         if (String.isNotEmpty(airplaneName)) {
             if (!hasFirstParam) {
@@ -47,7 +47,7 @@ public with sharing class CBS_AirplaneController {
             fetchedIds.add(airplane.Id);
         }
 
-        List<Attachment> fetchedAttachments = [SELECT Id, Name, ParentId FROM Attachment WHERE Name = 'main' AND ParentId IN :fetchedIds];
+        List<Attachment> fetchedAttachments = [SELECT Id, Name, ParentId FROM Attachment WHERE Name = 'main' AND ParentId IN :fetchedIds ORDER BY ParentId];
 
         List<AirplaneWrapper> airplaneWrappers = new List<CBS_AirplaneController.AirplaneWrapper>();
         for (Integer i = 0; i < fetchedAirplanes.size(); i++) {

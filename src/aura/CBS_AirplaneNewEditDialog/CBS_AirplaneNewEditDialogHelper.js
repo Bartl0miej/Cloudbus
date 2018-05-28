@@ -19,6 +19,7 @@
     	}
         var reader = new FileReader();
         reader.onloadend = function() {
+            console.log('in read file');
             var dataURL = reader.result;
             let atts = component.get("v.pictures");
             let att = {theData : dataURL};
@@ -38,7 +39,8 @@
                 "message": "Image successfully added to gallery."
             });
             toastEvent.fire();
-            helper.upload(component, file, dataURL.match(/,(.*)$/)[1]);
+            console.log('dataURL: ' + dataURL);
+            //helper.upload(component, file, dataURL.match(/,(.*)$/)[1]);
         };
         reader.readAsDataURL(file);
     },
@@ -65,5 +67,37 @@
         });
         component.set("v.message", "Uploading...");
         $A.enqueueAction(action);
-    }
+    },
+
+    saveRecord : function(component) {
+/*        let tempRec = component.find('forceRecord');
+        tempRec.saveRecord($A.getCallback(function(result) {
+            console.log(result.state);
+            let resultToast = $A.get("e.force:showToast");
+            if(result.state === 'SUCCESS') {
+                resultToast.setParams({
+                    "title": "Saved",
+                    "message": "The record was saved.",
+                    "type": 'success'
+                });
+                resultToast.fire();
+                let recId = result.recordId;
+                helper.navigateTo(component, recId);
+                let airplaneEditedEvent = $A.get("e.c:CBS_AirplaneEdited");
+                airplaneEditedEvent.fire();
+            } else if (result.state === "ERROR") {
+                console.log('ERROR: ' + JSON.stringify(result.error));
+                resultToast.setParams({
+                    "title": "Error",
+                    "message": "There was an error saving the record: " + JSON.stringify(result.error),
+                    "type": 'error'
+                });
+                resultToast.fire();
+                let recId = result.recordId;
+                helper.navigateTo(component, recId);
+            } else {
+                console.log('Unknown problem, state: ' + result.state + ', error: ' + JSON.stringify(result.error));
+            }
+        }*/
+        }
 })

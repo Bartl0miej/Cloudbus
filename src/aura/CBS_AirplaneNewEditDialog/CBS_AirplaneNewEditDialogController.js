@@ -1,32 +1,32 @@
 ({
-    doInit : function(component, event, helper) {
-       let recId = component.get("v.recordId");
-
-        if (!recId) {
-            component.find("forceRecord").getNewRecord(
-                    "Product2",
-                    null,
-                    false,
-                    $A.getCallback(function() {
-                        let rec = component.get("v.propertyRecord");
-                        let error = component.get("v.recordError");
-                        if (error || (rec === null)) {
-                            console.log("Error initializing record template: " + error);
-                            return;
-                        }
-                    })
-            );
-        }
-    },
+//    doInit : function(component, event, helper) {
+//       let recId = component.get("v.recordId");
+//
+//        if (!recId) {
+//            component.find("forceRecord").getNewRecord(
+//                    "Product2",
+//                    null,
+//                    false,
+//                    $A.getCallback(function() {
+//                        let rec = component.get("v.propertyRecord");
+//                        let error = component.get("v.recordError");
+//                        if (error || (rec === null)) {
+//                            console.log("Error initializing record template: " + error);
+//                            return;
+//                        }
+//                    })
+//            );
+//        }
+//    },
 
     onInit: function(component, event, helper) {
 
-/*        console.log('some record id  = ' + component.get("v.someRecordId"));
-        let someRecordId = component.get("v.someRecordId");
+       console.log('some record id  = ' + component.get("v.theRecordId"));
+        let theRecordId = component.get("v.theRecordId");
 
-        if (!someRecordId) {
-            component.set("v.recordId", someRecordId);
-        }*/
+        component.set("v.recordId", theRecordId);
+
+        console.log("recordId = " + component.get("v.recordId"));
 
         let recId = component.get("v.recordId");
 
@@ -36,15 +36,40 @@
                      null,
                      false,
                      $A.getCallback(function() {
-                         let rec = component.get("v.propertyRecord");
+                         console.log('Create a new airplane');
+                         let rec = component.get("v.airplaneRecord");
                          let error = component.get("v.recordError");
                          if (error || (rec === null)) {
                              console.log("Error initializing record template: " + error);
                              return;
                          }
+                         console.log('recId = ' + recId);
                      })
              );
         }
+
+        if (!recId) {
+            let tempRec = component.find('forceRecord');
+            tempRec.saveRecord($A.getCallback(function(result) {
+                console.log(result.state);
+                let resultToast = $A.get("e.force:showToast");
+                if(result.state === 'SUCCESS') {
+                    resultToast.setParams({
+                        "title": "Saved",
+                        "message": "The record was saved.",
+                        "type": 'success'
+                    });
+                    resultToast.fire();
+                    let recId = result.recordId;
+                    helper.navigateTo(component, recId);
+                    let airplaneEditedEvent = $A.get("e.c:CBS_AirplaneEdited");
+                    airplaneEditedEvent.fire();
+                } else {
+                    console.log('state is failure');
+                }
+            }));
+        }
+
         let theSpinner = component.find("spinner");
         theSpinner.showSpinner(component);
         let action = component.get("c.getAttachments");
@@ -293,7 +318,10 @@
                 });
                 resultToast.fire();
                 let recId = component.get("v.recordId");
-                helper.navigateTo(component, recId);
+                let tempRec = component.find('forceRecord');
+                tempRec.saveRecord($A.getCallback(function(response) {
+                        helper.navigateTo(component, recId);
+                }));
             } else {
                 console.log('error');
             }

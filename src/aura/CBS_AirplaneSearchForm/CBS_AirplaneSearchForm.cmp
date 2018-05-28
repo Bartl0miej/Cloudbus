@@ -10,14 +10,14 @@
     <aura:registerEvent name="selectHangar" type="c:CBS_SelectedHangarUpdate"/>
     -->
     <c:CBS_Spinner aura:id="spinner"/>
-        <lightning:card title="Search for Airplanes">
+        <lightning:card title="{!$Label.c.CBS_Search_for_Airplanes}">
         <div aria-labelledby="searchairplaneform">
             <lightning:layout horizontalAlign="center">
                 <lightning:layoutItem class="slds-m-right_small">
-                    <lightning:input label="Airplane name" aura:id="searchform" value="{!v.searchedAirplane.Name}"/>
+                    <lightning:input label="{!$Label.c.CBS_Airplane_name}" aura:id="searchform" value="{!v.searchedAirplane.Name}"/>
                 </lightning:layoutItem>
                 <lightning:layoutItem class="slds-m-right_xx-small">
-                    <lightning:input type="number" aura:id="searchform" label="Number of Seats"
+                    <lightning:input type="number" aura:id="searchform" label="{!$Label.c.CBS_Minimum_number_of_seats}"
                                      name="airplaneseats" min="1" max="999"
                                      value="{!v.searchedAirplane.Number_of_Seats__c}"/>
                 </lightning:layoutItem>
@@ -44,11 +44,11 @@
                         <!--</div>-->
                         <!--</div>-->
                         <div align="center">
-                            <lightning:button label="Search"
+                            <lightning:button label="{!$Label.c.CBS_Search}"
                                           class="slds-m-top--medium"
                                           variant="brand"
                                           onclick="{!c.searchForAirplane}" iconName="utility:search"/>
-                        <lightning:button label="Clear"
+                        <lightning:button label="{!$Label.c.CBS_Clear}"
                                           class="slds-m-top--medium"
                                           variant="neutral" onclick="{!c.clear}"/>
                         </div>
