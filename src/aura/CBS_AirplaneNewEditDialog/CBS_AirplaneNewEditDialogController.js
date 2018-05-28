@@ -175,7 +175,8 @@
             component.set("v.attachments", attachmentsList);
         } else {
             console.log('should be here');
-            picsList.push(mainBeforeChange);
+            let tData = mainBeforeChange.theData;
+            picsList.push(tData);
             component.set("v.pictures", picsList);
         }
     },
@@ -192,7 +193,7 @@
         let mainPic = {};
         mainPic.isAttachment = false;
         mainPic.Id = null;
-        mainPic.theData = picsList[picId].theData;
+        mainPic.theData = picsList[picId];
         mainPic.hasMain = true;
 
         picsList.splice(picId, 1);
@@ -220,12 +221,16 @@
     diselectFromMainPic : function(component, event, helper) {
         let mainPic = component.get("v.mainPicture");
         if (mainPic.isAttachment) {
+            console.log('jest attachmentem');
             let atts = component.get("v.attachments");
             atts.push(mainPic);
             component.set("v.attachments", atts);
         } else {
+            console.log('jest zdjeciem');
             let pics = component.get("v.pictures");
-            pics.unshift(mainPic);
+            let tData = mainPic.theData;
+            pics.push(tData);
+            console.log(mainPic.theData);
             component.set("v.pictures", pics);
         }
 
@@ -242,10 +247,9 @@
         let mainPic = component.get("v.mainPicture");
 
         if (mainPic.isAttachment) {
-        let toDelete = component.get("v.attachmentsToDelete");
-
-        toDelete.push(mainPic);
-        component.set("v.attachmentsToDelete", toDelete);
+            let toDelete = component.get("v.attachmentsToDelete");
+            toDelete.push(mainPic);
+            component.set("v.attachmentsToDelete", toDelete);
         }
 
         let afterChange = {};
@@ -264,6 +268,7 @@
     onDrop: function(component, event, helper) {
     	event.stopPropagation();
         event.preventDefault();
+        event.dataTransfer.dropEffect = 'copy';
         event.dataTransfer.dropEffect = 'copy';
         let files = event.dataTransfer.files;
         if (files.length>1) {
@@ -290,22 +295,21 @@
         let pics = component.get("v.pictures");
         let attsToDelete = component.get("v.attachmentsToDelete");
 
-        pics = JSON.stringify(pics);
-
-        console.log(pics);
-
         let tempRec = component.find('forceRecord');
         let rId = component.get("v.recordId");
         console.log('tempRec = ' + rId);
 
+        let picMain = null;
         let mainPicAttachment = null;
         if (mainPic.isAttachment) {
             mainPicAttachment = mainPic;
+        } else {
+            picMain = mainPic.theData;
         }
 
         theSpinner.showSpinner(component);
         let action = component.get("c.saveAirplane");
-        action.setParams({"mainPictureAtt" : mainPicAttachment, recordId : rId, "attachmentsToDelete" : attsToDelete});
+        action.setParams({"mainPictureAtt" : mainPicAttachment, recordId : rId, "attachmentsToDelete" : attsToDelete, "picturesToUpload" : pics, "pictureMain" : picMain});
         action.setCallback(this, function(response) {
             let state = response.getState();
             if (state === "SUCCESS") {
@@ -401,30 +405,4 @@
 //            helper.navigateTo(component, recId);
 //        }
     },
-
-    handleUploadFinished: function (component, event) {
-        var uploadedFiles = event.getParam("files");
-        alert("Files uploaded : " + uploadedFiles.length);
-        let airplaneEditedEvent = $A.get("e.c:CBS_AirplaneEdited");
-        airplaneEditedEvent.fire();
-    },
-
-    handleFilesChange : function(component, event, helper) {
-        var files = event.getSource().get("v.files");
-            if(files){
-                var file = files[0]
-                var reader = new FileReader();
-                reader.readAsDataURL(file);
-                reader.onload = function () {
-                    var template = component.get("v.richtextvalue");
-                    if(template===undefined) template = '';
-                    template += '<img src="'+reader.result+'"/>';
-                    component.set("v.airplaneRecord.Main_photo__c",template);
-                };
-                reader.onerror = function (error) {
-                    console.log('Error: ', error);
-                };
-                alert('Main photo updated successfully.');
-            }
-    }
 })

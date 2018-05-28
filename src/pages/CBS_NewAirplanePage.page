@@ -1,0 +1,2 @@
+<apex:page id="CBS_NewAirplanePage" standardController="Product2" extensions="CBS_AirplaneController" action="{!init}">
+</apex:page>

@@ -1,5 +1,11 @@
 public with sharing class CBS_AirplaneController {
 
+    public ApexPages.StandardController controller { get; set; }
+
+    public CBS_AirplaneController(ApexPages.StandardController controller) {
+        this.controller = controller;
+    }
+
     @AuraEnabled
     public static List<AirplaneWrapper> searchAirplanes(Product2 searchedAirplane) {
         String airplaneName = searchedAirplane.Name;
@@ -68,5 +74,9 @@ public with sharing class CBS_AirplaneController {
     @AuraEnabled
     public static List<Attachment> getAttachments(String recordId) {
         return [SELECT Id FROM Attachment WHERE ParentId = :recordId];
+    }
+
+    public PageReference init() {
+        return new PageReference('https://britenetb1-dev-ed.lightning.force.com/c/CBS_AirplaneNewDialogContainerApp.app');
     }
 }

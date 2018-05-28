@@ -15,7 +15,7 @@
             </div>
             <aura:if isTrue="{! !(v.attachments.length == 0)}">
                 <div class="slds-size_1-of-1 slds-m-top--large">
-                    <ui:outputText value="{!$Label.c.Gallery}" class="slds-m-left--small"/>
+                    <ui:outputText value="{!$Label.c.CBS_Gallery}" class="slds-m-left--small"/>
                 </div>
                 <aura:iteration items="{!v.attachments}" var="att">
                     <div class="slds-size_1-of-6 slds-m-around--small">

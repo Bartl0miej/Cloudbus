@@ -84,7 +84,7 @@ public with sharing class CBS_PictureController {
     }
 
     @AuraEnabled
-    public static void saveAirplane(Attachment mainPictureAtt, String recordId, List<Attachment> attachmentsToDelete, String picturesToUpload) {
+    public static void saveAirplane(Attachment mainPictureAtt, String recordId, List<Attachment> attachmentsToDelete, List<String> picturesToUpload, String pictureMain) {
         System.debug('In save airplane');
         List<Attachment> att = [SELECT Id, Name FROM Attachment WHERE ParentId = :recordId AND Name = 'main' LIMIT 1];
         if (!att.isEmpty()) {
@@ -92,33 +92,30 @@ public with sharing class CBS_PictureController {
             update att;
         }
 
-        System.debug('pictures to upload = ' + picturesToUpload);
+        List<Attachment> pictureAttachments = new List<Attachment>();
+        for (String picture : picturesToUpload) {
+            Attachment picAttachment = new Attachment();
+            picAttachment.ParentId = String.valueOf(recordId);
+            picAttachment.Body = EncodingUtil.base64Decode(picture.substring(picture.indexOf(',') + 1));
+            picAttachment.Name = 'picAttachment';
+            pictureAttachments.add(picAttachment);
+        }
+
+        upsert pictureAttachments;
+
+        System.debug('pictures to upload length = ' + picturesToUpload.size());
 
         if (!attachmentsToDelete.isEmpty()) {
             delete attachmentsToDelete;
         }
 
-        //List<PictureFile> pictureFiles = (List<PictureFile>)JSON.deserialize(picturesToUpload, List<PictureFile>.class);
-
-        //List<Attachment> picturesToAttachments = new List<Attachment>();
-        //for (PictureFile pic : pictureFiles) {
-            //System.debug('pic.Name: ' + pic.fileName);
-//            Attachment newAttachment = new Attachment();
-//            newAttachment.parentId = String.valueOf(recordId);
-//            newAttachment.body = EncodingUtil.base64Decode(pic.base64Data);
-//            newAttachment.name = pic.fileName;
-//            newAttachment.contentType = pic.contentType;
-//            picturesToAttachments.add(newAttachment);
- //       }
-
-        //insert picturesToAttachments;
-
-
         if (mainPictureAtt == null) {
-            return;
-        }
-
-        if (mainPictureAtt != null) {
+            Attachment mainPicAttachment = new Attachment();
+            mainPicAttachment.ParentId = String.valueOf(recordId);
+            mainPicAttachment.Body = EncodingUtil.base64Decode(pictureMain.substring(pictureMain.indexOf(',') + 1));
+            mainPicAttachment.Name = 'main';
+            upsert mainPicAttachment;
+        } else {
             Attachment toBeMain = [SELECT Id, Name FROM Attachment WHERE Id = :mainPictureAtt.Id];
             toBeMain.Name = 'main';
             update toBeMain;

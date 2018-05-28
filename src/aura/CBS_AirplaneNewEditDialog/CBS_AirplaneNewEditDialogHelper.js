@@ -27,7 +27,8 @@
             att.fileName = file.name;
             att.contentType = file.type;
             //console.log(att.theFile.name);
-            atts.push(att);
+            let theAttachment = dataURL;
+            atts.push(theAttachment);
             for (let i = 0; i < atts.length; i++) {
                 console.log('id is: ' + atts[i].Id);
             }
