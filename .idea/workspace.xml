@@ -2,18 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffb7f8dc-528c-4a66-b294-4414ce6fa1bc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneNewDialogContainerApp/CBS_AirplaneNewDialogContainerApp.app" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneNewDialogContainerApp/CBS_AirplaneNewDialogContainerApp.app-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/CBS_NewAirplanePage.page" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/CBS_NewAirplanePage.page-meta.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cloudbus.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Cloudbus.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneNewDialogContainerApp/CBS_AirplaneNewDialogContainerApp.app" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneNewDialogContainerApp/CBS_AirplaneNewDialogContainerApp.app-meta.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneNewEditDialog/CBS_AirplaneNewEditDialog.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneNewEditDialog/CBS_AirplaneNewEditDialog.cmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneNewEditDialog/CBS_AirplaneNewEditDialogController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneNewEditDialog/CBS_AirplaneNewEditDialogController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneNewEditDialog/CBS_AirplaneNewEditDialogHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneNewEditDialog/CBS_AirplaneNewEditDialogHelper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplanePicturesGallery/CBS_AirplanePicturesGallery.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplanePicturesGallery/CBS_AirplanePicturesGallery.cmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplanePicturesGallery/CBS_AirplanePicturesGalleryController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplanePicturesGallery/CBS_AirplanePicturesGalleryController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneSearchResults/CBS_AirplaneSearchResults.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneSearchResults/CBS_AirplaneSearchResults.cmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/classes/CBS_AirplaneController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/CBS_AirplaneController.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/CBS_PictureController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/CBS_PictureController.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/CBS_PictureController.cls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/CBS_PictureController.cls-meta.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CBS_NewAirplanePage.page" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CBS_NewAirplanePage.page-meta.xml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,11 +31,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CBS_AirplaneNewEditDialogController.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CBS_AirplaneNewEditDialog.cmp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneNewEditDialog/CBS_AirplaneNewEditDialog.cmp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CBS_AirplaneNewEditDialogController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneNewEditDialog/CBS_AirplaneNewEditDialogController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="328" column="20" lean-forward="true" selection-start-line="328" selection-start-column="20" selection-end-line="328" selection-end-column="20" />
+            <state relative-caret-position="2694">
+              <caret line="255" column="79" lean-forward="true" selection-start-line="255" selection-start-column="79" selection-end-line="255" selection-end-column="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CBS_AirplaneNewEditDialogHelper.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneNewEditDialog/CBS_AirplaneNewEditDialogHelper.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CBS_AirplanePicturesGallery.cmp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplanePicturesGallery/CBS_AirplanePicturesGallery.cmp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CBS_AirplanePicturesGalleryController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplanePicturesGallery/CBS_AirplanePicturesGalleryController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="3" column="59" selection-start-line="3" selection-start-column="59" selection-end-line="3" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CBS_AirplaneController.cls" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/classes/CBS_AirplaneController.cls">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="116" column="79" lean-forward="true" selection-start-line="116" selection-start-column="79" selection-end-line="116" selection-end-column="79" />
             </state>
           </provider>
         </entry>
@@ -58,16 +106,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>taken</find>
-      <find>list-item-1</find>
-      <find>tab-default-1__item</find>
-      <find>list-item-2</find>
-      <find>tab-default-3__item</find>
-      <find>tab-default-3</find>
-      <find>tab-default-1</find>
-      <find>tab-default-2</find>
-      <find>formFieldset1</find>
-      <find>formFirstName</find>
       <find>&amp;#45;&amp;#45;</find>
       <find>MAX_FILE_SIZE</find>
       <find>CHUNK_SIZE</find>
@@ -80,7 +118,6 @@
       <find>sear</find>
       <find>recordId</find>
       <find>background-i</find>
-      <find>AirplaneEdited</find>
       <find>someRecordId</find>
       <find>doInit</find>
       <find>readFile</find>
@@ -88,6 +125,17 @@
       <find>saveAttachment</find>
       <find>delete</find>
       <find>handleFiles</find>
+      <find>AirplaneEdited</find>
+      <find>airplaneEdited</find>
+      <find>attachmentsToCancel</find>
+      <find>listOfAttachmentIds</find>
+      <find>upload</find>
+      <find>getProfilePicture</find>
+      <find>Prof</find>
+      <find>cancel</find>
+      <find>cancelAi</find>
+      <find>save</find>
+      <find>PictureCo</find>
     </findStrings>
     <replaceStrings>
       <replace>contactListItem</replace>
@@ -151,19 +199,19 @@
         <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneTile/CBS_AirplaneTile.css" />
         <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneSearchForm/CBS_AirplaneSearchForm.css" />
         <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneSearchResults/CBS_AirplaneSearchResults.css" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneSearchResults/CBS_AirplaneSearchResults.cmp" />
         <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneSearchResults/CBS_AirplaneSearchResultsController.js" />
         <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneEditDialogContainer/CBS_AirplaneEditDialogContainer.cmp" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_AirplanePicturesGallery/CBS_AirplanePicturesGalleryController.js" />
         <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneSearchForm/CBS_AirplaneSearchForm.cmp" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneNewEditDialog/CBS_AirplaneNewEditDialogHelper.js" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_AirplanePicturesGallery/CBS_AirplanePicturesGallery.cmp" />
-        <option value="$PROJECT_DIR$/src/classes/CBS_PictureController.cls" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneNewEditDialog/CBS_AirplaneNewEditDialog.cmp" />
-        <option value="$PROJECT_DIR$/src/classes/CBS_AirplaneController.cls" />
         <option value="$PROJECT_DIR$/src/pages/CBS_NewAirplanePage.page" />
         <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneNewDialogContainerApp/CBS_AirplaneNewDialogContainerApp.app" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneSearchResults/CBS_AirplaneSearchResults.cmp" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneNewEditDialog/CBS_AirplaneNewEditDialogHelper.js" />
+        <option value="$PROJECT_DIR$/src/classes/CBS_PictureController.cls" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_AirplanePicturesGallery/CBS_AirplanePicturesGalleryController.js" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_AirplanePicturesGallery/CBS_AirplanePicturesGallery.cmp" />
         <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneNewEditDialog/CBS_AirplaneNewEditDialogController.js" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneNewEditDialog/CBS_AirplaneNewEditDialog.cmp" />
+        <option value="$PROJECT_DIR$/src/classes/CBS_AirplaneController.cls" />
       </list>
     </option>
   </component>
@@ -173,7 +221,7 @@
         <entry key="Cloudbus">
           <value>
             <ModuleWorkspaceSettings>
-              <option name="moduleContentsLastModified" value="1527497809842" />
+              <option name="moduleContentsLastModified" value="1527511515917" />
             </ModuleWorkspaceSettings>
           </value>
         </entry>
@@ -193,16 +241,15 @@
                 <ConnectionWorkspaceSettings>
                   <option name="buildSuccessDatesBySourceRootRelativePath">
                     <map>
-                      <entry key="AURA/CBS_AIRPLANEEDITDIALOGCONTAINER" value="1527490119000" />
-                      <entry key="AURA/CBS_AIRPLANEEDITED" value="1527490116000" />
-                      <entry key="AURA/CBS_AIRPLANENEWDIALOGCONTAINER" value="1527490112000" />
-                      <entry key="AURA/CBS_AIRPLANENEWDIALOGCONTAINERAPP" value="1527498740598" />
-                      <entry key="AURA/CBS_AIRPLANENEWEDITDIALOG" value="1527498817291" />
-                      <entry key="AURA/CBS_AIRPLANEPICTURESGALLERY" value="1527495009625" />
-                      <entry key="AURA/CBS_AIRPLANESEARCH" value="1527245350000" />
-                      <entry key="AURA/CBS_AIRPLANESEARCHEDEVENT" value="1527451069000" />
-                      <entry key="AURA/CBS_AIRPLANESEARCHFORM" value="1527491078120" />
-                      <entry key="AURA/CBS_AIRPLANESEARCHRESULTS" value="1527489911844" />
+                      <entry key="AURA/CBS_AIRPLANEEDITDIALOGCONTAINER" value="1527508260000" />
+                      <entry key="AURA/CBS_AIRPLANEEDITED" value="1527508262000" />
+                      <entry key="AURA/CBS_AIRPLANENEWDIALOGCONTAINER" value="1527508265000" />
+                      <entry key="AURA/CBS_AIRPLANENEWEDITDIALOG" value="1527511484266" />
+                      <entry key="AURA/CBS_AIRPLANEPICTURESGALLERY" value="1527511428000" />
+                      <entry key="AURA/CBS_AIRPLANESEARCH" value="1527511431000" />
+                      <entry key="AURA/CBS_AIRPLANESEARCHEDEVENT" value="1527511434000" />
+                      <entry key="AURA/CBS_AIRPLANESEARCHFORM" value="1527511437000" />
+                      <entry key="AURA/CBS_AIRPLANESEARCHRESULTS" value="1527511440000" />
                       <entry key="AURA/CBS_CLEARAIRPLANESEARCH" value="1527245583000" />
                       <entry key="AURA/CBS_CLEARHANGARSEARCH" value="1526037525000" />
                       <entry key="AURA/CBS_HANGARDETAILS" value="1526033662104" />
@@ -215,14 +262,12 @@
                       <entry key="AURA/CBS_SELECTEDHANGARUPDATE" value="1526038025722" />
                       <entry key="AURA/CBS_SETCOORDINATES" value="1525935016966" />
                       <entry key="AURA/CBS_SPINNER" value="1527239715299" />
-                      <entry key="CLASSES/CBS_AIRPLANECONTROLLER.CLS" value="1527498415666" />
+                      <entry key="CLASSES/CBS_AIRPLANECONTROLLER.CLS" value="1527511501871" />
                       <entry key="CLASSES/CBS_CUSTOMEXCEPTIONDATA.CLS" value="1527251422345" />
                       <entry key="CLASSES/CBS_HANGARCONTROLLER.CLS" value="1527254220509" />
                       <entry key="CLASSES/CBS_PICKLISTVALUESCONTROLLER.CLS" value="1526371487340" />
-                      <entry key="CLASSES/CBS_PICTURECONTROLLER.CLS" value="1527497045263" />
                       <entry key="CLASSES/CBS_UTIL.CLS" value="1526285919423" />
                       <entry key="CLASSES/VIEWSURVEYCONTROLLER.CLS" value="1526229062713" />
-                      <entry key="PAGES/CBS_NEWAIRPLANEPAGE.PAGE" value="1527498670979" />
                       <entry key="PAGES/FCC_SHOPRANDOM.PAGE" value="1526456707848" />
                     </map>
                   </option>
@@ -1911,13 +1956,6 @@
               <item name="Cloudbus" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="aura" type="462c0819:PsiDirectoryNode" />
-              <item name="CBS_AirplaneNewDialogContainerApp" type="edc2aaaf:IlluminatedCloudProjectTreeStructureProvider$BundleDirectoryNode" />
-            </path>
-            <path>
-              <item name="Cloudbus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cloudbus" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="aura" type="462c0819:PsiDirectoryNode" />
               <item name="CBS_AirplaneNewEditDialog" type="edc2aaaf:IlluminatedCloudProjectTreeStructureProvider$BundleDirectoryNode" />
             </path>
             <path>
@@ -1939,6 +1977,13 @@
               <item name="Cloudbus" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="aura" type="462c0819:PsiDirectoryNode" />
+              <item name="CBS_AirplaneSearchedEvent" type="edc2aaaf:IlluminatedCloudProjectTreeStructureProvider$BundleDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cloudbus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cloudbus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="aura" type="462c0819:PsiDirectoryNode" />
               <item name="CBS_AirplaneSearchForm" type="edc2aaaf:IlluminatedCloudProjectTreeStructureProvider$BundleDirectoryNode" />
             </path>
             <path>
@@ -1946,7 +1991,14 @@
               <item name="Cloudbus" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="aura" type="462c0819:PsiDirectoryNode" />
-              <item name="CBS_HangarForm" type="edc2aaaf:IlluminatedCloudProjectTreeStructureProvider$BundleDirectoryNode" />
+              <item name="CBS_AirplaneSearchResults" type="edc2aaaf:IlluminatedCloudProjectTreeStructureProvider$BundleDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cloudbus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cloudbus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="aura" type="462c0819:PsiDirectoryNode" />
+              <item name="CBS_HangarSearchResults" type="edc2aaaf:IlluminatedCloudProjectTreeStructureProvider$BundleDirectoryNode" />
             </path>
             <path>
               <item name="Cloudbus" type="b2602c69:ProjectViewProjectNode" />
@@ -2188,13 +2240,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/aura/widgets/widgets.app">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/aura/fileUpload/fileUploadController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -2244,13 +2289,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="15" column="63" selection-start-line="15" selection-start-column="63" selection-end-line="15" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarSearchResults/CBS_HangarSearchResults.cmp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -2395,17 +2433,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneSearchResults/CBS_AirplaneSearchResults.cmp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#li#0;n#aura:iteration#0;n#ul#0;n#ui:scrollerWrapper#0;n#lightning:card#0;n#aura:if#0;n#aura:component#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#li#0;n#aura:iteration#0;n#ul#0;n#ui:scrollerWrapper#0;n#lightning:card#0;n#aura:if#0;n#aura:component#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneTile/CBS_AirplaneTile.cmp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -2417,13 +2444,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="634">
           <caret line="42" column="25" lean-forward="true" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplanePicturesGallery/CBS_AirplanePicturesGalleryController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -2462,35 +2482,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneNewEditDialog/CBS_AirplaneNewEditDialog.cmp">
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneNewDialogContainer/CBS_AirplaneNewDialogContainer.cmp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1069">
-          <caret line="29" column="71" selection-start-line="29" selection-start-column="71" selection-end-line="29" selection-end-column="71" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#aura:if#1;n#div#2;n#div#1;n#div#0;n#div#0;n#aura:component#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="20">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplanePicturesGallery/CBS_AirplanePicturesGallery.cmp">
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarSearchResults/CBS_HangarSearchResults.cmp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
+        <state relative-caret-position="440">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/CBS_PictureController.cls">
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneSearchResults/CBS_AirplaneSearchResults.cmp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="117" column="15" selection-start-line="117" selection-start-column="15" selection-end-line="117" selection-end-column="15" />
-          <folding>
-            <element signature="e#3787#3799#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="200">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneNewDialogContainerApp/CBS_AirplaneNewDialogContainerApp.app">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneEdited/CBS_AirplaneEdited.evt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/CBS_NewAirplanePage.page">
       <provider selected="true" editor-type-id="text-editor">
@@ -2499,31 +2517,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/CBS_AirplaneController.cls">
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneNewDialogContainerApp/CBS_AirplaneNewDialogContainerApp.app">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplanePicturesGallery/CBS_AirplanePicturesGallery.cmp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+        <state relative-caret-position="40">
+          <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneNewDialogContainer/CBS_AirplaneNewDialogContainer.cmp">
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplanePicturesGallery/CBS_AirplanePicturesGalleryController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="34" />
+        <state relative-caret-position="60">
+          <caret line="3" column="59" selection-start-line="3" selection-start-column="59" selection-end-line="3" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneNewEditDialog/CBS_AirplaneNewEditDialogHelper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="46" column="6" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
+        <state relative-caret-position="54">
+          <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneNewEditDialog/CBS_AirplaneNewEditDialogController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="328" column="20" lean-forward="true" selection-start-line="328" selection-start-column="20" selection-end-line="328" selection-end-column="20" />
+        <state relative-caret-position="2694">
+          <caret line="255" column="79" lean-forward="true" selection-start-line="255" selection-start-column="79" selection-end-line="255" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneNewEditDialog/CBS_AirplaneNewEditDialog.cmp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/CBS_PictureController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1280">
+          <caret line="64" column="1" lean-forward="true" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/CBS_AirplaneController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="116" column="79" lean-forward="true" selection-start-line="116" selection-start-column="79" selection-end-line="116" selection-end-column="79" />
         </state>
       </provider>
     </entry>

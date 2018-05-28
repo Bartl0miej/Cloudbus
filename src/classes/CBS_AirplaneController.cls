@@ -1,11 +1,4 @@
 public with sharing class CBS_AirplaneController {
-
-    public ApexPages.StandardController controller { get; set; }
-
-    public CBS_AirplaneController(ApexPages.StandardController controller) {
-        this.controller = controller;
-    }
-
     @AuraEnabled
     public static List<AirplaneWrapper> searchAirplanes(Product2 searchedAirplane) {
         String airplaneName = searchedAirplane.Name;
@@ -76,7 +69,67 @@ public with sharing class CBS_AirplaneController {
         return [SELECT Id FROM Attachment WHERE ParentId = :recordId];
     }
 
-    public PageReference init() {
-        return new PageReference('https://britenetb1-dev-ed.lightning.force.com/c/CBS_AirplaneNewDialogContainerApp.app');
+    @AuraEnabled
+    public static AttachmentsWrapper getAttachmentWrappers(String recordId) {
+        AttachmentsWrapper aWrapper = new AttachmentsWrapper();
+        try {
+            List<Attachment> atts = [SELECT Id, Name FROM Attachment WHERE ParentId = :recordId AND Name = 'main' LIMIT 1];
+            if (!atts.isEmpty()) {
+                aWrapper.mainPicture = atts.get(0);
+                System.debug('--- ' + aWrapper.mainPicture.Id);
+            } else {
+                aWrapper.mainPicture = null;
+            }
+            aWrapper.attachments = [SELECT Id, Name FROM Attachment WHERE ParentId = :recordId AND Name != 'main'];
+
+            return aWrapper;
+        } catch (Exception exc) {
+            CBS_CustomExceptionData errData = new CBS_CustomExceptionData(exc.getTypeName(), exc.getMessage());
+            throw new AuraHandledException(JSON.serialize(errData));
+        }
+    }
+
+    public class AttachmentsWrapper {
+        @AuraEnabled public Attachment mainPicture;
+        @AuraEnabled public List<Attachment> attachments;
+    }
+
+    @AuraEnabled
+    public static void saveAirplane(Attachment mainPictureAtt, String recordId, List<Attachment> attachmentsToDelete, List<String> picturesToUpload, String pictureMain) {
+        System.debug('In save airplane');
+        List<Attachment> att = [SELECT Id, Name FROM Attachment WHERE ParentId = :recordId AND Name = 'main' LIMIT 1];
+        if (!att.isEmpty()) {
+            att[0].Name = 'attachment';
+            update att;
+        }
+
+        List<Attachment> pictureAttachments = new List<Attachment>();
+        for (String picture : picturesToUpload) {
+            Attachment picAttachment = new Attachment();
+            picAttachment.ParentId = String.valueOf(recordId);
+            picAttachment.Body = EncodingUtil.base64Decode(picture.substring(picture.indexOf(',') + 1));
+            picAttachment.Name = 'picAttachment';
+            pictureAttachments.add(picAttachment);
+        }
+
+        upsert pictureAttachments;
+
+        System.debug('pictures to upload length = ' + picturesToUpload.size());
+
+        if (!attachmentsToDelete.isEmpty()) {
+            delete attachmentsToDelete;
+        }
+
+        if (mainPictureAtt == null) {
+            Attachment mainPicAttachment = new Attachment();
+            mainPicAttachment.ParentId = String.valueOf(recordId);
+            mainPicAttachment.Body = EncodingUtil.base64Decode(pictureMain.substring(pictureMain.indexOf(',') + 1));
+            mainPicAttachment.Name = 'main';
+            upsert mainPicAttachment;
+        } else {
+            Attachment toBeMain = [SELECT Id, Name FROM Attachment WHERE Id = :mainPictureAtt.Id];
+            toBeMain.Name = 'main';
+            update toBeMain;
+        }
     }
 }

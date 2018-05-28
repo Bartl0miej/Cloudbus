@@ -1,6 +1,6 @@
 <aura:component description="CBS_AirplanePicturesGallery"
                 implements="flexipage:availableForRecordHome, force:hasRecordId" access="global"
-                controller="CBS_PictureController">
+                controller="CBS_AirplaneController">
     <aura:attribute name="attachments" type="Object[]" access="public"/>
     <aura:attribute name="mainPicId" type="String"/>
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>

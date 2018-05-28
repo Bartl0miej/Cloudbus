@@ -823,10 +823,6 @@
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="CBS_PictureController" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
                             <option name="name" value="CBS_AirplaneController" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
@@ -1210,10 +1206,6 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="CBS_AirplaneNewDialogContainer" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="CBS_AirplaneNewDialogContainerApp" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
@@ -3406,10 +3398,6 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="TakeSurvey" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="CBS_NewAirplanePage" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>

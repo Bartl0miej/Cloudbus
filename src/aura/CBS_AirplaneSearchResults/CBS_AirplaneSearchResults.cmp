@@ -9,7 +9,7 @@
                 <ul class="products">
                     <aura:iteration items="{!v.airplanes}" var="airplane">
                         <li style="margin: 7px;">
-                            <a href="{!'/one/one.app?#/sObject/'+ airplane.airplane.Id + '/view'}" target="_blank">
+                            <a href="{!'/one/one.app?#/sObject/'+ airplane.airplane.Id + '/view'}">
                                 <div class="image"
                                      style="{!'background-image: url(https://britenetb1-dev-ed--c.eu12.content.force.com/servlet/servlet.FileDownload?file=' + airplane.mainPicture.Id +');'}"></div>
                                 <h1>{!airplane.airplane.Name}</h1>
