@@ -830,6 +830,14 @@
                             <option name="name" value="CBS_CustomExceptionData" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="DynamicTableController" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_CommunityRegistrationHandler" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
                         </list>
                       </option>
                       <option name="name" value="ApexClass" />
@@ -1035,6 +1043,10 @@
                             <option name="name" value="CBS_Clients" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_Client" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
                         </list>
                       </option>
                       <option name="name" value="Profile" />
@@ -1181,10 +1193,6 @@
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="CBS_AirplaneSearch" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
                             <option name="name" value="CBS_AirplaneSearchForm" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
@@ -1201,11 +1209,35 @@
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="CBS_AirplaneEditDialogContainer" />
+                            <option name="name" value="CBS_AirplanesDatatable" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="CBS_AirplaneNewDialogContainer" />
+                            <option name="name" value="CBS_AirplaneDeleteEvent" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_AirplaneClearSearch" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="DynamicTable" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_AirplanePageHeader" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_AirplaneSaveEvent" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_AirplaneSavedEvent" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_CustomCommunityNoSearch" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
@@ -3100,6 +3132,10 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="FCC_SendInvitationEmail" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_UpdateContentDocumentLinkVisibilityOnInsert" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>

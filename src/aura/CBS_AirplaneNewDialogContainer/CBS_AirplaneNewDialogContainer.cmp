@@ -1,3 +1,0 @@
-<aura:component description="CBS_AirplaneNewDialogContainer" implements="flexipage:availableForRecordHome, lightning:actionOverride, force:LightningQuickActionWithoutHeader">
-    <c:CBS_AirplaneNewEditDialog/>
-</aura:component>

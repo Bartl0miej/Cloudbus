@@ -1,7 +1,7 @@
 <apex:page standardController="FCC_Shop__c" extensions="FCC_ShopRandomController" showHeader="false"
            standardStylesheets="false" lightningStylesheets="true" sidebar="false" docType="html-5.0">
     <apex:includeScript value="{!$Resource.jQuery}"/>
-    <apex:slds/>
+    <apex:slds />
     <div class="slds-scope" id="mainDiv">
         <div class="slds-tabs_default" id="sldsTabs">
             <ul class="slds-tabs_default__nav" role="tablist">

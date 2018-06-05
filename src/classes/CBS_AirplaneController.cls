@@ -1,4 +1,4 @@
-public with sharing class CBS_AirplaneController {
+public without sharing class CBS_AirplaneController {
     @AuraEnabled
     public static List<AirplaneWrapper> searchAirplanes(Product2 searchedAirplane) {
         String airplaneName = searchedAirplane.Name;
@@ -34,29 +34,39 @@ public with sharing class CBS_AirplaneController {
 
         query += ' ORDER BY Id';
 
-        System.debug('name ' + airplaneName);
-        System.debug('seats ' + airplaneNumberOfSeats);
-        System.debug('engines ' + airplaneEnginesNumber);
+        try {
+            List<Product2> fetchedAirplanes = Database.query(query);
 
-        System.debug('Query = ' + query);
-        List<Product2> fetchedAirplanes = Database.query(query);
+            List<String> fetchedIds = new List<String>();
+            for (Product2 airplane : fetchedAirplanes) {
+                fetchedIds.add(airplane.Id);
+            }
 
-        List<String> fetchedIds = new List<String>();
-        for (Product2 airplane : fetchedAirplanes) {
-            fetchedIds.add(airplane.Id);
+            List<Attachment> fetchedAttachments = [SELECT Id, Name, ParentId FROM Attachment WHERE Name = 'main' AND ParentId IN :fetchedIds ORDER BY ParentId];
+
+            List<AirplaneWrapper> airplaneWrappers = new List<CBS_AirplaneController.AirplaneWrapper>();
+            for (Integer i = 0; i < fetchedAirplanes.size(); i++) {
+                AirplaneWrapper aWrapper = new AirplaneWrapper();
+                aWrapper.airplane = fetchedAirplanes.get(i);
+                aWrapper.mainPicture = fetchedAttachments.get(i);
+                airplaneWrappers.add(aWrapper);
+            }
+
+            return airplaneWrappers;
+        } catch (Exception exc) {
+            CBS_CustomExceptionData errData = new CBS_CustomExceptionData(exc.getTypeName(), exc.getMessage());
+            throw new AuraHandledException(JSON.serialize(errData));
         }
+    }
 
-        List<Attachment> fetchedAttachments = [SELECT Id, Name, ParentId FROM Attachment WHERE Name = 'main' AND ParentId IN :fetchedIds ORDER BY ParentId];
-
-        List<AirplaneWrapper> airplaneWrappers = new List<CBS_AirplaneController.AirplaneWrapper>();
-        for (Integer i = 0; i < fetchedAirplanes.size(); i++) {
-            AirplaneWrapper aWrapper = new AirplaneWrapper();
-            aWrapper.airplane = fetchedAirplanes.get(i);
-            aWrapper.mainPicture = fetchedAttachments.get(i);
-            airplaneWrappers.add(aWrapper);
+    @AuraEnabled
+    public static List<Product2> getNewestAirplanes() {
+        try {
+            return [SELECT Id, Name, Number_of_Seats__c, Engines_Number__c, Engine__c, Length__c, Weight__c, Wingspan__c FROM Product2 ORDER BY CreatedDate LIMIT 6];
+        } catch (Exception exc) {
+            CBS_CustomExceptionData errData = new CBS_CustomExceptionData(exc.getTypeName(), exc.getMessage());
+            throw new AuraHandledException(JSON.serialize(errData));
         }
-
-        return airplaneWrappers;
     }
 
     public class AirplaneWrapper {
@@ -66,7 +76,12 @@ public with sharing class CBS_AirplaneController {
 
     @AuraEnabled
     public static List<Attachment> getAttachments(String recordId) {
-        return [SELECT Id FROM Attachment WHERE ParentId = :recordId];
+        try {
+            return [SELECT Id FROM Attachment WHERE ParentId = :recordId];
+        } catch (Exception exc) {
+            CBS_CustomExceptionData errData = new CBS_CustomExceptionData(exc.getTypeName(), exc.getMessage());
+            throw new AuraHandledException(JSON.serialize(errData));
+        }
     }
 
     @AuraEnabled
@@ -76,7 +91,6 @@ public with sharing class CBS_AirplaneController {
             List<Attachment> atts = [SELECT Id, Name FROM Attachment WHERE ParentId = :recordId AND Name = 'main' LIMIT 1];
             if (!atts.isEmpty()) {
                 aWrapper.mainPicture = atts.get(0);
-                System.debug('--- ' + aWrapper.mainPicture.Id);
             } else {
                 aWrapper.mainPicture = null;
             }
@@ -95,8 +109,18 @@ public with sharing class CBS_AirplaneController {
     }
 
     @AuraEnabled
-    public static void saveAirplane(Attachment mainPictureAtt, String recordId, List<Attachment> attachmentsToDelete, List<String> picturesToUpload, String pictureMain) {
-        System.debug('In save airplane');
+    public static String saveAirplane (Product2 theAirplane, Attachment mainPictureAtt, String recordId, List<Attachment> attachmentsToDelete, List<String> picturesToUpload, String pictureMain) {
+        try {
+            upsert theAirplane;
+            saveAttachments(mainPictureAtt, theAirplane.Id, attachmentsToDelete, picturesToUpload, pictureMain);
+            return theAirplane.Id;
+        } catch (Exception exc) {
+            CBS_CustomExceptionData errData = new CBS_CustomExceptionData(exc.getTypeName(), exc.getMessage());
+            throw new AuraHandledException(JSON.serialize(errData));
+        }
+    }
+
+    private static void saveAttachments(Attachment mainPictureAtt, String recordId, List<Attachment> attachmentsToDelete, List<String> picturesToUpload, String pictureMain) {
         List<Attachment> att = [SELECT Id, Name FROM Attachment WHERE ParentId = :recordId AND Name = 'main' LIMIT 1];
         if (!att.isEmpty()) {
             att[0].Name = 'attachment';
@@ -114,8 +138,6 @@ public with sharing class CBS_AirplaneController {
 
         upsert pictureAttachments;
 
-        System.debug('pictures to upload length = ' + picturesToUpload.size());
-
         if (!attachmentsToDelete.isEmpty()) {
             delete attachmentsToDelete;
         }
@@ -130,6 +152,37 @@ public with sharing class CBS_AirplaneController {
             Attachment toBeMain = [SELECT Id, Name FROM Attachment WHERE Id = :mainPictureAtt.Id];
             toBeMain.Name = 'main';
             update toBeMain;
+        }
+    }
+
+    @AuraEnabled
+    public static List<Product2> getAllAirplanes() {
+        try {
+            return [SELECT Id, Name, Engine__c, Engines_Number__c, Length__c, Number_of_Seats__c, Weight__c, Wingspan__c FROM Product2];
+        } catch (Exception exc) {
+            CBS_CustomExceptionData errData = new CBS_CustomExceptionData(exc.getTypeName(), exc.getMessage());
+            throw new AuraHandledException(JSON.serialize(errData));
+        }
+    }
+
+    @AuraEnabled
+    public static void deleteAirplane(String airplaneId) {
+        try {
+            Product2 airplaneToDelete = [SELECT Id FROM Product2 WHERE Id = :airplaneId LIMIT 1];
+            delete airplaneToDelete;
+        } catch (Exception exc) {
+            CBS_CustomExceptionData errData = new CBS_CustomExceptionData(exc.getTypeName(), exc.getMessage());
+            throw new AuraHandledException(JSON.serialize(errData));
+        }
+    }
+
+    @AuraEnabled
+    public static Product2 getAirplane(String airplaneId) {
+        try {
+            return [SELECT Id, Name, Number_of_Seats__c, Engine__c, Engines_Number__c FROM Product2 WHERE Id = :airplaneId];
+        } catch (Exception exc) {
+            CBS_CustomExceptionData errData = new CBS_CustomExceptionData(exc.getTypeName(), exc.getMessage());
+            throw new AuraHandledException(JSON.serialize(errData));
         }
     }
 }

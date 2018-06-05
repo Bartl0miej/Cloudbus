@@ -1,28 +1,31 @@
-<aura:component description="CBS_AirplaneSearchResults" implements="flexipage:availableForAllPageTypes">
+<aura:component description="CBS_AirplaneSearchResults" implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" controller="CBS_AirplaneController">
     <aura:attribute name="airplanes" type="Object" default="[]"/>
     <aura:attribute name="selectedAirplaneId" type="String"/>
     <aura:handler event="c:CBS_AirplaneSearchedEvent" action="{!c.onSearch}"/>
     <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    <aura:handler event="c:CBS_AirplaneClearSearch" action="{!c.onClear}"/>
     <aura:if isTrue="{! !(v.airplanes.length == 0)}">
-        <lightning:card title="Airplane search results">
+        <lightning:card title="{!$Label.c.CBS_Airplane_search_results}">
             <ui:scrollerWrapper class="scrollerSize" aura:id="scroller">
                 <ul class="products">
                     <aura:iteration items="{!v.airplanes}" var="airplane">
+                        <span onclick="{!c.navigateToAirplaneRecord}" data-id="{!airplane.airplane.Id}" aura:id="airplaneRecord">
                         <li style="margin: 7px;">
-                            <a href="{!'/one/one.app?#/sObject/'+ airplane.airplane.Id + '/view'}">
+                            <a>
                                 <div class="image"
-                                     style="{!'background-image: url(https://britenetb1-dev-ed--c.eu12.content.force.com/servlet/servlet.FileDownload?file=' + airplane.mainPicture.Id +');'}"></div>
+                                     style="{!'background-image: url(/servlet/servlet.FileDownload?file=' + airplane.mainPicture.Id +');'}"></div>
                                 <h1>{!airplane.airplane.Name}</h1>
                                 <div class="informations">
-                                    <p><strong>{!$Label.c.CBS_Number_of_seats}</strong>&nbsp;{!airplane.airplane.Number_of_Seats__c}</p>
+                                    <p><strong>{!$Label.c.CBS_Number_of_seats}</strong>&nbsp;<lightning:formattedNumber value="{!airplane.airplane.Number_of_Seats__c}"/></p>
                                     <p><strong>{!$Label.c.CBS_Engine}</strong>&nbsp;{!airplane.airplane.Engine__c}</p>
-                                    <p><strong>{!$Label.c.CBS_Engines_number}</strong>&nbsp;{!airplane.airplane.Engines_Number__c}</p>
-                                    <p><strong>{!$Label.c.CBS_Wingspan}</strong>&nbsp;{!airplane.airplane.Wingspan__c}</p>
-                                    <p><strong>{!$Label.c.CBS_Weight}</strong>&nbsp;{!airplane.airplane.Weight__c}</p>
-                                    <p><strong>{!$Label.c.CBS_Length}</strong>&nbsp;{!airplane.airplane.Length__c}</p>
+                                    <p><strong>{!$Label.c.CBS_Engines_number}</strong>&nbsp;<lightning:formattedNumber value="{!airplane.airplane.Engines_Number__c}"/></p>
+                                    <p><strong>{!$Label.c.CBS_Wingspan}</strong>&nbsp;<lightning:formattedNumber value="{!airplane.airplane.Wingspan__c}"/></p>
+                                    <p><strong>{!$Label.c.CBS_Weight}</strong>&nbsp;<lightning:formattedNumber value="{!airplane.airplane.Weight__c}"/></p>
+                                    <p><strong>{!$Label.c.CBS_Length}</strong>&nbsp;<lightning:formattedNumber value="{!airplane.airplane.Length__c}"/></p>
                                 </div>
                             </a>
                         </li>
+                        </span>
                     </aura:iteration>
                 </ul>
                 <div style="margin-bottom: 140px;">&nbsp;</div>

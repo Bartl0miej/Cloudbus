@@ -77,6 +77,18 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Lead__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Survey taken by Lead</label>
+        <referenceTo>Lead</referenceTo>
+        <relationshipLabel>Surveys Taken</relationshipLabel>
+        <relationshipName>Surveys_Taken</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Survey__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
@@ -112,10 +124,10 @@
     <label>Survey Taken</label>
     <listViews>
         <fullName>All</fullName>
+        <columns>NAME</columns>
         <columns>CREATED_DATE</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
-        <language>en_US</language>
     </listViews>
     <nameField>
         <displayFormat>{0000000}</displayFormat>

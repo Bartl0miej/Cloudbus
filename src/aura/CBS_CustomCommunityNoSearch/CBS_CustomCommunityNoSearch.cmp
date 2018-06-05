@@ -1,0 +1,2 @@
+<aura:component description="CBS_CustomCommunityNoSearch" implements="forceCommunity:searchInterface" access="global">
+</aura:component>

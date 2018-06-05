@@ -1,0 +1,2 @@
+<aura:event type="APPLICATION" description="CBS_AirplaneSaveEvent">
+</aura:event>

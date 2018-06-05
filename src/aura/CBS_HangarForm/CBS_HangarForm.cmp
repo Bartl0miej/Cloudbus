@@ -3,7 +3,7 @@
                     default="{'sobjectType' : 'CBS_Hangar__c', 'Name' : '', 'Country__c' : '', 'City__c' : ''}"/>
     <aura:attribute name="hangars" type="List" default="[]"/>
     <aura:attribute name="picklistValues" type="Object"/>
-    <c:CBS_PicklistValues sObjectName="CBS_Hangar__c" fieldName="Country__c" picklistValues="{!v.picklistValues}"/>
+    <c:CBS_PickListValues sObjectName="CBS_Hangar__c" fieldName="Country__c" picklistValues="{!v.picklistValues}"/>
     <aura:registerEvent name="clearSearch" type="c:CBS_ClearHangarSearch"/>
     <aura:registerEvent name="sendCoordinates" type="c:CBS_SetCoordinates"/>
     <aura:registerEvent name="selectHangar" type="c:CBS_SelectedHangarUpdate"/>

@@ -1,17 +1,9 @@
 ({
     searchForAirplane : function(component, event, helper) {
         let theSpinner = component.find("spinner");
-        //let clearEvent = component.getEvent("clearSearch");
-        //clearEvent.fire();
         let searchedAirplane = component.get("v.searchedAirplane");
         if (searchedAirplane.Name == '' && searchedAirplane.Number_of_Seats__c == null) {
-            let toastEvent = $A.get("e.force:showToast");
-            toastEvent.setParams({
-                "type": "Warning",
-                "title": "No criteria",
-                "message": "Please specify at least one search criteria."
-            });
-            toastEvent.fire();
+            helper.showToast(component, "Warning", $A.get("$Label.c.CBS_No_criteria"), $A.get("$Label.c.CBS_Please_specify_at_least_one_search_criteria"));
             theSpinner.hideSpinner();
             return;
         }
@@ -24,70 +16,33 @@
             if (state === "SUCCESS") {
                 console.log('success');
                 if (response.getReturnValue().length == 0) {
-                    let toastEvent = $A.get("e.force:showToast");
-                    toastEvent.setParams({
-                        "type": "Warning",
-                        "title": "No airplanes",
-                        "message": "No airplanes has beeen found using specified criteria."
-                    });
-                    toastEvent.fire();
                     theSpinner.hideSpinner();
+                    helper.showToast(component, "Warning", $A.get("$Label.c.CBS_No_airplanes"), $A.get("$Label.c.CBS_No_airplanes_found_using_criteria"));
                     return;
                 }
 
                 let planes = response.getReturnValue();
-                for (let i = 0; i < planes.length; i++) {
-                    console.log(planes[0].airplane.Name);
-                }
                 component.set("v.airplanes", planes);
-                console.log('planes');
-                console.log(planes);
                 let searchedAirplaneEvent = $A.get('e.c:CBS_AirplaneSearchedEvent');
                 searchedAirplaneEvent.setParam("airplaneWrappers", planes);
                 searchedAirplaneEvent.fire();
-
-                theSpinner.hideSpinner();
             } else if (state === "ERROR") {
-                console.log('error');
-                let errors = response.getError();
-                if (errors) {
-                    for (let i = 0; i < errors.length; i++) {
-                        for (let j = 0; errors[i].pageErrors && j < errors[i].pageErrors.length; j++) {
-                            message += (message.length > 0 ? '\n' : '') + errors[i].pageErrors[j].message;
-                        }
-
-                        if (errors[i].fieldErrors) {
-                            for (let fieldError = 0; fieldError < errors[i].fieldErrors.length; fieldError++) {
-                                let thisFieldError = errors[i].fieldErrors[fieldError];
-                                for (let j = 0; j < thisFieldError.length; j++) {
-                                    message += (message.length > 0 ? '\n' : '') + thisFieldError[j].message;
-                                }
-                            }
-                        }
-
-                        if (errors[i].message) {
-                            message += (message.length > 0 ? '\n' : '') + errors[i].message;
-                        }
-                    }
-                } else {
-                    message += (message.length > 0 ? '\n' : '') + 'Unknown error';
-                }
-                theSpinner.hideSpinner();
-                alert('Errors with server-side action:\n' + message);
+                let errors = response.getError()[0];
+                helper.showErrorToast(component, errors);
+            } else {
+                helper.showToast("Error", $A.get("$Label.c.CBS_Error"), $A.get("$Label.c.CBS_Errors_with_server_side_action"));
             }
+
+            theSpinner.hideSpinner();
         });
 
         $A.enqueueAction(action);
     },
 
     clear : function(component, event, helper) {
-        component.set("v.searchedHangar", {'sobjectType': 'CBS_Hangar__c', 'Name' : '', 'E_mail__c' : '', 'Country__c' : '', 'City__c' : ''});
-        component.set("v.hangars", []);
-        let clearEvent = component.getEvent("clearSearch");
-        clearEvent.fire();
+        component.set("v.searchedAirplane", {'sobjectType' : 'Product2', 'Name' : '', 'Engines_Number__c' : '', 'Number_of_Seats__c' : null});
 
-        let sendCoordinatesEvent = component.getEvent("sendCoordinates");
-        sendCoordinatesEvent.setParams({"hangarsCoordinates": new Array()});
-        sendCoordinatesEvent.fire();
+        let clearEvent = $A.get("e.c:CBS_AirplaneClearSearch");
+        clearEvent.fire();
     },
 })

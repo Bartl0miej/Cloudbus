@@ -18,13 +18,7 @@
                 let state = response.getState();
                 if (state === "SUCCESS") {
                     if (response.getReturnValue().length == 0) {
-                        let toastEvent = $A.get("e.force:showToast");
-                        toastEvent.setParams({
-                            "type": "Warning",
-                            "title": $A.get("$Label.c.CBS_No_hangars"),
-                            "message": $A.get("$Label.c.CBS_No_hangars_found")
-                        });
-                        toastEvent.fire();
+                        helper.showToast(component, "Warning", $A.get("$Label.c.CBS_No_hangars"), $A.get("$Label.c.CBS_No_hangars_found"));
                         theSpinner.hideSpinner();
                         return;
                     } else if (response.getReturnValue().length == 1) {
@@ -45,15 +39,7 @@
                     theSpinner.hideSpinner();
                 } else if (state === "ERROR") {
                     let errors = response.getError()[0];
-                    let errorData = JSON.parse(errors.message);
-                    console.log(errorData.name + ": " + errorData.message);
-                    let toastEvent = $A.get("e.force:showToast");
-                    toastEvent.setParams({
-                        "type": "Error",
-                        "title": errorData.name,
-                        "message": errorData.message
-                    });
-                    toastEvent.fire();
+                    helper.showErrorToast(component, errors);
                     theSpinner.hideSpinner();
                 }
             });

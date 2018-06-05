@@ -16,16 +16,8 @@
                 sendCoordinatesEvent.setParams({"hangarsCoordinates": hangarLatLong});
                 sendCoordinatesEvent.fire();
             } else if (state === "ERROR") {
-                let errors = response.getError();
-                let errorData = JSON.parse(errors.message);
-                console.log(errorData.name + ": " + errorData.message);
-                let toastEvent = $A.get("e.force:showToast");
-                toastEvent.setParams({
-                    "type": "Error",
-                    "title": errorData.name,
-                    "message": errorData.message
-                });
-                toastEvent.fire();
+                let errors = response.getError()[0];
+                helper.showErrorToast(component, errors);
             }
         });
 

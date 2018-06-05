@@ -1,121 +1,124 @@
 <aura:component description="CBS_AirplaneNewEditDialog"
-                implements="flexipage:availableForRecordHome, lightning:actionOverride, force:LightningQuickAction"
+                implements="flexipage:availableForRecordHome,force:lightningQuickAction,force:hasRecordId"
                 access="global" controller="CBS_AirplaneController">
-    <aura:attribute name="theRecordId" type="String" default=""/>
     <aura:attribute name="recordId" type="String"/>
     <aura:attribute name="airplaneRecord" type="Product2"/>
     <aura:attribute name="airplane" type="Object"/>
-    <aura:attribute name="pictureSrc" type="String"
-                    default="https://s3-us-west-1.amazonaws.com/sfdc-demo/image-placeholder.png"/>
     <aura:attribute name="attachments" type="Object[]" default="[]"/>
     <aura:attribute name="pictures" type="Object[]" default="[]"/>
     <aura:attribute name="attachmentsToDelete" type="Object[]" default="[]"/>
-    <aura:attribute name="message" type="String" default="{!$Label.c.CBS_Drag_an_airplane_picture_here}"/>
     <aura:attribute name="mainPicture" type="Object"/>
+    <aura:attribute name="downloadAttachmentEndpoint" type="String" default="/servlet/servlet.FileDownload?file="/>
+    <aura:registerEvent name="CBS_AirplaneEdited" type="c:CBS_AirplaneEdited"/>
+    <aura:registerEvent name="CBS_AirplaneSavedEvent" type="c:CBS_AirplaneSavedEvent"/>
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    <aura:handler event="c:CBS_AirplaneSaveEvent" action="{!c.saveRecord}"/>
+    <aura:method name="saveTheAirplane" action="{!c.saveRecord}">
+        <aura:attribute name="passedId" type="String"/>
+    </aura:method>
     <force:recordData aura:id="forceRecord"
-                      recordId="{!v.theRecordId}"
+                      recordId="{!v.recordId}"
                       layoutType="FULL"
                       targetRecord="{!v.airplane}"
                       targetFields="{!v.airplaneRecord}"
                       mode="EDIT"/>
-    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
-    <div aura:id="editDialog" role="dialog" tabindex="-1" aria-labelledby="header43"
-         class="slds-modal slds-fade-in-open">
-        <div class="slds-modal__container"
-             style="max-width 100rem !important; width: 100% !important; max-height: 100rem !important; height: 100% !important;">
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-grid slds-size_1-of-2 slds-wrap">
             <c:CBS_Spinner aura:id="spinner"/>
-            <div class="slds-modal__header">
-                <h2 class="slds-text-heading--medium">New Airplane</h2>
+            <lightning:input value="{!v.airplaneRecord.Name}" aura:id="airplaneName" name="airplaneName"
+                             label="{!$Label.c.CBS_Airplane_name}" required="true"
+                             class="slds-size_1-of-1"/>
+            <lightning:input value="{!v.airplaneRecord.Number_of_Seats__c}" type="number"
+                             name="airplaneNumberOfSeats" label="{!$Label.c.CBS_Number_of_seats_label}" min="1"
+                             max="999"
+                             class="slds-size_1-of-2"/>
+            <lightning:input value="{!v.airplaneRecord.Wingspan__c}" type="number" name="airplaneWingspan"
+                             label="{!$Label.c.CBS_Wingspan_m}" step="0.1" min="1" max="999"
+                             class="slds-size_1-of-2"/>
+            <lightning:input value="{!v.airplaneRecord.Engine__c}" name="airplaneEngine"
+                             label="{!$Label.c.CBS_Engine_Label}"
+                             class="slds-size--1-of-2 slds-p-around_x-small"/>
+            <lightning:input value="{!v.airplaneRecord.Engines_Number__c}" type="number"
+                             name="airplaneEnginesNumber" label="{!$Label.c.CBS_Engines_number_label}" step="1" min="1"
+                             max="9"
+                             class="slds-size--1-of-2 slds-p-around_x-small"/>
+            <lightning:input value="{!v.airplaneRecord.Weight__c}" type="number" name="airplaneWeight"
+                             label="{!$Label.c.CBS_Weight_label}" step="0.1" min="1" max="99999"
+                             class="slds-size--1-of-2 slds-p-around_x-small"/>
+            <lightning:input value="{!v.airplaneRecord.Length__c}" type="number" name="airplaneLength"
+                             label="{!$Label.c.CBS_Length_label}" step="0.1" min="1" max="999"
+                             class="slds-size--1-of-2 slds-p-around_x-small"/>
+            <lightning:textarea value="{!v.airplaneRecord.Description}" name="airplaneDescription"
+                                class="slds-size--1-of-1 slds-p-around_x-small"
+                                label="{!$Label.c.CBS_Airplane_Description}" maxlength="300"/>
+            <div ondragover="{!c.onDragOver}" ondrop="{!c.onDrop}" align="center"
+                 class="slds-col slds-size_1-of-1 slds-m-bottom--medium">
+                <img src="{!$Resource.CBS_AirplaneImagePlaceholder}"/>
+                <p>{!$Label.c.CBS_Drag_an_airplane_picture_here}</p>
             </div>
-            <div class="slds-modal__content slds-p-around--medium slds-grid slds-wrap" style="height: 100% !important;">
-                <lightning:input value="{!v.airplaneRecord.Name}" aura:id="airplaneName" name="airplaneName"
-                                 label="Airplane Name" required="true"
-                                 class="slds-size--1-of-1 slds-p-around_x-small"/>
-                <lightning:input value="{!v.airplaneRecord.Number_of_Seats__c}" type="number"
-                                 name="airplaneNumberOfSeats" label="Number of Seats" min="1" max="999"
-                                 class="slds-size--1-of-2 slds-p-around_x-small"/>
-                <lightning:input value="{!v.airplaneRecord.Wingspan__c}" type="number" name="airplaneWingspan"
-                                 label="Wingspan(m)" step="0.1" min="1" max="999"
-                                 class="slds-size--1-of-2 slds-p-around_x-small"/>
-                <lightning:input value="{!v.airplaneRecord.Engine__c}" name="airplaneEngine" label="Engine"
-                                 class="slds-size--1-of-2 slds-p-around_x-small"/>
-                <lightning:input value="{!v.airplaneRecord.Engines_Number__c}" type="number"
-                                 name="airplaneEnginesNumber" label="Engines Number" step="1" min="1" max="9"
-                                 class="slds-size--1-of-2 slds-p-around_x-small"/>
-                <lightning:input value="{!v.airplaneRecord.Weight__c}" type="number" name="airplaneWeight"
-                                 label="Weight" step="0.1" min="1" max="99999"
-                                 class="slds-size--1-of-2 slds-p-around_x-small"/>
-                <lightning:input value="{!v.airplaneRecord.Length__c}" type="number" name="airplaneLength"
-                                 label="Length" step="0.1" min="1" max="999"
-                                 class="slds-size--1-of-2 slds-p-around_x-small"/>
-                <lightning:textarea value="{!v.airplaneRecord.Description}" name="airplaneDescription"
-                                    class="slds-size--1-of-1 slds-p-around_x-small"
-                                    label="Airplane Description" maxlength="300"/>
-                <div ondragover="{!c.onDragOver}" ondrop="{!c.onDrop}" align="center"
-                     class="slds-col slds-size_1-of-1 slds-m-bottom--medium">
-                    <img src="{!v.pictureSrc}"/>
-                    <p>{!v.message}</p>
-                </div>
-                <div class="slds-size_1-of-1">
-                    <ui:outputText value="{!$Label.c.CBS_Main_picture}"/>
-                </div>
-                <div class="mainContainer">
-                    <aura:if isTrue="{!v.mainPicture.hasMain}">
-                        <aura:if isTrue="{!v.mainPicture.isAttachment}">
-                            <img class="mainConImg" src="{!'/servlet/servlet.FileDownload?file=' + v.mainPicture.Id}"
-                                 onclick="{!c.diselectFromMainPic}"/>
-                            <button class="btn" onclick="{!c.deleteMainPic}">
-                                <lightning:icon iconName="utility:delete" alternativeText="{!$Label.c.CBS_Delete_Picture}" size="small"
-                                                variant="error"/>
-                            </button>
-                        </aura:if>
-                        <aura:if isTrue="{! !v.mainPicture.isAttachment}">
-                            <img class="mainConImg" src="{!v.mainPicture.theData}" onclick="{!c.diselectFromMainPic}"/>
-                            <button class="btn" onclick="{!c.deleteMainPic}">
-                                <lightning:icon iconName="utility:delete" alternativeText="{!$Label.c.CBS_Delete_Picture}" size="small"
-                                                variant="error"/>
-                            </button>
-                        </aura:if>
+        </div>
+        <div class="slds-col slds-grid slds-size_1-of-2 slds-wrap">
+            <div class="slds-size_1-of-1">
+                <ui:outputText value="{!$Label.c.CBS_Main_picture}" class="slds-p-left--medium"/>
+            </div>
+            <div class="mainContainer">
+                <aura:if isTrue="{!v.mainPicture.hasMain}">
+                    <aura:if isTrue="{!v.mainPicture.isAttachment}">
+                        <img class="mainConImg slds-p-left--medium"
+                             src="{!v.downloadAttachmentEndpoint + v.mainPicture.Id}"
+                             onclick="{!c.diselectFromMainPic}" />
+                        <button class="btn" onclick="{!c.deleteMainPic}">
+                            <lightning:icon iconName="utility:delete"
+                                            alternativeText="{!$Label.c.CBS_Delete_Picture}" size="small"
+                                            variant="error"/>
+                        </button>
                     </aura:if>
-                    <aura:if isTrue="{! !v.mainPicture.hasMain}">
-                        <img class="mainConImg" src="{!$Resource.CBS_AirplaneNoMainimage}" style="height: 200px;"/>
+                    <aura:if isTrue="{! !v.mainPicture.isAttachment}">
+                        <img class="mainConImg slds-p-left--medium" src="{!v.mainPicture.theData}"
+                             onclick="{!c.diselectFromMainPic}"/>
+                        <button class="btn" onclick="{!c.deleteMainPic}">
+                            <lightning:icon iconName="utility:delete"
+                                            alternativeText="{!$Label.c.CBS_Delete_Picture}" size="small"
+                                            variant="error"/>
+                        </button>
                     </aura:if>
-                </div>
-                <div class="slds-size_1-of-1">
-                    <ui:outputText value="{!$Label.c.CBS_Gallery}"/>
-                </div>
-                <aura:if isTrue="{!v.pictures.length > 0}">
-                    <aura:iteration items="{!v.pictures}" var="picture" indexVar="index">
-                        <div class="slds-size_1-of-3">
-                            <div class="container" onclick="{!c.setPicAsMain}" data-id="{!index}" aura:id="airplanePic">
-                                <img class="conImg" src="{!picture}"/>
-                                <button class="btn" data-id="{!index}" aura:id="airplanePic"
-                                        onclick="{!c.deletePicture}">
-                                    <lightning:icon iconName="utility:delete" alternativeText="{!$Label.c.CBS_Delete_Picture}"
-                                                    size="small" variant="error"/>
-                                </button>
-                            </div>
-                        </div>
-                    </aura:iteration>
                 </aura:if>
-                <aura:iteration items="{!v.attachments}" var="att" indexVar="index">
+                <aura:if isTrue="{! !v.mainPicture.hasMain}">
+                    <img class="mainConImg slds-p-left--medium" src="{!$Resource.CBS_AirplaneNoMainimage}" style="height: 200px;"/>
+                </aura:if>
+            </div>
+            <div class="slds-size_1-of-1">
+                <ui:outputText value="{!$Label.c.CBS_Gallery}" class="slds-p-left--medium"/>
+            </div>
+            <aura:if isTrue="{!v.pictures.length > 0}">
+                <aura:iteration items="{!v.pictures}" var="picture" indexVar="index">
                     <div class="slds-size_1-of-3">
-                        <div class="container" onclick="{!c.setAttAsMain}" data-id="{!index}" aura:id="airplanePic">
-                            <img class="conImg" src="{!'/servlet/servlet.FileDownload?file=' + att.Id}"/>
+                        <div class="container" onclick="{!c.setPicAsMain}" data-id="{!index}"
+                             aura:id="airplanePic">
+                            <img class="conImg slds-p-left--medium" src="{!picture}"/>
                             <button class="btn" data-id="{!index}" aura:id="airplanePic"
-                                    onclick="{!c.deleteAttachment}">
-                                <lightning:icon iconName="utility:delete" alternativeText="{!$Label.c.CBS_Delete_Picture}" size="small"
-                                                variant="error"/>
+                                    onclick="{!c.deletePicture}">
+                                <lightning:icon iconName="utility:delete"
+                                                alternativeText="{!$Label.c.CBS_Delete_Picture}"
+                                                size="small" variant="error"/>
                             </button>
                         </div>
                     </div>
                 </aura:iteration>
-            </div>
-            <div class="slds-modal__footer">
-                <lightning:button variant="neutral" label="{!$Label.c.CBS_Cancel}" onclick="{!c.cancelDialog}"/>
-                <lightning:button variant="brand" label="{!$Label.c.CBS_Submit}" onclick="{!c.saveRecord}"/>
-            </div>
+            </aura:if>
+            <aura:iteration items="{!v.attachments}" var="att" indexVar="index">
+                <div class="slds-size_1-of-3">
+                    <div class="container" onclick="{!c.setAttAsMain}" data-id="{!index}" aura:id="airplanePic">
+                        <img class="conImg slds-p-left--medium" src="{!v.downloadAttachmentEndpoint + att.Id}"/>
+                        <button class="btn" data-id="{!index}" aura:id="airplanePic"
+                                onclick="{!c.deleteAttachment}">
+                            <lightning:icon iconName="utility:delete"
+                                            alternativeText="{!$Label.c.CBS_Delete_Picture}" size="small"
+                                            variant="error"/>
+                        </button>
+                    </div>
+                </div>
+            </aura:iteration>
         </div>
     </div>
-    <div aura:id="overlay" class="slds-backdrop slds-backdrop--open"></div>
 </aura:component>

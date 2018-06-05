@@ -1,0 +1,41 @@
+<aura:component description="CBS_AirplanesDatatable" controller="CBS_AirplaneController"
+                implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:registerEvent name="CBS_AirplaneSaveEvent2" type="c:CBS_AirplaneSaveEvent2"/>
+    <aura:attribute name="isModalOpen" type="Boolean" default="false"/>
+    <lightning:card title="{!$Label.c.CBS_Airplanes_List}">
+        <aura:set attribute="actions">
+            <lightning:button label="{!$Label.c.CBS_New_Airplane}" onclick="{!c.openModal}"
+                              class="slds-m-right--medium" variant="brand"/>
+        </aura:set>
+        <div class="slds-m-top--large">
+            <c:DynamicTable SObjectName="Product2"
+                    FieldNames="['Name', 'Number_of_Seats__c', 'Engine__c', 'Engines_Number__c']"
+                    ReferenceFields="['Name']"/>
+        </div>
+    </lightning:card>
+    <aura:if isTrue="{!v.isModalOpen}">
+        <div role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_medium" aria-labelledby="header99"
+             aria-modal="true">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <button class="slds-button slds-modal__close slds-button--icon-inverse"
+                            title="{!$Label.c.CBS_Close}"
+                            onclick="{!c.closeModal}">
+                        <lightning:icon title="{!$Label.c.CBS_Close}" iconName="utility:close" variant="inverse"
+                                        size="small"/>
+                        <span class="slds-assistive-text">{!$Label.c.CBS_Close}</span>
+                    </button>
+                    <h2 id="header99" class="slds-text-heading--medium">{!$Label.c.CBS_Create_Airplane}</h2>
+                </div>
+                <div class="slds-modal__content slds-p-around--medium">
+                    <c:CBS_AirplaneNewEditDialog />
+                </div>
+                <div class="slds-modal__footer">
+                    <lightning:button label="{!$Label.c.CBS_Cancel}" variant="neutral" onclick="{!c.closeModal}"/>
+                    <lightning:button label="{!$Label.c.CBS_Save}" variant="brand" onclick="{!c.saveAirplaneDatatable}"/>
+                </div>
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+    </aura:if>
+</aura:component>

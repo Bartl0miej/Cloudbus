@@ -1,58 +1,33 @@
-<aura:component description="CBS_AirplaneSearchForm" access="global" implements="flexipage:availableForAllPageTypes" controller="CBS_AirplaneController">
+<aura:component description="CBS_AirplaneSearchForm" access="global"
+                implements="flexipage:availableForAllPageTypes, forceCommunity:availableForAllPageTypes"
+                controller="CBS_AirplaneController">
     <aura:attribute name="searchedAirplane" type="Product2"
                     default="{'sobjectType' : 'Product2', 'Name' : '', 'Engines_Number__c' : '', 'Number_of_Seats__c' : null}"/>
     <aura:attribute name="airplaneWrappers" type="List" default="[]"/>
     <aura:attribute name="picklistValues" type="Object"/>
     <aura:registerEvent name="CBS_AirplaneSearchedEvent" type="c:CBS_AirplaneSearchedEvent"/>
-    <!--<c:CBS_PicklistValues sObjectName="CBS_Hangar__c" fieldName="Country__c" picklistValues="{!v.picklistValues}"/>-->
-    <aura:registerEvent name="clearSearch" type="c:CBS_ClearAirplaneSearch"/>
-    <!--<aura:registerEvent name="sendCoordinates" type="c:CBS_SetCoordinates"/>
-    <aura:registerEvent name="selectHangar" type="c:CBS_SelectedHangarUpdate"/>
-    -->
+    <aura:registerEvent name="CBS_AirplaneClearSearch" type="c:CBS_AirplaneClearSearch"/>
     <c:CBS_Spinner aura:id="spinner"/>
-        <lightning:card title="{!$Label.c.CBS_Search_for_Airplanes}">
-        <div aria-labelledby="searchairplaneform">
-            <lightning:layout horizontalAlign="center">
-                <lightning:layoutItem class="slds-m-right_small">
-                    <lightning:input label="{!$Label.c.CBS_Airplane_name}" aura:id="searchform" value="{!v.searchedAirplane.Name}"/>
-                </lightning:layoutItem>
-                <lightning:layoutItem class="slds-m-right_xx-small">
-                    <lightning:input type="number" aura:id="searchform" label="{!$Label.c.CBS_Minimum_number_of_seats}"
-                                     name="airplaneseats" min="1" max="999"
-                                     value="{!v.searchedAirplane.Number_of_Seats__c}"/>
-                </lightning:layoutItem>
-            </lightning:layout>
-
-                <!--<form class="slds-form slds-m-around&#45;&#45;medium">-->
-                    <!--<div class="slds-grid">-->
-                        <!--<div class="slds-col slds-size_1-of-3">-->
-                            <!--<lightning:input aura:id="searchform" label="Airplane name"-->
-                                             <!--name="airplanename"-->
-                                             <!--value="{!v.searchedAirplane.Name}" class="slds-size_1-of-2"/>-->
-                        <!--</div>-->
-                        <!--&lt;!&ndash;<lightning:select label="{!$Label.c.CBS_Country}" name="hangarcountry" aura:id="searchform"&ndash;&gt;-->
-                        <!--&lt;!&ndash;value="{!v.searchedHangar.Country__c}" required="true">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<option value="">{!$Label.c.CBS_Select_a_country}</option>&ndash;&gt;-->
-                        <!--&lt;!&ndash;<aura:iteration items="{!v.picklistValues}" var="item">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<option value="{!item}">{!item}</option>&ndash;&gt;-->
-                        <!--&lt;!&ndash;</aura:iteration>&ndash;&gt;-->
-                        <!--&lt;!&ndash;</lightning:select>&ndash;&gt;-->
-                        <!--<div class="slds-col slds-size_1-of-3">-->
-                            <!--<lightning:input type="number" aura:id="searchform" label="Number of Seats"-->
-                                             <!--name="airplaneseats" min="1" max="999"-->
-                                             <!--value="{!v.searchedAirplane.Number_of_Seats__c}" class="slds-size_1-of-2"/>-->
-                        <!--</div>-->
-                        <!--</div>-->
-                        <div align="center">
-                            <lightning:button label="{!$Label.c.CBS_Search}"
-                                          class="slds-m-top--medium"
-                                          variant="brand"
-                                          onclick="{!c.searchForAirplane}" iconName="utility:search"/>
-                        <lightning:button label="{!$Label.c.CBS_Clear}"
-                                          class="slds-m-top--medium"
-                                          variant="neutral" onclick="{!c.clear}"/>
-                        </div>
-                <!--</form>-->
+    <lightning:card title="{!$Label.c.CBS_Search_for_Airplanes}">
+        <lightning:layout horizontalAlign="center">
+            <lightning:layoutItem class="slds-m-right_small">
+                <lightning:input label="{!$Label.c.CBS_Airplane_name}" aura:id="searchform"
+                                 value="{!v.searchedAirplane.Name}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem class="slds-m-right_xx-small">
+                <lightning:input type="number" aura:id="searchform" label="{!$Label.c.CBS_Minimum_number_of_seats}"
+                                 name="airplaneseats" min="1" max="999"
+                                 value="{!v.searchedAirplane.Number_of_Seats__c}"/>
+            </lightning:layoutItem>
+        </lightning:layout>
+        <div align="center">
+            <lightning:button label="{!$Label.c.CBS_Search}"
+                              class="slds-m-top--medium"
+                              variant="brand"
+                              onclick="{!c.searchForAirplane}" iconName="utility:search"/>
+            <lightning:button label="{!$Label.c.CBS_Clear}"
+                              class="slds-m-top--medium"
+                              variant="neutral" onclick="{!c.clear}"/>
         </div>
-        </lightning:card>
+    </lightning:card>
 </aura:component>

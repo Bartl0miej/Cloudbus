@@ -1,0 +1,118 @@
+<aura:component description="CBS_AirplanePageHeader"
+                implements="flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes"
+                access="global" controller="CBS_AirplaneController">
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="airplaneRecord" type="Product2"/>
+    <aura:attribute name="isModalOpen" type="Boolean" default="false"/>
+    <aura:attribute name="isDeleteModalOpen" type="Boolean" default="false"/>
+    <aura:attribute name="theName" type="String" default=""/>
+    <aura:attribute name="theEngine" type="String" default=""/>
+    <aura:attribute name="theEnginesNumber" type="String" default=""/>
+    <aura:attribute name="theNumberOfSeats" type="String" default=""/>
+    <aura:attribute name="isStandardSite" type="Boolean" default="true"/>
+    <aura:attribute name="environmentType" type="String"
+                    description="This variable is used to indicate which environment this component is displayed on, f.i. community vs standard lightning"/>
+    <aura:registerEvent name="CBS_AirplaneSaveEvent" type="c:CBS_AirplaneSaveEvent"/>
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    <aura:handler name="CBS_AirplaneSavedEvent" event="c:CBS_AirplaneSavedEvent" action="{!c.closeModal}"/>
+    <force:recordData aura:id="forceRecord"
+                      recordId="{!v.recordId}"
+                      layoutType="FULL"
+                      targetRecord="{!v.airplane}"
+                      targetFields="{!v.airplaneRecord}"
+                      mode="EDIT"/>
+    <div class="slds-page-header">
+        <div class="slds-media slds-no-space slds-grow">
+            <div class="slds-media__figure">
+                <lightning:icon iconName="standard:product" size="medium"/>
+            </div>
+            <div class="slds-media__body">
+                <p class="slds-text-title--caps slds-line-height--reset">Airplane</p>
+                <h1 class="slds-page-header__title slds-m-right--small slds-align-middle slds-truncate"
+                    title="{!v.airplaneRecord.Name}">{!v.theName}</h1>
+            </div>
+            <aura:if isTrue="{!v.isStandardSite}">
+                <div class="slds-col slds-no-flex slds-grid slds-align-top">
+                    <div class="slds-button-group" role="group">
+                        <lightning:button label="{!$Label.c.CBS_Edit_Airplane}" onclick="{!c.openModal}"/>
+                        <lightning:button label="{!$Label.c.CBS_Delete_Airplane}" onclick="{!c.openDeleteModal}"/>
+                    </div>
+                </div>
+            </aura:if>
+        </div>
+        <ul class="slds-grid slds-page-header__detail-row">
+            <li class="slds-page-header__detail-block">
+                <p class="slds-text-title slds-truncate slds-m-bottom--xx-small"
+                   title="{!$Label.c.CBS_Number_of_seats_label}">{!$Label.c.CBS_Number_of_seats_label}</p>
+                <p class="slds-text-body--regular slds-truncate"
+                   title="{!v.airplaneRecord.Number_of_Seats__c}">{!v.theNumberOfSeats}</p>
+            </li>
+            <li class="slds-page-header__detail-block">
+                <p class="slds-text-title slds-truncate slds-m-bottom--xx-small"
+                   title="{!$Label.c.CBS_Engine_Label}">{!$Label.c.CBS_Engine_Label}</p>
+                <p class="slds-text-body--regular slds-truncate"
+                   title="{!v.airplaneRecord.Engine__c}">{!v.theEngine}</p>
+            </li>
+            <li class="slds-page-header__detail-block">
+                <p class="slds-text-title slds-truncate slds-m-bottom--xx-small"
+                   title="{!$Label.c.CBS_Engines_number_label}">{!$Label.c.CBS_Engines_number_label}</p>
+                <p class="slds-text-body--regular slds-truncate"
+                   title="{!v.airplaneRecord.Engines_Number__c}">{!v.theEnginesNumber}</p>
+            </li>
+        </ul>
+    </div>
+    <aura:if isTrue="{!v.isModalOpen}">
+        <div role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_medium"
+             aria-labelledby="header99"
+             aria-modal="true">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <button class="slds-button slds-modal__close slds-button--icon-inverse"
+                            title="{!$Label.c.CBS_Close}"
+                            onclick="{!c.closeModal}">
+                        <lightning:icon title="{!$Label.c.CBS_Close}" iconName="utility:close" variant="inverse"
+                                        size="small"/>
+                        <span class="slds-assistive-text">{!$Label.c.CBS_Close}</span>
+                    </button>
+                    <h2 id="header99" class="slds-text-heading--medium">{!$Label.c.CBS_Edit_Airplane}</h2>
+                </div>
+                <div class="slds-modal__content slds-p-around--medium">
+                    <c:CBS_AirplaneNewEditDialog recordId="{!v.recordId}" aura:id="editComponent"/>
+                </div>
+                <div class="slds-modal__footer">
+                    <lightning:button label="{!$Label.c.CBS_Cancel}" variant="neutral" onclick="{!c.closeModal}"/>
+                    <lightning:button label="{!$Label.c.CBS_Save}" variant="brand" onclick="{!c.saveAirplaneHeader}"/>
+                </div>
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+    </aura:if>
+    <aura:if isTrue="{!v.isDeleteModalOpen}">
+        <div role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header slds-modal__header--empty">
+                    <button class="slds-button slds-modal__close slds-button--icon-inverse"
+                            title="{!$Label.c.CBS_Close}"
+                            onclick="{!c.closeDeleteModal}">
+                        <lightning:icon title="{!$Label.c.CBS_Close}" iconName="utility:close" variant="inverse"
+                                        size="small"/>
+                        <span class="slds-assistive-text">{!$Label.c.CBS_Close}</span>
+                    </button>
+                </div>
+                <div class="slds-modal__content slds-p-around--medium">
+                    <p class="slds-align_absolute-center">
+                    {!$Label.c.CBS_Are_you_sure_you_want_to_delete}
+                        &nbsp;{!v.airplaneRecord.Name}{!$Label.c.CBS_Question_mark}
+                    </p>
+                </div>
+                <div class="slds-modal__footer">
+                    <button class="slds-button slds-button--neutral"
+                            onclick="{!c.closeDeleteModal}">{!$Label.c.CBS_Cancel}</button>
+                    <lightning:button variant="brand"
+                                      onclick="{!c.deleteAirplane}">{!$Label.c.CBS_Delete}</lightning:button>
+                </div>
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+    </aura:if>
+</aura:component>
