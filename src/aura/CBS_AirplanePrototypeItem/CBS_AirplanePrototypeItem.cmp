@@ -1,0 +1,46 @@
+<aura:component description="CBS_AirplanePrototypeItem">
+    <aura:attribute name="airplane" type="Object"/>
+    <aura:registerEvent name="CBS_SelectedAirplaneUpdate" type="c:CBS_SelectedAirplaneUpdate"/>
+    <div onclick="{!c.airplaneSelected}" class="slds-m-bottom--medium">
+        <div class="slds-grid">
+            <h3 class="slds-text-heading_small slds-m-bottom_xx-small" style="font-size: 20px;">Request showing in
+                hangar:&nbsp;{!v.airplane.airplane.Hangar__r.Name}</h3>
+        </div>
+        <div class="slds-grid slds-wrap slds-gutters">
+            <aura:if isTrue="{!v.airplane.promotionPricebookEntry}">
+                <div class="slds-col slds-size_1-of-2 slds-m-top--small">
+                <span class="slds-m-right_small slds-size--1-of-2">Promotion price:
+                    &nbsp;<ui:outputCurrency value="{!v.airplane.promotionPricebookEntry.UnitPrice}" currencyCode="€"/></span>
+                </div>
+                <div class="slds-col slds-size_1-of-2 slds-m-top--small">
+                <span class="slds-m-right_small slds-size--1-of-2">Standard price:
+                    &nbsp;<s><ui:outputCurrency value="{!v.airplane.standardPricebookEntry.UnitPrice}"
+                                                currencyCode="€"/></s></span>
+                </div>
+                <div class="slds-col slds-size_1-of-2 slds-m-top--small">
+                <span class="slds-m-right_small slds-size--1-of-1">Promotion start date:
+                    &nbsp;<ui:outputDate value="{!v.airplane.promotionPricebookEntry.Pricebook2.Promotion_start__c}" format="dd/MM/yyyy"/></span>
+                </div>
+                <div class="slds-col slds-size_1-of-2 slds-m-top--small">
+                <span class="slds-m-right_small slds-size--1-of-1">Promotion end date:
+                    &nbsp;<ui:outputDate value="{!v.airplane.promotionPricebookEntry.Pricebook2.Promotion_end__c}" format="dd/MM/yyyy"/></span>
+                </div>
+            </aura:if>
+            <aura:if isTrue="{! !v.airplane.promotionPricebookEntry}">
+                <div class="slds-col slds-size_1-of-1 slds-m-top--small">
+                <span class="slds-m-right_small slds-size--1-of-2">Price:
+                    &nbsp;<ui:outputCurrency value="{!v.airplane.standardPricebookEntry.UnitPrice}"
+                                             currencyCode="€"/></span>
+                </div>
+            </aura:if>
+            <div class="slds-col slds-size_1-of-2 slds-m-top--small">
+                <span class="slds-m-right_small slds-size--1-of-2">{!$Label.c.CBS_City2}
+                    &nbsp;{!v.airplane.airplane.Hangar__r.City__c}</span>
+            </div>
+            <div class="slds-col slds-size_1-of-2 slds-m-top--small">
+                <span class="slds-m-right_small slds-size--1-of-2">{!$Label.c.CBS_Country2}
+                    &nbsp;{!v.airplane.airplane.Hangar__r.Country__c}</span>
+            </div>
+        </div>
+    </div>
+</aura:component>

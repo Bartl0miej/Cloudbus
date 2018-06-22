@@ -1,0 +1,40 @@
+.THIS {
+}
+
+.THIS .slds-form-element__label {
+    display: inline-block;
+    color: rgb(112, 110, 107);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-right: .75rem;
+    margin-bottom: .25rem;
+}
+
+.THIS .uiInput--default .form-element__label {
+    color: rgb(112, 110, 107);
+    line-height: 1.5;
+    margin-bottom: .25rem;
+    font-size: 1rem;
+}
+
+.THIS .slds-input {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(221, 219, 218);
+    border-radius: .25rem;
+    width: 100%;
+    -webkit-transition: border .1s linear,background-color .1s linear;
+    transition: border .1s linear,background-color .1s linear;
+    display: inline-block;
+    padding: 0 1rem 0 .75rem;
+    line-height: 1.875rem;
+    min-height: calc(2.19rem + (1px * 2));
+}
+
+/*.THIS.cCBS_AirplaneCreatePromotions .slds-form-element__label{
+    display: inline-block;
+    color: rgb(112, 110, 107);
+    font-size: .8125rem;
+    line-height: 1.5;
+    margin-right: .75rem;
+    margin-bottom: .25rem;
+}*/

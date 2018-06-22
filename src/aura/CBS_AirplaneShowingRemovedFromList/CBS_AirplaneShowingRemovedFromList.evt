@@ -1,0 +1,3 @@
+<aura:event type="COMPONENT" description="CBS_AirplaneShowingRemovedFromList">
+        <aura:attribute name="indexInList" type="Integer"/>
+</aura:event>

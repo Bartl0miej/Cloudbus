@@ -1,0 +1,48 @@
+<aura:component description="CBS_AirplaneShowingsCart" controller="CBS_AirplaneShowingsController"
+                implements="forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute access="PUBLIC" name="manageView" type="List" default="[]"/>
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    <aura:handler event="c:CBS_AirplaneAddShowingEvent" action="{!c.onAddShowingEvent}"/>
+    <aura:handler name="CBS_AirplaneShowingRemovedFromList" event="c:CBS_AirplaneShowingRemovedFromList"
+                  action="{!c.onShowingRemove}"/>
+    <aura:registerEvent name="CBS_AirplaneShowingsAddedEvent" type="c:CBS_AirplaneShowingsAddedEvent"/>
+    <c:TMU_Spinner aura:id="spinner"/>
+    <lightning:card title="Request for showings" iconName="utility:event">
+        <aura:if isTrue="{!v.manageView.length > 0}">
+            <div class="slds">
+                <table data-reactroot="" class="slds-table slds-table_bordered slds-table_cell-buffer">
+                    <thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col">
+                            <div class="slds-truncate" title="Airplane">Airplane</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Hangar">Hangar</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Showing Date">Showing Date</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Action">Action</div>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <aura:iteration items="{!v.manageView}" var="row" indexVar="index">
+                        <c:CBS_AirplaneShowingsCartRow view="{!row}" tIndex="{!index}"/>
+                    </aura:iteration>
+                    </tbody>
+                </table>
+                <div>
+                    <div align="right" class="slds-m-top--small slds-m-right_small">
+                        <lightning:button label="Clear" variant="neutral" onclick="{!c.clearAllShowings}"/>
+                        <lightning:button label="Request all" variant="brand" onclick="{!c.createShowingsEvent}"/>
+                    </div>
+                </div>
+            </div>
+        </aura:if>
+        <aura:if isTrue="{!v.manageView.length == 0}">
+            <ui:outputText value="There are no showings to request for yet." class="slds-align_absolute-center"/>
+        </aura:if>
+    </lightning:card>
+</aura:component>

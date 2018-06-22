@@ -1,0 +1,55 @@
+<aura:component description="CBS_AirplaneSalesRepsEventsSearchForm" controller="CBS_AirplaneSalesEventsController" implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="salesReps" type="List" default="[]"/>
+    <aura:attribute name="upcomingEvents" type="List" default="[]"/>
+    <aura:attribute name="eContacts" type="List"/>
+    <aura:attribute name="event" type="Event" default="[]"/>
+    <aura:attribute name="startDate" type="Datetime"/>
+    <aura:attribute name="endDate" type="Datetime"/>
+    <aura:attribute name="orderOptions" type="List"/>
+    <aura:attribute name="order" type="String"/>
+    <aura:attribute name="events" type="List" default="[]"/>
+    <aura:registerEvent name="CBS_AirplaneEventsSearched" type="c:CBS_AirplaneEventsSearched"/>
+    <aura:registerEvent name="CBS_AirplaneEventsCleared" type="c:CBS_AirplaneEventsCleared"/>
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    <c:CBS_Spinner aura:id="spinner"/>
+    <lightning:card title="{!$Label.c.CBS_Search_for_sales_representatives_events}">
+        <lightning:layout horizontalAlign="center">
+            <lightning:layoutItem class="slds-m-right_small">
+                <lightning:select label="{!$Label.c.CBS_Sales_representative}" value="{!v.event.OwnerId}">
+                    <aura:iteration items="{!v.salesReps}" var="salesRep">
+                        <option value="{!salesRep.Id}">{!salesRep.Name}</option>
+                    </aura:iteration>
+                </lightning:select>
+            </lightning:layoutItem>
+            <lightning:layoutItem class="slds-m-right_small">
+                <lightning:select label="{!$Label.c.CBS_Event_with}" value="{!v.event.WhoId}">
+                    <aura:iteration items="{!v.eContacts}" var="eContact">
+                        <option value="{!eContact.Id}">{!eContact.Name}</option>
+                    </aura:iteration>
+                </lightning:select>
+            </lightning:layoutItem>
+            <lightning:layoutItem class="slds-m-right_small">
+                <ui:inputDate label="{!$Label.c.CBS_Event_from}" displayDatePicker="true" value="{!v.startDate}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem class="slds-m-right_small">
+                <ui:inputDate label="{!$Label.c.CBS_Event_to}" displayDatePicker="true" value="{!v.endDate}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem class="slds-m-right_small">
+                <lightning:select label="{!$Label.c.CBS_Order_by}" value="{!v.order}">
+                    <aura:iteration items="{!v.orderOptions}" var="orderOption">
+                        <option value="{!orderOption.orderValue}">{!orderOption.label}</option>
+                    </aura:iteration>
+                </lightning:select>
+            </lightning:layoutItem>
+        </lightning:layout>
+        <div align="center">
+            <lightning:button label="{!$Label.c.CBS_Search}"
+                              class="slds-m-top--medium"
+                              variant="brand"
+                              onclick="{!c.searchForEvent}" iconName="utility:search"/>
+            <lightning:button label="{!$Label.c.CBS_Clear}"
+                              class="slds-m-top--medium"
+                              variant="neutral" onclick="{!c.clear}"/>
+        </div>
+    </lightning:card>
+</aura:component>

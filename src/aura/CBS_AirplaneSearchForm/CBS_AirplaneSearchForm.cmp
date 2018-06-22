@@ -1,10 +1,10 @@
 <aura:component description="CBS_AirplaneSearchForm" access="global"
                 implements="flexipage:availableForAllPageTypes, forceCommunity:availableForAllPageTypes"
                 controller="CBS_AirplaneController">
-    <aura:attribute name="searchedAirplane" type="Product2"
-                    default="{'sobjectType' : 'Product2', 'Name' : '', 'Engines_Number__c' : '', 'Number_of_Seats__c' : null}"/>
+    <aura:attribute name="searchedAirplane" type="Airplane_Type__c"
+                    default="{'sobjectType' : 'Airplane_Type__c', 'Name' : '', 'Engines_Number__c' : '', 'Number_of_Seats__c' : null}"/>
     <aura:attribute name="airplaneWrappers" type="List" default="[]"/>
-    <aura:attribute name="picklistValues" type="Object"/>
+    <aura:attribute name="options" type="List" default="[]"/>
     <aura:registerEvent name="CBS_AirplaneSearchedEvent" type="c:CBS_AirplaneSearchedEvent"/>
     <aura:registerEvent name="CBS_AirplaneClearSearch" type="c:CBS_AirplaneClearSearch"/>
     <c:CBS_Spinner aura:id="spinner"/>
@@ -14,7 +14,7 @@
                 <lightning:input label="{!$Label.c.CBS_Airplane_name}" aura:id="searchform"
                                  value="{!v.searchedAirplane.Name}"/>
             </lightning:layoutItem>
-            <lightning:layoutItem class="slds-m-right_xx-small">
+            <lightning:layoutItem class="slds-m-right_small">
                 <lightning:input type="number" aura:id="searchform" label="{!$Label.c.CBS_Minimum_number_of_seats}"
                                  name="airplaneseats" min="1" max="999"
                                  value="{!v.searchedAirplane.Number_of_Seats__c}"/>

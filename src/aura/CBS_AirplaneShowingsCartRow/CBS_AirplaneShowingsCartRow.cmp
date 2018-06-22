@@ -1,0 +1,32 @@
+<aura:component description="CBS_AirplaneShowingsCartRow">
+    <aura:attribute access="PUBLIC" name="view" type="Object"/>
+    <aura:attribute name="tIndex" type="Integer"/>
+    <aura:registerEvent name="CBS_AirplaneShowingRemovedFromList" type="c:CBS_AirplaneShowingRemovedFromList"/>
+    <tr>
+        <th scope="row" data-label="Airplane name">
+            <div class="slds-truncate">{!v.view.thePlane.Name}</div>
+        </th>
+        <td data-label="Hangar">
+            <div style="width: 120px;" class="slds-truncate"
+                 title="{!v.view.thePlane.Hangar__r.Name + ' - ' + v.view.thePlane.Hangar__r.City__c + ', ' + v.view.thePlane.Hangar__r.Country__c}">
+            {!v.view.thePlane.Hangar__r.Name} - {!v.view.thePlane.Hangar__r.City__c}
+                , {!v.view.thePlane.Hangar__r.Country__c}
+            </div>
+        </td>
+        <td data-label="Showing date">
+            <div class="slds-truncate">
+                <ui:outputDateTime value="{!v.view.dTI}" format="HH:mm dd/MM/yyyy"/>
+            </div>
+        </td>
+        <td data-label="">
+            <div class="slds-truncate slds-align_absolute-center">
+                <button onclick="{!c.callDeleteShowing}" class="slds-button slds-button_icon"
+                        title="Delete from requested showings list">
+                    <lightning:icon iconName="utility:close" size="xx-small"
+                                    alternativeText="Delete from requested showings list"/>
+                    <span class="slds-assistive-text">Delete from requested showings list</span>
+                </button>
+            </div>
+        </td>
+    </tr>
+</aura:component>

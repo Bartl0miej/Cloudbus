@@ -19,7 +19,7 @@
 
 .THIS .products li {
     display:inline-block;
-    width:300px;
+    width:287px;
     height:237px;
     position:relative;
     margin:0px;
@@ -44,7 +44,7 @@
 
 .THIS .products li a {
     display:block;
-    width:280px;
+    width:272px;
     height:auto;
     padding:10px;
     position:absolute;
@@ -60,6 +60,12 @@
     -ms-box-shadow:0px 0px 5px rgba(0,0,0,0.5);
 }
 
+.THIS .container {
+    position: relative ;
+    width: 100%;
+    margin-right: 3px;
+}
+
 .THIS .products li a .image {
     display:block;
     height:150px;
@@ -69,22 +75,47 @@
     background-size:cover;
 }
 
+.THIS .btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background:none;
+    border:none;
+    margin:0;
+}
+
+.THIS .discount {
+    position: absolute;
+    background-color: #ffd700;
+    top: 0px;
+    left: 0px;
+    width: 45px;
+    height: 45px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+}
+
 .THIS .products li a h1 {
-    display:block;
-    height:auto;
-    margin:10px 0px 10px 5px;
-    font-family:arial;
-    font-size:20px;
-    font-weight:bold;
+    display: block;
+    height: auto;
+    margin: 10px 0px 0px 5px;
+    color: #223a6b !important;
+    font-family: arial;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .THIS .products li a h2 {
-    display:block;
-    height:auto;
-    margin:10px 0px;
-    font-family:arial;
-    font-size:12px;
-    font-weight:normal;
+    display: block;
+    height: auto;
+    margin-left: 5px;
+    color: #223a6b !important;
+    text-decoration: none;
+    font-family: arial;
+    font-size: 16px;
+    font-weight: normal;
 }
 
 .THIS .products li a .informations {
@@ -104,4 +135,16 @@
 
 .THIS .products li:hover a .informations {
     display:block;
+}
+
+.THIS {
+}
+
+.THIS .itemSelected {
+    background-color: rgba(128, 179, 255, 0.7) !important;
+}
+
+.THIS .tListItem:hover {
+    background-color: #cce0ff;
+    cursor: pointer;
 }

@@ -1,0 +1,41 @@
+<aura:component description="CBS_Pagination">
+    <aura:attribute name="currentPageNumber" type="Integer" required="true"/>
+    <aura:attribute name="maxPageNumber" type="Integer" required="true"/>
+    <div class="slds-button-group" role="group">
+        <aura:if isTrue="{!v.currentPageNumber == 1}">
+            <button disabled="disabled" onclick="{!c.firstPage}" class="slds-button slds-button--neutral">
+                {!$Label.c.CBS_First}
+            </button>
+            <button disabled="disabled" onclick="{!c.prevPage}" class="slds-button slds-button--neutral">
+                {!$Label.c.CBS_Prev}
+            </button>
+            <aura:set attribute="else">
+                <button onclick="{!c.firstPage}" class="slds-button slds-button--neutral">
+                    {!$Label.c.CBS_First}
+                </button>
+                <button onclick="{!c.prevPage}" class="slds-button slds-button--neutral">
+                        {!$Label.c.CBS_Prev}
+                </button>
+            </aura:set>
+        </aura:if>
+        <button id="pageNumber" class="slds-button slds-button--neutral" disabled="disabled">
+        {!v.currentPageNumber}&nbsp;{!$Label.c.CBS_Slash}&nbsp;{!v.maxPageNumber}
+        </button>
+        <aura:if isTrue="{!v.currentPageNumber == v.maxPageNumber}">
+            <button disabled="disabled" onclick="{!c.nextPage}" class="slds-button slds-button--neutral">
+                {!$Label.c.CBS_Next}
+            </button>
+            <button disabled="disabled" onclick="{!c.lastPage}" class="slds-button slds-button--neutral">
+                {!$Label.c.CBS_Last}
+            </button>
+            <aura:set attribute="else">
+                <button onclick="{!c.nextPage}" class="slds-button slds-button--neutral">
+                    {!$Label.c.CBS_Next}
+                </button>
+                <button onclick="{!c.lastPage}" class="slds-button slds-button--neutral">
+                    {!$Label.c.CBS_Last}
+                </button>
+            </aura:set>
+        </aura:if>
+    </div>
+</aura:component>

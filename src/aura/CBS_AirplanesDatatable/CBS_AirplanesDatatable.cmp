@@ -1,6 +1,5 @@
 <aura:component description="CBS_AirplanesDatatable" controller="CBS_AirplaneController"
                 implements="flexipage:availableForAllPageTypes" access="global">
-    <aura:registerEvent name="CBS_AirplaneSaveEvent2" type="c:CBS_AirplaneSaveEvent2"/>
     <aura:attribute name="isModalOpen" type="Boolean" default="false"/>
     <lightning:card title="{!$Label.c.CBS_Airplanes_List}">
         <aura:set attribute="actions">
@@ -8,7 +7,7 @@
                               class="slds-m-right--medium" variant="brand"/>
         </aura:set>
         <div class="slds-m-top--large">
-            <c:DynamicTable SObjectName="Product2"
+            <c:DynamicTable SObjectName="Airplane_Type__c"
                     FieldNames="['Name', 'Number_of_Seats__c', 'Engine__c', 'Engines_Number__c']"
                     ReferenceFields="['Name']"/>
         </div>

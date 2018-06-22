@@ -1,0 +1,3 @@
+<aura:event type="COMPONENT" description="CBS_SelectedAirplaneUpdate">
+    <aura:attribute name="chosenAirplane" type="Product2"/>
+</aura:event>

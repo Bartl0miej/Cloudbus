@@ -3,7 +3,7 @@
         let recId = component.get("v.recordId");
         if (!recId) {
             component.find("forceRecord").getNewRecord(
-                "Product2",
+                "Airplane_Type__c",
                 null,
                 false,
                 $A.getCallback(function() {
@@ -187,4 +187,14 @@
             helper.navigateTo(component, recId);
         }
     },
+
+    calculatePrice : function(component, event, helper) {
+        let airplane = component.get("v.airplaneRecord");
+        let price = airplane.Price__c;
+        let discount = airplane.Discount__c;
+
+        let priceDiscounted = price - (price * discount/100);
+
+        component.set("v.priceAfterDiscount", priceDiscounted);
+    }
 })

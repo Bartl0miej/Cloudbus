@@ -2,12 +2,13 @@
                 implements="flexipage:availableForRecordHome,force:lightningQuickAction,force:hasRecordId"
                 access="global" controller="CBS_AirplaneController">
     <aura:attribute name="recordId" type="String"/>
-    <aura:attribute name="airplaneRecord" type="Product2"/>
+    <aura:attribute name="airplaneRecord" type="Airplane_Type__c"/>
     <aura:attribute name="airplane" type="Object"/>
     <aura:attribute name="attachments" type="Object[]" default="[]"/>
     <aura:attribute name="pictures" type="Object[]" default="[]"/>
     <aura:attribute name="attachmentsToDelete" type="Object[]" default="[]"/>
     <aura:attribute name="mainPicture" type="Object"/>
+    <aura:attribute name="priceAfterDiscount" type="Currency" default="100"/>
     <aura:attribute name="downloadAttachmentEndpoint" type="String" default="/servlet/servlet.FileDownload?file="/>
     <aura:registerEvent name="CBS_AirplaneEdited" type="c:CBS_AirplaneEdited"/>
     <aura:registerEvent name="CBS_AirplaneSavedEvent" type="c:CBS_AirplaneSavedEvent"/>
@@ -28,6 +29,19 @@
             <lightning:input value="{!v.airplaneRecord.Name}" aura:id="airplaneName" name="airplaneName"
                              label="{!$Label.c.CBS_Airplane_name}" required="true"
                              class="slds-size_1-of-1"/>
+            <lightning:input value="{!v.airplaneRecord.Price__c}" type="number" formatter="currency"
+                             name="airplanePrice" label="Price" min="1"
+                             max="9999999999999" class="slds-size_1-of-3" onchange="{!c.calculatePrice}"/>
+            <lightning:input value="{!v.airplaneRecord.Discount__c}" type="number"
+                             name="airplanePrice" label="Discount(%)" min="0"
+                             max="100" class="slds-size_1-of-3" onchange="{!c.calculatePrice}"/>
+            <div class="slds-size_1-of-3">
+                <ui:outputText value="Price After Discount"/>
+                <div style="margin-left: 10px; margin-top: 8px;">
+                    <ui:outputCurrency value="{!v.priceAfterDiscount}"
+                                       currencySymbol="$"/>
+                </div>
+            </div>
             <lightning:input value="{!v.airplaneRecord.Number_of_Seats__c}" type="number"
                              name="airplaneNumberOfSeats" label="{!$Label.c.CBS_Number_of_seats_label}" min="1"
                              max="999"
@@ -48,7 +62,7 @@
             <lightning:input value="{!v.airplaneRecord.Length__c}" type="number" name="airplaneLength"
                              label="{!$Label.c.CBS_Length_label}" step="0.1" min="1" max="999"
                              class="slds-size--1-of-2 slds-p-around_x-small"/>
-            <lightning:textarea value="{!v.airplaneRecord.Description}" name="airplaneDescription"
+            <lightning:textarea value="{!v.airplaneRecord.Description__c}" name="airplaneDescription"
                                 class="slds-size--1-of-1 slds-p-around_x-small"
                                 label="{!$Label.c.CBS_Airplane_Description}" maxlength="300"/>
             <div ondragover="{!c.onDragOver}" ondrop="{!c.onDrop}" align="center"
@@ -66,7 +80,7 @@
                     <aura:if isTrue="{!v.mainPicture.isAttachment}">
                         <img class="mainConImg slds-p-left--medium"
                              src="{!v.downloadAttachmentEndpoint + v.mainPicture.Id}"
-                             onclick="{!c.diselectFromMainPic}" />
+                             onclick="{!c.diselectFromMainPic}"/>
                         <button class="btn" onclick="{!c.deleteMainPic}">
                             <lightning:icon iconName="utility:delete"
                                             alternativeText="{!$Label.c.CBS_Delete_Picture}" size="small"
@@ -84,7 +98,8 @@
                     </aura:if>
                 </aura:if>
                 <aura:if isTrue="{! !v.mainPicture.hasMain}">
-                    <img class="mainConImg slds-p-left--medium" src="{!$Resource.CBS_AirplaneNoMainimage}" style="height: 200px;"/>
+                    <img class="mainConImg slds-p-left--medium" src="{!$Resource.CBS_AirplaneNoMainimage}"
+                         style="height: 200px;"/>
                 </aura:if>
             </div>
             <div class="slds-size_1-of-1">

@@ -1,0 +1,167 @@
+<aura:component description="CBS_AirplaneCreatePromotionsTile" controller="CBS_AirplaneCreatePromotionsController">
+    <aura:attribute name="wrapper" type="Object"/>
+    <aura:attribute name="promotionPrice" type="Integer"/>
+    <aura:attribute name="calculatedDiscountPrice" type="Currency"/>
+    <aura:attribute name="startDate" type="Date"/>
+    <aura:attribute name="endDate" type="Date"/>
+    <aura:attribute name="isModalOpen" type="Boolean" default="false"/>
+    <aura:attribute name="isAddingPromotion" type="Boolean" default="false"/>
+    <aura:attribute name="isAddingPromotionForAll" type="Boolean" default="false"/>
+    <aura:attribute name="promotionsToDelete" type="List" default="[]"/>
+    <aura:registerEvent name="CBS_AirplanePromotionCreated" type="c:CBS_AirplanePromotionCreated"/>
+    <aura:method name="onDiscountForAll" action="{!c.discountForAll}" access="public">
+        <aura:attribute name="isChecked" type="Boolean"/>
+    </aura:method>
+    <aura:method name="calculatePrice" action="{!c.onCalculatePrice}" access="public">
+        <aura:attribute name="discountPercentage" type="Integer"/>
+    </aura:method>
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    <aura:handler name="CBS_AirplaneAddPromotionToDeleteList" event="c:CBS_AirplaneAddPromotionToDeleteList" action="{!c.onPromoToDeleteList}"/>
+    <div class="slds-col slds-size--1-of-3">
+        <div class="slds-box slds-m-around--small" style="background-color: #f7faff">
+            <dt class="slds-dl--horizontal__label"><b>Airplane name: </b></dt>
+            <dd class="slds-dl--horizontal__detail slds-truncate" style="word-wrap: break-word;">
+                <a href="{!'/' + v.wrapper.airplane.Airplane_Type__c}">{!v.wrapper.airplane.Name}</a><br/>
+            </dd>
+            <div style="margin: 10px;"></div>
+            <dt class="slds-dl--horizontal__label"><b>Hangar name: </b></dt>
+            <dd class="slds-dl--horizontal__detail slds-truncate" style="word-wrap: break-word;">
+                <a href="{!'/' + v.wrapper.airplane.Hangar__c}">{!v.wrapper.airplane.Hangar__r.Name}</a><br/>
+            </dd>
+            <div style="margin: 10px;"></div>
+            <dt class="slds-dl--horizontal__label"><b>Standard price: </b></dt>
+            <dd class="slds-dl--horizontal__detail slds-truncate" style="word-wrap: break-word;">
+                <ui:outputCurrency value="{!v.wrapper.standardPrice}" currencySymbol="€"/>
+            </dd>
+            <div style="margin: 10px;"></div>
+            <p><b>Current promotion: </b></p>
+            <aura:if isTrue="{!v.wrapper.currentPricePromotion}">
+                <dd class="slds-dl--horizontal__detail slds-truncate" style="word-wrap: break-word;">
+                    <ul class="slds-list--dotted">
+                        <li>Promotion price:
+                            <ui:outputCurrency value="{!v.wrapper.currentPricePromotion.UnitPrice}" currencySymbol="€"/>
+                        </li>
+                        <li>From
+                            <ui:outputDate value="{!v.wrapper.currentPricePromotion.Pricebook2.Promotion_start__c}"
+                                           format="dd/MM/yyyy"/>
+                            to
+                            <ui:outputDate value="{!v.wrapper.currentPricePromotion.Pricebook2.Promotion_end__c}"
+                                           format="dd/MM/yyyy"/>
+                        </li>
+                    </ul>
+                </dd>
+            </aura:if>
+            <aura:if isTrue="{! !v.wrapper.currentPricePromotion}">
+                <p>There are no current promotions for this plane</p>
+
+                <div style="{!!v.isAddingPromotionForAll == true ? 'margin-top: 44px;' : ''}"></div>
+            </aura:if>
+            <aura:if isTrue="{!v.isAddingPromotionForAll}">
+                <div style="margin: 10px;"></div>
+                <p><b style="color: #771515;">Price after discount: </b></p>
+                <dd class="slds-dl--horizontal__detail slds-truncate" style="word-wrap: break-word;">
+                    <ui:outputCurrency value="{!v.calculatedDiscountPrice}" currencySymbol="€"/>
+                </dd>
+                <div style="margin: 10px;"></div>
+            </aura:if>
+            <div style="margin-top: 15px;">
+                <aura:if isTrue="{!v.wrapper.pBEntries.length > 0}">
+                    <a href="javascritpt:void(0)" onclick="{!c.showPromotions}"
+                       style="float: left; margin-let: 5px; text-decoration: underline;">Manage promotions ({!v.wrapper.pBEntries.length})</a>
+                </aura:if>
+                <aura:if isTrue="{! !v.isAddingPromotionForAll}">
+                <a href="javascritpt:void(0)" onclick="{!c.addPromotion}"
+                   style="float: right; margin-right: 5px; text-decoration: underline;">Add a promotion</a>
+                </aura:if>
+                <div style="clear: both;"></div>
+            </div>
+            <aura:if isTrue="{!v.isAddingPromotion}">
+                <hr/>
+                <div class="slds-grid slds-wrap slds-m-top--large">
+                    <div class="slds-align_absolute-center slds-size_1-of-1">
+                        <p style="font-size: 20px; line-height: 1.5;"><b>New promotion</b></p>
+                    </div>
+                    <div class="slds-size--1-of-3 slds-p-around--medium"
+                         style="margin-top: -4px; color: rgb(112, 110, 107)">
+                        <ui:outputText value="Promotion price"/>
+                        <ui:inputCurrency value="{!v.promotionPrice}"/>
+                    </div>
+                    <div class="slds-size--1-of-3 slds-p-around--small">
+                        <ui:inputDate value="{!v.startDate}" label="Start date" displayDatePicker="true"/>
+                    </div>
+                    <div class="slds-size--1-of-3 slds-p-around--small">
+                        <ui:inputDate value="{!v.endDate}" label="End date" displayDatePicker="true"/>
+                    </div>
+                </div>
+                <div style="float: right; margin-top: 15px;">
+                    <lightning:buttonGroup>
+                        <lightning:button label="Cancel" variant="neutral" onclick="{!c.cancelAddingPromotion}"/>
+                        <lightning:button label="Save" variant="brand" onclick="{!c.savePromotion}"/>
+                    </lightning:buttonGroup>
+                </div>
+                <div style="clear: both;"></div>
+            </aura:if>
+        </div>
+    </div>
+    <aura:if isTrue="{!v.isModalOpen}">
+        <div role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_medium"
+             aria-labelledby="header99"
+             aria-modal="true">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <button class="slds-button slds-modal__close slds-button--icon-inverse"
+                            title="{!$Label.c.CBS_Close}"
+                            onclick="{!c.closeModal}">
+                        <lightning:icon title="{!$Label.c.CBS_Close}" iconName="utility:close" variant="inverse"
+                                        size="small"/>
+                        <span class="slds-assistive-text">{!$Label.c.CBS_Close}</span>
+                    </button>
+                    <h2 id="header99" class="slds-text-heading--medium">Manage promotions
+                        for {!v.wrapper.airplane.Name}</h2>
+                </div>
+                <div class="slds-modal__content slds-p-around--medium">
+                    <div class="slds-grid">
+                        <aura:if isTrue="{!v.wrapper.pBEntries.length > v.promotionsToDelete.length}">
+                        <table data-reactroot="" class="slds-table slds-table_bordered slds-table_cell-buffer">
+                            <thead>
+                            <tr class="slds-text-title_caps">
+                                <th scope="col">
+                                    <div class="slds-truncate" title="Price">Price</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate" title="Promotion start date">Promotion start date</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate" title="Promotion end date">Promotion end date</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate" title="Created by">Created by</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate" title="Action">Action</div>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <aura:iteration items="{!v.wrapper.pBEntries}" var="pbe" indexVar="index">
+                                <c:CBS_AirplanePromotionsRow tPBEntrty="{!pbe}" tIndex="{!index}"/>
+                            </aura:iteration>
+                            </tbody>
+                        </table>
+                        </aura:if>
+                        <aura:if isTrue="{!v.wrapper.pBEntries.length == v.promotionsToDelete.length}">
+                            <div class="slds-align_absolute-center">
+                                There are no promotions left for this airplane.
+                            </div>
+                        </aura:if>
+                    </div>
+                </div>
+                <div class="slds-modal__footer">
+                    <lightning:button label="{!$Label.c.CBS_Cancel}" variant="neutral" onclick="{!c.closeModal}"/>
+                    <lightning:button label="{!$Label.c.CBS_Save}" variant="brand" onclick="{!c.deletePromotions}"/>
+                </div>
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+    </aura:if>
+</aura:component>

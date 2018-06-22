@@ -5,7 +5,7 @@
             component.set("v.isStandardSite", false);
         }
         let theRecordId = component.get("v.recordId");
-        let action = component.get("c.getAirplane");
+        let action = component.get("c.getAirplaneType");
         action.setParams({"airplaneId" : theRecordId});
         action.setCallback(this, function(response) {
             let state = response.getState();
@@ -15,6 +15,9 @@
                 component.set("v.theNumberOfSeats", tAirplane.Number_of_Seats__c);
                 component.set("v.theEngine", tAirplane.Engine__c);
                 component.set("v.theEnginesNumber", tAirplane.Engines_Number__c);
+                component.set("v.price", tAirplane.Price__c);
+                component.set("v.discount", tAirplane.Discount__c);
+                component.set("v.priceAfterDiscount", tAirplane.Price_after_Discount__c);
             } else {
                 let errors = response.getError()[0];
                 helper.showErrorToast(component, errors);
@@ -46,21 +49,33 @@
         childCmp.saveTheAirplane(rId);
     },
 
-    deleteAirplane : function(component, event, helper) {
-        let airplaneName = component.get("v.airplaneRecord.Name");
-        component.find("forceRecord").deleteRecord($A.getCallback(function(deleteResult) {
-            if (deleteResult.state === "SUCCESS" || deleteResult.state === "DRAFT") {
-                let urlEvent = $A.get("e.force:navigateToURL");
-                urlEvent.setParams({
-                  "url": "/one/one.app#/n/Airplanes"
-                });
-                urlEvent.fire();
+    deleteAirplaneRecord : function(component, event, helper) {
+        let airplaneName = component.get("v.theName");
+        let tAirplaneId = component.get("v.recordId");
+        let action = component.get("c.deleteAirplane");
+        action.setParams({"airplaneId" : tAirplaneId});
+        action.setCallback(this, function(response) {
+            let state = response.getState();
+            if (state === "SUCCESS") {
                 helper.showToast(component, "Success", $A.get("$Label.c.CBS_Deleted"), $A.get("$Label.c.CBS_Airplane") + " " + airplaneName + " " + $A.get("$Label.c.CBS_deleted_successfully"));
-            } else if (deleteResult.state === "INCOMPLETE") {
-                helper.showToast(component, "Error", $A.get("$Label.c.CBS_User_offline"), $A.get("$Label.c.CBS_User_offline_no_drafts"));
+                let urlEvent = $A.get("e.force:navigateToURL");
+                urlEvent.setParams({"url": "/one/one.app#/n/Airplanes"});
+                urlEvent.fire();
+                $A.get('e.force:refreshView').fire();
             } else {
-                helper.showToast(component, "Error", $A.get("$Label.c.CBS_Error"), $A.get("$Label.c.CBS_Problem_deleting_error") + JSON.stringify(deleteResult.error));
+                let errors = response.getError()[0];
+                helper.showErrorToast(component, errors);
             }
-        }));
+        });
+
+        $A.enqueueAction(action);
+    },
+
+    openShowingModal : function(component, event, helper) {
+        component.set("v.isShowingModalOpen", true);
+    },
+
+    onAirplaneShowingModalClose : function(component, event, helper) {
+        component.set("v.isShowingModalOpen", false);
     }
 })

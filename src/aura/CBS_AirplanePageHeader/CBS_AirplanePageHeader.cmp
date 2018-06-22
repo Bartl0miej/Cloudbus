@@ -2,26 +2,26 @@
                 implements="flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes"
                 access="global" controller="CBS_AirplaneController">
     <aura:attribute name="recordId" type="String"/>
-    <aura:attribute name="airplaneRecord" type="Product2"/>
+    <aura:attribute name="airplaneRecord" type="Airplane_Type__c"/>
     <aura:attribute name="isModalOpen" type="Boolean" default="false"/>
     <aura:attribute name="isDeleteModalOpen" type="Boolean" default="false"/>
     <aura:attribute name="theName" type="String" default=""/>
     <aura:attribute name="theEngine" type="String" default=""/>
     <aura:attribute name="theEnginesNumber" type="String" default=""/>
     <aura:attribute name="theNumberOfSeats" type="String" default=""/>
+    <aura:attribute name="price" type="Currency"/>
+    <aura:attribute name="discount" type="Integer"/>
+    <aura:attribute name="priceAfterDiscount" type="Currency"/>
     <aura:attribute name="isStandardSite" type="Boolean" default="true"/>
-    <aura:attribute name="environmentType" type="String"
-                    description="This variable is used to indicate which environment this component is displayed on, f.i. community vs standard lightning"/>
+    <aura:attribute name="environmentType" type="String"/>
+    <aura:attribute name="isShowingModalOpen" type="Boolean" default="false"/>
     <aura:registerEvent name="CBS_AirplaneSaveEvent" type="c:CBS_AirplaneSaveEvent"/>
     <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    <aura:handler event="c:CBS_AirplaneEdited" action="{!c.onInit}"/>
     <aura:handler name="CBS_AirplaneSavedEvent" event="c:CBS_AirplaneSavedEvent" action="{!c.closeModal}"/>
-    <force:recordData aura:id="forceRecord"
-                      recordId="{!v.recordId}"
-                      layoutType="FULL"
-                      targetRecord="{!v.airplane}"
-                      targetFields="{!v.airplaneRecord}"
-                      mode="EDIT"/>
+    <aura:handler name="CBS_AirplaneShowingModalCloseEvent" event="c:CBS_AirplaneShowingModalCloseEvent" action="{!c.onAirplaneShowingModalClose}"/>
     <div class="slds-page-header">
+        <lightning:workspaceAPI aura:id="workspace"/>
         <div class="slds-media slds-no-space slds-grow">
             <div class="slds-media__figure">
                 <lightning:icon iconName="standard:product" size="medium"/>
@@ -29,7 +29,7 @@
             <div class="slds-media__body">
                 <p class="slds-text-title--caps slds-line-height--reset">Airplane</p>
                 <h1 class="slds-page-header__title slds-m-right--small slds-align-middle slds-truncate"
-                    title="{!v.airplaneRecord.Name}">{!v.theName}</h1>
+                    title="{!v.theName}">{!v.theName}</h1>
             </div>
             <aura:if isTrue="{!v.isStandardSite}">
                 <div class="slds-col slds-no-flex slds-grid slds-align-top">
@@ -39,25 +39,48 @@
                     </div>
                 </div>
             </aura:if>
+            <aura:if isTrue="{! !v.isStandardSite}">
+                <div class="slds-col slds-no-flex slds-grid slds-align-top">
+                        <lightning:button label="Request for showing" onclick="{!c.openShowingModal}"/>
+                </div>
+            </aura:if>
         </div>
         <ul class="slds-grid slds-page-header__detail-row">
             <li class="slds-page-header__detail-block">
                 <p class="slds-text-title slds-truncate slds-m-bottom--xx-small"
+                   title="Price">Price</p>
+                <p class="slds-text-body--regular slds-truncate"
+                   title="{!v.price}"><ui:outputCurrency value="{!v.price}" currencySymbol="$"/></p>
+            </li>
+            <li class="slds-page-header__detail-block">
+                <p class="slds-text-title slds-truncate slds-m-bottom--xx-small"
+                   title="Discount">Discount</p>
+                <p class="slds-text-body--regular slds-truncate"
+                   title="{!v.discount}">{!v.discount}%</p>
+            </li>
+            <li class="slds-page-header__detail-block">
+                <p class="slds-text-title slds-truncate slds-m-bottom--xx-small"
+                   title="Price after discount">Price after discount</p>
+                <p class="slds-text-body--regular slds-truncate"
+                   title="{!v.priceAfterDiscount}"><ui:outputCurrency value="{!v.priceAfterDiscount}" currencySymbol="$"/></p>
+            </li>
+            <li class="slds-page-header__detail-block">
+                <p class="slds-text-title slds-truncate slds-m-bottom--xx-small"
                    title="{!$Label.c.CBS_Number_of_seats_label}">{!$Label.c.CBS_Number_of_seats_label}</p>
                 <p class="slds-text-body--regular slds-truncate"
-                   title="{!v.airplaneRecord.Number_of_Seats__c}">{!v.theNumberOfSeats}</p>
+                   title="{!v.theNumberOfSeats}">{!v.theNumberOfSeats}</p>
             </li>
             <li class="slds-page-header__detail-block">
                 <p class="slds-text-title slds-truncate slds-m-bottom--xx-small"
                    title="{!$Label.c.CBS_Engine_Label}">{!$Label.c.CBS_Engine_Label}</p>
                 <p class="slds-text-body--regular slds-truncate"
-                   title="{!v.airplaneRecord.Engine__c}">{!v.theEngine}</p>
+                   title="{!v.theEngine}">{!v.theEngine}</p>
             </li>
             <li class="slds-page-header__detail-block">
                 <p class="slds-text-title slds-truncate slds-m-bottom--xx-small"
                    title="{!$Label.c.CBS_Engines_number_label}">{!$Label.c.CBS_Engines_number_label}</p>
                 <p class="slds-text-body--regular slds-truncate"
-                   title="{!v.airplaneRecord.Engines_Number__c}">{!v.theEnginesNumber}</p>
+                   title="{!v.theEnginesNumber}">{!v.theEnginesNumber}</p>
             </li>
         </ul>
     </div>
@@ -102,17 +125,20 @@
                 <div class="slds-modal__content slds-p-around--medium">
                     <p class="slds-align_absolute-center">
                     {!$Label.c.CBS_Are_you_sure_you_want_to_delete}
-                        &nbsp;{!v.airplaneRecord.Name}{!$Label.c.CBS_Question_mark}
+                        &nbsp;{!v.theName}{!$Label.c.CBS_Question_mark}
                     </p>
                 </div>
                 <div class="slds-modal__footer">
                     <button class="slds-button slds-button--neutral"
                             onclick="{!c.closeDeleteModal}">{!$Label.c.CBS_Cancel}</button>
                     <lightning:button variant="brand"
-                                      onclick="{!c.deleteAirplane}">{!$Label.c.CBS_Delete}</lightning:button>
+                                      onclick="{!c.deleteAirplaneRecord}">{!$Label.c.CBS_Delete}</lightning:button>
                 </div>
             </div>
         </div>
         <div class="slds-backdrop slds-backdrop--open"></div>
+    </aura:if>
+    <aura:if isTrue="{!v.isShowingModalOpen}">
+        <c:CBS_AirplaneShowingModal planeId="{!v.recordId}"/>
     </aura:if>
 </aura:component>

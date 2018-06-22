@@ -1,0 +1,32 @@
+<aura:component description="CBS_AirplaneUpcomingShowings" controller="CBS_AirplaneShowingsController" implements="forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute access="PUBLIC" name="manageView" type="List" default="[]"/>
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    <aura:handler event="c:CBS_AirplaneShowingsAddedEvent" action="{!c.onInit}"/>
+    <c:TMU_Spinner aura:id="spinner"/>
+    <lightning:card title="Upcoming Showings" iconName="utility:event">
+        <aura:if isTrue="{!v.manageView.length > 0}">
+            <div class="slds">
+                <table data-reactroot="" class="slds-table slds-table_bordered slds-table_cell-buffer">
+                    <thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col">
+                            <div class="slds-truncate" title="Showing">Showing</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Showing Date">Showing Date</div>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <aura:iteration items="{!v.manageView}" var="row" indexVar="index">
+                        <c:CBS_AirplaneUpcomingShowingsRow view="{!row}"/>
+                    </aura:iteration>
+                    </tbody>
+                </table>
+            </div>
+        </aura:if>
+        <aura:if isTrue="{!v.manageView.length == 0}">
+            <ui:outputText value="You don't have any upcoming showings yet." class="slds-align_absolute-center"/>
+        </aura:if>
+    </lightning:card>
+</aura:component>

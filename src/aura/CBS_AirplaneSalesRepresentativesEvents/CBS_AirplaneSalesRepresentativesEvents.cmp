@@ -1,0 +1,61 @@
+<aura:component description="CBS_AirplaneSalesRepresentativesEvents" implements="flexipage:availableForAllPageTypes"
+                access="global" controller="CBS_AirplaneSalesEventsController">
+    <aura:attribute name="salesRepsEvents" type="List" default="[]"/>
+    <aura:attribute name="upcomingEvents" type="List" default="[]"/>
+    <aura:attribute name="searched" type="Boolean" default="false"/>
+    <aura:attribute name="currentList" type="List"/>
+    <aura:attribute type="Integer" name="pageNumber" default="1"/>
+    <aura:attribute type="Integer" name="maxPage" default="1"/>
+    <aura:attribute type="Integer" name="repEventsPerPage"/>
+    <aura:handler name="change" value="{!v.pageNumber}" action="{!c.renderPage}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    <aura:handler event="c:CBS_AirplaneEventsSearched" action="{!c.onEventsSearched}"/>
+    <aura:handler event="c:CBS_AirplaneEventsCleared" action="{!c.onEventsCleared}"/>
+    <lightning:card
+            title="{!(v.searched == true) ? $Label.c.CBS_Sales_representatives_filter_results : $Label.c.CBS_Upcoming_sales_representatives_events}">
+        <c:CBS_Spinner aura:id="spinner"/>
+        <div class="slds-grid slds-wrap">
+            <aura:iteration items="{!v.currentList}" var="evt">
+                <div class="slds-col slds-size_1-of-3" style="padding: 15px">
+                    <div class="slds-box slds-m-around--small"
+                         style="background-image: url('https://i.imgur.com/rplk9p9.png'); background-size: cover;">
+                        <dt><b>{!$Label.c.CBS_Sales_representative2}</b></dt>
+                        <dd class="slds-dl--horizontal__detail slds-truncate" style="word-wrap: break-word; margin-bottom: 15px;">
+                            <a href="{!'/' + evt.OwnerId}">{!evt.Owner.Name}</a>
+                        </dd>
+                        <dt class="slds-dl--horizontal__label"><b>{!$Label.c.CBS_Contact2}</b></dt>
+                        <dd class="slds-dl--horizontal__detail slds-truncate" style="word-wrap: break-word; margin-bottom: 15px;">
+                            <a href="{!'/' + evt.WhoId}">{!evt.Who.Name}</a>
+                        </dd>
+                        <dt class="slds-dl--horizontal__label"><b>{!$Label.c.CBS_Description2}</b></dt>
+                        <dd class="slds-dl--horizontal__detail slds-truncate" title="{!evt.Description}"
+                            style="word-wrap: break-word; margin-bottom: 15px;">
+                            <a href="{!'/' + evt.Id}">{!evt.Description}</a>
+                        </dd>
+                        <dt class="slds-dl--horizontal__label"><b>{!$Label.c.CBS_Date2}</b></dt>
+                        <dd class="slds-dl--horizontal__detail slds-truncate" style="word-wrap: break-word; margin-bottom: 15px;">
+                            <ui:outputDateTime value="{!evt.ActivityDateTime}" format="HH:mm dd/MM/yyyy"/>
+                        </dd>
+                        <dt class="slds-dl--horizontal__label"><b>{!$Label.c.CBS_Airplane2}</b></dt>
+                        <dd class="slds-dl--horizontal__detail slds-truncate" style="word-wrap: break-word; margin-bottom: 15px;">
+                            <a href="{!'/' + evt.Airplane_Type__c}">{!evt.Airplane_Type__r.Name}</a>
+                        </dd>
+                        <dt class="slds-dl--horizontal__label"><b>{!$Label.c.CBS_Hangar2}</b></dt>
+                        <dd class="slds-dl--horizontal__detail slds-truncate" style="word-wrap: break-word;">
+                            <a href="{!'/' + evt.Hangar__c}">{!evt.Hangar__r.Name}</a>
+                        </dd>
+                    </div>
+                </div>
+            </aura:iteration>
+            <aura:if isTrue="{!v.salesRepsEvents.length == 0}">
+                <ui:outputText class="slds-m-left--medium slds-align_absolute-center"
+                               value="{!$Label.c.CBS_No_events_found_using_specified_criteria}"/>
+            </aura:if>
+        </div>
+        <aura:if isTrue="{!v.salesRepsEvents.length > v.repEventsPerPage}">
+            <div align="center">
+                <c:CBS_Pagination currentPageNumber="{!v.pageNumber}" maxPageNumber="{!v.maxPage}"/>
+            </div>
+        </aura:if>
+    </lightning:card>
+</aura:component>

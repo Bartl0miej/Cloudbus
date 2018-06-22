@@ -1,0 +1,48 @@
+<aura:component description="CBS_AirplaneCreatePromotions" controller="CBS_AirplaneCreatePromotionsController"
+                implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="wrappers" type="List" default="[]"/>
+    <aura:attribute name="discount" type="Integer"/>
+    <aura:attribute name="checked" type="Boolean" default="false"/>
+    <aura:attribute name="startDate" type="Date"/>
+    <aura:attribute name="endDate" type="Date"/>
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    <aura:handler event="c:CBS_AirplanePromotionCreated" action="{!c.onInit}"/>
+    <c:CBS_Spinner aura:id="spinner"/>
+    <lightning:card title="Set promotions for airplanes">
+        <div class="slds-m-around--large slds-align_absolute-center">
+            <lightning:input name="toggle" messageToggleInactive="No" messageToggleActive="Yes"
+                             label="Set one discount for all airplanes?"
+                             type="toggle"
+                             checked="{!v.checked}"
+                             onchange="{!c.handleToggleChanged}"/>
+        </div>
+        <aura:if isTrue="{!v.checked}">
+            <div class="slds-grid slds-wrap slds-m-top--small">
+                <div class="slds-col slds-wrap slds-size--1-of-3 slds-align_absolute-center">
+                    <div class="slds-col slds-size--1-of-3 slds-p-around--medium"
+                         style="color: rgb(112, 110, 107); margin-top: -2px;">
+                        <lightning:input label="Discount (%)" type="number" value="{!v.discount}" onchange="{!c.onDiscountChange}"/>
+                    </div>
+                    <div class=" slds-col slds-size--1-of-3 slds-p-around--small">
+                        <ui:inputDate value="{!v.startDate}" label="Start date" displayDatePicker="true"/>
+                    </div>
+                    <div class="slds-col slds-size--1-of-3 slds-p-around--small">
+                        <ui:inputDate value="{!v.endDate}" label="End date" displayDatePicker="true"/>
+                    </div>
+                    <div class="slds-col slds-size--1-of-3 slds-m-top--small" style="margin-left: 4.2rem;">
+                        <lightning:buttonGroup>
+                            <lightning:button label="Clear" variant="neutral" onclick="{!c.clearPromoForm}"/>
+                            <lightning:button label="Save" variant="brand" onclick="{!c.savePromotionForAll}"/>
+                        </lightning:buttonGroup>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+        </aura:if>
+        <div class="slds-grid slds-wrap">
+            <aura:iteration items="{!v.wrappers}" var="tWrapper">
+                <c:CBS_AirplaneCreatePromotionsTile wrapper="{!tWrapper}" aura:id="child"/>
+            </aura:iteration>
+        </div>
+    </lightning:card>
+</aura:component>

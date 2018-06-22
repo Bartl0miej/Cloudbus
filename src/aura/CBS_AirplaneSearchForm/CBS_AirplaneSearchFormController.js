@@ -14,7 +14,6 @@
         action.setCallback(this, function(response) {
             let state = response.getState();
             if (state === "SUCCESS") {
-                console.log('success');
                 if (response.getReturnValue().length == 0) {
                     theSpinner.hideSpinner();
                     helper.showToast(component, "Warning", $A.get("$Label.c.CBS_No_airplanes"), $A.get("$Label.c.CBS_No_airplanes_found_using_criteria"));
@@ -40,7 +39,7 @@
     },
 
     clear : function(component, event, helper) {
-        component.set("v.searchedAirplane", {'sobjectType' : 'Product2', 'Name' : '', 'Engines_Number__c' : '', 'Number_of_Seats__c' : null});
+        component.set("v.searchedAirplane", {'sobjectType' : 'Airplane_Type__c', 'Name' : '', 'Engines_Number__c' : '', 'Number_of_Seats__c' : null});
 
         let clearEvent = $A.get("e.c:CBS_AirplaneClearSearch");
         clearEvent.fire();
