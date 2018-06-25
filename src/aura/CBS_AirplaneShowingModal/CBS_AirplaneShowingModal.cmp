@@ -1,20 +1,19 @@
 <aura:component description="CBS_AirplaneShowingModal" controller="CBS_AirplaneShowingsController">
     <aura:attribute name="planeId" type="String"/>
-    <aura:attribute name="showingEvent" type="Event" default="{'sobjectType' : 'Event'}"/>
     <aura:attribute name="tAirplaneName" type="String" default=""/>
     <aura:attribute name="airplanePrototypes" type="List" default="[]"/>
     <aura:attribute name="airplaneSelected" type="Boolean" default="false"/>
     <aura:attribute name="selectedAirplaneForShowing" type="Product2"/>
     <aura:attribute name="showingDate" type="Object"/>
-    <aura:attribute name="cachedUserShowingsLength" type="Integer"/>
     <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
-    <aura:handler name="CBS_SelectedAirplaneUpdate" event="c:CBS_SelectedAirplaneUpdate" action="{!c.onSelectedAirplaneUpdate}"/>
+    <aura:handler name="CBS_SelectedAirplaneUpdate" event="c:CBS_SelectedAirplaneUpdate"
+                  action="{!c.onSelectedAirplaneUpdate}"/>
     <aura:registerEvent name="CBS_AirplaneAddShowingEvent" type="c:CBS_AirplaneAddShowingEvent"/>
     <aura:registerEvent name="CBS_AirplaneShowingModalCloseEvent" type="c:CBS_AirplaneShowingModalCloseEvent"/>
+    <c:CBS_Spinner aura:id="spinner"/>
     <div role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open"
          aria-labelledby="header99"
          aria-modal="true" style="z-index: 20001;">
-        <c:CBS_Spinner aura:id="spinner"/>
         <div class="slds-modal__container">
             <div class="slds-modal__header">
                 <button class="slds-button slds-modal__close slds-button--icon-inverse"
@@ -24,7 +23,7 @@
                                     size="small"/>
                     <span class="slds-assistive-text">{!$Label.c.CBS_Close}</span>
                 </button>
-                <h2 id="header99" class="slds-text-heading--medium">Showing for {!v.tAirplaneName}</h2>
+                <h2 id="header99" class="slds-text-heading--medium">{!$Label.c.CBS_Showing_for}&nbsp;{!v.tAirplaneName}</h2>
             </div>
             <div class="slds-modal__content slds-p-around--medium">
                 <div class="slds-p-left_medium slds-p-right_medium">
@@ -34,19 +33,20 @@
                                 <li class="itemSelected slds-list__item slds-p-around_small">
                                     <c:CBS_AirplanePrototypeItem airplane="{!prototype}"/>
                                 </li>
-                            </aura:if>
-                            <aura:if isTrue="{!v.airplanePrototypes.length > 1}">
-                                <li class="tListItem slds-list__item slds-p-around_small" aura:id="listItem"
-                                    data-id="{!index}" onclick="{!c.addClass}">
-                                    <c:CBS_AirplanePrototypeItem airplane="{!prototype}"/>
-                                </li>
+                                <aura:set attribute="else">
+                                    <li class="tListItem slds-list__item slds-p-around_small" aura:id="listItem"
+                                        data-id="{!index}" onclick="{!c.addClass}">
+                                        <c:CBS_AirplanePrototypeItem airplane="{!prototype}"/>
+                                    </li>
+                                </aura:set>
                             </aura:if>
                         </aura:iteration>
                     </ul>
                 </div>
                 <aura:if isTrue="{!v.airplaneSelected}">
                     <div class="slds-m-top--small">
-                        <ui:inputDateTime value="{!v.showingDate}" label="Showing Time" displayDatePicker="true" required="true"/>
+                        <ui:inputDateTime value="{!v.showingDate}" label="{!$Label.c.CBS_Showing_Time}" displayDatePicker="true"
+                                          required="true"/>
                     </div>
                 </aura:if>
             </div>

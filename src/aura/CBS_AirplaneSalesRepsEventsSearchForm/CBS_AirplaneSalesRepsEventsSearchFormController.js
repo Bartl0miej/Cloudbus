@@ -7,10 +7,11 @@
                 let wrapper = response.getReturnValue();
                 let reps = wrapper.saleRepUsers;
                 let contacts = wrapper.contactUsers;
+                // do apexowego
                 let allOption = {};
-                allOption.Id = allOption.Name = 'All';
-                reps.unshift(allOption);
-                contacts.unshift(allOption);
+                //allOption.Id = allOption.Name = 'All';
+                //reps.unshift(allOption);
+                //contacts.unshift(allOption);
                 component.set("v.salesReps", reps);
                 component.set("v.eContacts", contacts);
                 let orderOpts = [];

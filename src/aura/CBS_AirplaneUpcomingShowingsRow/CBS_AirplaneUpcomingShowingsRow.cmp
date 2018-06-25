@@ -1,18 +1,15 @@
-<aura:component description="CBS_AirplaneUpcomingShowingsRow" controller="CBS_AirplaneController">
-    <aura:attribute name="view" type="Object"/>
-    <aura:attribute name="suggestedPrice" type="String"/>
-    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+<aura:component description="CBS_AirplaneUpcomingShowingsRow">
+    <aura:attribute name="upcomingShowing" type="Object"/>
     <tr>
-        <th scope="row" data-label="Showing">
-            <div style="width: 278px;" class="slds-truncate"
-                 title="{!'For ' + v.view.Airplane_Type__r.Name + ' in hangar ' + v.view.Hangar__r.Name + ', price: $' + v.suggestedPrice + '.'}">
-                For&nbsp;<a onclick="{!c.onAirplaneClick}">{!v.view.Airplane_Type__r.Name}</a> in
-                hangar&nbsp;{!v.view.Hangar__r.Name}, price: <ui:outputCurrency value="{!v.view.Airplane_Type__r.Price_after_Discount__c}" currencySymbol="$"/>.
+        <th scope="row">
+            <div style="width: 275px;" class="slds-truncate"
+                 title="{!$Label.c.CBS_For + ' ' + v.upcomingShowing.Airplane_Type__r.Name + ' ' + $Label.c.CBS_in_hangar + ' ' + v.upcomingShowing.Hangar__r.Name + '.'}">
+                {!$Label.c.CBS_For}&nbsp;<a onclick="{!c.onAirplaneClick}">{!v.upcomingShowing.Airplane_Type__r.Name}</a>&nbsp;{!$Label.c.CBS_in_hangar}&nbsp;{!v.upcomingShowing.Hangar__r.Name}
             </div>
         </th>
-        <td data-label="Showing date">
+        <td>
             <div class="slds-truncate">
-                <ui:outputDateTime value="{!v.view.ActivityDateTime}" format="HH:mm dd/MM/yyyy"/>
+                <ui:outputDateTime value="{!v.upcomingShowing.ActivityDateTime}" format="HH:mm dd/MM/yyyy"/>
             </div>
         </td>
     </tr>

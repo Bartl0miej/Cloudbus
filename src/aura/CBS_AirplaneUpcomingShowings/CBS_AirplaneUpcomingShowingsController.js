@@ -7,7 +7,7 @@
             let state = response.getState();
             if (state === "SUCCESS") {
                 let rValue = response.getReturnValue();
-                component.set("v.manageView", rValue);
+                component.set("v.upcomingShowings", rValue);
             } else {
                 let errors = response.getError()[0];
                 helper.showErrorToast(component, errors);

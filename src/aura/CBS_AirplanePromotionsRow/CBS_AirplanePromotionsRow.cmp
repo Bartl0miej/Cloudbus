@@ -5,34 +5,34 @@
     <aura:registerEvent name="CBS_AirplaneAddPromotionToDeleteList" type="c:CBS_AirplaneAddPromotionToDeleteList"/>
     <aura:if isTrue="{!!v.toDelete}">
         <tr>
-            <th scope="row" data-label="Price">
+            <th scope="row">
                 <div class="slds-truncate">
                     <ui:outputCurrency value="{!v.tPBEntrty.UnitPrice}" currencySymbol="€"/>
                 </div>
             </th>
-            <td data-label="Promotion start date">
+            <td>
                 <div class="slds-truncate">
                     <ui:outputDate value="{!v.tPBEntrty.Pricebook2.Promotion_start__c}" format="dd/MM/yyyy"/>
                 </div>
             </td>
-            <td data-label="Promotion end date" align="center">
+            <td>
                 <div class="slds-truncate">
                     <ui:outputDate value="{!v.tPBEntrty.Pricebook2.Promotion_end__c}" format="dd/MM/yyyy"/>
                 </div>
             </td>
-            <td data-label="Created by">
+            <td>
                 <div class="slds-truncate">
                     <p>{!v.tPBEntrty.CreatedBy.Name}</p>
                 </div>
             </td>
-            <td data-label="">
+            <td>
                 <div class="slds-truncate slds-align_absolute-center">
                     <button onclick="{!c.callDeletePromotion}" class="slds-button slds-button_icon"
                             style="margin-left: -50px !important;"
-                            title="Delete promotion">
+                            title="{!$Label.c.CBS_Delete_promotion}">
                         <lightning:icon iconName="action:delete" size="xx-small"
-                                        alternativeText="Delete promotion"/>
-                        <span class="slds-assistive-text">Delete promotion</span>
+                                        alternativeText="{!$Label.c.CBS_Delete_promotion}"/>
+                        <span class="slds-assistive-text">{!$Label.c.CBS_Delete_promotion}</span>
                     </button>
                 </div>
             </td>

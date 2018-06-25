@@ -4,23 +4,41 @@ public class CBS_AirplaneShowingsController {
         try {
             List<PrototypeWrapper> wrappers = new List<CBS_AirplaneShowingsController.PrototypeWrapper>();
             List<Product2> airplanes = [SELECT Id, Name, Hangar__c, Hangar__r.Name, Hangar__r.City__c, Hangar__r.Country__c, Airplane_Type__c FROM Product2 WHERE Airplane_Type__c = :typeId];
+            List<String> planeIds = new List<String>();
+            for (Product2 airplane : airplanes) {
+                planeIds.add(airplane.Id);
+            }
+            List<PricebookEntry> standardPBE = [SELECT Id, UnitPrice, Product2Id FROM PricebookEntry WHERE Pricebook2.IsStandard = true AND Product2Id IN :planeIds];
+
+            Map<String, PricebookEntry> standardPricesMap = new Map<String, PricebookEntry>();
+
+            for (PricebookEntry entry : standardPBE) {
+                standardPricesMap.put(entry.Product2Id, entry);
+            }
+
+            List<PricebookEntry> promotions = [SELECT Id, UnitPrice, Pricebook2.Promotion_start__c, Pricebook2.Promotion_end__c, Product2Id FROM PricebookEntry WHERE Product2Id IN :planeIds AND Pricebook2.Promotion_start__c <= :System.today() AND Pricebook2.Promotion_end__c >= :System.today()];
+
+            Map<String, PricebookEntry> promotionsMap = new Map<String, PricebookEntry>();
+            for (PricebookEntry entry : promotions) {
+                PricebookEntry promEntry = promotionsMap.get(entry.Product2Id);
+                if (promEntry == null) {
+                    promotionsMap.put(entry.Product2Id, entry);
+                } else if (entry.UnitPrice < promEntry.UnitPrice) {
+                    promotionsMap.put(entry.Product2Id, entry);
+                }
+            }
 
             for (Product2 plane : airplanes) {
                 PrototypeWrapper wrapper = new PrototypeWrapper();
                 wrapper.airplane = plane;
-                wrapper.standardPricebookEntry = [SELECT Id, UnitPrice FROM PricebookEntry WHERE Pricebook2.IsStandard = true AND Product2Id = :plane.Id];
-                List<PricebookEntry> promotions = [SELECT Id, UnitPrice, Pricebook2.Promotion_start__c, Pricebook2.Promotion_end__c FROM PricebookEntry WHERE Product2Id = :plane.Id AND Pricebook2.Promotion_start__c <= :System.today() AND Pricebook2.Promotion_end__c >= :System.today() ORDER BY UnitPrice];
-                if (promotions != null && promotions.size() > 0) {
-                    wrapper.promotionPricebookEntry = promotions[0];
+                wrapper.standardPricebookEntry = standardPricesMap.get(plane.Id);
+                if (promotionsMap.get(plane.Id) != null) {
+                    wrapper.promotionPricebookEntry = promotionsMap.get(plane.Id);
                 }
                 wrappers.add(wrapper);
             }
 
-
             return wrappers;
-            //return [SELECT Id, Name, Hangar__c, Hangar__r.Name, Hangar__r.City__c, Hangar__r.Country__c, Airplane_Type__c FROM Product2 WHERE Airplane_Type__c = :typeId];
-
-
         } catch (Exception exc) {
             CBS_CustomExceptionData errData = new CBS_CustomExceptionData(exc.getTypeName(), exc.getMessage());
             throw new AuraHandledException(JSON.serialize(errData));
@@ -28,10 +46,12 @@ public class CBS_AirplaneShowingsController {
     }
 
     public class PrototypeWrapper {
-        @AuraEnabled public Product2 airplane;
-        @AuraEnabled public PricebookEntry standardPricebookEntry;
-        @AuraEnabled public PricebookEntry promotionPricebookEntry;
-
+        @AuraEnabled
+        public Product2 airplane;
+        @AuraEnabled
+        public PricebookEntry standardPricebookEntry;
+        @AuraEnabled
+        public PricebookEntry promotionPricebookEntry;
     }
 
     @AuraEnabled
@@ -46,6 +66,7 @@ public class CBS_AirplaneShowingsController {
 
     @AuraEnabled
     public static List<ShowingInfo> putShowingInSessionCache(String uId, Product2 aircraft, String dateTimeInfo) {
+        Integer showingDuration = Integer.valueOf(CBS_Util.getCustomSettingValue('ShowingDurationInHours'));
         ShowingInfo sInfo = new ShowingInfo();
         sInfo.thePlane = aircraft;
         sInfo.dTI = dateTimeInfo;
@@ -59,31 +80,20 @@ public class CBS_AirplaneShowingsController {
 
         for (ShowingInfo showing : sessInfo) {
             DateTime userDt = (DateTime) JSON.deserialize('"' + showing.dTI + '"', DateTime.class);
-            if ((toAddDt < userDt && toAddDt.addHours(6) > userDt) || toAddDt == userDt || (userDt < toAddDt && userDt.addHours(6) > toAddDt)) {
-                throw new AuraHandledException('You already requested for showing on: ' + userDt.addHours(1));
+            if ((toAddDt < userDt && toAddDt.addHours(showingDuration) > userDt) || toAddDt == userDt || (userDt < toAddDt && userDt.addHours(showingDuration) > toAddDt)) {
+                throw new AuraHandledException(Label.CBS_You_already_requested_for_showing_on + ' ' + userDt.addHours(1));
             }
         }
 
-        System.debug('sInfoPlaneId = ' + sInfo.thePlane.Id);
-        System.debug('sInfo.Hangar__c = ' + sInfo.thePlane.Hangar__c);
         List<CBS_Hangar__c> hangars = [SELECT Sales_Representative__r.Name FROM CBS_Hangar__c WHERE Id = :sInfo.thePlane.Hangar__c];
-        System.debug('hangars user ids size = ' + hangars.size());
-        System.debug(hangars[0].Sales_Representative__r.Id);
 
         List<User> commUser = [SELECT ContactId FROM User WHERE Id = :uId LIMIT 1];
-        List<Event> userEvents = new List<Event>();// = [SELECT ActivityDateTime FROM Event WHERE WhoId = :commUser[0].ContactId];
-
-        System.debug('contact id = ' + commUser[0].ContactId);
-
+        List<Event> userEvents = new List<Event>();
 
         Http rrHttp = new Http();
-        HttpRequest request = new HttpRequest();
         String preparedQuery = 'SELECT ActivityDateTime FROM Event WHERE WhoId=' + '\'' + commUser[0].ContactId + '\'';
         preparedQuery = preparedQuery.replaceAll('\\s+', '+');
-        System.debug('pQ = ' + preparedQuery);
-        request.setEndpoint('https://eu12.salesforce.com/services/data/v41.0/query/?q=' + preparedQuery);
-        request.setHeader('Authorization', 'OAuth ' + CBS_Util.login());
-        request.setMethod('GET');
+        HttpRequest request = CBS_Util.setUpQueryRequest(preparedQuery);
         HttpResponse response = rrHttp.send(request);
         List<Event> events = new List<Event>();
         ResponseJson resJson = new ResponseJson();
@@ -91,36 +101,32 @@ public class CBS_AirplaneShowingsController {
             resJson = (CBS_AirplaneShowingsController.ResponseJson) JSON.deserialize(response.getBody(), CBS_AirplaneShowingsController.ResponseJson.class);
             userEvents = resJson.records;
         } else {
-            System.debug('Cos sie zjebalo');
+            throw new AuraHandledException(String.valueOf(response.getStatusCode()));
         }
 
-        Http rrHttp2 = new Http();
-        HttpRequest request2 = new HttpRequest();
-        String preparedQuery2 = 'SELECT ActivityDateTime FROM Event WHERE OwnerId=' + '\'' + hangars[0].Sales_Representative__r.Id + '\'';
-        preparedQuery2 = preparedQuery2.replaceAll('\\s+', '+');
-        System.debug('pQ = ' + preparedQuery2);
-        request2.setEndpoint('https://eu12.salesforce.com/services/data/v41.0/query/?q=' + preparedQuery2);
-        request2.setHeader('Authorization', 'OAuth ' + CBS_Util.login());
-        request2.setMethod('GET');
-        HttpResponse response2 = rrHttp2.send(request2);
+        rrHttp = new Http();
+        preparedQuery = 'SELECT ActivityDateTime FROM Event WHERE OwnerId=' + '\'' + hangars[0].Sales_Representative__r.Id + '\'';
+        preparedQuery = preparedQuery.replaceAll('\\s+', '+');
+        request = CBS_Util.setUpQueryRequest(preparedQuery);
+        response = rrHttp.send(request);
         List<Event> eventsList = new List<Event>();
-        ResponseJson resJson2 = new ResponseJson();
+        resJson = new ResponseJson();
         if (response.getStatusCode() == 200) {
-            resJson2 = (CBS_AirplaneShowingsController.ResponseJson) JSON.deserialize(response2.getBody(), CBS_AirplaneShowingsController.ResponseJson.class);
-            eventsList = resJson2.records;
+            resJson = (CBS_AirplaneShowingsController.ResponseJson) JSON.deserialize(response.getBody(), CBS_AirplaneShowingsController.ResponseJson.class);
+            eventsList = resJson.records;
         } else {
-            System.debug('Cos sie zjebalo');
+            throw new AuraHandledException(String.valueOf(response.getStatusCode()));
         }
 
         for (Event evt : eventsList) {
-            if ((toAddDt < evt.ActivityDateTime && toAddDt.addHours(6) > evt.ActivityDateTime) || toAddDt == evt.ActivityDateTime || (evt.ActivityDateTime < toAddDt && evt.ActivityDateTime.addHours(6) > toAddDt)) {
-                throw new AuraHandledException('There already is a booked showing on: ' + evt.ActivityDateTime.addHours(1));
+            if ((toAddDt < evt.ActivityDateTime && toAddDt.addHours(showingDuration) > evt.ActivityDateTime) || toAddDt == evt.ActivityDateTime || (evt.ActivityDateTime < toAddDt && evt.ActivityDateTime.addHours(showingDuration) > toAddDt)) {
+                throw new AuraHandledException(Label.CBS_There_already_is_a_booked_showing_on + ' ' + evt.ActivityDateTime.addHours(1));
             }
         }
 
         for (Event evt : userEvents) {
-            if ((toAddDt < evt.ActivityDateTime && toAddDt.addHours(6) > evt.ActivityDateTime) || toAddDt == evt.ActivityDateTime || (evt.ActivityDateTime < toAddDt && evt.ActivityDateTime.addHours(6) > toAddDt)) {
-                throw new AuraHandledException('You already have a booked event on: ' + evt.ActivityDateTime.addHours(1));
+            if ((toAddDt < evt.ActivityDateTime && toAddDt.addHours(showingDuration) > evt.ActivityDateTime) || toAddDt == evt.ActivityDateTime || (evt.ActivityDateTime < toAddDt && evt.ActivityDateTime.addHours(showingDuration) > toAddDt)) {
+                throw new AuraHandledException(Label.CBS_You_already_have_a_booked_event_on + ' ' + evt.ActivityDateTime.addHours(1));
             }
         }
         sessInfo.add(sInfo);
@@ -134,13 +140,9 @@ public class CBS_AirplaneShowingsController {
         try {
             List<User> commUser = [SELECT ContactId, AccountId FROM User WHERE Id = :uId LIMIT 1];
             Http rrHttp = new Http();
-            HttpRequest request = new HttpRequest();
             String preparedQuery = 'SELECT Id, Description, ActivityDateTime, Airplane_Type__c, Airplane_Type__r.Price_after_Discount__c, Hangar__c, Airplane_Type__r.Name, Hangar__r.Name FROM Event WHERE WhoId=' + '\'' + commUser[0].ContactId + '\' ORDER BY ActivityDateTime';
             preparedQuery = preparedQuery.replaceAll('\\s+', '+');
-            System.debug('pQ = ' + preparedQuery);
-            request.setEndpoint('https://eu12.salesforce.com/services/data/v41.0/query/?q=' + preparedQuery);
-            request.setHeader('Authorization', 'OAuth ' + CBS_Util.login());
-            request.setMethod('GET');
+            HttpRequest request = CBS_Util.setUpQueryRequest(preparedQuery);
             HttpResponse response = rrHttp.send(request);
             List<Event> events = new List<Event>();
             ResponseJson resJson = new ResponseJson();
@@ -152,9 +154,8 @@ public class CBS_AirplaneShowingsController {
                     }
                 }
             } else {
-                System.debug('Something went wrong.');
+                throw new AuraHandledException(String.valueOf(response.getStatusCode()));
             }
-
             return events;
         } catch (Exception exc) {
             CBS_CustomExceptionData errData = new CBS_CustomExceptionData(exc.getTypeName(), exc.getMessage());
@@ -199,7 +200,6 @@ public class CBS_AirplaneShowingsController {
         }
     }
 
-
     @AuraEnabled
     public static void createEventsFromShowings(String uId) {
         String userId = uId;
@@ -233,12 +233,9 @@ public class CBS_AirplaneShowingsController {
         List<Event> eventsList = new List<Event>();
 
         Http rrHttp = new Http();
-        HttpRequest request = new HttpRequest();
         String preparedQuery = 'SELECT ActivityDateTime FROM Event WHERE OwnerId IN ' + inQuery;
         preparedQuery = preparedQuery.replaceAll('\\s+', '+');
-        request.setEndpoint('https://eu12.salesforce.com/services/data/v41.0/query/?q=' + preparedQuery);
-        request.setHeader('Authorization', 'OAuth ' + CBS_Util.login());
-        request.setMethod('GET');
+        HttpRequest request = CBS_Util.setUpQueryRequest(preparedQuery);
         HttpResponse response = rrHttp.send(request);
         List<Event> events = new List<Event>();
         ResponseJson resJson = new ResponseJson();
@@ -246,109 +243,67 @@ public class CBS_AirplaneShowingsController {
             resJson = (CBS_AirplaneShowingsController.ResponseJson) JSON.deserialize(response.getBody(), CBS_AirplaneShowingsController.ResponseJson.class);
             eventsList = resJson.records;
         } else {
-            System.debug('Error');
+            throw new AuraHandledException(String.valueOf(response.getStatusCode()));
         }
 
+        Integer showingDuration = Integer.valueOf(CBS_Util.getCustomSettingValue('ShowingDurationInHours'));
         String exceptionMessage = '';
         Boolean hasExceptions = false;
         for (ShowingInfo showing : sessInfo) {
             Event evt = new Event();
             evt.WhoId = commUser[0].ContactId;
-            evt.DurationInMinutes = 360;
+            evt.DurationInMinutes = showingDuration * 60;
             evt.OwnerId = salesRepsMap.get(showing.thePlane.Hangar__c);
             DateTime dt = (DateTime) JSON.deserialize('"' + showing.dTI + '"', DateTime.class);
             for (Event tEvent : eventsList) {
-                if ((dt < tEvent.ActivityDateTime && dt.addHours(6) > tEvent.ActivityDateTime) || dt == tEvent.ActivityDateTime || (tEvent.ActivityDateTime < dt && tEvent.ActivityDateTime.addHours(6) > dt)) {
+                if ((dt < tEvent.ActivityDateTime && dt.addHours(showingDuration) > tEvent.ActivityDateTime) || dt == tEvent.ActivityDateTime || (tEvent.ActivityDateTime < dt && tEvent.ActivityDateTime.addHours(showingDuration) > dt)) {
                     hasExceptions = true;
-                    exceptionMessage += 'There already is a booked showing on: ' + evt.ActivityDateTime.addHours(1) + ' for airplane ' + evt.Airplane_Type__r.Name + ' in hangar ' + evt.Hangar__r.Name;
+                    exceptionMessage += Label.CBS_There_already_is_a_booked_showing_on + ' ' + evt.ActivityDateTime.addHours(1) + ' ' + Label.CBS_for_airplane + ' ' + evt.Airplane_Type__r.Name + ' ' + Label.CBS_in_hangar + ' ' + evt.Hangar__r.Name;
                     continue;
                 }
             }
             evt.StartDateTime = dt;
-            evt.Subject = 'Airplane Showing';
-            evt.Type = 'Airplane Showing';
+            evt.Subject = Label.CBS_Airplane_showing;
+            evt.Type =Label.CBS_Airplane_showing;
             evt.Hangar__c = showing.thePlane.Hangar__c;
             evt.Airplane_Type__c = showing.thePlane.Airplane_Type__c;
             evt.WhatId = showing.thePlane.Id;
-            System.debug('evt what id = ' + evt.WhatId);
-            evt.Description = 'Showing for ' + showing.thePlane.Name + ' in hangar: ' + showing.thePlane.Hangar__r.Name + ', suggested price: ' + showing.thePlane.Airplane_Type__r.Price_after_Discount__c + '.';
+            evt.Description = Label.CBS_Showing_for + ' ' + showing.thePlane.Name + ' ' + Label.CBS_in_hangar + ' ' + showing.thePlane.Hangar__r.Name + '.';
             showingEvents.add(evt);
         }
 
+        if (hasExceptions) {
+            throw new AuraHandledException(exceptionMessage);
+        }
 
         String restBody = JSON.serialize(showingEvents);
+        System.debug(restBody);
         restBody = restBody.replace('Event"}', 'Event", "referenceId" : "ref1"}');
-
-
 
         for (Integer i = 0; i < showingEvents.size(); i++) {
             restBody = restBody.replaceFirst('ref1', 'ref' + i);
         }
 
         restBody = '{"records" :' + restBody + '}';
-        System.debug(restBody);
 
-
-        Http rrHttp3 = new Http();
-        HttpRequest request3 = new HttpRequest();
-        request3.setEndpoint('https://eu12.salesforce.com/services/data/v34.0/composite/tree/Event');
-        request3.setHeader('Authorization', 'OAuth ' + CBS_Util.login());
-        request3.setMethod('POST');
-        request3.setHeader('Content-Type', 'application/json');
-        request3.setBody(restBody);
-        HttpResponse response3 = rrHttp3.send(request3);
-
-
-//        for (Event evt : showingEvents) {
-//            String serializedEvent = serializeEvent(evt);
-//            Http rrHttp3 = new Http();
-//            HttpRequest request3 = new HttpRequest();
-//            request3.setEndpoint('https://eu12.salesforce.com/services/data/v40.0/sobjects/Event/');
-//            request3.setHeader('Authorization', 'OAuth ' + CBS_Util.login());
-//            request3.setMethod('POST');
-//            request3.setHeader('Content-Type', 'application/json');
-//            request3.setBody(serializedEvent);
-//            HttpResponse response3 = rrHttp3.send(request3);
-//            System.debug('response3 = ' + response3);
-//        }
-//
-//        System.debug(JSON.serialize(showingEvents));
+        rrHttp = new Http();
+        request = CBS_Util.setUpPostListRequest(restBody);
+        response = rrHttp.send(request);
 
         removeUserShowings();
-
-        if (hasExceptions) {
-            throw new AuraHandledException(exceptionMessage);
-        }
     }
-
-    private static String serializeEvent(Event evt) {
-        JSONGenerator gen = JSON.createGenerator(true);
-        gen.writeStartObject();
-        gen.writeDateTimeField('StartDateTime', evt.StartDateTime);
-        gen.writeNumberField('DurationInMinutes', evt.DurationInMinutes);
-        gen.writeIdField('OwnerId', evt.OwnerId);
-        gen.writeStringField('Description', evt.Description);
-        gen.writeIdField('WhoId', evt.WhoId);
-        gen.writeStringField('Subject', evt.Subject);
-        gen.writeStringField('Type', evt.Type);
-        gen.writeIdField('Hangar__c', evt.Hangar__c);
-        gen.writeIdField('Airplane_Type__c', evt.Airplane_Type__c);
-        gen.writeIdField('WhatId', evt.WhatId);
-
-        return gen.getAsString();
-    }
-
 
     public class ShowingInfo {
-        @AuraEnabled public Product2 thePlane;
-        @AuraEnabled public String dTI;
+        @AuraEnabled
+        public Product2 thePlane;
+        @AuraEnabled
+        public String dTI;
     }
 
     public class ResponseJson {
-        @AuraEnabled public List<Event> records { get; set; }
-        @AuraEnabled public Integer totalSize { get; set; }
-        public ResponseJson() {
-        }
+        @AuraEnabled
+        public List<Event> records { get; set; }
+        @AuraEnabled
+        public Integer totalSize { get; set; }
     }
-
 }

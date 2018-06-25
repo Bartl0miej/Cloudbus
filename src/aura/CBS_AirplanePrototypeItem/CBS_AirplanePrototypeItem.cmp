@@ -3,32 +3,31 @@
     <aura:registerEvent name="CBS_SelectedAirplaneUpdate" type="c:CBS_SelectedAirplaneUpdate"/>
     <div onclick="{!c.airplaneSelected}" class="slds-m-bottom--medium">
         <div class="slds-grid">
-            <h3 class="slds-text-heading_small slds-m-bottom_xx-small" style="font-size: 20px;">Request showing in
-                hangar:&nbsp;{!v.airplane.airplane.Hangar__r.Name}</h3>
+            <h3 class="slds-text-heading_small slds-m-bottom_xx-small" style="font-size: 20px;">{!$Label.c.CBS_Request_showing_in_hangar}&nbsp;{!v.airplane.airplane.Hangar__r.Name}</h3>
         </div>
         <div class="slds-grid slds-wrap slds-gutters">
             <aura:if isTrue="{!v.airplane.promotionPricebookEntry}">
                 <div class="slds-col slds-size_1-of-2 slds-m-top--small">
-                <span class="slds-m-right_small slds-size--1-of-2">Promotion price:
+                <span class="slds-m-right_small slds-size--1-of-2">{!$Label.c.CBS_Promotion_price2}
                     &nbsp;<ui:outputCurrency value="{!v.airplane.promotionPricebookEntry.UnitPrice}" currencyCode="€"/></span>
                 </div>
                 <div class="slds-col slds-size_1-of-2 slds-m-top--small">
-                <span class="slds-m-right_small slds-size--1-of-2">Standard price:
+                <span class="slds-m-right_small slds-size--1-of-2">{!$Label.c.CBS_Standard_price2}
                     &nbsp;<s><ui:outputCurrency value="{!v.airplane.standardPricebookEntry.UnitPrice}"
                                                 currencyCode="€"/></s></span>
                 </div>
                 <div class="slds-col slds-size_1-of-2 slds-m-top--small">
-                <span class="slds-m-right_small slds-size--1-of-1">Promotion start date:
+                <span class="slds-m-right_small slds-size--1-of-1">{!$Label.c.CBS_Promotion_start_date2}
                     &nbsp;<ui:outputDate value="{!v.airplane.promotionPricebookEntry.Pricebook2.Promotion_start__c}" format="dd/MM/yyyy"/></span>
                 </div>
                 <div class="slds-col slds-size_1-of-2 slds-m-top--small">
-                <span class="slds-m-right_small slds-size--1-of-1">Promotion end date:
+                <span class="slds-m-right_small slds-size--1-of-1">{!$Label.c.CBS_Promotion_end_date2}
                     &nbsp;<ui:outputDate value="{!v.airplane.promotionPricebookEntry.Pricebook2.Promotion_end__c}" format="dd/MM/yyyy"/></span>
                 </div>
             </aura:if>
             <aura:if isTrue="{! !v.airplane.promotionPricebookEntry}">
                 <div class="slds-col slds-size_1-of-1 slds-m-top--small">
-                <span class="slds-m-right_small slds-size--1-of-2">Price:
+                <span class="slds-m-right_small slds-size--1-of-2">{!$Label.c.CBS_Price2}
                     &nbsp;<ui:outputCurrency value="{!v.airplane.standardPricebookEntry.UnitPrice}"
                                              currencyCode="€"/></span>
                 </div>

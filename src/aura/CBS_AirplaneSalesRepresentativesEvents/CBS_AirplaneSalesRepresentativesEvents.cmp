@@ -4,9 +4,9 @@
     <aura:attribute name="upcomingEvents" type="List" default="[]"/>
     <aura:attribute name="searched" type="Boolean" default="false"/>
     <aura:attribute name="currentList" type="List"/>
-    <aura:attribute type="Integer" name="pageNumber" default="1"/>
-    <aura:attribute type="Integer" name="maxPage" default="1"/>
-    <aura:attribute type="Integer" name="repEventsPerPage"/>
+    <aura:attribute name="pageNumber" type="Integer" default="1"/>
+    <aura:attribute name="maxPage" type="Integer" default="1"/>
+    <aura:attribute name="repEventsPerPage" type="Integer"/>
     <aura:handler name="change" value="{!v.pageNumber}" action="{!c.renderPage}"/>
     <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
     <aura:handler event="c:CBS_AirplaneEventsSearched" action="{!c.onEventsSearched}"/>

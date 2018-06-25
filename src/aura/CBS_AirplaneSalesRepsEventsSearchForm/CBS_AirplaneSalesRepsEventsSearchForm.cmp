@@ -17,14 +17,14 @@
             <lightning:layoutItem class="slds-m-right_small">
                 <lightning:select label="{!$Label.c.CBS_Sales_representative}" value="{!v.event.OwnerId}">
                     <aura:iteration items="{!v.salesReps}" var="salesRep">
-                        <option value="{!salesRep.Id}">{!salesRep.Name}</option>
+                        <option value="{!salesRep.Id}">{!salesRep.FirstName}&nbsp;{!salesRep.LastName}</option>
                     </aura:iteration>
                 </lightning:select>
             </lightning:layoutItem>
             <lightning:layoutItem class="slds-m-right_small">
                 <lightning:select label="{!$Label.c.CBS_Event_with}" value="{!v.event.WhoId}">
                     <aura:iteration items="{!v.eContacts}" var="eContact">
-                        <option value="{!eContact.Id}">{!eContact.Name}</option>
+                        <option value="{!eContact.Id}">{!eContact.FirstName}&nbsp;{!eContact.LastName}</option>
                     </aura:iteration>
                 </lightning:select>
             </lightning:layoutItem>

@@ -5,102 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffb7f8dc-528c-4a66-b294-4414ce6fa1bc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneAddPromotionToDeleteList/CBS_AirplaneAddPromotionToDeleteList.evt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneAddPromotionToDeleteList/CBS_AirplaneAddPromotionToDeleteList.evt-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneAddShowingEvent/CBS_AirplaneAddShowingEvent.evt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneAddShowingEvent/CBS_AirplaneAddShowingEvent.evt-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotions.cmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotions.cmp-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotions.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotionsController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotionsHelper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotionsTile/CBS_AirplaneCreatePromotionsTile.cmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotionsTile/CBS_AirplaneCreatePromotionsTile.cmp-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotionsTile/CBS_AirplaneCreatePromotionsTile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotionsTile/CBS_AirplaneCreatePromotionsTileController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotionsTile/CBS_AirplaneCreatePromotionsTileHelper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneEventsCleared/CBS_AirplaneEventsCleared.evt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneEventsCleared/CBS_AirplaneEventsCleared.evt-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneEventsSearched/CBS_AirplaneEventsSearched.evt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneEventsSearched/CBS_AirplaneEventsSearched.evt-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplanePromotionCreated/CBS_AirplanePromotionCreated.evt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplanePromotionCreated/CBS_AirplanePromotionCreated.evt-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplanePromotionsRow/CBS_AirplanePromotionsRow.cmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplanePromotionsRow/CBS_AirplanePromotionsRow.cmp-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplanePromotionsRow/CBS_AirplanePromotionsRowController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplanePrototypeItem/CBS_AirplanePrototypeItem.cmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplanePrototypeItem/CBS_AirplanePrototypeItem.cmp-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplanePrototypeItem/CBS_AirplanePrototypeItem.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplanePrototypeItem/CBS_AirplanePrototypeItemController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepresentativesEvents/CBS_AirplaneSalesRepresentativesEvents.cmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepresentativesEvents/CBS_AirplaneSalesRepresentativesEvents.cmp-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepresentativesEvents/CBS_AirplaneSalesRepresentativesEvents.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepresentativesEvents/CBS_AirplaneSalesRepresentativesEventsController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepresentativesEvents/CBS_AirplaneSalesRepresentativesEventsHelper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepsEventsSearchForm/CBS_AirplaneSalesRepsEventsSearchForm.cmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepsEventsSearchForm/CBS_AirplaneSalesRepsEventsSearchForm.cmp-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepsEventsSearchForm/CBS_AirplaneSalesRepsEventsSearchFormController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepsEventsSearchForm/CBS_AirplaneSalesRepsEventsSearchFormHelper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneSearchResults/CBS_AirplaneSearchResultsHelper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingModal/CBS_AirplaneShowingModal.cmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingModal/CBS_AirplaneShowingModal.cmp-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingModal/CBS_AirplaneShowingModal.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingModal/CBS_AirplaneShowingModalController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingModal/CBS_AirplaneShowingModalHelper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingModalCloseEvent/CBS_AirplaneShowingModalCloseEvent.evt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingModalCloseEvent/CBS_AirplaneShowingModalCloseEvent.evt-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingRemoveFromList/CBS_AirplaneShowingRemoveFromList.evt-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingRemovedFromList/CBS_AirplaneShowingRemovedFromList.evt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingRemovedFromList/CBS_AirplaneShowingRemovedFromList.evt-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsAddedEvent/CBS_AirplaneShowingsAddedEvent.evt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsAddedEvent/CBS_AirplaneShowingsAddedEvent.evt-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCart/CBS_AirplaneShowingsCart.cmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCart/CBS_AirplaneShowingsCart.cmp-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCart/CBS_AirplaneShowingsCartController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCart/CBS_AirplaneShowingsCartHelper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCartRow/CBS_AirplaneShowingsCartRow.cmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCartRow/CBS_AirplaneShowingsCartRow.cmp-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCartRow/CBS_AirplaneShowingsCartRowController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneUpcomingShowings/CBS_AirplaneUpcomingShowings.cmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneUpcomingShowings/CBS_AirplaneUpcomingShowings.cmp-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneUpcomingShowings/CBS_AirplaneUpcomingShowingsController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneUpcomingShowingsRow/CBS_AirplaneUpcomingShowingsRow.cmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneUpcomingShowingsRow/CBS_AirplaneUpcomingShowingsRow.cmp-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneUpcomingShowingsRow/CBS_AirplaneUpcomingShowingsRowController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_Pagination/CBS_Pagination.cmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_Pagination/CBS_Pagination.cmp-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_Pagination/CBS_Pagination.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_Pagination/CBS_PaginationController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_SelectedAirplaneUpdate/CBS_SelectedAirplaneUpdate.evt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/CBS_SelectedAirplaneUpdate/CBS_SelectedAirplaneUpdate.evt-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/CBS_AirplaneCreatePromotionsController.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/CBS_AirplaneCreatePromotionsController.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/CBS_AirplaneSalesEventsController.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/CBS_AirplaneSalesEventsController.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/CBS_AirplaneShowingsController.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/CBS_AirplaneShowingsController.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/triggers/CBS_AirplaneOpportunityEvent.trigger" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/triggers/CBS_AirplaneOpportunityEvent.trigger-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/aura/CBS_ContactCustomerSupportForm/CBS_ContactCustomerSupportForm.cmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/aura/CBS_ContactCustomerSupportForm/CBS_ContactCustomerSupportForm.cmp-meta.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cloudbus.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Cloudbus.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlluminatedCloud/Developer_Edition/OfflineSymbolTable.zip" beforeDir="false" afterPath="$PROJECT_DIR$/IlluminatedCloud/Developer_Edition/OfflineSymbolTable.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneNewEditDialog/CBS_AirplaneNewEditDialog.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneNewEditDialog/CBS_AirplaneNewEditDialog.cmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneNewEditDialog/CBS_AirplaneNewEditDialogController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneNewEditDialog/CBS_AirplaneNewEditDialogController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplanePageHeader/CBS_AirplanePageHeader.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplanePageHeader/CBS_AirplanePageHeader.cmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplanePageHeader/CBS_AirplanePageHeaderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplanePageHeader/CBS_AirplanePageHeaderController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplanePicturesGallery/CBS_AirplanePicturesGallery.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplanePicturesGallery/CBS_AirplanePicturesGallery.cmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplanePicturesGallery/CBS_AirplanePicturesGalleryController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplanePicturesGallery/CBS_AirplanePicturesGalleryController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneSearchForm/CBS_AirplaneSearchForm.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneSearchForm/CBS_AirplaneSearchForm.cmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneSearchForm/CBS_AirplaneSearchFormController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneSearchForm/CBS_AirplaneSearchFormController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneSearchResults/CBS_AirplaneSearchResults.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneSearchResults/CBS_AirplaneSearchResults.cmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneSearchResults/CBS_AirplaneSearchResults.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneSearchResults/CBS_AirplaneSearchResults.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneSearchResults/CBS_AirplaneSearchResultsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneSearchResults/CBS_AirplaneSearchResultsController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplanesDatatable/CBS_AirplanesDatatable.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplanesDatatable/CBS_AirplanesDatatable.cmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/DynamicTable/DynamicTable.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/DynamicTable/DynamicTable.cmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotions.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotions.cmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotions.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotions.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotionsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotionsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotionsHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotionsHelper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotionsTile/CBS_AirplaneCreatePromotionsTile.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotionsTile/CBS_AirplaneCreatePromotionsTile.cmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotionsTile/CBS_AirplaneCreatePromotionsTileController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotionsTile/CBS_AirplaneCreatePromotionsTileController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotionsTile/CBS_AirplaneCreatePromotionsTileHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotionsTile/CBS_AirplaneCreatePromotionsTileHelper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplanePromotionsRow/CBS_AirplanePromotionsRow.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplanePromotionsRow/CBS_AirplanePromotionsRow.cmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplanePrototypeItem/CBS_AirplanePrototypeItem.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplanePrototypeItem/CBS_AirplanePrototypeItem.cmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplanePrototypeItem/CBS_AirplanePrototypeItemController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplanePrototypeItem/CBS_AirplanePrototypeItemController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepresentativesEvents/CBS_AirplaneSalesRepresentativesEvents.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepresentativesEvents/CBS_AirplaneSalesRepresentativesEvents.cmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepsEventsSearchForm/CBS_AirplaneSalesRepsEventsSearchForm.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepsEventsSearchForm/CBS_AirplaneSalesRepsEventsSearchForm.cmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepsEventsSearchForm/CBS_AirplaneSalesRepsEventsSearchFormController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepsEventsSearchForm/CBS_AirplaneSalesRepsEventsSearchFormController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingModal/CBS_AirplaneShowingModal.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingModal/CBS_AirplaneShowingModal.cmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingModal/CBS_AirplaneShowingModalController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingModal/CBS_AirplaneShowingModalController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCart/CBS_AirplaneShowingsCart.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCart/CBS_AirplaneShowingsCart.cmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCart/CBS_AirplaneShowingsCartController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCart/CBS_AirplaneShowingsCartController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCartRow/CBS_AirplaneShowingsCartRow.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCartRow/CBS_AirplaneShowingsCartRow.cmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneUpcomingShowings/CBS_AirplaneUpcomingShowings.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneUpcomingShowings/CBS_AirplaneUpcomingShowings.cmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneUpcomingShowings/CBS_AirplaneUpcomingShowingsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneUpcomingShowings/CBS_AirplaneUpcomingShowingsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneUpcomingShowingsRow/CBS_AirplaneUpcomingShowingsRow.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneUpcomingShowingsRow/CBS_AirplaneUpcomingShowingsRow.cmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/CBS_AirplaneUpcomingShowingsRow/CBS_AirplaneUpcomingShowingsRowController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/CBS_AirplaneUpcomingShowingsRow/CBS_AirplaneUpcomingShowingsRowController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/classes/CBS_AirplaneController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/CBS_AirplaneController.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/CBS_CommunityRegistrationHandler.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/CBS_CommunityRegistrationHandler.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/CBS_AirplaneCreatePromotionsController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/CBS_AirplaneCreatePromotionsController.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/CBS_AirplaneSalesEventsController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/CBS_AirplaneSalesEventsController.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/CBS_AirplaneShowingsController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/CBS_AirplaneShowingsController.cls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/classes/CBS_Util.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/CBS_Util.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/triggers/CBS_UpdateContentDocumentLinkVisibilityOnInsert.trigger" beforeDir="false" afterPath="$PROJECT_DIR$/src/triggers/CBS_UpdateContentDocumentLinkVisibilityOnInsert.trigger" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/triggers/CBS_AirplaneOpportunityEvent.trigger" beforeDir="false" afterPath="$PROJECT_DIR$/src/triggers/CBS_AirplaneOpportunityEvent.trigger" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/triggers/CBS_AirplaneTypePriceUpdated.trigger" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/triggers/CBS_AirplaneTypePriceUpdated.trigger-meta.xml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -114,39 +52,33 @@
     <SUITE FILE_PATH="coverage/Cloudbus$ViewSurveyController_Test.null" NAME="Developer Edition Coverage Results" MODIFIED="1529269160448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Cloudbus" CONNECTION_NAME="Developer Edition" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file leaf-file-name="CBS_AirplaneOpportunityEvent.trigger" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/triggers/CBS_AirplaneOpportunityEvent.trigger">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="121" column="28" selection-start-line="121" selection-start-column="28" selection-end-line="121" selection-end-column="28" />
+            <state relative-caret-position="1700">
+              <caret line="85" column="5" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
               <folding>
-                <element signature="e#475#483#0" expanded="true" />
-                <element signature="e#1363#1380#0" expanded="true" />
-                <element signature="e#1964#1980#0" expanded="true" />
-                <element signature="e#3366#3387#0" expanded="true" />
+                <element signature="e#99#107#0" expanded="true" />
+                <element signature="e#1255#1279#0" expanded="true" />
+                <element signature="e#1996#2012#0" expanded="true" />
+                <element signature="e#2056#2064#0" expanded="true" />
+                <element signature="e#2537#2545#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CBS_Util.cls" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/classes/CBS_Util.cls">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="754">
-              <caret line="76" column="5" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
-            </state>
-          </provider>
+      <file leaf-file-name="CBS_AirplaneShowingsCartHelper.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCart/CBS_AirplaneShowingsCartHelper.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="CBS_AirplaneController.cls" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/classes/CBS_AirplaneController.cls">
+      <file leaf-file-name="CBS_AirplaneShowingsCartController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCart/CBS_AirplaneShowingsCartController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="66" column="59" lean-forward="true" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="59" />
-              <folding>
-                <element signature="e#4363#4379#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="114">
+              <caret line="46" column="55" lean-forward="true" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="85" />
             </state>
           </provider>
         </entry>
@@ -154,8 +86,54 @@
       <file leaf-file-name="CBS_AirplaneShowingsController.cls" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/classes/CBS_AirplaneShowingsController.cls">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="67" column="70" lean-forward="true" selection-start-line="67" selection-start-column="70" selection-end-line="67" selection-end-column="70" />
+            <state relative-caret-position="393">
+              <caret line="48" column="20" lean-forward="true" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+              <folding>
+                <element signature="e#505#513#0" expanded="true" />
+                <element signature="e#858#882#0" expanded="true" />
+                <element signature="e#1496#1544#0" expanded="true" />
+                <element signature="e#2069#2082#0" expanded="true" />
+                <element signature="e#2743#2756#0" expanded="true" />
+                <element signature="e#2861#2905#0" expanded="true" />
+                <element signature="e#3867#3874#0" expanded="true" />
+                <element signature="e#11060#11076#0" expanded="true" />
+                <element signature="e#11406#11413#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CBS_ContactCustomerSupportForm.cmp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/aura/CBS_ContactCustomerSupportForm/CBS_ContactCustomerSupportForm.cmp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="CBS_Util.cls" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/classes/CBS_Util.cls">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="76" column="12" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CBS_AirplaneController.cls" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/classes/CBS_AirplaneController.cls">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="52" selection-start-line="52" selection-end-line="53" />
+              <folding>
+                <element signature="e#5390#5414#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CBS_AirplaneShowingModalController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneShowingModal/CBS_AirplaneShowingModalController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -163,8 +141,8 @@
       <file leaf-file-name="CBS_AirplaneShowingModal.cmp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneShowingModal/CBS_AirplaneShowingModal.cmp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-360">
-              <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+            <state relative-caret-position="660">
+              <caret line="33" column="53" lean-forward="true" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -172,26 +150,8 @@
       <file leaf-file-name="CBS_AirplanePrototypeItem.cmp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplanePrototypeItem/CBS_AirplanePrototypeItem.cmp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CBS_AirplanePrototypeItemController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplanePrototypeItem/CBS_AirplanePrototypeItemController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="3" column="56" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CBS_AirplaneShowingModalController.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneShowingModal/CBS_AirplaneShowingModalController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="79" column="95" selection-start-line="79" selection-start-column="95" selection-end-line="79" selection-end-column="95" />
+            <state relative-caret-position="20">
+              <caret line="1" column="51" lean-forward="true" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -208,47 +168,47 @@
         <option value="Apex Trigger" />
         <option value="Apex Class" />
         <option value="Lightning Application Event" />
-        <option value="Lightning Component" />
         <option value="Lightning Style" />
         <option value="Lightning Controller" />
         <option value="Lightning Component Event" />
-        <option value="Apex Metadata" />
         <option value="Lightning Helper" />
+        <option value="Lightning Component" />
+        <option value="Apex Metadata" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pBE</find>
-      <find>Show</find>
-      <find>JSON.deserialize</find>
-      <find>Price after</find>
-      <find>calculatedDiscountPrice</find>
-      <find>Price a</find>
-      <find>discount</find>
-      <find>Man</find>
-      <find>Set</find>
-      <find>Set one</find>
-      <find>CBS_</find>
-      <find>You</find>
-      <find>D</find>
-      <find>fDate</find>
-      <find>tDate</find>
-      <find>orders</find>
-      <find>createEv</find>
-      <find>order</find>
-      <find>getSales</find>
-      <find>getReps</find>
-      <find>Subject</find>
-      <find>onApp</find>
-      <find>AirplaneEventsApply</find>
-      <find>sortField</find>
       <find>sortAsc</find>
       <find>EventWrap</find>
       <find>background-i</find>
       <find>from</find>
       <find>Pricebook</find>
       <find>putShowin</find>
+      <find>wrapper</find>
+      <find>promotionPri</find>
+      <find>pricebookEntries</find>
+      <find>manageView</find>
+      <find>view</find>
+      <find>planeId</find>
+      <find>showingEvent</find>
+      <find>cachedUserShowings</find>
+      <find>diffTime</find>
+      <find>addC</find>
+      <find>promotionsList</find>
+      <find>airplanes</find>
+      <find>product2Ids</find>
+      <find>lowestPrices</find>
+      <find>getProto</find>
+      <find>getProt</find>
+      <find>standardPricebookEntry</find>
+      <find>serializeEvent</find>
+      <find>throw new</find>
+      <find>Integer</find>
+      <find>Lab</find>
+      <find>airplaneId</find>
+      <find>rrHttp2</find>
+      <find>Http</find>
     </findStrings>
     <replaceStrings>
       <replace>contactListItem</replace>
@@ -271,6 +231,10 @@
       <replace>CBS_AirplaneShowingRemovedFromList</replace>
       <replace>startDate</replace>
       <replace>endDate</replace>
+      <replace>upcomingShowing</replace>
+      <replace>upcomingShowings</replace>
+      <replace>tShowing</replace>
+      <replace>showings</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\BRITENET\Desktop\Cloudbus\src\aura</dir>
@@ -283,15 +247,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCartRow/CBS_AirplaneShowingsCartRowController.js" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCart/CBS_AirplaneShowingsCartHelper.js" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCart/CBS_AirplaneShowingsCart.cmp" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCartRow/CBS_AirplaneShowingsCartRow.cmp" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCart/CBS_AirplaneShowingsCartController.js" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneUpcomingShowingsRow/CBS_AirplaneUpcomingShowingsRow.cmp" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneUpcomingShowings/CBS_AirplaneUpcomingShowingsController.js" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneSearchForm/CBS_AirplaneSearchForm.cmp" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneSearchForm/CBS_AirplaneSearchFormController.js" />
         <option value="$PROJECT_DIR$/src/triggers/CBS_UpdateContentDocumentLinkVisibilityOnInsert.trigger" />
         <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneFiterDate/CBS_AirplaneFiterDateController.js" />
         <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepsEvents/CBS_AirplaneSalesRepsEvents.cmp" />
@@ -304,36 +259,45 @@
         <option value="$PROJECT_DIR$/src/aura/CBS_Pagination/CBS_Pagination.css" />
         <option value="$PROJECT_DIR$/src/aura/CBS_AirplanePromotionCreated/CBS_AirplanePromotionCreated.evt" />
         <option value="$PROJECT_DIR$/src/aura/CBS_AirplanePrototypeItem/CBS_AirplanePrototypeItem.css" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_AirplanePrototypeItem/CBS_AirplanePrototypeItem.cmp" />
         <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotionsTile/CBS_AirplaneCreatePromotionsTile.css" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotionsTile/CBS_AirplaneCreatePromotionsTileHelper.js" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotionsHelper.js" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotionsController.js" />
-        <option value="$PROJECT_DIR$/src/classes/CBS_AirplaneController.cls" />
         <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneSearchResults/CBS_AirplaneSearchResults.cmp" />
         <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneAddPromotionToDeleteList/CBS_AirplaneAddPromotionToDeleteList.evt" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_AirplanePromotionsRow/CBS_AirplanePromotionsRow.cmp" />
         <option value="$PROJECT_DIR$/src/aura/CBS_AirplanePromotionsRow/CBS_AirplanePromotionsRowController.js" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotionsTile/CBS_AirplaneCreatePromotionsTileController.js" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotionsTile/CBS_AirplaneCreatePromotionsTile.cmp" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotions.css" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotions.cmp" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepsEventsSearchForm/CBS_AirplaneSalesRepsEventsSearchForm.cmp" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepsEventsSearchForm/CBS_AirplaneSalesRepsEventsSearchFormController.js" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_Pagination/CBS_PaginationController.js" />
         <option value="$PROJECT_DIR$/src/aura/CBS_Pagination/CBS_Pagination.cmp" />
         <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepresentativesEvents/CBS_AirplaneSalesRepresentativesEvents.css" />
         <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepsEventsSearchForm/CBS_AirplaneSalesRepsEventsSearchFormHelper.js" />
-        <option value="$PROJECT_DIR$/src/classes/CBS_AirplaneSalesEventsController.cls" />
         <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepresentativesEvents/CBS_AirplaneSalesRepresentativesEventsHelper.js" />
-        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepresentativesEvents/CBS_AirplaneSalesRepresentativesEvents.cmp" />
         <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepresentativesEvents/CBS_AirplaneSalesRepresentativesEventsController.js" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepresentativesEvents/CBS_AirplaneSalesRepresentativesEvents.cmp" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_Pagination/CBS_PaginationController.js" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepsEventsSearchForm/CBS_AirplaneSalesRepsEventsSearchFormController.js" />
+        <option value="$PROJECT_DIR$/src/classes/CBS_AirplaneSalesEventsController.cls" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_AirplanePromotionsRow/CBS_AirplanePromotionsRow.cmp" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepsEventsSearchForm/CBS_AirplaneSalesRepsEventsSearchForm.cmp" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotionsTile/CBS_AirplaneCreatePromotionsTile.cmp" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotionsTile/CBS_AirplaneCreatePromotionsTileHelper.js" />
         <option value="$PROJECT_DIR$/src/classes/CBS_AirplaneCreatePromotionsController.cls" />
-        <option value="$PROJECT_DIR$/src/classes/CBS_Util.cls" />
-        <option value="$PROJECT_DIR$/src/triggers/CBS_AirplaneOpportunityEvent.trigger" />
-        <option value="$PROJECT_DIR$/src/classes/CBS_AirplaneShowingsController.cls" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotions.css" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotionsHelper.js" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotions.cmp" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotionsTile/CBS_AirplaneCreatePromotionsTileController.js" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotionsController.js" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_AirplanePrototypeItem/CBS_AirplanePrototypeItem.cmp" />
         <option value="$PROJECT_DIR$/src/aura/CBS_AirplanePrototypeItem/CBS_AirplanePrototypeItemController.js" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneUpcomingShowings/CBS_AirplaneUpcomingShowingsController.js" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneUpcomingShowingsRow/CBS_AirplaneUpcomingShowingsRowController.js" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneUpcomingShowingsRow/CBS_AirplaneUpcomingShowingsRow.cmp" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneUpcomingShowings/CBS_AirplaneUpcomingShowings.cmp" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCartRow/CBS_AirplaneShowingsCartRow.cmp" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCart/CBS_AirplaneShowingsCart.cmp" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCart/CBS_AirplaneShowingsCartController.js" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingModal/CBS_AirplaneShowingModal.cmp" />
         <option value="$PROJECT_DIR$/src/aura/CBS_AirplaneShowingModal/CBS_AirplaneShowingModalController.js" />
+        <option value="$PROJECT_DIR$/src/classes/CBS_AirplaneController.cls" />
+        <option value="$PROJECT_DIR$/src/triggers/CBS_AirplaneOpportunityEvent.trigger" />
+        <option value="$PROJECT_DIR$/src/classes/CBS_Util.cls" />
+        <option value="$PROJECT_DIR$/src/classes/CBS_AirplaneShowingsController.cls" />
+        <option value="$PROJECT_DIR$/src/aura/CBS_ContactCustomerSupportForm/CBS_ContactCustomerSupportForm.cmp" />
       </list>
     </option>
   </component>
@@ -343,7 +307,7 @@
         <entry key="Cloudbus">
           <value>
             <ModuleWorkspaceSettings>
-              <option name="moduleContentsLastModified" value="1529657252361" />
+              <option name="moduleContentsLastModified" value="1529917105569" />
             </ModuleWorkspaceSettings>
           </value>
         </entry>
@@ -353,7 +317,7 @@
       <ProjectWorkspaceSettings>
         <option name="anonymousApexSettings">
           <AnonymousApexSettings>
-            <option name="documentText" value="List&lt;Pricebook2&gt; pricebook2s = [SELECT Id FROM Pricebook2 WHERE Name LIKE 'todelete%'];&#10;System.debug(pricebook2s.size());&#10;&#10;delete pricebook2s;&#10;&#10;Date d2;&#10;Date d1 = d2 = System.today();&#10;&#10;List&lt;Object&gt; objList = new List&lt;Object&gt;();&#10;objList.add('AAAAA');&#10;objList.add(false);&#10;objList.add('');&#10;objList.add(d2);&#10;&#10;System.debug(CBS_Util.checkIfValueEqualsArguments(d1, objList));&#10;&#10;String a = 'AAA';&#10;CBS_Util.passByTest(a);&#10;System.debug(a);&#10;&#10;CBS_Util.buildQueryWithString('OwnerId', '012aaa', false, 'LIKE');&#10;&#10;&#10;&#10;&#10;&#10;" />
+            <option name="documentText" value="List&lt;Pricebook2&gt; pricebook2s = [SELECT Id FROM Pricebook2 WHERE Name LIKE 'todelete%'];&#10;System.debug(pricebook2s.size());&#10;&#10;delete pricebook2s;&#10;&#10;Date d2;&#10;Date d1 = d2 = System.today();&#10;&#10;List&lt;Object&gt; objList = new List&lt;Object&gt;();&#10;objList.add('AAAAA');&#10;objList.add(false);&#10;objList.add('');&#10;objList.add(d2);&#10;&#10;System.debug(CBS_Util.checkIfValueEqualsArguments(d1, objList));&#10;&#10;String a = 'AAA';&#10;CBS_Util.passByTest(a);&#10;System.debug(a);&#10;&#10;CBS_Util.buildQueryWithString('OwnerId', '012aaa', false, 'LIKE');&#10;&#10;&#10;Map&lt;String, String&gt; a = new Map&lt;String, String&gt;();&#10;System.debug(a.get('a'));&#10;&#10;List&lt;PricebookEntry&gt; pbe = [SELECT Id, UnitPrice, Product2Id, Product2.Airplane_Type__c FROM PricebookEntry WHERE Pricebook2.Promotion_start__c &lt;= :System.today() AND Pricebook2.Promotion_end__c &gt;= :System.today() ORDER BY UnitPrice];&#10;&#10;for (PricebookEntry entry : pbe) {&#10;    System.debug('Unit price = ' + entry.UnitPrice + ', p2Id = ' + entry.Product2Id + ', ' + entry.Product2.Airplane_Type__c);&#10;}&#10;&#10;&#10;" />
             <option name="splitterProportion" value="0.35919696" />
           </AnonymousApexSettings>
         </option>
@@ -367,8 +331,8 @@
                       <entry key="AURA/CBS_AIRPLANEADDPROMOTIONTODELETELIST" value="1529493808000" />
                       <entry key="AURA/CBS_AIRPLANEADDSHOWINGEVENT" value="1528361950000" />
                       <entry key="AURA/CBS_AIRPLANECLEARSEARCH" value="1527593053000" />
-                      <entry key="AURA/CBS_AIRPLANECREATEPROMOTIONS" value="1529563896258" />
-                      <entry key="AURA/CBS_AIRPLANECREATEPROMOTIONSTILE" value="1529563080886" />
+                      <entry key="AURA/CBS_AIRPLANECREATEPROMOTIONS" value="1529872627695" />
+                      <entry key="AURA/CBS_AIRPLANECREATEPROMOTIONSTILE" value="1529872577000" />
                       <entry key="AURA/CBS_AIRPLANEDELETEEVENT" value="1527543185635" />
                       <entry key="AURA/CBS_AIRPLANEEDITED" value="1527508262000" />
                       <entry key="AURA/CBS_AIRPLANEEVENTSCLEARED" value="1529313368000" />
@@ -377,27 +341,28 @@
                       <entry key="AURA/CBS_AIRPLANEPAGEHEADER" value="1529070457482" />
                       <entry key="AURA/CBS_AIRPLANEPICTURESGALLERY" value="1528312715000" />
                       <entry key="AURA/CBS_AIRPLANEPROMOTIONCREATED" value="1529392593000" />
-                      <entry key="AURA/CBS_AIRPLANEPROMOTIONSROW" value="1529494113000" />
-                      <entry key="AURA/CBS_AIRPLANEPROTOTYPEITEM" value="1529668408611" />
-                      <entry key="AURA/CBS_AIRPLANESALESREPRESENTATIVESEVENTS" value="1529662234399" />
-                      <entry key="AURA/CBS_AIRPLANESALESREPSEVENTSSEARCHFORM" value="1529659654373" />
+                      <entry key="AURA/CBS_AIRPLANEPROMOTIONSROW" value="1529859702025" />
+                      <entry key="AURA/CBS_AIRPLANEPROTOTYPEITEM" value="1529873320527" />
+                      <entry key="AURA/CBS_AIRPLANESALESREPRESENTATIVESEVENTS" value="1529674681000" />
+                      <entry key="AURA/CBS_AIRPLANESALESREPSEVENTSSEARCHFORM" value="1529860705850" />
                       <entry key="AURA/CBS_AIRPLANESAVEDEVENT" value="1527845205000" />
                       <entry key="AURA/CBS_AIRPLANESAVEEVENT" value="1527844668000" />
                       <entry key="AURA/CBS_AIRPLANESDATATABLE" value="1529069733716" />
                       <entry key="AURA/CBS_AIRPLANESEARCHEDEVENT" value="1527511434000" />
                       <entry key="AURA/CBS_AIRPLANESEARCHFORM" value="1529070083459" />
                       <entry key="AURA/CBS_AIRPLANESEARCHRESULTS" value="1529493022007" />
-                      <entry key="AURA/CBS_AIRPLANESHOWINGMODAL" value="1529668584098" />
+                      <entry key="AURA/CBS_AIRPLANESHOWINGMODAL" value="1529877058401" />
                       <entry key="AURA/CBS_AIRPLANESHOWINGMODALCLOSEEVENT" value="1528670662000" />
                       <entry key="AURA/CBS_AIRPLANESHOWINGREMOVEDFROMLIST" value="1529067996163" />
                       <entry key="AURA/CBS_AIRPLANESHOWINGREMOVEFROMLIST" value="1529068007000" />
                       <entry key="AURA/CBS_AIRPLANESHOWINGSADDEDEVENT" value="1528459468000" />
-                      <entry key="AURA/CBS_AIRPLANESHOWINGSCART" value="1529069624695" />
-                      <entry key="AURA/CBS_AIRPLANESHOWINGSCARTROW" value="1529069141087" />
-                      <entry key="AURA/CBS_AIRPLANEUPCOMINGSHOWINGS" value="1529069979013" />
-                      <entry key="AURA/CBS_AIRPLANEUPCOMINGSHOWINGSROW" value="1529069845388" />
+                      <entry key="AURA/CBS_AIRPLANESHOWINGSCART" value="1529875915368" />
+                      <entry key="AURA/CBS_AIRPLANESHOWINGSCARTROW" value="1529874997549" />
+                      <entry key="AURA/CBS_AIRPLANEUPCOMINGSHOWINGS" value="1529874582399" />
+                      <entry key="AURA/CBS_AIRPLANEUPCOMINGSHOWINGSROW" value="1529874222396" />
                       <entry key="AURA/CBS_CLEARAIRPLANESEARCH" value="1527245583000" />
                       <entry key="AURA/CBS_CLEARHANGARSEARCH" value="1526037525000" />
+                      <entry key="AURA/CBS_CONTACTCUSTOMERSUPPORTFORM" value="1529917111632" />
                       <entry key="AURA/CBS_CUSTOMCOMMUNITYNOSEARCH" value="1528185074601" />
                       <entry key="AURA/CBS_HANGARDETAILS" value="1526033662104" />
                       <entry key="AURA/CBS_HANGARFORM" value="1528794712379" />
@@ -412,20 +377,19 @@
                       <entry key="AURA/CBS_SETCOORDINATES" value="1525935016966" />
                       <entry key="AURA/CBS_SPINNER" value="1528885938810" />
                       <entry key="AURA/DYNAMICTABLE" value="1529067689393" />
-                      <entry key="CLASSES/CBS_AIRPLANECONTROLLER.CLS" value="1529491899737" />
-                      <entry key="CLASSES/CBS_AIRPLANECREATEPROMOTIONSCONTROLLER.CLS" value="1529663779422" />
-                      <entry key="CLASSES/CBS_AIRPLANESALESEVENTSCONTROLLER.CLS" value="1529661689349" />
-                      <entry key="CLASSES/CBS_AIRPLANESHOWINGSCONTROLLER.CLS" value="1529668071010" />
+                      <entry key="CLASSES/CBS_AIRPLANECONTROLLER.CLS" value="1529891569000" />
+                      <entry key="CLASSES/CBS_AIRPLANECREATEPROMOTIONSCONTROLLER.CLS" value="1529871433503" />
+                      <entry key="CLASSES/CBS_AIRPLANESALESEVENTSCONTROLLER.CLS" value="1529856676440" />
+                      <entry key="CLASSES/CBS_AIRPLANESHOWINGSCONTROLLER.CLS" value="1529914615927" />
                       <entry key="CLASSES/CBS_COMMUNITYREGISTRATIONHANDLER.CLS" value="1528287740000" />
                       <entry key="CLASSES/CBS_CUSTOMEXCEPTIONDATA.CLS" value="1527251422345" />
                       <entry key="CLASSES/CBS_HANGARCONTROLLER.CLS" value="1528044588858" />
                       <entry key="CLASSES/CBS_PICKLISTVALUESCONTROLLER.CLS" value="1526371487340" />
-                      <entry key="CLASSES/CBS_UTIL.CLS" value="1529666220396" />
+                      <entry key="CLASSES/CBS_UTIL.CLS" value="1529914207995" />
                       <entry key="CLASSES/DYNAMICTABLECONTROLLER.CLS" value="1527840915973" />
                       <entry key="CLASSES/VIEWSURVEYCONTROLLER.CLS" value="1526229062713" />
                       <entry key="PAGES/FCC_SHOPRANDOM.PAGE" value="1526456707848" />
-                      <entry key="TRIGGERS/CBS_AIRPLANEOPPORTUNITYEVENT.TRIGGER" value="1529667458749" />
-                      <entry key="TRIGGERS/CBS_AIRPLANETYPEPRICEUPDATED.TRIGGER" value="1529070141462" />
+                      <entry key="TRIGGERS/CBS_AIRPLANEOPPORTUNITYEVENT.TRIGGER" value="1529914149072" />
                       <entry key="TRIGGERS/CBS_UPDATECONTENTDOCUMENTLINKVISIBILITYONINSERT.TRIGGER" value="1529070132674" />
                     </map>
                   </option>
@@ -2555,8 +2519,8 @@
         <option name="retrieveAndMergeDefault" value="false" />
         <option name="soqlQuerySettings">
           <SoqlQuerySettings>
-            <option name="documentText" value="SELECT Id, Product2Id, UnitPrice FROM PricebookEntry WHERE Pricebook2.IsStandard = true&#10;&#10;SELECT Product2Id, UnitPrice, Pricebook2.IsStandard FROM PricebookEntry&#10;&#10;        SELECT Id, Pricebook2.Promotion_start__c, Pricebook2.Promotion_end__c, UnitPrice FROM PricebookEntry WHERE Pricebook2.IsStandard = true&#10;&#10;SELECT UnitPrice, Product2Id FROM PricebookEntry WHERE Pricebook2.IsStandard = true&#10;&#10;        SELECT Id, Description, Hangar__c, Hangar__r.Name, Airplane_Type__c, Airplane_Type__r.Name, WhoId, Who.Name, Owner.Name, OwnerId, ActivityDateTime FROM Event&#10;        WHERE OwnerId IN (SELECT Id FROM User WHERE Profile.Name = 'CBS_Sales') AND ActivityDateTime &gt; :System.now() ORDER BY ActivityDateTime LIMIT 6&#10;&#10;&#10;&#10;        SELECT Id, UnitPrice, Product2.Name FROM PricebookEntry WHERE Pricebook2.IsStandard = true&#10;&#10;&#10;        SELECT Sales_Representative__r.Name FROM CBS_Hangar__c&#10;" />
-            <option name="resultsSplitterProportion" value="0.4289855" />
+            <option name="documentText" value="SELECT Id, Product2Id, UnitPrice FROM PricebookEntry WHERE Pricebook2.IsStandard = true&#10;&#10;SELECT Product2Id, UnitPrice, Pricebook2.IsStandard FROM PricebookEntry&#10;&#10;        SELECT Id, Pricebook2.Promotion_start__c, Pricebook2.Promotion_end__c, UnitPrice FROM PricebookEntry WHERE Pricebook2.IsStandard = true&#10;&#10;SELECT UnitPrice, Product2Id FROM PricebookEntry WHERE Pricebook2.IsStandard = true&#10;&#10;        SELECT Id, Description, Hangar__c, Hangar__r.Name, Airplane_Type__c, Airplane_Type__r.Name, WhoId, Who.Name, Owner.Name, OwnerId, ActivityDateTime FROM Event&#10;        WHERE OwnerId IN (SELECT Id FROM User WHERE Profile.Name = 'CBS_Sales') AND ActivityDateTime &gt; :System.now() ORDER BY ActivityDateTime LIMIT 6&#10;&#10;&#10;&#10;        SELECT Id, UnitPrice, Product2.Name FROM PricebookEntry WHERE Pricebook2.IsStandard = true&#10;&#10;&#10;        SELECT Sales_Representative__r.Name FROM CBS_Hangar__c&#10;&#10;&#10;        SELECT Product2.Name, Id, UnitPrice, Product2Id, Product2.Airplane_Type__c FROM PricebookEntry ORDER BY UnitPrice GROUP BY Product2Id&#10;" />
+            <option name="resultsSplitterProportion" value="0.79646015" />
           </SoqlQuerySettings>
         </option>
       </ProjectWorkspaceSettings>
@@ -2569,10 +2533,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1696" />
-    <option name="height" value="1026" />
+    <option name="x" value="1912" />
+    <option name="y" value="-213" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectReloadState">
     <option name="STATE" value="1" />
@@ -2612,14 +2576,7 @@
               <item name="Cloudbus" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="aura" type="462c0819:PsiDirectoryNode" />
-              <item name="CBS_AirplanePrototypeItem" type="edc2aaaf:IlluminatedCloudProjectTreeStructureProvider$BundleDirectoryNode" />
-            </path>
-            <path>
-              <item name="Cloudbus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cloudbus" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="aura" type="462c0819:PsiDirectoryNode" />
-              <item name="CBS_AirplaneShowingModal" type="edc2aaaf:IlluminatedCloudProjectTreeStructureProvider$BundleDirectoryNode" />
+              <item name="CBS_ContactCustomerSupportForm" type="edc2aaaf:IlluminatedCloudProjectTreeStructureProvider$BundleDirectoryNode" />
             </path>
             <path>
               <item name="Cloudbus" type="b2602c69:ProjectViewProjectNode" />
@@ -2642,6 +2599,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/BRITENET/Desktop/Cloudbus/src/classes/CBS_AirplaneController.cls" />
+    <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../The Movie Universe" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -2767,7 +2725,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-213" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -2788,7 +2746,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3295838" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3297062" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23466666" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30826667" />
       <window_info anchor="bottom" id="Problems" order="13" weight="0.3297062" />
       <window_info anchor="bottom" id="SOQL Query" order="11" weight="0.42981502" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -2810,87 +2768,61 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCart/CBS_AirplaneShowingsCartController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-720" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCartRow/CBS_AirplaneShowingsCartRow.cmp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" selection-start-line="4" selection-end-line="30" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCart/CBS_AirplaneShowingsCart.cmp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="34" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneSearchForm/CBS_AirplaneSearchFormController.js">
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_Pagination/CBS_Pagination.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneSearchResults/CBS_AirplaneSearchResults.css">
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplanePicturesGallery/CBS_AirplanePicturesGallery.cmp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneSearchResults/CBS_AirplaneSearchResultsController.js">
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneNewEditDialog/CBS_AirplaneNewEditDialog.cmp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneShowingModal/CBS_AirplaneShowingModalHelper.js">
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepresentativesEvents/CBS_AirplaneSalesRepresentativesEvents.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepsEventsSearchForm/CBS_AirplaneSalesRepsEventsSearchFormHelper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="32" column="2" lean-forward="true" selection-start-line="32" selection-start-column="2" selection-end-line="32" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_Pagination/CBS_PaginationController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="2" lean-forward="true" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepresentativesEvents/CBS_AirplaneSalesRepresentativesEventsHelper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../kolokwiumAutomaty/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplanePrototypeItem/CBS_AirplanePrototypeItem.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotionsTile/CBS_AirplaneCreatePromotionsTile.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotionsHelper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotionsTile/CBS_AirplaneCreatePromotionsTileHelper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="23" selection-start-line="23" selection-end-line="39" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneSearchResults/CBS_AirplaneSearchResults.cmp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="50" column="108" lean-forward="true" selection-start-line="50" selection-start-column="108" selection-end-line="50" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotionsTile/CBS_AirplaneCreatePromotionsTileController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2420">
-          <caret line="121" column="91" selection-start-line="121" selection-start-column="91" selection-end-line="121" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplanePromotionsRow/CBS_AirplanePromotionsRow.cmp">
+    <entry file="file://$PROJECT_DIR$/../kolokwiumAutomaty/src/com/company/AutomatDoKawy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
-          <caret line="4" column="115" selection-start-line="4" selection-start-column="115" selection-end-line="4" selection-end-column="115" />
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarForm/CBS_HangarForm.cmp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="96" selection-start-line="14" selection-start-column="81" selection-end-line="14" selection-end-column="115" />
         </state>
       </provider>
     </entry>
@@ -2901,267 +2833,280 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneAddPromotionToDeleteList/CBS_AirplaneAddPromotionToDeleteList.evt">
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepresentativesEvents/CBS_AirplaneSalesRepresentativesEvents.cmp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
-          <caret line="1" column="38" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepsEvents/CBS_AirplaneSalesRepsEvents.cmp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepsEvents/CBS_AirplaneSalesRepsEventsController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-60">
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepsEvents/CBS_AirplaneSalesRepsEventsHelper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotions.cmp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="39" column="17" lean-forward="true" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#aura:if#0;n#lightning:card#0;n#aura:component#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#aura:if#0;n#lightning:card#0;n#aura:component#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/CBS_CommunityRegistrationHandler.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="58" lean-forward="true" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotions.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotionsController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="87" column="16" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotionsTile/CBS_AirplaneCreatePromotionsTile.cmp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="22" column="97" selection-start-line="22" selection-start-column="97" selection-end-line="22" selection-end-column="97" />
-          <folding>
-            <element signature="n#style#0;n#dd#2;n#div#0;n#div#0;n#aura:component#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#dd#0;n#aura:if#0;n#div#0;n#div#0;n#aura:component#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#aura:if#3;n#div#0;n#div#0;n#aura:component#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarForm/CBS_HangarForm.cmp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="115" selection-start-line="14" selection-start-column="81" selection-end-line="14" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_HangarForm/CBS_HangarFormController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="40" selection-start-line="40" selection-end-line="42" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneFiterDate/CBS_AirplaneFiterDateController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneFiterDate/CBS_AirplaneFiterDate.cmp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneEventsApplyFilterEvent/CBS_AirplaneEventsApplyFilterEvent.evt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="46" selection-start-column="46" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_Pagination/CBS_Pagination.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepsEventsSearchForm/CBS_AirplaneSalesRepsEventsSearchFormController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="27" selection-start-line="27" selection-end-line="28" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepsEventsSearchForm/CBS_AirplaneSalesRepsEventsSearchFormHelper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="25" column="51" lean-forward="true" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_Pagination/CBS_PaginationController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="79" selection-start-line="16" selection-start-column="79" selection-end-line="16" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_Pagination/CBS_Pagination.cmp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="63" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
+          <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepsEventsSearchForm/CBS_AirplaneSalesRepsEventsSearchForm.cmp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="14" column="82" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="82" />
+        <state relative-caret-position="94">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplanePicturesGallery/CBS_AirplanePicturesGallery.cmp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneNewEditDialog/CBS_AirplaneNewEditDialog.cmp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepresentativesEvents/CBS_AirplaneSalesRepresentativesEventsHelper.js">
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplanePromotionsRow/CBS_AirplanePromotionsRow.cmp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        <state relative-caret-position="660">
+          <caret line="33" column="89" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="89" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepresentativesEvents/CBS_AirplaneSalesRepresentativesEvents.cmp">
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepsEventsSearchForm/CBS_AirplaneSalesRepsEventsSearchFormController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        <state relative-caret-position="600">
+          <caret line="60" selection-start-line="60" selection-end-line="61" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepresentativesEvents/CBS_AirplaneSalesRepresentativesEventsController.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneSalesRepresentativesEvents/CBS_AirplaneSalesRepresentativesEvents.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        <state relative-caret-position="-126" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotionsTile/CBS_AirplaneCreatePromotionsTileHelper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="27" column="64" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/triggers/CBS_AirplaneOpportunityEvent.trigger">
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotionsTile/CBS_AirplaneCreatePromotionsTile.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="121" column="28" selection-start-line="121" selection-start-column="28" selection-end-line="121" selection-end-column="28" />
-          <folding>
-            <element signature="e#475#483#0" expanded="true" />
-            <element signature="e#1363#1380#0" expanded="true" />
-            <element signature="e#1964#1980#0" expanded="true" />
-            <element signature="e#3366#3387#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="40">
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/CBS_AirplaneShowingsController.cls">
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotionsTile/CBS_AirplaneCreatePromotionsTile.cmp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="67" column="70" lean-forward="true" selection-start-line="67" selection-start-column="70" selection-end-line="67" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/CBS_AirplaneSalesEventsController.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" column="104" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="104" />
-          <folding>
-            <element signature="e#314#320#0" expanded="true" />
-            <element signature="e#380#397#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/CBS_AirplaneController.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="66" column="59" lean-forward="true" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="59" />
-          <folding>
-            <element signature="e#4363#4379#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="420">
+          <caret line="21" column="84" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="84" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/classes/CBS_AirplaneCreatePromotionsController.cls">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="68" column="12" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="12" />
+        <state relative-caret-position="1000">
+          <caret line="159" column="1" lean-forward="true" selection-start-line="159" selection-start-column="1" selection-end-line="159" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/CBS_Util.cls">
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotionsHelper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="754">
-          <caret line="76" column="5" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+        <state relative-caret-position="620">
+          <caret line="31" column="20" lean-forward="true" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotionsTile/CBS_AirplaneCreatePromotionsTileController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="28" column="91" lean-forward="true" selection-start-line="28" selection-start-column="91" selection-end-line="28" selection-end-column="173" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplanesDatatable/CBS_AirplanesDatatable.cmp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotions.cmp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="66" selection-start-line="12" selection-start-column="66" selection-end-line="12" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotions.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneCreatePromotions/CBS_AirplaneCreatePromotionsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="854">
+          <caret line="85" column="57" selection-start-line="85" selection-start-column="57" selection-end-line="85" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplanePrototypeItem/CBS_AirplanePrototypeItem.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneUpcomingShowingsRow/CBS_AirplaneUpcomingShowingsRow.cmp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="61" selection-start-column="61" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/triggers/CBS_AirplaneTypePriceUpdated.trigger">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCartRow/CBS_AirplaneShowingsCartRowController.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCartRow/CBS_AirplaneShowingsCartRow.cmp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneSearchForm/CBS_AirplaneSearchFormController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="94" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplanePrototypeItem/CBS_AirplanePrototypeItemController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="3" column="56" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplanePrototypeItem/CBS_AirplanePrototypeItem.cmp">
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneUpcomingShowings/CBS_AirplaneUpcomingShowingsController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+        <state relative-caret-position="100">
+          <caret line="5" column="53" lean-forward="true" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneShowingModal/CBS_AirplaneShowingModal.cmp">
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneUpcomingShowingsRow/CBS_AirplaneUpcomingShowingsRowController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-360">
-          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+        <state relative-caret-position="20">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneUpcomingShowings/CBS_AirplaneUpcomingShowings.cmp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="38" lean-forward="true" selection-start-column="38" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_Pagination/CBS_Pagination.cmp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" selection-start-line="11" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCart/CBS_AirplaneShowingsCart.cmp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="740">
+          <caret line="37" column="70" lean-forward="true" selection-start-line="37" selection-start-column="70" selection-end-line="37" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneShowingModal/CBS_AirplaneShowingModalHelper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneShowingModal/CBS_AirplaneShowingModal.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/CBS_AirplaneSalesEventsController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1560">
+          <caret line="3" selection-start-line="3" selection-end-line="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneShowingModal/CBS_AirplaneShowingModalController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="79" column="95" selection-start-line="79" selection-start-column="95" selection-end-line="79" selection-end-column="95" />
+        <state relative-caret-position="80">
+          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneShowingModal/CBS_AirplaneShowingModal.cmp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="33" column="53" lean-forward="true" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplanePrototypeItem/CBS_AirplanePrototypeItem.cmp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="51" lean-forward="true" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/CBS_AirplaneController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="52" selection-start-line="52" selection-end-line="53" />
+          <folding>
+            <element signature="e#5390#5414#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCart/CBS_AirplaneShowingsCartHelper.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_AirplaneShowingsCart/CBS_AirplaneShowingsCartController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="46" column="55" lean-forward="true" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/triggers/CBS_AirplaneOpportunityEvent.trigger">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1700">
+          <caret line="85" column="5" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
+          <folding>
+            <element signature="e#99#107#0" expanded="true" />
+            <element signature="e#1255#1279#0" expanded="true" />
+            <element signature="e#1996#2012#0" expanded="true" />
+            <element signature="e#2056#2064#0" expanded="true" />
+            <element signature="e#2537#2545#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/CBS_Util.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="76" column="12" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/CBS_AirplaneShowingsController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="48" column="20" lean-forward="true" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+          <folding>
+            <element signature="e#505#513#0" expanded="true" />
+            <element signature="e#858#882#0" expanded="true" />
+            <element signature="e#1496#1544#0" expanded="true" />
+            <element signature="e#2069#2082#0" expanded="true" />
+            <element signature="e#2743#2756#0" expanded="true" />
+            <element signature="e#2861#2905#0" expanded="true" />
+            <element signature="e#3867#3874#0" expanded="true" />
+            <element signature="e#11060#11076#0" expanded="true" />
+            <element signature="e#11406#11413#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aura/CBS_ContactCustomerSupportForm/CBS_ContactCustomerSupportForm.cmp">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">

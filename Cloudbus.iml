@@ -1340,6 +1340,10 @@
                             <option name="name" value="CBS_AirplaneAddPromotionToDeleteList" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CBS_ContactCustomerSupportForm" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
                         </list>
                       </option>
                       <option name="name" value="AuraDefinitionBundle" />
@@ -3239,10 +3243,6 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="CBS_AirplaneOpportunityEvent" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="CBS_AirplaneTypePriceUpdated" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>

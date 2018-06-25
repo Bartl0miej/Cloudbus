@@ -11,17 +11,21 @@ public with sharing class CBS_Util {
         return '\'%' + param + '%\'';
     }
 
-    public static Boolean checkIfValueEqualsArguments(Object valueToCheck, List<Object> values) {
+    public static Boolean checkIfStringValueEqualsArguments(String valueToCheck, List<String> values) {
+        if (valueToCheck.contains('All')) {
+            return true;
+        }
+
         if (valueToCheck == null) {
-            for (Object obj : values) {
+            for (String obj : values) {
                 if (obj == null) {
                     return true;
                 }
             }
         }
 
-        for (Object obj : values) {
-            if (valueToCheck.equals(obj)) {
+        for (String obj : values) {
+            if (valueToCheck.equalsIgnoreCase(obj)) {
                 return true;
             }
         }
@@ -31,9 +35,9 @@ public with sharing class CBS_Util {
     public static String buildQueryWithLiteralString(String fieldToAdd, String fieldValue, Boolean hasFirstParam, String operator) {
         String toAdd;
 
-        toAdd =  hasFirstParam ? ' AND ' : ' WHERE ';
+        toAdd = hasFirstParam ? ' AND ' : ' WHERE ';
         toAdd += fieldToAdd + ' ' + operator + ' ';
-        toAdd += (operator == '=') ? + '\'' + fieldValue + '\'' : '\'%' + fieldValue + '%\'';
+        toAdd += (operator == '=') ? +'\'' + fieldValue + '\'' : '\'%' + fieldValue + '%\'';
 
         return toAdd;
     }
@@ -41,7 +45,7 @@ public with sharing class CBS_Util {
     public static String buildQueryWithVariable(String fieldToAdd, String variableString, Boolean hasFirstParam, String operator) {
         String toAdd;
 
-        toAdd =  hasFirstParam ? ' AND ' : ' WHERE ';
+        toAdd = hasFirstParam ? ' AND ' : ' WHERE ';
         toAdd += fieldToAdd + ' ' + operator + ' ';
         toAdd += ' :' + variableString;
 
@@ -57,8 +61,8 @@ public with sharing class CBS_Util {
         request.setHeader('Content-Type', 'text/xml;charset=UTF-8');
         request.setBody('<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:enterprise.soap.sforce.com">' +
                 '<soapenv:Header>' + '</soapenv:Header>' + '<soapenv:Body>' + '<urn:login>' +
-                '<urn:username>bartosz@britenet.com</urn:username>' +
-                '<urn:password>Grunwald1410TncjzIKk0C42JPT4FZQc5MvF</urn:password>' +
+                '<urn:username>' + CBS_Util.getCustomSettingValue('AdminUserName') + '</urn:username>' +
+                '<urn:password>' + CBS_Util.getCustomSettingValue('AdminPass') +  '</urn:password>' +
                 '</urn:login>' +
                 '</soapenv:Body>' +
                 '</soapenv:Envelope>');
@@ -70,9 +74,28 @@ public with sharing class CBS_Util {
             Dom.Xmlnode loginResponseElm = bodyElm.getChildElement('loginResponse', NS_SF);
             Dom.Xmlnode resultElm = loginResponseElm.getChildElement('result', NS_SF);
             Dom.Xmlnode sessionIdElm = resultElm.getChildElement('sessionId', NS_SF);
-            System.debug('session id = ' + sessionIdElm.getText());
             return sessionIdElm.getText();
         }
         return null;
+    }
+
+    public static HttpRequest setUpQueryRequest(String preparedQuery) {
+        HttpRequest request = new HttpRequest();
+        request.setEndpoint(CBS_Util.getCustomSettingValue('StandardQueryEndpoint') + preparedQuery);
+        request.setHeader('Authorization', 'OAuth ' + CBS_Util.login());
+        request.setMethod('GET');
+
+        return request;
+    }
+
+    public static HttpRequest setUpPostListRequest(String restBody) {
+        HttpRequest request = new HttpRequest();
+        request.setEndpoint(CBS_Util.getCustomSettingValue('RestPostEventsList'));
+        request.setHeader('Authorization', 'OAuth ' + CBS_Util.login());
+        request.setMethod('POST');
+        request.setHeader('Content-Type', 'application/json');
+        request.setBody(restBody);
+
+        return request;
     }
 }

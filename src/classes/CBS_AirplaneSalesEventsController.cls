@@ -2,39 +2,49 @@ public with sharing class CBS_AirplaneSalesEventsController {
     @AuraEnabled
     public static UsersContactsWrapper getSalesRepresentativesAndContacts() {
         Integer eventsPerPage = Integer.valueOf(CBS_Util.getCustomSettingValue('SalesRepresentativeEventsPerPage'));
-
         List<User> salesReps = new List<User>();
-        List<AggregateResult> showingEventsAR = new List<AggregateResult>();
+        List<Event> events =  [SELECT WhoId FROM Event WHERE Subject = 'Airplane Showing'];
+
         try {
-            salesReps = [SELECT Id, Name FROM User WHERE Profile.Name = 'CBS_Sales'];
-            showingEventsAR = [SELECT WhoId FROM Event WHERE Subject = 'Airplane Showing' GROUP BY WhoId];
+            salesReps = [SELECT Id, Name, FirstName, LastName FROM User WHERE Profile.Name = 'CBS_Sales'];
+            events = [SELECT WhoId FROM Event WHERE Subject = 'Airplane Showing'];
         } catch (Exception exc) {
             CBS_CustomExceptionData errData = new CBS_CustomExceptionData(exc.getTypeName(), exc.getMessage());
             throw new AuraHandledException(JSON.serialize(errData));
         }
 
         List<String> whoIds = new List<String>();
-        for (AggregateResult ar : showingEventsAR) {
-            whoIds.add((String) ar.get('WhoId'));
+        for (Event evt : events) {
+            whoIds.add(evt.WhoId);
         }
 
         List<Contact> contacts = new List<Contact>();
         try {
-            contacts = [SELECT Id, Name FROM Contact WHERE Id IN :whoIds];
+            contacts = [SELECT Id, FirstName, LastName, Name FROM Contact WHERE Id IN :whoIds];
         } catch (Exception exc) {
             CBS_CustomExceptionData errData = new CBS_CustomExceptionData(exc.getTypeName(), exc.getMessage());
             throw new AuraHandledException(JSON.serialize(errData));
         }
 
-        UsersContactsWrapper uCWrapper = new UsersContactsWrapper();
-        uCWrapper.contactUsers = contacts;
-        uCWrapper.saleRepUsers = salesReps;
-        return uCWrapper;
+        User allUser = new User(FirstName='All', LastName='', Title='');
+        salesReps.add(0, allUser);
+
+        Contact allContact = new Contact(FirstName='All', LastName='', Title='');
+        contacts.add(0, allContact);
+
+        return new UsersContactsWrapper(salesReps, contacts);
     }
 
     public class UsersContactsWrapper {
-        @AuraEnabled public List<User> saleRepUsers;
-        @AuraEnabled public List<Contact> contactUsers;
+        public UsersContactsWrapper(List<User> saleRepUsers, List<Contact> contactUsers) {
+            this.saleRepUsers = saleRepUsers;
+            this.contactUsers = contactUsers;
+        }
+
+        @AuraEnabled
+        public List<User> saleRepUsers;
+        @AuraEnabled
+        public List<Contact> contactUsers;
     }
 
     @AuraEnabled
@@ -42,10 +52,10 @@ public with sharing class CBS_AirplaneSalesEventsController {
         Boolean hasSalesRep, hasContactUser, hasFromDate, hasToDate = true;
         Boolean hasFirstParam = false;
 
-        hasSalesRep = !CBS_Util.checkIfValueEqualsArguments((Object) salesRepresentative, new List<Object>{
+        hasSalesRep = !CBS_Util.checkIfStringValueEqualsArguments(salesRepresentative, new List<String>{
                 null, 'All', ''
         });
-        hasContactUser = !CBS_Util.checkIfValueEqualsArguments((Object) contactUser, new List<Object>{
+        hasContactUser = !CBS_Util.checkIfStringValueEqualsArguments(contactUser, new List<String>{
                 null, 'All', ''
         });
         hasFromDate = fromDate != null ? true : false;
@@ -91,11 +101,9 @@ public with sharing class CBS_AirplaneSalesEventsController {
     public static EventWrapper getUpcomingRepsEvents() {
         try {
             Integer eventsPerPage = Integer.valueOf(CBS_Util.getCustomSettingValue('SalesRepresentativeEventsPerPage'));
-            EventWrapper wrapper = new EventWrapper();
-            wrapper.events = [SELECT Id, Description, Hangar__c, Hangar__r.Name, Airplane_Type__c, Airplane_Type__r.Name, WhoId, Who.Name, Owner.Name, OwnerId, ActivityDateTime FROM Event
-                    WHERE OwnerId IN (SELECT Id FROM User WHERE Profile.Name = 'CBS_Sales') AND ActivityDateTime > :System.now() ORDER BY ActivityDateTime LIMIT 6];
-            wrapper.eventsPerPage = eventsPerPage;
-            return wrapper;
+            List<Event> events = [SELECT Id, Description, Hangar__c, Hangar__r.Name, Airplane_Type__c, Airplane_Type__r.Name, WhoId, Who.Name, Owner.Name, OwnerId, ActivityDateTime FROM Event
+                    WHERE OwnerId IN (SELECT Id FROM User WHERE Profile.Name = 'CBS_Sales') AND ActivityDateTime > :System.now() ORDER BY ActivityDateTime LIMIT :eventsPerPage];
+            return new EventWrapper(events, eventsPerPage);
         } catch (Exception exc) {
             CBS_CustomExceptionData errData = new CBS_CustomExceptionData(exc.getTypeName(), exc.getMessage());
             throw new AuraHandledException(JSON.serialize(errData));
@@ -103,7 +111,14 @@ public with sharing class CBS_AirplaneSalesEventsController {
     }
 
     public class EventWrapper {
-        @AuraEnabled public List<Event> events;
-        @AuraEnabled public Integer eventsPerPage;
+        @AuraEnabled
+        public List<Event> events;
+        @AuraEnabled
+        public Integer eventsPerPage;
+
+        public EventWrapper(List<Event> events, Integer eventsPerPage) {
+            this.events = events;
+            this.eventsPerPage = eventsPerPage;
+        }
     }
 }

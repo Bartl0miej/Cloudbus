@@ -1,6 +1,6 @@
 <aura:component description="CBS_AirplaneCreatePromotionsTile" controller="CBS_AirplaneCreatePromotionsController">
     <aura:attribute name="wrapper" type="Object"/>
-    <aura:attribute name="promotionPrice" type="Integer"/>
+    <aura:attribute name="promotionPrice" type="Decimal"/>
     <aura:attribute name="calculatedDiscountPrice" type="Currency"/>
     <aura:attribute name="startDate" type="Date"/>
     <aura:attribute name="endDate" type="Date"/>
@@ -19,32 +19,32 @@
     <aura:handler name="CBS_AirplaneAddPromotionToDeleteList" event="c:CBS_AirplaneAddPromotionToDeleteList" action="{!c.onPromoToDeleteList}"/>
     <div class="slds-col slds-size--1-of-3">
         <div class="slds-box slds-m-around--small" style="background-color: #f7faff">
-            <dt class="slds-dl--horizontal__label"><b>Airplane name: </b></dt>
+            <dt class="slds-dl--horizontal__label"><b>{!$Label.c.CBS_Airplane_name2}</b></dt>
             <dd class="slds-dl--horizontal__detail slds-truncate" style="word-wrap: break-word;">
                 <a href="{!'/' + v.wrapper.airplane.Airplane_Type__c}">{!v.wrapper.airplane.Name}</a><br/>
             </dd>
             <div style="margin: 10px;"></div>
-            <dt class="slds-dl--horizontal__label"><b>Hangar name: </b></dt>
+            <dt class="slds-dl--horizontal__label"><b>{!$Label.c.CBS_Hangar_name2}</b></dt>
             <dd class="slds-dl--horizontal__detail slds-truncate" style="word-wrap: break-word;">
                 <a href="{!'/' + v.wrapper.airplane.Hangar__c}">{!v.wrapper.airplane.Hangar__r.Name}</a><br/>
             </dd>
             <div style="margin: 10px;"></div>
-            <dt class="slds-dl--horizontal__label"><b>Standard price: </b></dt>
+            <dt class="slds-dl--horizontal__label"><b>{!$Label.c.CBS_Standard_price2}</b></dt>
             <dd class="slds-dl--horizontal__detail slds-truncate" style="word-wrap: break-word;">
                 <ui:outputCurrency value="{!v.wrapper.standardPrice}" currencySymbol="€"/>
             </dd>
             <div style="margin: 10px;"></div>
-            <p><b>Current promotion: </b></p>
+            <p><b>{!$Label.c.CBS_Current_promotion2}</b></p>
             <aura:if isTrue="{!v.wrapper.currentPricePromotion}">
                 <dd class="slds-dl--horizontal__detail slds-truncate" style="word-wrap: break-word;">
                     <ul class="slds-list--dotted">
-                        <li>Promotion price:
+                        <li>{!$Label.c.CBS_Promotion_price2}
                             <ui:outputCurrency value="{!v.wrapper.currentPricePromotion.UnitPrice}" currencySymbol="€"/>
                         </li>
-                        <li>From
+                        <li>{!$Label.c.CBS_From}&nbsp;
                             <ui:outputDate value="{!v.wrapper.currentPricePromotion.Pricebook2.Promotion_start__c}"
                                            format="dd/MM/yyyy"/>
-                            to
+                            &nbsp;{!$Label.c.CBS_to}&nbsp;
                             <ui:outputDate value="{!v.wrapper.currentPricePromotion.Pricebook2.Promotion_end__c}"
                                            format="dd/MM/yyyy"/>
                         </li>
@@ -52,13 +52,12 @@
                 </dd>
             </aura:if>
             <aura:if isTrue="{! !v.wrapper.currentPricePromotion}">
-                <p>There are no current promotions for this plane</p>
-
+                <p>{!$Label.c.CBS_There_are_no_current_promotions_for_this_plane}</p>
                 <div style="{!!v.isAddingPromotionForAll == true ? 'margin-top: 44px;' : ''}"></div>
             </aura:if>
             <aura:if isTrue="{!v.isAddingPromotionForAll}">
                 <div style="margin: 10px;"></div>
-                <p><b style="color: #771515;">Price after discount: </b></p>
+                <p><b style="color: #771515;">{!$Label.c.CBS_Price_after_discount}</b></p>
                 <dd class="slds-dl--horizontal__detail slds-truncate" style="word-wrap: break-word;">
                     <ui:outputCurrency value="{!v.calculatedDiscountPrice}" currencySymbol="€"/>
                 </dd>
@@ -67,11 +66,11 @@
             <div style="margin-top: 15px;">
                 <aura:if isTrue="{!v.wrapper.pBEntries.length > 0}">
                     <a href="javascritpt:void(0)" onclick="{!c.showPromotions}"
-                       style="float: left; margin-let: 5px; text-decoration: underline;">Manage promotions ({!v.wrapper.pBEntries.length})</a>
+                       style="float: left; margin-let: 5px; text-decoration: underline;">{!$Label.c.CBS_Manage_promotions}&nbsp;({!v.wrapper.pBEntries.length})</a>
                 </aura:if>
                 <aura:if isTrue="{! !v.isAddingPromotionForAll}">
                 <a href="javascritpt:void(0)" onclick="{!c.addPromotion}"
-                   style="float: right; margin-right: 5px; text-decoration: underline;">Add a promotion</a>
+                   style="float: right; margin-right: 5px; text-decoration: underline;">{!$Label.c.CBS_Add_a_promotion}</a>
                 </aura:if>
                 <div style="clear: both;"></div>
             </div>
@@ -79,24 +78,24 @@
                 <hr/>
                 <div class="slds-grid slds-wrap slds-m-top--large">
                     <div class="slds-align_absolute-center slds-size_1-of-1">
-                        <p style="font-size: 20px; line-height: 1.5;"><b>New promotion</b></p>
+                        <p style="font-size: 20px; line-height: 1.5;"><b>{!$Label.c.CBS_New_promotion}</b></p>
                     </div>
                     <div class="slds-size--1-of-3 slds-p-around--medium"
                          style="margin-top: -4px; color: rgb(112, 110, 107)">
-                        <ui:outputText value="Promotion price"/>
+                        <ui:outputText value="{!$Label.c.CBS_Promotion_price}"/>
                         <ui:inputCurrency value="{!v.promotionPrice}"/>
                     </div>
                     <div class="slds-size--1-of-3 slds-p-around--small">
-                        <ui:inputDate value="{!v.startDate}" label="Start date" displayDatePicker="true"/>
+                        <ui:inputDate value="{!v.startDate}" label="{!$Label.c.CBS_Start_date}" displayDatePicker="true"/>
                     </div>
                     <div class="slds-size--1-of-3 slds-p-around--small">
-                        <ui:inputDate value="{!v.endDate}" label="End date" displayDatePicker="true"/>
+                        <ui:inputDate value="{!v.endDate}" label="{!$Label.c.CBS_End_date}" displayDatePicker="true"/>
                     </div>
                 </div>
                 <div style="float: right; margin-top: 15px;">
                     <lightning:buttonGroup>
-                        <lightning:button label="Cancel" variant="neutral" onclick="{!c.cancelAddingPromotion}"/>
-                        <lightning:button label="Save" variant="brand" onclick="{!c.savePromotion}"/>
+                        <lightning:button label="{!$Label.c.CBS_Cancel}" variant="neutral" onclick="{!c.cancelAddingPromotion}"/>
+                        <lightning:button label="{!$Label.c.CBS_Save}" variant="brand" onclick="{!c.savePromotion}"/>
                     </lightning:buttonGroup>
                 </div>
                 <div style="clear: both;"></div>
@@ -116,8 +115,7 @@
                                         size="small"/>
                         <span class="slds-assistive-text">{!$Label.c.CBS_Close}</span>
                     </button>
-                    <h2 id="header99" class="slds-text-heading--medium">Manage promotions
-                        for {!v.wrapper.airplane.Name}</h2>
+                    <h2 id="header99" class="slds-text-heading--medium">{!$Label.c.CBS_Manage_promotions_for}&nbsp;{!v.wrapper.airplane.Name}</h2>
                 </div>
                 <div class="slds-modal__content slds-p-around--medium">
                     <div class="slds-grid">
@@ -126,19 +124,19 @@
                             <thead>
                             <tr class="slds-text-title_caps">
                                 <th scope="col">
-                                    <div class="slds-truncate" title="Price">Price</div>
+                                    <div class="slds-truncate" title="{!$Label.c.CBS_Price}">{!$Label.c.CBS_Price}</div>
                                 </th>
                                 <th scope="col">
-                                    <div class="slds-truncate" title="Promotion start date">Promotion start date</div>
+                                    <div class="slds-truncate" title="{!$Label.c.CBS_Promotion_start_date}">{!$Label.c.CBS_Promotion_start_date}</div>
                                 </th>
                                 <th scope="col">
-                                    <div class="slds-truncate" title="Promotion end date">Promotion end date</div>
+                                    <div class="slds-truncate" title="{!$Label.c.CBS_Promotion_end_date}">{!$Label.c.CBS_Promotion_end_date}</div>
                                 </th>
                                 <th scope="col">
-                                    <div class="slds-truncate" title="Created by">Created by</div>
+                                    <div class="slds-truncate" title="{!$Label.c.CBS_Created_by}">{!$Label.c.CBS_Created_by}</div>
                                 </th>
                                 <th scope="col">
-                                    <div class="slds-truncate" title="Action">Action</div>
+                                    <div class="slds-truncate" title="{!$Label.c.CBS_Action}">{!$Label.c.CBS_Action}</div>
                                 </th>
                             </tr>
                             </thead>
@@ -151,7 +149,7 @@
                         </aura:if>
                         <aura:if isTrue="{!v.wrapper.pBEntries.length == v.promotionsToDelete.length}">
                             <div class="slds-align_absolute-center">
-                                There are no promotions left for this airplane.
+                                    {!$Label.c.CBS_There_are_no_more_promotions_for_this_airplane}
                             </div>
                         </aura:if>
                     </div>

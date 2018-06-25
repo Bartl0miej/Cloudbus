@@ -24,13 +24,14 @@
         let theSpinner = component.find("spinner");
         theSpinner.showSpinner(component);
 
-        let action = component.get("c.getAirplanes");
+        let action = component.get("c.getAirplanesWithPromotions");
         action.setCallback(this, function(response) {
             let state = response.getState();
             if (state === "SUCCESS") {
                 component.set("v.wrappers", response.getReturnValue());
             } else {
-                console.log('error');
+                let errors = response.getError()[0];
+                helper.showErrorToast(component, errors);
             }
             theSpinner.hideSpinner();
         });
